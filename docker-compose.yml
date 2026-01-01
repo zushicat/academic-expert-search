@@ -1,0 +1,16 @@
+services:
+  academic_expert-search:
+    container_name: academic_expert-search-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - .:/app
+    ports:
+      - 10101:80
+    restart: on-failure
+    command: uvicorn app:app --reload --host 0.0.0.0 --port 80
