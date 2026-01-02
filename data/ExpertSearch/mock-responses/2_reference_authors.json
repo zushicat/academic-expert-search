@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 38,
-    "db_response_time_ms": 24,
+    "db_response_time_ms": 21,
     "page": 1,
     "per_page": 38,
     "groups_count": null
@@ -10,6 +10,10 @@
     {
       "id": "https://openalex.org/A5078525299",
       "display_name": "Peter Neumann",
+      "ids": {
+        "openalex": "https://openalex.org/A5078525299",
+        "orcid": "https://orcid.org/0000-0001-5163-5215"
+      },
       "affiliations": [
         {
           "institution": {
@@ -1549,6 +1553,10 @@
     {
       "id": "https://openalex.org/A5007801614",
       "display_name": "James H. Cane",
+      "ids": {
+        "openalex": "https://openalex.org/A5007801614",
+        "orcid": "https://orcid.org/0000-0002-4745-382X"
+      },
       "affiliations": [
         {
           "institution": {
@@ -1918,6 +1926,10 @@
     {
       "id": "https://openalex.org/A5008498925",
       "display_name": "Dave Goulson",
+      "ids": {
+        "openalex": "https://openalex.org/A5008498925",
+        "orcid": "https://orcid.org/0000-0003-4421-2876"
+      },
       "affiliations": [
         {
           "institution": {
@@ -2443,6 +2455,10 @@
     {
       "id": "https://openalex.org/A5078861569",
       "display_name": "Rufus Isaacs",
+      "ids": {
+        "openalex": "https://openalex.org/A5078861569",
+        "orcid": "https://orcid.org/0000-0001-7523-4643"
+      },
       "affiliations": [
         {
           "institution": {
@@ -2721,6 +2737,10 @@
     {
       "id": "https://openalex.org/A5079176981",
       "display_name": "Rebecca E. Irwin",
+      "ids": {
+        "openalex": "https://openalex.org/A5079176981",
+        "orcid": "https://orcid.org/0000-0002-1394-4946"
+      },
       "affiliations": [
         {
           "institution": {
@@ -3219,6 +3239,10 @@
     {
       "id": "https://openalex.org/A5067099702",
       "display_name": "Douglas W. Yu",
+      "ids": {
+        "openalex": "https://openalex.org/A5067099702",
+        "orcid": "https://orcid.org/0000-0001-8551-5609"
+      },
       "affiliations": [
         {
           "institution": {
@@ -3914,6 +3938,10 @@
     {
       "id": "https://openalex.org/A5088698878",
       "display_name": "James D. Thomson",
+      "ids": {
+        "openalex": "https://openalex.org/A5088698878",
+        "orcid": "https://orcid.org/0000-0002-1171-3589"
+      },
       "affiliations": [
         {
           "institution": {
@@ -4249,6 +4277,10 @@
     {
       "id": "https://openalex.org/A5085952515",
       "display_name": "Neal M. Williams",
+      "ids": {
+        "openalex": "https://openalex.org/A5085952515",
+        "orcid": "https://orcid.org/0000-0003-3053-8445"
+      },
       "affiliations": [
         {
           "institution": {
@@ -4686,6 +4718,10 @@
     {
       "id": "https://openalex.org/A5055832161",
       "display_name": "Oliver Schweiger",
+      "ids": {
+        "openalex": "https://openalex.org/A5055832161",
+        "orcid": "https://orcid.org/0000-0001-8779-2335"
+      },
       "affiliations": [
         {
           "institution": {
@@ -5059,6 +5095,10 @@
     {
       "id": "https://openalex.org/A5039999199",
       "display_name": "Nicolas J. Vereecken",
+      "ids": {
+        "openalex": "https://openalex.org/A5039999199",
+        "orcid": "https://orcid.org/0000-0002-8858-4623"
+      },
       "affiliations": [
         {
           "institution": {
@@ -5376,6 +5416,10 @@
     {
       "id": "https://openalex.org/A5084349484",
       "display_name": "Jens Pistorius",
+      "ids": {
+        "openalex": "https://openalex.org/A5084349484",
+        "orcid": "https://orcid.org/0000-0002-7707-1216"
+      },
       "affiliations": [
         {
           "institution": {
@@ -5555,6 +5599,10 @@
     {
       "id": "https://openalex.org/A5043714176",
       "display_name": "Sandra M. Rehan",
+      "ids": {
+        "openalex": "https://openalex.org/A5043714176",
+        "orcid": "https://orcid.org/0000-0002-6441-5155"
+      },
       "affiliations": [
         {
           "institution": {
@@ -5829,6 +5877,10 @@
     {
       "id": "https://openalex.org/A5083070664",
       "display_name": "Candace Galen",
+      "ids": {
+        "openalex": "https://openalex.org/A5083070664",
+        "orcid": "https://orcid.org/0000-0001-5240-1250"
+      },
       "affiliations": [
         {
           "institution": {
@@ -6071,6 +6123,10 @@
     {
       "id": "https://openalex.org/A5007581267",
       "display_name": "Thomas J. Wood",
+      "ids": {
+        "openalex": "https://openalex.org/A5007581267",
+        "orcid": "https://orcid.org/0000-0001-5653-224X"
+      },
       "affiliations": [
         {
           "institution": {
@@ -6492,6 +6548,10 @@
     {
       "id": "https://openalex.org/A5022069215",
       "display_name": "Margarita M. López‐Uribe",
+      "ids": {
+        "openalex": "https://openalex.org/A5022069215",
+        "orcid": "https://orcid.org/0000-0002-8185-2904"
+      },
       "affiliations": [
         {
           "institution": {
@@ -6721,6 +6781,10 @@
     {
       "id": "https://openalex.org/A5085477907",
       "display_name": "Rachael Winfree",
+      "ids": {
+        "openalex": "https://openalex.org/A5085477907",
+        "orcid": "https://orcid.org/0000-0002-1271-2676"
+      },
       "affiliations": [
         {
           "institution": {
@@ -6984,6 +7048,10 @@
     {
       "id": "https://openalex.org/A5037725540",
       "display_name": "Michael Otterstatter",
+      "ids": {
+        "openalex": "https://openalex.org/A5037725540",
+        "orcid": "https://orcid.org/0000-0001-5489-014X"
+      },
       "affiliations": [
         {
           "institution": {
@@ -7325,6 +7393,10 @@
     {
       "id": "https://openalex.org/A5061655812",
       "display_name": "J. Scott MacIvor",
+      "ids": {
+        "openalex": "https://openalex.org/A5061655812",
+        "orcid": "https://orcid.org/0000-0002-2443-8192"
+      },
       "affiliations": [
         {
           "institution": {
@@ -7591,6 +7663,10 @@
     {
       "id": "https://openalex.org/A5089895033",
       "display_name": "Zsofia Szendrei",
+      "ids": {
+        "openalex": "https://openalex.org/A5089895033",
+        "orcid": "https://orcid.org/0000-0001-6893-2056"
+      },
       "affiliations": [
         {
           "institution": {
@@ -7842,6 +7918,10 @@
     {
       "id": "https://openalex.org/A5017487819",
       "display_name": "Sheila R. Colla",
+      "ids": {
+        "openalex": "https://openalex.org/A5017487819",
+        "orcid": null
+      },
       "affiliations": [
         {
           "institution": {
@@ -8052,6 +8132,10 @@
     {
       "id": "https://openalex.org/A5084859594",
       "display_name": "Philip G. Hahn",
+      "ids": {
+        "openalex": "https://openalex.org/A5084859594",
+        "orcid": "https://orcid.org/0000-0001-9717-9489"
+      },
       "affiliations": [
         {
           "institution": {
@@ -8245,6 +8329,10 @@
     {
       "id": "https://openalex.org/A5015695171",
       "display_name": "Elsa Youngsteadt",
+      "ids": {
+        "openalex": "https://openalex.org/A5015695171",
+        "orcid": "https://orcid.org/0000-0003-2032-9674"
+      },
       "affiliations": [
         {
           "institution": {
@@ -8409,6 +8497,10 @@
     {
       "id": "https://openalex.org/A5076351210",
       "display_name": "Christoph Sandrock",
+      "ids": {
+        "openalex": "https://openalex.org/A5076351210",
+        "orcid": "https://orcid.org/0000-0002-2054-2216"
+      },
       "affiliations": [
         {
           "institution": {
@@ -8759,6 +8851,10 @@
     {
       "id": "https://openalex.org/A5035027734",
       "display_name": "Alexandra Papanikolaou",
+      "ids": {
+        "openalex": "https://openalex.org/A5035027734",
+        "orcid": "https://orcid.org/0000-0003-3244-3503"
+      },
       "affiliations": [
         {
           "institution": {
@@ -8958,6 +9054,10 @@
     {
       "id": "https://openalex.org/A5012301888",
       "display_name": "Leon Marshall",
+      "ids": {
+        "openalex": "https://openalex.org/A5012301888",
+        "orcid": "https://orcid.org/0000-0002-7819-7005"
+      },
       "affiliations": [
         {
           "institution": {
@@ -9139,6 +9239,10 @@
     {
       "id": "https://openalex.org/A5035816075",
       "display_name": "Elizabeth Nicholls",
+      "ids": {
+        "openalex": "https://openalex.org/A5035816075",
+        "orcid": "https://orcid.org/0000-0002-3697-0223"
+      },
       "affiliations": [
         {
           "institution": {
@@ -9318,6 +9422,10 @@
     {
       "id": "https://openalex.org/A5006181984",
       "display_name": "Nash E. Turley",
+      "ids": {
+        "openalex": "https://openalex.org/A5006181984",
+        "orcid": "https://orcid.org/0000-0001-7318-8786"
+      },
       "affiliations": [
         {
           "institution": {
@@ -9511,6 +9619,10 @@
     {
       "id": "https://openalex.org/A5101684869",
       "display_name": "Min Tang",
+      "ids": {
+        "openalex": "https://openalex.org/A5101684869",
+        "orcid": "https://orcid.org/0000-0002-6021-7282"
+      },
       "affiliations": [
         {
           "institution": {
@@ -9798,6 +9910,10 @@
     {
       "id": "https://openalex.org/A5039013257",
       "display_name": "Nicole E. Miller‐Struttmann",
+      "ids": {
+        "openalex": "https://openalex.org/A5039013257",
+        "orcid": "https://orcid.org/0000-0002-4799-4802"
+      },
       "affiliations": [
         {
           "institution": {
@@ -10174,6 +10290,10 @@
     {
       "id": "https://openalex.org/A5070927118",
       "display_name": "Kelsey K. Graham",
+      "ids": {
+        "openalex": "https://openalex.org/A5070927118",
+        "orcid": "https://orcid.org/0000-0001-9445-0202"
+      },
       "affiliations": [
         {
           "institution": {
@@ -10384,6 +10504,10 @@
     {
       "id": "https://openalex.org/A5044410338",
       "display_name": "Felix Klaus",
+      "ids": {
+        "openalex": "https://openalex.org/A5044410338",
+        "orcid": "https://orcid.org/0000-0001-7587-0412"
+      },
       "affiliations": [
         {
           "institution": {
@@ -10525,6 +10649,10 @@
     {
       "id": "https://openalex.org/A5033279590",
       "display_name": "Zachariah J. Gezon",
+      "ids": {
+        "openalex": "https://openalex.org/A5033279590",
+        "orcid": null
+      },
       "affiliations": [
         {
           "institution": {
@@ -10729,6 +10857,10 @@
     {
       "id": "https://openalex.org/A5100995230",
       "display_name": "Jeff Peters",
+      "ids": {
+        "openalex": "https://openalex.org/A5100995230",
+        "orcid": null
+      },
       "affiliations": [
         {
           "institution": {
@@ -10880,6 +11012,10 @@
     {
       "id": "https://openalex.org/A5045082865",
       "display_name": "Marirose P. Kuhlman",
+      "ids": {
+        "openalex": "https://openalex.org/A5045082865",
+        "orcid": "https://orcid.org/0000-0003-2297-9400"
+      },
       "affiliations": [
         {
           "institution": {
@@ -11029,6 +11165,10 @@
     {
       "id": "https://openalex.org/A5003036339",
       "display_name": "Minna E. Mathiasson",
+      "ids": {
+        "openalex": "https://openalex.org/A5003036339",
+        "orcid": null
+      },
       "affiliations": [
         {
           "institution": {
@@ -11165,6 +11305,10 @@
     {
       "id": "https://openalex.org/A5028598963",
       "display_name": "Logan R. Appenfeller",
+      "ids": {
+        "openalex": "https://openalex.org/A5028598963",
+        "orcid": "https://orcid.org/0000-0002-2776-1841"
+      },
       "affiliations": [
         {
           "institution": {
@@ -11315,6 +11459,10 @@
     {
       "id": "https://openalex.org/A5054459536",
       "display_name": "Emma L. Briggs",
+      "ids": {
+        "openalex": "https://openalex.org/A5054459536",
+        "orcid": "https://orcid.org/0000-0003-3436-2977"
+      },
       "affiliations": [
         {
           "institution": {
@@ -11450,6 +11598,10 @@
     {
       "id": "https://openalex.org/A5005192858",
       "display_name": "Andrew H. Aldercotte",
+      "ids": {
+        "openalex": "https://openalex.org/A5005192858",
+        "orcid": "https://orcid.org/0000-0001-5223-4691"
+      },
       "affiliations": [
         {
           "institution": {

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "count": 89915,
-    "db_response_time_ms": 44,
+    "count": 89937,
+    "db_response_time_ms": 58,
     "page": 1,
     "per_page": 100,
     "groups_count": null
@@ -10,10 +10,9 @@
     {
       "id": "https://openalex.org/A5038194873",
       "display_name": "Teja Tscharntke",
-      "summary_stats": {
-        "2yr_mean_citedness": 13,
-        "h_index": 150,
-        "i10_index": 462
+      "ids": {
+        "openalex": "https://openalex.org/A5038194873",
+        "orcid": "https://orcid.org/0000-0002-4482-3178"
       },
       "affiliations": [
         {
@@ -431,6 +430,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 13,
+        "h_index": 150,
+        "i10_index": 462
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -527,10 +531,9 @@
     {
       "id": "https://openalex.org/A5082498150",
       "display_name": "Jeffery L. Dangl",
-      "summary_stats": {
-        "2yr_mean_citedness": 18.441176470588236,
-        "h_index": 126,
-        "i10_index": 241
+      "ids": {
+        "openalex": "https://openalex.org/A5082498150",
+        "orcid": "https://orcid.org/0000-0003-3199-8654"
       },
       "affiliations": [
         {
@@ -927,6 +930,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 18.441176470588236,
+        "h_index": 126,
+        "i10_index": 241
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -1023,10 +1031,9 @@
     {
       "id": "https://openalex.org/A5068391722",
       "display_name": "Ian T. Baldwin",
-      "summary_stats": {
-        "2yr_mean_citedness": 9.512195121951219,
-        "h_index": 125,
-        "i10_index": 541
+      "ids": {
+        "openalex": "https://openalex.org/A5068391722",
+        "orcid": "https://orcid.org/0000-0001-5371-2974"
       },
       "affiliations": [
         {
@@ -2126,6 +2133,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 9.512195121951219,
+        "h_index": 125,
+        "i10_index": 541
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -2222,10 +2234,9 @@
     {
       "id": "https://openalex.org/A5058286546",
       "display_name": "Marcel Dicke",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.816901408450704,
-        "h_index": 125,
-        "i10_index": 520
+      "ids": {
+        "openalex": "https://openalex.org/A5058286546",
+        "orcid": "https://orcid.org/0000-0001-8565-8896"
       },
       "affiliations": [
         {
@@ -2606,6 +2617,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.816901408450704,
+        "h_index": 125,
+        "i10_index": 520
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -2702,10 +2718,9 @@
     {
       "id": "https://openalex.org/A5071511664",
       "display_name": "Jonathan Gershenzon",
-      "summary_stats": {
-        "2yr_mean_citedness": 9.226666666666667,
-        "h_index": 124,
-        "i10_index": 458
+      "ids": {
+        "openalex": "https://openalex.org/A5071511664",
+        "orcid": "https://orcid.org/0000-0002-1812-1551"
       },
       "affiliations": [
         {
@@ -3236,6 +3251,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 9.226666666666667,
+        "h_index": 124,
+        "i10_index": 458
+      },
       "topics": [
         {
           "id": "https://openalex.org/T11882",
@@ -3332,10 +3352,9 @@
     {
       "id": "https://openalex.org/A5084143562",
       "display_name": "Mark W. Chase",
-      "summary_stats": {
-        "2yr_mean_citedness": 14.4,
-        "h_index": 123,
-        "i10_index": 475
+      "ids": {
+        "openalex": "https://openalex.org/A5084143562",
+        "orcid": "https://orcid.org/0000-0003-2172-0931"
       },
       "affiliations": [
         {
@@ -4349,6 +4368,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 14.4,
+        "h_index": 123,
+        "i10_index": 475
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10385",
@@ -4445,10 +4469,9 @@
     {
       "id": "https://openalex.org/A5053128729",
       "display_name": "Ingolf Steffan‐Dewenter",
-      "summary_stats": {
-        "2yr_mean_citedness": 7.0638297872340425,
-        "h_index": 114,
-        "i10_index": 303
+      "ids": {
+        "openalex": "https://openalex.org/A5053128729",
+        "orcid": "https://orcid.org/0000-0003-1359-3944"
       },
       "affiliations": [
         {
@@ -4612,6 +4635,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 7.0638297872340425,
+        "h_index": 114,
+        "i10_index": 303
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -4708,10 +4736,9 @@
     {
       "id": "https://openalex.org/A5100769533",
       "display_name": "Jiayang Li",
-      "summary_stats": {
-        "2yr_mean_citedness": 13.392,
-        "h_index": 108,
-        "i10_index": 250
+      "ids": {
+        "openalex": "https://openalex.org/A5100769533",
+        "orcid": "https://orcid.org/0000-0002-0487-6574"
       },
       "affiliations": [
         {
@@ -6141,6 +6168,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 13.392,
+        "h_index": 108,
+        "i10_index": 250
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10184",
@@ -6237,10 +6269,9 @@
     {
       "id": "https://openalex.org/A5088582956",
       "display_name": "J. Van Staden",
-      "summary_stats": {
-        "2yr_mean_citedness": 3.188679245283019,
-        "h_index": 106,
-        "i10_index": 1017
+      "ids": {
+        "openalex": "https://openalex.org/A5088582956",
+        "orcid": "https://orcid.org/0000-0003-0515-1281"
       },
       "affiliations": [
         {
@@ -6773,6 +6804,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 3.188679245283019,
+        "h_index": 106,
+        "i10_index": 1017
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10240",
@@ -6869,10 +6905,9 @@
     {
       "id": "https://openalex.org/A5052671897",
       "display_name": "Ragan M. Callaway",
-      "summary_stats": {
-        "2yr_mean_citedness": 7.413043478260869,
-        "h_index": 105,
-        "i10_index": 278
+      "ids": {
+        "openalex": "https://openalex.org/A5052671897",
+        "orcid": "https://orcid.org/0000-0001-7342-4312"
       },
       "affiliations": [
         {
@@ -7152,6 +7187,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 7.413043478260869,
+        "h_index": 105,
+        "i10_index": 278
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -7248,10 +7288,9 @@
     {
       "id": "https://openalex.org/A5008498925",
       "display_name": "Dave Goulson",
-      "summary_stats": {
-        "2yr_mean_citedness": 11.185185185185185,
-        "h_index": 105,
-        "i10_index": 317
+      "ids": {
+        "openalex": "https://openalex.org/A5008498925",
+        "orcid": "https://orcid.org/0000-0003-4421-2876"
       },
       "affiliations": [
         {
@@ -7677,6 +7716,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 11.185185185185185,
+        "h_index": 105,
+        "i10_index": 317
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -7773,10 +7817,9 @@
     {
       "id": "https://openalex.org/A5038302656",
       "display_name": "Corné M. J. Pieterse",
-      "summary_stats": {
-        "2yr_mean_citedness": 11.689655172413794,
-        "h_index": 104,
-        "i10_index": 213
+      "ids": {
+        "openalex": "https://openalex.org/A5038302656",
+        "orcid": "https://orcid.org/0000-0002-5473-4646"
       },
       "affiliations": [
         {
@@ -8327,6 +8370,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 11.689655172413794,
+        "h_index": 104,
+        "i10_index": 213
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -8423,10 +8471,9 @@
     {
       "id": "https://openalex.org/A5083459636",
       "display_name": "Wolfgang W. Weisser",
-      "summary_stats": {
-        "2yr_mean_citedness": 7.037037037037037,
-        "h_index": 104,
-        "i10_index": 393
+      "ids": {
+        "openalex": "https://openalex.org/A5083459636",
+        "orcid": "https://orcid.org/0000-0002-2757-8959"
       },
       "affiliations": [
         {
@@ -8901,6 +8948,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 7.037037037037037,
+        "h_index": 104,
+        "i10_index": 393
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -8997,10 +9049,9 @@
     {
       "id": "https://openalex.org/A5045999136",
       "display_name": "Simon G. Potts",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.52112676056338,
-        "h_index": 102,
-        "i10_index": 256
+      "ids": {
+        "openalex": "https://openalex.org/A5045999136",
+        "orcid": "https://orcid.org/0000-0002-2045-980X"
       },
       "affiliations": [
         {
@@ -9349,6 +9400,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.52112676056338,
+        "h_index": 102,
+        "i10_index": 256
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -9445,10 +9501,9 @@
     {
       "id": "https://openalex.org/A5032997569",
       "display_name": "Markus Fischer",
-      "summary_stats": {
-        "2yr_mean_citedness": 13,
-        "h_index": 100,
-        "i10_index": 326
+      "ids": {
+        "openalex": "https://openalex.org/A5032997569",
+        "orcid": "https://orcid.org/0000-0002-5589-5900"
       },
       "affiliations": [
         {
@@ -9979,6 +10034,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 13,
+        "h_index": 100,
+        "i10_index": 326
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -10075,10 +10135,9 @@
     {
       "id": "https://openalex.org/A5024169467",
       "display_name": "Spencer C. H. Barrett",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.476190476190476,
-        "h_index": 100,
-        "i10_index": 352
+      "ids": {
+        "openalex": "https://openalex.org/A5024169467",
+        "orcid": "https://orcid.org/0000-0002-7762-3455"
       },
       "affiliations": [
         {
@@ -10646,6 +10705,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.476190476190476,
+        "h_index": 100,
+        "i10_index": 352
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -10742,10 +10806,9 @@
     {
       "id": "https://openalex.org/A5085437167",
       "display_name": "Harro J. Bouwmeester",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.74468085106383,
-        "h_index": 99,
-        "i10_index": 287
+      "ids": {
+        "openalex": "https://openalex.org/A5085437167",
+        "orcid": "https://orcid.org/0000-0003-0907-2732"
       },
       "affiliations": [
         {
@@ -11128,6 +11191,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.74468085106383,
+        "h_index": 99,
+        "i10_index": 287
+      },
       "topics": [
         {
           "id": "https://openalex.org/T12475",
@@ -11224,10 +11292,9 @@
     {
       "id": "https://openalex.org/A5113603630",
       "display_name": "F. A. Bazzaz",
-      "summary_stats": {
-        "2yr_mean_citedness": 0,
-        "h_index": 99,
-        "i10_index": 263
+      "ids": {
+        "openalex": "https://openalex.org/A5113603630",
+        "orcid": null
       },
       "affiliations": [
         {
@@ -11394,6 +11461,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0,
+        "h_index": 99,
+        "i10_index": 263
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -11490,10 +11562,9 @@
     {
       "id": "https://openalex.org/A5057407298",
       "display_name": "Paola Bonfante",
-      "summary_stats": {
-        "2yr_mean_citedness": 13.470588235294118,
-        "h_index": 98,
-        "i10_index": 341
+      "ids": {
+        "openalex": "https://openalex.org/A5057407298",
+        "orcid": "https://orcid.org/0000-0003-3576-8530"
       },
       "affiliations": [
         {
@@ -12187,6 +12258,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 13.470588235294118,
+        "h_index": 98,
+        "i10_index": 341
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10451",
@@ -12283,10 +12359,9 @@
     {
       "id": "https://openalex.org/A5077466677",
       "display_name": "Claire Kremen",
-      "summary_stats": {
-        "2yr_mean_citedness": 11.1,
-        "h_index": 97,
-        "i10_index": 189
+      "ids": {
+        "openalex": "https://openalex.org/A5077466677",
+        "orcid": "https://orcid.org/0000-0001-6909-4605"
       },
       "affiliations": [
         {
@@ -12666,6 +12741,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 11.1,
+        "h_index": 97,
+        "i10_index": 189
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -12762,10 +12842,9 @@
     {
       "id": "https://openalex.org/A5014883785",
       "display_name": "Juli G. Pausas",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.888888888888889,
-        "h_index": 96,
-        "i10_index": 223
+      "ids": {
+        "openalex": "https://openalex.org/A5014883785",
+        "orcid": "https://orcid.org/0000-0003-3533-5786"
       },
       "affiliations": [
         {
@@ -13230,6 +13309,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.888888888888889,
+        "h_index": 96,
+        "i10_index": 223
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -13326,10 +13410,9 @@
     {
       "id": "https://openalex.org/A5007458724",
       "display_name": "Anurag A. Agrawal",
-      "summary_stats": {
-        "2yr_mean_citedness": 3.232142857142857,
-        "h_index": 92,
-        "i10_index": 226
+      "ids": {
+        "openalex": "https://openalex.org/A5007458724",
+        "orcid": "https://orcid.org/0000-0003-0095-1220"
       },
       "affiliations": [
         {
@@ -13785,6 +13868,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 3.232142857142857,
+        "h_index": 92,
+        "i10_index": 226
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -13881,10 +13969,9 @@
     {
       "id": "https://openalex.org/A5070766255",
       "display_name": "John A. Pickett",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.9,
-        "h_index": 92,
-        "i10_index": 459
+      "ids": {
+        "openalex": "https://openalex.org/A5070766255",
+        "orcid": "https://orcid.org/0000-0002-8386-3770"
       },
       "affiliations": [
         {
@@ -14383,6 +14470,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.9,
+        "h_index": 92,
+        "i10_index": 459
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -14479,10 +14571,9 @@
     {
       "id": "https://openalex.org/A5058629427",
       "display_name": "Pedro Jordano",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.5,
-        "h_index": 88,
-        "i10_index": 186
+      "ids": {
+        "openalex": "https://openalex.org/A5058629427",
+        "orcid": "https://orcid.org/0000-0003-2142-9116"
       },
       "affiliations": [
         {
@@ -14667,6 +14758,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.5,
+        "h_index": 88,
+        "i10_index": 186
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -14763,10 +14859,9 @@
     {
       "id": "https://openalex.org/A5043625675",
       "display_name": "Richard G. Olmstead",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.142857142857143,
-        "h_index": 88,
-        "i10_index": 209
+      "ids": {
+        "openalex": "https://openalex.org/A5043625675",
+        "orcid": "https://orcid.org/0000-0001-7660-4159"
       },
       "affiliations": [
         {
@@ -15585,6 +15680,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.142857142857143,
+        "h_index": 88,
+        "i10_index": 209
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10385",
@@ -15681,10 +15781,9 @@
     {
       "id": "https://openalex.org/A5086285278",
       "display_name": "Ken Shirasu",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.735294117647059,
-        "h_index": 87,
-        "i10_index": 194
+      "ids": {
+        "openalex": "https://openalex.org/A5086285278",
+        "orcid": "https://orcid.org/0000-0002-0349-3870"
       },
       "affiliations": [
         {
@@ -16144,6 +16243,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.735294117647059,
+        "h_index": 87,
+        "i10_index": 194
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -16240,10 +16344,9 @@
     {
       "id": "https://openalex.org/A5080532569",
       "display_name": "Brian J. Staskawicz",
-      "summary_stats": {
-        "2yr_mean_citedness": 26.608695652173914,
-        "h_index": 87,
-        "i10_index": 145
+      "ids": {
+        "openalex": "https://openalex.org/A5080532569",
+        "orcid": "https://orcid.org/0000-0002-9711-3962"
       },
       "affiliations": [
         {
@@ -16731,6 +16834,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 26.608695652173914,
+        "h_index": 87,
+        "i10_index": 145
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -16827,10 +16935,9 @@
     {
       "id": "https://openalex.org/A5005215306",
       "display_name": "Montserrat Vilà",
-      "summary_stats": {
-        "2yr_mean_citedness": 7.903225806451613,
-        "h_index": 87,
-        "i10_index": 225
+      "ids": {
+        "openalex": "https://openalex.org/A5005215306",
+        "orcid": "https://orcid.org/0000-0003-3171-8261"
       },
       "affiliations": [
         {
@@ -17377,6 +17484,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 7.903225806451613,
+        "h_index": 87,
+        "i10_index": 225
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -17473,10 +17585,9 @@
     {
       "id": "https://openalex.org/A5069579045",
       "display_name": "Sheng Yang He",
-      "summary_stats": {
-        "2yr_mean_citedness": 11.054054054054054,
-        "h_index": 87,
-        "i10_index": 150
+      "ids": {
+        "openalex": "https://openalex.org/A5069579045",
+        "orcid": "https://orcid.org/0000-0003-1308-498X"
       },
       "affiliations": [
         {
@@ -18103,6 +18214,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 11.054054054054054,
+        "h_index": 87,
+        "i10_index": 150
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -18199,10 +18315,9 @@
     {
       "id": "https://openalex.org/A5066605711",
       "display_name": "Steven M. Smith",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.076923076923077,
-        "h_index": 86,
-        "i10_index": 184
+      "ids": {
+        "openalex": "https://openalex.org/A5066605711",
+        "orcid": "https://orcid.org/0000-0001-5661-9994"
       },
       "affiliations": [
         {
@@ -19112,6 +19227,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.076923076923077,
+        "h_index": 86,
+        "i10_index": 184
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10184",
@@ -19208,10 +19328,9 @@
     {
       "id": "https://openalex.org/A5069611685",
       "display_name": "Joop J. A. van Loon",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.133333333333334,
-        "h_index": 86,
-        "i10_index": 292
+      "ids": {
+        "openalex": "https://openalex.org/A5069611685",
+        "orcid": "https://orcid.org/0000-0002-4260-0501"
       },
       "affiliations": [
         {
@@ -19541,6 +19660,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.133333333333334,
+        "h_index": 86,
+        "i10_index": 292
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -19637,10 +19761,9 @@
     {
       "id": "https://openalex.org/A5013706725",
       "display_name": "Jane E. Parker",
-      "summary_stats": {
-        "2yr_mean_citedness": 16.375,
-        "h_index": 86,
-        "i10_index": 177
+      "ids": {
+        "openalex": "https://openalex.org/A5013706725",
+        "orcid": "https://orcid.org/0000-0002-4700-6480"
       },
       "affiliations": [
         {
@@ -20661,6 +20784,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 16.375,
+        "h_index": 86,
+        "i10_index": 177
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -20757,10 +20885,9 @@
     {
       "id": "https://openalex.org/A5010631631",
       "display_name": "Ted C. J. Turlings",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.8478260869565215,
-        "h_index": 86,
-        "i10_index": 221
+      "ids": {
+        "openalex": "https://openalex.org/A5010631631",
+        "orcid": "https://orcid.org/0000-0002-8315-785X"
       },
       "affiliations": [
         {
@@ -21086,6 +21213,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.8478260869565215,
+        "h_index": 86,
+        "i10_index": 221
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -21182,10 +21314,9 @@
     {
       "id": "https://openalex.org/A5009604211",
       "display_name": "Ondřej Novák",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.063492063492063,
-        "h_index": 86,
-        "i10_index": 332
+      "ids": {
+        "openalex": "https://openalex.org/A5009604211",
+        "orcid": "https://orcid.org/0000-0003-3452-0154"
       },
       "affiliations": [
         {
@@ -21652,6 +21783,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.063492063492063,
+        "h_index": 86,
+        "i10_index": 332
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10184",
@@ -21748,10 +21884,9 @@
     {
       "id": "https://openalex.org/A5058090063",
       "display_name": "Susanne S. Renner",
-      "summary_stats": {
-        "2yr_mean_citedness": 16.017857142857142,
-        "h_index": 85,
-        "i10_index": 283
+      "ids": {
+        "openalex": "https://openalex.org/A5058090063",
+        "orcid": "https://orcid.org/0000-0003-3704-0703"
       },
       "affiliations": [
         {
@@ -22579,6 +22714,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 16.017857142857142,
+        "h_index": 85,
+        "i10_index": 283
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -22675,10 +22815,9 @@
     {
       "id": "https://openalex.org/A5067498631",
       "display_name": "Claude W. dePamphilis",
-      "summary_stats": {
-        "2yr_mean_citedness": 9.142857142857142,
-        "h_index": 84,
-        "i10_index": 145
+      "ids": {
+        "openalex": "https://openalex.org/A5067498631",
+        "orcid": "https://orcid.org/0000-0001-8465-1342"
       },
       "affiliations": [
         {
@@ -23047,6 +23186,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 9.142857142857142,
+        "h_index": 84,
+        "i10_index": 145
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10385",
@@ -23143,10 +23287,9 @@
     {
       "id": "https://openalex.org/A5070924304",
       "display_name": "Alexandra‐Maria Klein",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.012820512820513,
-        "h_index": 84,
-        "i10_index": 219
+      "ids": {
+        "openalex": "https://openalex.org/A5070924304",
+        "orcid": "https://orcid.org/0000-0003-2139-8575"
       },
       "affiliations": [
         {
@@ -23557,6 +23700,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.012820512820513,
+        "h_index": 84,
+        "i10_index": 219
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -23653,10 +23801,9 @@
     {
       "id": "https://openalex.org/A5087060148",
       "display_name": "Gregory B. Martin",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.777777777777778,
-        "h_index": 84,
-        "i10_index": 189
+      "ids": {
+        "openalex": "https://openalex.org/A5087060148",
+        "orcid": "https://orcid.org/0000-0003-0044-6830"
       },
       "affiliations": [
         {
@@ -24267,6 +24414,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.777777777777778,
+        "h_index": 84,
+        "i10_index": 189
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -24363,10 +24515,9 @@
     {
       "id": "https://openalex.org/A5077364923",
       "display_name": "Thomas Boller",
-      "summary_stats": {
-        "2yr_mean_citedness": 2.5,
-        "h_index": 84,
-        "i10_index": 173
+      "ids": {
+        "openalex": "https://openalex.org/A5077364923",
+        "orcid": "https://orcid.org/0000-0001-6768-7503"
       },
       "affiliations": [
         {
@@ -24666,6 +24817,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 2.5,
+        "h_index": 84,
+        "i10_index": 173
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -24762,10 +24918,9 @@
     {
       "id": "https://openalex.org/A5063900609",
       "display_name": "Maurice W. Sabelis",
-      "summary_stats": {
-        "2yr_mean_citedness": 1.5,
-        "h_index": 83,
-        "i10_index": 303
+      "ids": {
+        "openalex": "https://openalex.org/A5063900609",
+        "orcid": "https://orcid.org/0000-0001-5209-6903"
       },
       "affiliations": [
         {
@@ -24981,6 +25136,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 1.5,
+        "h_index": 83,
+        "i10_index": 303
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -25077,10 +25237,9 @@
     {
       "id": "https://openalex.org/A5046711399",
       "display_name": "Kingsley W. Dixon",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.5,
-        "h_index": 83,
-        "i10_index": 360
+      "ids": {
+        "openalex": "https://openalex.org/A5046711399",
+        "orcid": "https://orcid.org/0000-0001-5989-2929"
       },
       "affiliations": [
         {
@@ -25482,6 +25641,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.5,
+        "h_index": 83,
+        "i10_index": 360
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -25578,10 +25742,9 @@
     {
       "id": "https://openalex.org/A5083978052",
       "display_name": "Ken Thompson",
-      "summary_stats": {
-        "2yr_mean_citedness": 2.909090909090909,
-        "h_index": 83,
-        "i10_index": 142
+      "ids": {
+        "openalex": "https://openalex.org/A5083978052",
+        "orcid": "https://orcid.org/0000-0002-1487-3254"
       },
       "affiliations": [
         {
@@ -26119,6 +26282,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 2.909090909090909,
+        "h_index": 83,
+        "i10_index": 142
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -26215,10 +26383,9 @@
     {
       "id": "https://openalex.org/A5084581807",
       "display_name": "Jingquan Yu",
-      "summary_stats": {
-        "2yr_mean_citedness": 13.8,
-        "h_index": 83,
-        "i10_index": 218
+      "ids": {
+        "openalex": "https://openalex.org/A5084581807",
+        "orcid": null
       },
       "affiliations": [
         {
@@ -26611,6 +26778,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 13.8,
+        "h_index": 83,
+        "i10_index": 218
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10014",
@@ -26707,10 +26879,9 @@
     {
       "id": "https://openalex.org/A5021753471",
       "display_name": "Steven D. Johnson",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.270833333333333,
-        "h_index": 83,
-        "i10_index": 321
+      "ids": {
+        "openalex": "https://openalex.org/A5021753471",
+        "orcid": "https://orcid.org/0000-0002-5114-5862"
       },
       "affiliations": [
         {
@@ -27277,6 +27448,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.270833333333333,
+        "h_index": 83,
+        "i10_index": 321
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -27373,10 +27549,9 @@
     {
       "id": "https://openalex.org/A5069578294",
       "display_name": "Daniel J. Kliebenstein",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.2,
-        "h_index": 82,
-        "i10_index": 187
+      "ids": {
+        "openalex": "https://openalex.org/A5069578294",
+        "orcid": "https://orcid.org/0000-0001-5759-3175"
       },
       "affiliations": [
         {
@@ -27720,6 +27895,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.2,
+        "h_index": 82,
+        "i10_index": 187
+      },
       "topics": [
         {
           "id": "https://openalex.org/T11332",
@@ -27816,10 +27996,9 @@
     {
       "id": "https://openalex.org/A5089335497",
       "display_name": "David S. Guttman",
-      "summary_stats": {
-        "2yr_mean_citedness": 16.033333333333335,
-        "h_index": 82,
-        "i10_index": 191
+      "ids": {
+        "openalex": "https://openalex.org/A5089335497",
+        "orcid": "https://orcid.org/0000-0001-8479-3869"
       },
       "affiliations": [
         {
@@ -28270,6 +28449,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 16.033333333333335,
+        "h_index": 82,
+        "i10_index": 191
+      },
       "topics": [
         {
           "id": "https://openalex.org/T11578",
@@ -28366,10 +28550,9 @@
     {
       "id": "https://openalex.org/A5069787458",
       "display_name": "Douglas W. Schemske",
-      "summary_stats": {
-        "2yr_mean_citedness": 7.4,
-        "h_index": 82,
-        "i10_index": 148
+      "ids": {
+        "openalex": "https://openalex.org/A5069787458",
+        "orcid": null
       },
       "affiliations": [
         {
@@ -28659,6 +28842,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 7.4,
+        "h_index": 82,
+        "i10_index": 148
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -28755,10 +28943,9 @@
     {
       "id": "https://openalex.org/A5007788413",
       "display_name": "Shinjiro Yamaguchi",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.8,
-        "h_index": 82,
-        "i10_index": 168
+      "ids": {
+        "openalex": "https://openalex.org/A5007788413",
+        "orcid": "https://orcid.org/0000-0002-0786-1757"
       },
       "affiliations": [
         {
@@ -29318,6 +29505,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.8,
+        "h_index": 82,
+        "i10_index": 168
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10184",
@@ -29414,10 +29606,9 @@
     {
       "id": "https://openalex.org/A5072260864",
       "display_name": "Jos M. Raaijmakers",
-      "summary_stats": {
-        "2yr_mean_citedness": 11.78048780487805,
-        "h_index": 82,
-        "i10_index": 179
+      "ids": {
+        "openalex": "https://openalex.org/A5072260864",
+        "orcid": "https://orcid.org/0000-0003-1608-6614"
       },
       "affiliations": [
         {
@@ -29671,6 +29862,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 11.78048780487805,
+        "h_index": 82,
+        "i10_index": 179
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -29767,10 +29963,9 @@
     {
       "id": "https://openalex.org/A5031130945",
       "display_name": "S. D. Wratten",
-      "summary_stats": {
-        "2yr_mean_citedness": 0.6666666666666666,
-        "h_index": 82,
-        "i10_index": 309
+      "ids": {
+        "openalex": "https://openalex.org/A5031130945",
+        "orcid": "https://orcid.org/0000-0002-5168-8277"
       },
       "affiliations": [
         {
@@ -30206,6 +30401,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0.6666666666666666,
+        "h_index": 82,
+        "i10_index": 309
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -30302,10 +30502,9 @@
     {
       "id": "https://openalex.org/A5043602538",
       "display_name": "Mark van Kleunen",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.7063492063492065,
-        "h_index": 81,
-        "i10_index": 273
+      "ids": {
+        "openalex": "https://openalex.org/A5043602538",
+        "orcid": "https://orcid.org/0000-0002-2861-3701"
       },
       "affiliations": [
         {
@@ -30671,6 +30870,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.7063492063492065,
+        "h_index": 81,
+        "i10_index": 273
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -30767,10 +30971,9 @@
     {
       "id": "https://openalex.org/A5009220759",
       "display_name": "Jian‐Min Zhou",
-      "summary_stats": {
-        "2yr_mean_citedness": 9.722222222222221,
-        "h_index": 81,
-        "i10_index": 158
+      "ids": {
+        "openalex": "https://openalex.org/A5009220759",
+        "orcid": "https://orcid.org/0000-0002-9943-2975"
       },
       "affiliations": [
         {
@@ -31352,6 +31555,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 9.722222222222221,
+        "h_index": 81,
+        "i10_index": 158
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -31448,10 +31656,9 @@
     {
       "id": "https://openalex.org/A5019896810",
       "display_name": "Riccardo Bommarco",
-      "summary_stats": {
-        "2yr_mean_citedness": 9.34375,
-        "h_index": 81,
-        "i10_index": 177
+      "ids": {
+        "openalex": "https://openalex.org/A5019896810",
+        "orcid": "https://orcid.org/0000-0001-8888-0476"
       },
       "affiliations": [
         {
@@ -31586,6 +31793,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 9.34375,
+        "h_index": 81,
+        "i10_index": 177
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -31682,10 +31894,9 @@
     {
       "id": "https://openalex.org/A5076974173",
       "display_name": "Minoru Ueda",
-      "summary_stats": {
-        "2yr_mean_citedness": 2.125,
-        "h_index": 80,
-        "i10_index": 376
+      "ids": {
+        "openalex": "https://openalex.org/A5076974173",
+        "orcid": "https://orcid.org/0000-0002-2305-3303"
       },
       "affiliations": [
         {
@@ -32647,6 +32858,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 2.125,
+        "h_index": 80,
+        "i10_index": 376
+      },
       "topics": [
         {
           "id": "https://openalex.org/T11570",
@@ -32743,10 +32959,9 @@
     {
       "id": "https://openalex.org/A5085510832",
       "display_name": "J. M. Barea",
-      "summary_stats": {
-        "2yr_mean_citedness": 0,
-        "h_index": 80,
-        "i10_index": 194
+      "ids": {
+        "openalex": "https://openalex.org/A5085510832",
+        "orcid": "https://orcid.org/0000-0001-5021-4718"
       },
       "affiliations": [
         {
@@ -32909,6 +33124,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0,
+        "h_index": 80,
+        "i10_index": 194
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10451",
@@ -33005,10 +33225,9 @@
     {
       "id": "https://openalex.org/A5052920399",
       "display_name": "Jordi Bascompte",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.4411764705882355,
-        "h_index": 80,
-        "i10_index": 162
+      "ids": {
+        "openalex": "https://openalex.org/A5052920399",
+        "orcid": "https://orcid.org/0000-0002-0108-6411"
       },
       "affiliations": [
         {
@@ -33307,6 +33526,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.4411764705882355,
+        "h_index": 80,
+        "i10_index": 162
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -33403,10 +33627,9 @@
     {
       "id": "https://openalex.org/A5066337086",
       "display_name": "John N. Thompson",
-      "summary_stats": {
-        "2yr_mean_citedness": 8.2,
-        "h_index": 79,
-        "i10_index": 163
+      "ids": {
+        "openalex": "https://openalex.org/A5066337086",
+        "orcid": "https://orcid.org/0000-0001-5941-6498"
       },
       "affiliations": [
         {
@@ -33709,6 +33932,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 8.2,
+        "h_index": 79,
+        "i10_index": 163
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -33805,10 +34033,9 @@
     {
       "id": "https://openalex.org/A5041360961",
       "display_name": "John N. Klironomos",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.666666666666667,
-        "h_index": 79,
-        "i10_index": 153
+      "ids": {
+        "openalex": "https://openalex.org/A5041360961",
+        "orcid": "https://orcid.org/0000-0003-0965-381X"
       },
       "affiliations": [
         {
@@ -34116,6 +34343,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.666666666666667,
+        "h_index": 79,
+        "i10_index": 153
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10451",
@@ -34212,10 +34444,9 @@
     {
       "id": "https://openalex.org/A5045453076",
       "display_name": "Carlos M. Herrera",
-      "summary_stats": {
-        "2yr_mean_citedness": 2.8421052631578947,
-        "h_index": 79,
-        "i10_index": 212
+      "ids": {
+        "openalex": "https://openalex.org/A5045453076",
+        "orcid": "https://orcid.org/0000-0003-2452-3888"
       },
       "affiliations": [
         {
@@ -34658,6 +34889,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 2.8421052631578947,
+        "h_index": 79,
+        "i10_index": 212
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -34754,10 +34990,9 @@
     {
       "id": "https://openalex.org/A5051832543",
       "display_name": "James D. Bever",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.104166666666667,
-        "h_index": 79,
-        "i10_index": 184
+      "ids": {
+        "openalex": "https://openalex.org/A5051832543",
+        "orcid": "https://orcid.org/0000-0003-4068-3582"
       },
       "affiliations": [
         {
@@ -34979,6 +35214,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.104166666666667,
+        "h_index": 79,
+        "i10_index": 184
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10451",
@@ -35075,10 +35315,9 @@
     {
       "id": "https://openalex.org/A5060214139",
       "display_name": "Robert F. Denno",
-      "summary_stats": {
-        "2yr_mean_citedness": 0,
-        "h_index": 78,
-        "i10_index": 152
+      "ids": {
+        "openalex": "https://openalex.org/A5060214139",
+        "orcid": null
       },
       "affiliations": [
         {
@@ -35252,6 +35491,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0,
+        "h_index": 78,
+        "i10_index": 152
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -35348,10 +35592,9 @@
     {
       "id": "https://openalex.org/A5021071256",
       "display_name": "Joy Bergelson",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.423076923076923,
-        "h_index": 78,
-        "i10_index": 154
+      "ids": {
+        "openalex": "https://openalex.org/A5021071256",
+        "orcid": "https://orcid.org/0000-0001-7893-7387"
       },
       "affiliations": [
         {
@@ -35687,6 +35930,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.423076923076923,
+        "h_index": 78,
+        "i10_index": 154
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -35783,10 +36031,9 @@
     {
       "id": "https://openalex.org/A5110214691",
       "display_name": "L.C. van Loon",
-      "summary_stats": {
-        "2yr_mean_citedness": 0,
-        "h_index": 78,
-        "i10_index": 144
+      "ids": {
+        "openalex": "https://openalex.org/A5110214691",
+        "orcid": null
       },
       "affiliations": [
         {
@@ -36020,6 +36267,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0,
+        "h_index": 78,
+        "i10_index": 144
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -36116,10 +36368,9 @@
     {
       "id": "https://openalex.org/A5040115265",
       "display_name": "Alan Collmer",
-      "summary_stats": {
-        "2yr_mean_citedness": 28,
-        "h_index": 76,
-        "i10_index": 144
+      "ids": {
+        "openalex": "https://openalex.org/A5040115265",
+        "orcid": "https://orcid.org/0000-0003-0923-0913"
       },
       "affiliations": [
         {
@@ -36506,6 +36757,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 28,
+        "h_index": 76,
+        "i10_index": 144
+      },
       "topics": [
         {
           "id": "https://openalex.org/T11578",
@@ -36602,10 +36858,9 @@
     {
       "id": "https://openalex.org/A5005262367",
       "display_name": "Kamaljit S. Bawa",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.714285714285714,
-        "h_index": 75,
-        "i10_index": 161
+      "ids": {
+        "openalex": "https://openalex.org/A5005262367",
+        "orcid": "https://orcid.org/0000-0001-6174-9777"
       },
       "affiliations": [
         {
@@ -36963,6 +37218,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.714285714285714,
+        "h_index": 75,
+        "i10_index": 161
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -37059,10 +37319,9 @@
     {
       "id": "https://openalex.org/A5072219752",
       "display_name": "Rosario Azcón",
-      "summary_stats": {
-        "2yr_mean_citedness": 2.5,
-        "h_index": 75,
-        "i10_index": 197
+      "ids": {
+        "openalex": "https://openalex.org/A5072219752",
+        "orcid": "https://orcid.org/0000-0003-4568-4090"
       },
       "affiliations": [
         {
@@ -37178,6 +37437,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 2.5,
+        "h_index": 75,
+        "i10_index": 197
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10451",
@@ -37274,10 +37538,9 @@
     {
       "id": "https://openalex.org/A5070192659",
       "display_name": "Ottoline Leyser",
-      "summary_stats": {
-        "2yr_mean_citedness": 3.142857142857143,
-        "h_index": 75,
-        "i10_index": 115
+      "ids": {
+        "openalex": "https://openalex.org/A5070192659",
+        "orcid": "https://orcid.org/0000-0003-2161-3829"
       },
       "affiliations": [
         {
@@ -37624,6 +37887,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 3.142857142857143,
+        "h_index": 75,
+        "i10_index": 115
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10184",
@@ -37720,10 +37988,9 @@
     {
       "id": "https://openalex.org/A5073523465",
       "display_name": "Cyrille Violle",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.0777777777777775,
-        "h_index": 75,
-        "i10_index": 196
+      "ids": {
+        "openalex": "https://openalex.org/A5073523465",
+        "orcid": "https://orcid.org/0000-0002-4104-6844"
       },
       "affiliations": [
         {
@@ -38225,6 +38492,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.0777777777777775,
+        "h_index": 75,
+        "i10_index": 196
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -38321,10 +38593,9 @@
     {
       "id": "https://openalex.org/A5055297109",
       "display_name": "Tadao Asami",
-      "summary_stats": {
-        "2yr_mean_citedness": 3.4878048780487805,
-        "h_index": 75,
-        "i10_index": 225
+      "ids": {
+        "openalex": "https://openalex.org/A5055297109",
+        "orcid": "https://orcid.org/0000-0003-0774-6203"
       },
       "affiliations": [
         {
@@ -39158,6 +39429,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 3.4878048780487805,
+        "h_index": 75,
+        "i10_index": 225
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10184",
@@ -39254,10 +39530,9 @@
     {
       "id": "https://openalex.org/A5036984771",
       "display_name": "Jorge M. Vivanco",
-      "summary_stats": {
-        "2yr_mean_citedness": 13.125,
-        "h_index": 75,
-        "i10_index": 146
+      "ids": {
+        "openalex": "https://openalex.org/A5036984771",
+        "orcid": "https://orcid.org/0000-0001-6046-4948"
       },
       "affiliations": [
         {
@@ -39633,6 +39908,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 13.125,
+        "h_index": 75,
+        "i10_index": 146
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -39729,10 +40009,9 @@
     {
       "id": "https://openalex.org/A5088698878",
       "display_name": "James D. Thomson",
-      "summary_stats": {
-        "2yr_mean_citedness": 8.5,
-        "h_index": 75,
-        "i10_index": 145
+      "ids": {
+        "openalex": "https://openalex.org/A5088698878",
+        "orcid": "https://orcid.org/0000-0002-1171-3589"
       },
       "affiliations": [
         {
@@ -39968,6 +40247,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 8.5,
+        "h_index": 75,
+        "i10_index": 145
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -40064,10 +40348,9 @@
     {
       "id": "https://openalex.org/A5025475871",
       "display_name": "Barbara Ann Halkier",
-      "summary_stats": {
-        "2yr_mean_citedness": 8,
-        "h_index": 74,
-        "i10_index": 164
+      "ids": {
+        "openalex": "https://openalex.org/A5025475871",
+        "orcid": "https://orcid.org/0000-0002-3742-702X"
       },
       "affiliations": [
         {
@@ -40457,6 +40740,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 8,
+        "h_index": 74,
+        "i10_index": 164
+      },
       "topics": [
         {
           "id": "https://openalex.org/T11332",
@@ -40553,10 +40841,9 @@
     {
       "id": "https://openalex.org/A5011301116",
       "display_name": "Xinnian Dong",
-      "summary_stats": {
-        "2yr_mean_citedness": 22.952380952380953,
-        "h_index": 74,
-        "i10_index": 112
+      "ids": {
+        "openalex": "https://openalex.org/A5011301116",
+        "orcid": "https://orcid.org/0000-0002-1120-0951"
       },
       "affiliations": [
         {
@@ -41000,6 +41287,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 22.952380952380953,
+        "h_index": 74,
+        "i10_index": 112
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -41096,10 +41388,9 @@
     {
       "id": "https://openalex.org/A5082909194",
       "display_name": "L. Johnson",
-      "summary_stats": {
-        "2yr_mean_citedness": 8.857142857142858,
-        "h_index": 74,
-        "i10_index": 114
+      "ids": {
+        "openalex": "https://openalex.org/A5082909194",
+        "orcid": "https://orcid.org/0000-0003-2181-6888"
       },
       "affiliations": [
         {
@@ -41322,6 +41613,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 8.857142857142858,
+        "h_index": 74,
+        "i10_index": 114
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -41418,10 +41714,9 @@
     {
       "id": "https://openalex.org/A5003059316",
       "display_name": "Matthias Erb",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.326530612244898,
-        "h_index": 74,
-        "i10_index": 148
+      "ids": {
+        "openalex": "https://openalex.org/A5003059316",
+        "orcid": "https://orcid.org/0000-0002-4446-9834"
       },
       "affiliations": [
         {
@@ -41714,6 +42009,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.326530612244898,
+        "h_index": 74,
+        "i10_index": 148
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -41810,10 +42110,9 @@
     {
       "id": "https://openalex.org/A5052381433",
       "display_name": "Carlos L. Ballaré",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.454545454545454,
-        "h_index": 74,
-        "i10_index": 118
+      "ids": {
+        "openalex": "https://openalex.org/A5052381433",
+        "orcid": "https://orcid.org/0000-0001-9129-4531"
       },
       "affiliations": [
         {
@@ -42200,6 +42499,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.454545454545454,
+        "h_index": 74,
+        "i10_index": 118
+      },
       "topics": [
         {
           "id": "https://openalex.org/T11268",
@@ -42296,10 +42600,9 @@
     {
       "id": "https://openalex.org/A5004022979",
       "display_name": "L.E.M. Vet",
-      "summary_stats": {
-        "2yr_mean_citedness": 12.6,
-        "h_index": 73,
-        "i10_index": 188
+      "ids": {
+        "openalex": "https://openalex.org/A5004022979",
+        "orcid": "https://orcid.org/0000-0002-2287-1128"
       },
       "affiliations": [
         {
@@ -42559,6 +42862,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 12.6,
+        "h_index": 73,
+        "i10_index": 188
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -42655,10 +42963,9 @@
     {
       "id": "https://openalex.org/A5075919156",
       "display_name": "Carsten F. Dormann",
-      "summary_stats": {
-        "2yr_mean_citedness": 2.3962264150943398,
-        "h_index": 73,
-        "i10_index": 156
+      "ids": {
+        "openalex": "https://openalex.org/A5075919156",
+        "orcid": "https://orcid.org/0000-0002-9835-1794"
       },
       "affiliations": [
         {
@@ -42910,6 +43217,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 2.3962264150943398,
+        "h_index": 73,
+        "i10_index": 156
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -43006,10 +43318,9 @@
     {
       "id": "https://openalex.org/A5054910142",
       "display_name": "Claus Wasternack",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.6,
-        "h_index": 73,
-        "i10_index": 159
+      "ids": {
+        "openalex": "https://openalex.org/A5054910142",
+        "orcid": "https://orcid.org/0000-0002-9872-6998"
       },
       "affiliations": [
         {
@@ -43575,6 +43886,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.6,
+        "h_index": 73,
+        "i10_index": 159
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -43671,10 +43987,9 @@
     {
       "id": "https://openalex.org/A5090858629",
       "display_name": "Felix Wäckers",
-      "summary_stats": {
-        "2yr_mean_citedness": 3.909090909090909,
-        "h_index": 73,
-        "i10_index": 210
+      "ids": {
+        "openalex": "https://openalex.org/A5090858629",
+        "orcid": "https://orcid.org/0000-0002-9748-0615"
       },
       "affiliations": [
         {
@@ -44090,6 +44405,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 3.909090909090909,
+        "h_index": 73,
+        "i10_index": 210
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -44186,10 +44506,9 @@
     {
       "id": "https://openalex.org/A5001395924",
       "display_name": "Santiago F. Elena",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.261904761904762,
-        "h_index": 73,
-        "i10_index": 244
+      "ids": {
+        "openalex": "https://openalex.org/A5001395924",
+        "orcid": "https://orcid.org/0000-0001-8249-5593"
       },
       "affiliations": [
         {
@@ -44662,6 +44981,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.261904761904762,
+        "h_index": 73,
+        "i10_index": 244
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10494",
@@ -44758,10 +45082,9 @@
     {
       "id": "https://openalex.org/A5063641005",
       "display_name": "Naomi E. Pierce",
-      "summary_stats": {
-        "2yr_mean_citedness": 7.325581395348837,
-        "h_index": 72,
-        "i10_index": 180
+      "ids": {
+        "openalex": "https://openalex.org/A5063641005",
+        "orcid": "https://orcid.org/0000-0003-3366-1625"
       },
       "affiliations": [
         {
@@ -45239,6 +45562,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 7.325581395348837,
+        "h_index": 72,
+        "i10_index": 180
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -45335,10 +45663,9 @@
     {
       "id": "https://openalex.org/A5059017776",
       "display_name": "Peter K. Endress",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.5,
-        "h_index": 72,
-        "i10_index": 183
+      "ids": {
+        "openalex": "https://openalex.org/A5059017776",
+        "orcid": "https://orcid.org/0000-0002-4813-1734"
       },
       "affiliations": [
         {
@@ -45722,6 +46049,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.5,
+        "h_index": 72,
+        "i10_index": 183
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10385",
@@ -45818,10 +46150,9 @@
     {
       "id": "https://openalex.org/A5111611237",
       "display_name": "Jean‐Pierre Métraux",
-      "summary_stats": {
-        "2yr_mean_citedness": 0,
-        "h_index": 72,
-        "i10_index": 109
+      "ids": {
+        "openalex": "https://openalex.org/A5111611237",
+        "orcid": null
       },
       "affiliations": [
         {
@@ -46133,6 +46464,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0,
+        "h_index": 72,
+        "i10_index": 109
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -46229,10 +46565,9 @@
     {
       "id": "https://openalex.org/A5005192151",
       "display_name": "Mark D. Rausher",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.5,
-        "h_index": 72,
-        "i10_index": 171
+      "ids": {
+        "openalex": "https://openalex.org/A5005192151",
+        "orcid": "https://orcid.org/0000-0002-6541-9641"
       },
       "affiliations": [
         {
@@ -46403,6 +46738,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.5,
+        "h_index": 72,
+        "i10_index": 171
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -46499,10 +46839,9 @@
     {
       "id": "https://openalex.org/A5061992490",
       "display_name": "Nickolas M. Waser",
-      "summary_stats": {
-        "2yr_mean_citedness": 0,
-        "h_index": 72,
-        "i10_index": 132
+      "ids": {
+        "openalex": "https://openalex.org/A5061992490",
+        "orcid": "https://orcid.org/0000-0001-8416-5037"
       },
       "affiliations": [
         {
@@ -46741,6 +47080,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0,
+        "h_index": 72,
+        "i10_index": 132
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -46837,10 +47181,9 @@
     {
       "id": "https://openalex.org/A5051257404",
       "display_name": "Choong‐Min Ryu",
-      "summary_stats": {
-        "2yr_mean_citedness": 7.533333333333333,
-        "h_index": 71,
-        "i10_index": 181
+      "ids": {
+        "openalex": "https://openalex.org/A5051257404",
+        "orcid": "https://orcid.org/0000-0002-7276-1189"
       },
       "affiliations": [
         {
@@ -47261,6 +47604,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 7.533333333333333,
+        "h_index": 71,
+        "i10_index": 181
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10076",
@@ -47357,10 +47705,9 @@
     {
       "id": "https://openalex.org/A5017127428",
       "display_name": "Roberto Solano",
-      "summary_stats": {
-        "2yr_mean_citedness": 13.071428571428571,
-        "h_index": 71,
-        "i10_index": 113
+      "ids": {
+        "openalex": "https://openalex.org/A5017127428",
+        "orcid": "https://orcid.org/0000-0001-5459-2417"
       },
       "affiliations": [
         {
@@ -47631,6 +47978,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 13.071428571428571,
+        "h_index": 71,
+        "i10_index": 113
+      },
       "topics": [
         {
           "id": "https://openalex.org/T12475",
@@ -47727,10 +48079,9 @@
     {
       "id": "https://openalex.org/A5043270745",
       "display_name": "Ove Eriksson",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.3,
-        "h_index": 71,
-        "i10_index": 187
+      "ids": {
+        "openalex": "https://openalex.org/A5043270745",
+        "orcid": "https://orcid.org/0000-0001-7580-5135"
       },
       "affiliations": [
         {
@@ -47949,6 +48300,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.3,
+        "h_index": 71,
+        "i10_index": 187
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -48045,10 +48401,9 @@
     {
       "id": "https://openalex.org/A5113725924",
       "display_name": "V. K. Brown",
-      "summary_stats": {
-        "2yr_mean_citedness": 0,
-        "h_index": 71,
-        "i10_index": 156
+      "ids": {
+        "openalex": "https://openalex.org/A5113725924",
+        "orcid": null
       },
       "affiliations": [
         {
@@ -48341,6 +48696,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0,
+        "h_index": 71,
+        "i10_index": 156
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -48435,276 +48795,11 @@
       ]
     },
     {
-      "id": "https://openalex.org/A5057290137",
-      "display_name": "Byron B. Lamont",
-      "summary_stats": {
-        "2yr_mean_citedness": 4.25,
-        "h_index": 71,
-        "i10_index": 238
-      },
-      "affiliations": [
-        {
-          "institution": {
-            "id": "https://openalex.org/I176790772",
-            "ror": "https://ror.org/00r4sry34",
-            "display_name": "Murdoch University",
-            "country_code": "AU",
-            "type": "education",
-            "lineage": [
-              "https://openalex.org/I176790772"
-            ]
-          },
-          "years": [
-            2014,
-            2013,
-            2012,
-            2011
-          ]
-        },
-        {
-          "institution": {
-            "id": "https://openalex.org/I154130895",
-            "ror": "https://ror.org/03b94tp07",
-            "display_name": "University of Auckland",
-            "country_code": "NZ",
-            "type": "education",
-            "lineage": [
-              "https://openalex.org/I154130895"
-            ]
-          },
-          "years": [
-            2013
-          ]
-        },
-        {
-          "institution": {
-            "id": "https://openalex.org/I2802348851",
-            "ror": "https://ror.org/05vje5x10",
-            "display_name": "Vision Australia",
-            "country_code": "AU",
-            "type": "nonprofit",
-            "lineage": [
-              "https://openalex.org/I2802348851"
-            ]
-          },
-          "years": [
-            1986,
-            1982
-          ]
-        },
-        {
-          "institution": {
-            "id": "https://openalex.org/I165143802",
-            "ror": "https://ror.org/00rqy9422",
-            "display_name": "The University of Queensland",
-            "country_code": "AU",
-            "type": "education",
-            "lineage": [
-              "https://openalex.org/I165143802"
-            ]
-          },
-          "years": [
-            2022
-          ]
-        },
-        {
-          "institution": {
-            "id": "https://openalex.org/I38260057",
-            "ror": "https://ror.org/02qp5k481",
-            "display_name": "In-Q-Tel",
-            "country_code": "US",
-            "type": "nonprofit",
-            "lineage": [
-              "https://openalex.org/I38260057"
-            ]
-          },
-          "years": [
-            1995
-          ]
-        },
-        {
-          "institution": {
-            "id": "https://openalex.org/I177877127",
-            "ror": "https://ror.org/047272k79",
-            "display_name": "The University of Western Australia",
-            "country_code": "AU",
-            "type": "education",
-            "lineage": [
-              "https://openalex.org/I177877127"
-            ]
-          },
-          "years": [
-            1974
-          ]
-        },
-        {
-          "institution": {
-            "id": "https://openalex.org/I137479271",
-            "ror": "https://ror.org/000h6jb29",
-            "display_name": "Helmholtz Centre for Environmental Research",
-            "country_code": "DE",
-            "type": "facility",
-            "lineage": [
-              "https://openalex.org/I1305996414",
-              "https://openalex.org/I137479271"
-            ]
-          },
-          "years": [
-            2002
-          ]
-        },
-        {
-          "institution": {
-            "id": "https://openalex.org/I205640436",
-            "ror": "https://ror.org/02n415q13",
-            "display_name": "Curtin University",
-            "country_code": "AU",
-            "type": "education",
-            "lineage": [
-              "https://openalex.org/I205640436"
-            ]
-          },
-          "years": [
-            2025,
-            2024,
-            2023,
-            2022,
-            2021,
-            2020,
-            2019,
-            2018,
-            2017,
-            2016,
-            2015,
-            2014,
-            2013,
-            2012,
-            2011,
-            2010,
-            2009,
-            2008,
-            2007,
-            2006,
-            2005,
-            2004,
-            2003,
-            2002,
-            2001,
-            2000,
-            1999,
-            1998,
-            1997,
-            1996,
-            1995,
-            1994,
-            1993,
-            1991,
-            1989,
-            1988,
-            1987
-          ]
-        }
-      ],
-      "topics": [
-        {
-          "id": "https://openalex.org/T10005",
-          "display_name": "Ecology and Vegetation Dynamics Studies",
-          "count": 213,
-          "score": 0.9998999834060669,
-          "subfield": {
-            "id": "https://openalex.org/subfields/2309",
-            "display_name": "Nature and Landscape Conservation"
-          },
-          "field": {
-            "id": "https://openalex.org/fields/23",
-            "display_name": "Environmental Science"
-          },
-          "domain": {
-            "id": "https://openalex.org/domains/3",
-            "display_name": "Physical Sciences"
-          }
-        },
-        {
-          "id": "https://openalex.org/T10487",
-          "display_name": "Plant and animal studies",
-          "count": 90,
-          "score": 1,
-          "subfield": {
-            "id": "https://openalex.org/subfields/1105",
-            "display_name": "Ecology, Evolution, Behavior and Systematics"
-          },
-          "field": {
-            "id": "https://openalex.org/fields/11",
-            "display_name": "Agricultural and Biological Sciences"
-          },
-          "domain": {
-            "id": "https://openalex.org/domains/1",
-            "display_name": "Life Sciences"
-          }
-        },
-        {
-          "id": "https://openalex.org/T10555",
-          "display_name": "Fire effects on ecosystems",
-          "count": 67,
-          "score": 1,
-          "subfield": {
-            "id": "https://openalex.org/subfields/2306",
-            "display_name": "Global and Planetary Change"
-          },
-          "field": {
-            "id": "https://openalex.org/fields/23",
-            "display_name": "Environmental Science"
-          },
-          "domain": {
-            "id": "https://openalex.org/domains/3",
-            "display_name": "Physical Sciences"
-          }
-        },
-        {
-          "id": "https://openalex.org/T13388",
-          "display_name": "Rangeland and Wildlife Management",
-          "count": 64,
-          "score": 0.9997000098228455,
-          "subfield": {
-            "id": "https://openalex.org/subfields/2303",
-            "display_name": "Ecology"
-          },
-          "field": {
-            "id": "https://openalex.org/fields/23",
-            "display_name": "Environmental Science"
-          },
-          "domain": {
-            "id": "https://openalex.org/domains/3",
-            "display_name": "Physical Sciences"
-          }
-        },
-        {
-          "id": "https://openalex.org/T12475",
-          "display_name": "Plant Parasitism and Resistance",
-          "count": 59,
-          "score": 1,
-          "subfield": {
-            "id": "https://openalex.org/subfields/1110",
-            "display_name": "Plant Science"
-          },
-          "field": {
-            "id": "https://openalex.org/fields/11",
-            "display_name": "Agricultural and Biological Sciences"
-          },
-          "domain": {
-            "id": "https://openalex.org/domains/1",
-            "display_name": "Life Sciences"
-          }
-        }
-      ]
-    },
-    {
       "id": "https://openalex.org/A5051768518",
       "display_name": "Sally E. Smith",
-      "summary_stats": {
-        "2yr_mean_citedness": 0,
-        "h_index": 71,
-        "i10_index": 175
+      "ids": {
+        "openalex": "https://openalex.org/A5051768518",
+        "orcid": "https://orcid.org/0000-0001-8629-9442"
       },
       "affiliations": [
         {
@@ -49074,6 +49169,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 0,
+        "h_index": 71,
+        "i10_index": 175
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10451",
@@ -49168,12 +49268,279 @@
       ]
     },
     {
+      "id": "https://openalex.org/A5057290137",
+      "display_name": "Byron B. Lamont",
+      "ids": {
+        "openalex": "https://openalex.org/A5057290137",
+        "orcid": "https://orcid.org/0000-0001-9279-7149"
+      },
+      "affiliations": [
+        {
+          "institution": {
+            "id": "https://openalex.org/I176790772",
+            "ror": "https://ror.org/00r4sry34",
+            "display_name": "Murdoch University",
+            "country_code": "AU",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I176790772"
+            ]
+          },
+          "years": [
+            2014,
+            2013,
+            2012,
+            2011
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I154130895",
+            "ror": "https://ror.org/03b94tp07",
+            "display_name": "University of Auckland",
+            "country_code": "NZ",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I154130895"
+            ]
+          },
+          "years": [
+            2013
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I2802348851",
+            "ror": "https://ror.org/05vje5x10",
+            "display_name": "Vision Australia",
+            "country_code": "AU",
+            "type": "nonprofit",
+            "lineage": [
+              "https://openalex.org/I2802348851"
+            ]
+          },
+          "years": [
+            1986,
+            1982
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I165143802",
+            "ror": "https://ror.org/00rqy9422",
+            "display_name": "The University of Queensland",
+            "country_code": "AU",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I165143802"
+            ]
+          },
+          "years": [
+            2022
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I38260057",
+            "ror": "https://ror.org/02qp5k481",
+            "display_name": "In-Q-Tel",
+            "country_code": "US",
+            "type": "nonprofit",
+            "lineage": [
+              "https://openalex.org/I38260057"
+            ]
+          },
+          "years": [
+            1995
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I177877127",
+            "ror": "https://ror.org/047272k79",
+            "display_name": "The University of Western Australia",
+            "country_code": "AU",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I177877127"
+            ]
+          },
+          "years": [
+            1974
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I137479271",
+            "ror": "https://ror.org/000h6jb29",
+            "display_name": "Helmholtz Centre for Environmental Research",
+            "country_code": "DE",
+            "type": "facility",
+            "lineage": [
+              "https://openalex.org/I1305996414",
+              "https://openalex.org/I137479271"
+            ]
+          },
+          "years": [
+            2002
+          ]
+        },
+        {
+          "institution": {
+            "id": "https://openalex.org/I205640436",
+            "ror": "https://ror.org/02n415q13",
+            "display_name": "Curtin University",
+            "country_code": "AU",
+            "type": "education",
+            "lineage": [
+              "https://openalex.org/I205640436"
+            ]
+          },
+          "years": [
+            2025,
+            2024,
+            2023,
+            2022,
+            2021,
+            2020,
+            2019,
+            2018,
+            2017,
+            2016,
+            2015,
+            2014,
+            2013,
+            2012,
+            2011,
+            2010,
+            2009,
+            2008,
+            2007,
+            2006,
+            2005,
+            2004,
+            2003,
+            2002,
+            2001,
+            2000,
+            1999,
+            1998,
+            1997,
+            1996,
+            1995,
+            1994,
+            1993,
+            1991,
+            1989,
+            1988,
+            1987
+          ]
+        }
+      ],
+      "summary_stats": {
+        "2yr_mean_citedness": 4.25,
+        "h_index": 71,
+        "i10_index": 238
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T10005",
+          "display_name": "Ecology and Vegetation Dynamics Studies",
+          "count": 213,
+          "score": 0.9998999834060669,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2309",
+            "display_name": "Nature and Landscape Conservation"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10487",
+          "display_name": "Plant and animal studies",
+          "count": 90,
+          "score": 1,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1105",
+            "display_name": "Ecology, Evolution, Behavior and Systematics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/11",
+            "display_name": "Agricultural and Biological Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10555",
+          "display_name": "Fire effects on ecosystems",
+          "count": 67,
+          "score": 1,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2306",
+            "display_name": "Global and Planetary Change"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13388",
+          "display_name": "Rangeland and Wildlife Management",
+          "count": 64,
+          "score": 0.9997000098228455,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2303",
+            "display_name": "Ecology"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/23",
+            "display_name": "Environmental Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T12475",
+          "display_name": "Plant Parasitism and Resistance",
+          "count": 59,
+          "score": 1,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1110",
+            "display_name": "Plant Science"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/11",
+            "display_name": "Agricultural and Biological Sciences"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/1",
+            "display_name": "Life Sciences"
+          }
+        }
+      ]
+    },
+    {
       "id": "https://openalex.org/A5019190387",
       "display_name": "Bettina Hause",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.6923076923076925,
-        "h_index": 71,
-        "i10_index": 173
+      "ids": {
+        "openalex": "https://openalex.org/A5019190387",
+        "orcid": "https://orcid.org/0000-0001-9697-4990"
       },
       "affiliations": [
         {
@@ -49579,6 +49946,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.6923076923076925,
+        "h_index": 71,
+        "i10_index": 173
+      },
       "topics": [
         {
           "id": "https://openalex.org/T12475",
@@ -49675,10 +50047,9 @@
     {
       "id": "https://openalex.org/A5088468992",
       "display_name": "Edward E. Farmer",
-      "summary_stats": {
-        "2yr_mean_citedness": 15.125,
-        "h_index": 70,
-        "i10_index": 117
+      "ids": {
+        "openalex": "https://openalex.org/A5088468992",
+        "orcid": "https://orcid.org/0000-0002-6572-5024"
       },
       "affiliations": [
         {
@@ -49933,6 +50304,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 15.125,
+        "h_index": 70,
+        "i10_index": 117
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -50029,10 +50405,9 @@
     {
       "id": "https://openalex.org/A5082055304",
       "display_name": "Gary W. Felton",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.461538461538462,
-        "h_index": 70,
-        "i10_index": 152
+      "ids": {
+        "openalex": "https://openalex.org/A5082055304",
+        "orcid": "https://orcid.org/0000-0002-1076-1431"
       },
       "affiliations": [
         {
@@ -50400,6 +50775,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.461538461538462,
+        "h_index": 70,
+        "i10_index": 152
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10135",
@@ -50496,10 +50876,9 @@
     {
       "id": "https://openalex.org/A5074743304",
       "display_name": "Francisco I. Pugnaire",
-      "summary_stats": {
-        "2yr_mean_citedness": 6.9411764705882355,
-        "h_index": 70,
-        "i10_index": 150
+      "ids": {
+        "openalex": "https://openalex.org/A5074743304",
+        "orcid": "https://orcid.org/0000-0002-1227-6827"
       },
       "affiliations": [
         {
@@ -50679,6 +51058,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 6.9411764705882355,
+        "h_index": 70,
+        "i10_index": 150
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -50775,10 +51159,9 @@
     {
       "id": "https://openalex.org/A5013363004",
       "display_name": "Marcelo A. Aizen",
-      "summary_stats": {
-        "2yr_mean_citedness": 5.416666666666667,
-        "h_index": 70,
-        "i10_index": 170
+      "ids": {
+        "openalex": "https://openalex.org/A5013363004",
+        "orcid": "https://orcid.org/0000-0001-9079-9749"
       },
       "affiliations": [
         {
@@ -51179,6 +51562,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 5.416666666666667,
+        "h_index": 70,
+        "i10_index": 170
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
@@ -51275,10 +51663,9 @@
     {
       "id": "https://openalex.org/A5045396338",
       "display_name": "Jaboury Ghazoul",
-      "summary_stats": {
-        "2yr_mean_citedness": 9.097560975609756,
-        "h_index": 70,
-        "i10_index": 194
+      "ids": {
+        "openalex": "https://openalex.org/A5045396338",
+        "orcid": "https://orcid.org/0000-0002-8319-1636"
       },
       "affiliations": [
         {
@@ -51534,6 +51921,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 9.097560975609756,
+        "h_index": 70,
+        "i10_index": 194
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -51630,10 +52022,9 @@
     {
       "id": "https://openalex.org/A5047906247",
       "display_name": "William E. Kunin",
-      "summary_stats": {
-        "2yr_mean_citedness": 3.8275862068965516,
-        "h_index": 70,
-        "i10_index": 151
+      "ids": {
+        "openalex": "https://openalex.org/A5047906247",
+        "orcid": "https://orcid.org/0000-0002-9812-2326"
       },
       "affiliations": [
         {
@@ -51917,6 +52308,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 3.8275862068965516,
+        "h_index": 70,
+        "i10_index": 151
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10005",
@@ -52013,10 +52409,9 @@
     {
       "id": "https://openalex.org/A5084223502",
       "display_name": "Nico Blüthgen",
-      "summary_stats": {
-        "2yr_mean_citedness": 8.387096774193548,
-        "h_index": 70,
-        "i10_index": 181
+      "ids": {
+        "openalex": "https://openalex.org/A5084223502",
+        "orcid": "https://orcid.org/0000-0001-6349-4528"
       },
       "affiliations": [
         {
@@ -52261,6 +52656,11 @@
           ]
         }
       ],
+      "summary_stats": {
+        "2yr_mean_citedness": 8.387096774193548,
+        "h_index": 70,
+        "i10_index": 181
+      },
       "topics": [
         {
           "id": "https://openalex.org/T10487",
