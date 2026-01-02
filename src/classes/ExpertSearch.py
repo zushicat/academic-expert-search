@@ -1,4 +1,5 @@
 import asyncio
+import collections
 from itertools import combinations
 import json
 from time import sleep
@@ -54,7 +55,33 @@ class ExpertSearch:
         )
 
         authors_by_topics = self._get_authors_by_topics(topics_filter=topics_filter)
-        print(json.dumps(authors_by_topics[0], indent=2))
+
+        # ***
+        # Step 4
+        # ***
+        aggregated_authors: List[Dict[str, Any]] = []
+
+        aggregated_authors_source_search = self._aggregate_authors(
+            author_list=reference_author_results,
+            best_match_topics=best_match_topics,
+            source_search=True,
+        )
+
+        aggregated_authors_source_topics = self._aggregate_authors(
+            author_list=authors_by_topics,
+            best_match_topics=best_match_topics,
+            source_search=False,
+        )
+
+        aggregated_authors = (
+            aggregated_authors_source_search + aggregated_authors_source_topics
+        )
+
+        shared_topics_batches = self._shared_topics_batches(
+            aggregated_authors=aggregated_authors
+        )
+
+        # print(json.dumps(shared_topics_batches, ensure_ascii=False))
 
         return [{"foo": "bar"}]
 
@@ -274,6 +301,87 @@ class ExpertSearch:
         results: List[Dict[str, Any]] = json_data.get("results") or []
 
         return results
+
+    # ***********
+    # STEP 4: Aggregate responses
+    # ***********
+    def _aggregate_authors(
+        self,
+        author_list: List[Dict[str, Any]],
+        best_match_topics: Dict[str, int],
+        source_search: bool = False,
+    ) -> List[Dict[str, Any]]:
+        relevant_topics = list(best_match_topics.keys())
+        new_author_list = []
+
+        for author in author_list:
+            tmp_author = {
+                "openalex_id": author.get("id"),
+                "orcid_id": author.get("ids").get("orcid"),
+                "display_name": author.get("display_name"),
+                "source_search": source_search,
+                "2yr_mean_citedness": author.get("summary_stats").get(
+                    "2yr_mean_citedness"
+                ),
+                "h_index": author.get("summary_stats").get("h_index"),
+                "i10_index": author.get("summary_stats").get("i10_index"),
+                "relevant_topics": {topic: False for topic in relevant_topics},
+                "relevant_topics_share": 0,
+                "active_years_min": None,
+                "active_years_max": None,
+                "active_years_sum": None,
+                "active_years_counted": None,
+            }
+
+            # ***
+            # process topics
+            # ***
+            for topic in author.get("topics"):
+                topic_id = topic.get("id").split("/")[-1]
+                if topic_id in relevant_topics:
+                    tmp_author["relevant_topics"][topic_id] = True
+
+            tmp_author["relevant_topics_share"] = sum(
+                tmp_author["relevant_topics"].values()
+            )
+
+            # ***
+            # process affiliations: collect year activity
+            # ***
+            active_years = {}
+            for affiliation in author.get("affiliations"):
+                years = affiliation.get("years")
+
+                for year in years:
+                    if active_years.get(year) is None:
+                        active_years[year] = 0
+                    active_years[year] += 1
+
+            # ***
+            # year activity in activities / institutions
+            # Multiple counts per year can be a signal for
+            # a) mismatches regarding the disambiguation
+            # b) high coorporation activity with different institutions that year (nor necessarily employment per se)
+            # ***
+            active_years = collections.OrderedDict(
+                sorted(active_years.items(), reverse=False)
+            )
+
+            tmp_author["active_years_counted"] = active_years
+            tmp_author["active_years_sum"] = len(list(set(active_years.keys())))
+
+            # ***
+            # get min and max active years
+            # ***
+            tmp_author["active_years_min"] = min(map(int, active_years.keys()))
+            tmp_author["active_years_max"] = max(map(int, active_years.keys()))
+
+            new_author_list.append(tmp_author)
+
+        return new_author_list
+
+    def _shared_topics_batches(self, aggregated_authors: List[Dict[str, Any]]):
+        pass
 
 
 if __name__ == "__main__":
