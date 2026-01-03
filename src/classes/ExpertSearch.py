@@ -67,13 +67,13 @@ class ExpertSearch:
         aggregated_authors_source_search = self._aggregate_authors(
             author_list=reference_author_results,
             best_match_topics=best_match_topics,
-            source_search=True,
+            from_relevant_author_list=True,
         )
 
         aggregated_authors_source_topics = self._aggregate_authors(
             author_list=authors_by_topics,
             best_match_topics=best_match_topics,
-            source_search=False,
+            from_relevant_author_list=False,
         )
 
         aggregated_authors = aggregated_authors_source_search
@@ -87,13 +87,19 @@ class ExpertSearch:
         )
 
         author_topic_share_batches = self._shared_topics_batches(
-            aggregated_authors=aggregated_authors, min_share=3
+            aggregated_authors=aggregated_authors, min_share=1
         )
 
-        for key, val in author_topic_share_batches.items():
-            print(key, len(val))
+        print(json.dumps(author_topic_share_batches[5], ensure_ascii=False))
 
-        # print(json.dumps(author_topic_share_batches[5], ensure_ascii=False))
+        # for key, val in author_topic_share_batches.items():
+        #     print(key, len(val))
+
+        # xxx = []
+        # for vals in author_topic_share_batches.values():
+        #     for k in vals.keys():
+        #         xxx.append(k.split("/")[-1])
+        # print("|".join(xxx))
 
         return [{"topics": topics, "works": works}]
 
@@ -367,7 +373,7 @@ class ExpertSearch:
         self,
         author_list: List[Dict[str, Any]],
         best_match_topics: Dict[str, int],
-        source_search: bool = False,
+        from_relevant_author_list: bool = False,
     ) -> Dict[str, Any]:
         relevant_topics = list(best_match_topics.keys())
         aggregate_authors: Dict[str, Any] = {}
@@ -379,7 +385,7 @@ class ExpertSearch:
                 "openalex_id": author_openalex_id,
                 "orcid_id": author.get("ids").get("orcid"),
                 "display_name": author.get("display_name"),
-                "source_search": source_search,
+                "from_relevant_author_list": from_relevant_author_list,
                 "2yr_mean_citedness": author.get("summary_stats").get(
                     "2yr_mean_citedness"
                 ),
@@ -393,7 +399,7 @@ class ExpertSearch:
                 "active_years_counted": None,
                 "institutions": None,
                 "instituitions_count": 0,
-                "works": None,
+                "works_search": None,
             }
 
             # ***
@@ -478,14 +484,14 @@ class ExpertSearch:
         for work_id, work_val in works.items():
             for author_id in work_val.get("author_ids"):
                 if aggregated_authors.get(author_id):
-                    if aggregated_authors[author_id].get("works") is None:
-                        aggregated_authors[author_id]["works"] = []
-                    aggregated_authors[author_id]["works"].append(work_id)
+                    if aggregated_authors[author_id].get("works_search") is None:
+                        aggregated_authors[author_id]["works_search"] = []
+                    aggregated_authors[author_id]["works_search"].append(work_id)
 
         return aggregated_authors
 
     def _shared_topics_batches(
-        self, aggregated_authors: Dict[str, Any], min_share: int = 4
+        self, aggregated_authors: Dict[str, Any], min_share: int = 1
     ):
         author_batches: Dict[int, Dict[str, Any]] = {}
 
