@@ -6,6 +6,7 @@ wild bee population decline bee monitoring
 ```
 
 ## Step 1: Openalex Request: Seach works
+- Use Top 20 or so: relevance_score on search is a little unclear
 - `https://api.openalex.org/works?search=` and `https://api.openalex.org/works?filter=title_and_abstract.search:...` are probably too broad.
     - seems as if type=article can't be used with search
     ```json
@@ -24,7 +25,7 @@ wild bee population decline bee monitoring
     }
     ```
 - Search in title and abstract might be sufficient and might be more precise (regarding the query match)
-    - [ttps://api.openalex.org/works?filter=title_and_abstract.search:...](https://api.openalex.org/works?search=wild%20bee%20decline%20bee%20monitoring&filter=type:article&per_page=1&select=title|publication_year|relevance_score|authorships|cited_by_count|primary_topic|topics)
+    - [ttps://api.openalex.org/works?filter=title_and_abstract.search:...](https://api.openalex.org/works?search=wild%20bee%20decline%20bee%20monitoring&filter=type:article&per_page=20&select=id,ids,title,publication_year,relevance_score,authorships,cited_by_count,primary_topic,topics)
     ```json
     {
         "meta": {
@@ -153,8 +154,11 @@ https://api.openalex.org/works
 Collect all author ids (authorships.author.id) with author_position "first" and "last"
 
 ## Step 2: Get Author Topics
-[https://api.openalex.org/authors?filter=id:A5085952515|A5100995230 ... ...&select=id,display_name,ids,affiliations,summary_stats,topics&per_page=38](https://api.openalex.org/authors?filter=id:A5015695171|A5076351210|A5017487819|A5039999199|A5078525299|A5033279590|A5022069215|A5101684869|A5007801614|A5079176981|A5005192858|A5061655812|A5008498925|A5070927118|A5084349484|A5035816075|A5037725540|A5028598963|A5035027734|A5078861569|A5055832161|A5100995230|A5085477907|A5045082865|A5085952515|A5088698878|A5039013257|A5044410338|A5003036339|A5012301888|A5089895033|A5084859594|A5043714176|A5067099702|A5007581267|A5054459536|A5006181984|A5083070664&select=id,display_name,ids,affiliations,summary_stats,topics&per_page=38)
+[https://api.openalex.org/authors?filter=id:A5085952515|A5100995230 ... ...&select=id,display_name,ids,affiliations,summary_stats,topics](https://api.openalex.org/authors?filter=id:A5035027734|A5006181984|A5079176981|A5078525299|A5076351210|A5056296790|A5043714176|A5039999199|A5037725540|A5035816075|A5083070664|A5006827889|A5012195646|A5008498925|A5039511630|A5070960423|A5034993300|A5007801614|A5039013257|A5070924304|A5088698878|A5100995230|A5041689568|A5049557719|A5078861569|A5107879285|A5047172838|A5057350038|A5022069215|A5077466677|A5055832161|A5067099702|A5085952515|A5003036339|A5007581267|A5002890318|A5076985885|A5101684869|A5033279590&select=id,display_name,ids,affiliations,summary_stats,topics)
 
 
 ## Step 3: Get Authors by topics filter
-[https://api.openalex.org/authors?filter=topics.id:T10487+T11641+(T10702|T12475|T10005)&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page=100](https://api.openalex.org/authors?filter=topics.id:T10487+T11641+(T10702|T12475|T10005)&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page=100)
+[https://api.openalex.org/authors?filter=topics.id:T10487+(T11641|T10702|T12475|T10005)&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page=100](https://api.openalex.org/authors?filter=topics.id:T10487+(T11641|T10702|T12475|T10005)&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page=100)
+
+
+https://api.openalex.org/authors?filter=topics.id:T10487+(T11641|T10702|T12475|T10005)&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page=100
