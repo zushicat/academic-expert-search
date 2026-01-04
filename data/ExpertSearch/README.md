@@ -47,7 +47,7 @@ wild bee population decline bee monitoring
 https://api.openalex.org/works
     ?filter=title_and_abstract.search:wild%20bee%20population%20decline%20bee%20monitoring|type:article
     &per_page=1
-    &select=title|publication_year|relevance_score|authorships|cited_by_count|primary_topic|topics
+    &select=id,ids,title,publication_year,relevance_score,authorships,cited_by_count,primary_topic,topics
 ```
     
 **Result**    

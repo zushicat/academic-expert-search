@@ -5,12 +5,14 @@ import json
 from time import sleep
 from typing import Dict, Any, List, Set, Tuple
 
-from helpers.filehandler import read_json_file
+from helpers.filehandler import read_json_file, write_json_file
+
+import requests
 
 
 class ExpertSearch:
     def __init__(self):
-        pass
+        self.class_name = self.__class__.__name__
 
     # ************
     # The actual processing call (i.e. from router)
@@ -64,16 +66,17 @@ class ExpertSearch:
         # ***
         # Step 4
         # ***
-        aggregated_authors_source_search = self._aggregate_authors(
+        aggregated_authors_source_search, institutions = self._aggregate_authors(
             author_list=reference_author_results,
             best_match_topics=best_match_topics,
             from_relevant_author_list=True,
         )
 
-        aggregated_authors_source_topics = self._aggregate_authors(
+        aggregated_authors_source_topics, institutions = self._aggregate_authors(
             author_list=authors_by_topics,
             best_match_topics=best_match_topics,
             from_relevant_author_list=False,
+            institutions=institutions,
         )
 
         aggregated_authors = aggregated_authors_source_search
@@ -86,32 +89,44 @@ class ExpertSearch:
             aggregated_authors=aggregated_authors, works=works
         )
 
-        author_topic_share_batches = self._shared_topics_batches(
-            aggregated_authors=aggregated_authors, min_share=1
-        )
+        # ***
+        # Step 5: Putting it all together and return
+        # ***
+        search_result: Dict[str, Any] = {
+            "topics": topics,
+            "works": works,
+            "institutions": institutions,
+            "authors": aggregated_authors,
+            "meta": {
+                "query": query,
+                "reference_author_count": author_count,
+                "author_count": len(aggregated_authors),
+                "works_count": len(works),
+                "institutions_count": len(institutions),
+                "best_match_topics": best_match_topics,
+                "topics_filter": topics_filter,
+            },
+        }
 
-        print(json.dumps(author_topic_share_batches[5], ensure_ascii=False))
+        # debug
+        # write_json_file(
+        #     file_path="ExpertRecommender/mock-responses/0_search_result.json",
+        #     data=search_result,
+        # )
 
-        # for key, val in author_topic_share_batches.items():
-        #     print(key, len(val))
-
-        # xxx = []
-        # for vals in author_topic_share_batches.values():
-        #     for k in vals.keys():
-        #         xxx.append(k.split("/")[-1])
-        # print("|".join(xxx))
-
-        return [{"topics": topics, "works": works}]
+        return search_result
 
     # ***********
     # STEP 1: use Openalex search on works and get Openalex ids of reference authors
     # ***********
     def _search_works(self, query: str, limit: int = 20) -> List[Dict[str, Any]]:
+        request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article&per_page={limit}&select=id,ids,title,publication_year,relevance_score,authorships,cited_by_count,primary_topic,topics"
+        # print(request_url)
         # ***
         # Simulate Openalex request: use mock data
         # Use top 20 or so in order to only get relevant results
         # ***
-        sleep(0.1)
+        sleep(1)
         json_data = read_json_file(
             "ExpertSearch/mock-responses/1_openalex_search_response_works.json"
         )
@@ -190,7 +205,7 @@ class ExpertSearch:
         # ***
         # Simulate Openalex request: use mock data
         # ***
-        sleep(0.1)
+        sleep(1)
         json_data = read_json_file(
             "ExpertSearch/mock-responses/2_reference_authors.json"
         )
@@ -270,14 +285,6 @@ class ExpertSearch:
         - Optional topics are added cumulatively and ORed
         - Core-only filter is always included
         """
-
-        # def build_filter(core, optional):
-        #     """helper to build OpenAlex filter string"""
-        #     base = "topics.id:" + "+".join(core)
-        #     if not optional:
-        #         return base
-        #     return base + "+(" + "|".join(optional) + ")"
-
         # ***************
         # preparation
         # ***************
@@ -316,48 +323,13 @@ class ExpertSearch:
 
         return topics_filter
 
-        # expectations = []
-
-        # # ***
-        # # core-only baseline
-        # # ***
-        # expectations.append(
-        #     {
-        #         "filter": build_filter(core_topics, []),
-        #         "core_topics": core_topics.copy(),
-        #         "optional_topics": [],
-        #         "restrictiveness_level": "low",
-        #         "expected_behavior": "Baseline: all authors sharing core topics",
-        #     }
-        # )
-
-        # # ***
-        # # progressive OR expansions
-        # # ***
-        # levels = ["medium", "high", "very_high"]
-        # for i in range(len(optional_topics)):
-        #     current_optional = optional_topics[: i + 1]
-        #     level = levels[min(i, len(levels) - 1)]
-
-        #     expectations.append(
-        #         {
-        #             "filter": build_filter(core_topics, current_optional),
-        #             "core_topics": core_topics.copy(),
-        #             "optional_topics": current_optional.copy(),
-        #             "restrictiveness_level": level,
-        #             "expected_behavior": "Progressively narrowed by optional topic OR expansion",
-        #         }
-        #     )
-
-        # return expectations
-
     def _get_authors_by_topics(self, topics_filter: str) -> List[Dict[str, Any]]:
         request_url = f"https://api.openalex.org/authors?filter=topics.id:{topics_filter}&select=id,display_name,summary_stats,topics&sort=summary_stats.h_index:desc&per_page=100"
 
         # ***
         # Simulate Openalex request: use mock data
         # ***
-        sleep(0.1)
+        sleep(1)
         json_data = read_json_file(
             "ExpertSearch/mock-responses/3_authors_by_topics.json"
         )
@@ -374,7 +346,8 @@ class ExpertSearch:
         author_list: List[Dict[str, Any]],
         best_match_topics: Dict[str, int],
         from_relevant_author_list: bool = False,
-    ) -> Dict[str, Any]:
+        institutions: Dict[str, Any] = {},
+    ) -> Tuple[Dict[str, Any], Dict[str, Any]]:
         relevant_topics = list(best_match_topics.keys())
         aggregate_authors: Dict[str, Any] = {}
 
@@ -427,9 +400,13 @@ class ExpertSearch:
                         active_years[year] = 0
                     active_years[year] += 1
 
-                # set institutions
+                # ***
+                # process institution
+                # ***
                 institution = affiliation.get("institution")
                 openalex_id = institution.get("id")
+
+                # set institutions for author
                 year_min = min(years)
                 year_max = max(years)
 
@@ -443,6 +420,13 @@ class ExpertSearch:
                         "year_end": year_max,
                     }
                 )
+
+                # set institution object
+                if institutions.get(openalex_id) is None:
+                    institution["openalex_id"] = institution.get("id")
+                    for attr in ("id", "lineage"):
+                        del institution[attr]
+                    institutions[openalex_id] = institution
 
             # ***
             # sort institutions by year_start
@@ -476,7 +460,7 @@ class ExpertSearch:
             if aggregate_authors.get(author_openalex_id) is None:
                 aggregate_authors[author_openalex_id] = tmp_author
 
-        return aggregate_authors
+        return aggregate_authors, institutions
 
     def _assign_search_works_authors(
         self, aggregated_authors: Dict[str, Any], works: Dict[str, Any]
@@ -509,4 +493,6 @@ class ExpertSearch:
 
 if __name__ == "__main__":
     searcher = ExpertSearch()
-    result = asyncio.run(searcher.search_experts(query="foo"))
+
+    query = "wild bee population decline bee monitoring"
+    result = asyncio.run(searcher.search_experts(query=query))
