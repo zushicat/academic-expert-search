@@ -1,6 +1,6 @@
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List
 
-from pydantic import BaseModel
+from pydantic import BaseModel, RootModel
 
 
 class ExpertSearch_Work(BaseModel):
@@ -15,8 +15,8 @@ class ExpertSearch_Work(BaseModel):
     author_ids: List[str]
 
 
-class ExpertSearch_Works(BaseModel):
-    __root__: Dict[str, ExpertSearch_Work]
+class ExpertSearch_Works(RootModel[Dict[str, ExpertSearch_Work]]):
+    pass
 
 
 class ExpertSearch_Topic(BaseModel):
@@ -28,19 +28,20 @@ class ExpertSearch_Topic(BaseModel):
     domain: Dict[str, Any] | None = None
 
 
-class ExpertSearch_Topics(BaseModel):
-    __root__: Dict[str, ExpertSearch_Topic]
+class ExpertSearch_Topics(RootModel[Dict[str, ExpertSearch_Topic]]):
+    pass
 
 
 class ExpertSearch_Institution(BaseModel):
     openalex_id: str
+    ror: str | None = None
     display_name: str | None = None
     country_code: str | None = None
     type: str | None = None
 
 
-class ExpertSearch_Institutions(BaseModel):
-    __root__: Dict[str, ExpertSearch_Institution]
+class ExpertSearch_Institutions(RootModel[Dict[str, ExpertSearch_Institution]]):
+    pass
 
 
 class ExpertSearch_AuthorInstitution(BaseModel):
@@ -73,8 +74,8 @@ class ExpertSearch_Author(BaseModel):
     works_search: List[str] | None
 
 
-class ExpertSearch_Authors(BaseModel):
-    __root__: Dict[str, ExpertSearch_Author]
+class ExpertSearch_Authors(RootModel[Dict[str, ExpertSearch_Author]]):
+    pass
 
 
 class ExpertSearch_Meta(BaseModel):
