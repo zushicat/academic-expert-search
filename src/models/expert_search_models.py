@@ -13,6 +13,7 @@ class ExpertSearch_Work(BaseModel):
     primary_topic: str | None
     topics: List[str]
     author_ids: List[str]
+    from_query_search: bool = False
 
 
 class ExpertSearch_Works(RootModel[Dict[str, ExpertSearch_Work]]):
@@ -86,6 +87,7 @@ class ExpertSearch_Meta(BaseModel):
     institutions_count: int
     best_match_topics: Dict[str, int]
     topics_filter: str
+    authors_topic_share_counts: Dict[int, int]
 
 
 class ExpertSearch_Response(BaseModel):
