@@ -41,11 +41,17 @@ class ExpertRecommender:
         )
         print(top_counts)
 
-        self._filter_search_result(
+        authors, works, institutions = self._filter_search_result(
             works=works,
             institutions=institutions,
             authors=authors,
             top_counts=top_counts,
+        )
+
+        print(
+            len(authors.model_dump()),
+            len(works.model_dump()),
+            len(institutions.model_dump()),
         )
 
     # ***********
@@ -65,18 +71,73 @@ class ExpertRecommender:
         authors: ExpertSearch_Authors,
         top_counts: int,
     ):
-        invalid_author_ids = []
-        invalid_institution_ids = []
-        invalid_works_ids = []
+        # ***
+        # filter authors on relevant_topics_share ---
+        # ***
+        valid_author_ids = set()
+        invalid_author_ids = set()
 
-        # first
-        # for each author: check if relevant_topics_share is >= or < top_counts
-        # only keep relevant_topics_share >= top_counts
-        # if relevant_topics_share < top_counts: relevant_topics_share >= top_counts in invalid_author_ids
+        for author_id, author in list(authors.root.items()):
+            if (
+                author.relevant_topics_share >= top_counts
+                and author.relevant_topics_share > 0
+            ):
+                valid_author_ids.add(author_id)
+            else:
+                invalid_author_ids.add(author_id)
+                authors.root.pop(author_id, None)
 
-        # then check the references to works and instritutions:
-        # if a work and an institution gas ONLY references to authors that are removed (invalid)
-        # then remove this work or institution
+        # ***
+        # filter works
+        # ***
+        invalid_work_ids = set()
+
+        for work_id, work in list(works.root.items()):
+            if not work.author_ids:
+                invalid_work_ids.add(work_id)
+                works.root.pop(work_id, None)
+                continue
+
+            if not any(author_id in valid_author_ids for author_id in work.author_ids):
+                invalid_work_ids.add(work_id)
+                works.root.pop(work_id, None)
+
+        # ***
+        # filter institutions
+        # ***
+        institution_ref_count = {}
+
+        for author in authors.root.values():
+            if not author.institutions:
+                continue
+            for inst in author.institutions:
+                institution_ref_count[inst.openalex_id] = (
+                    institution_ref_count.get(inst.openalex_id, 0) + 1
+                )
+
+        invalid_institution_ids = set()
+        for inst_id in list(institutions.root.keys()):
+            if institution_ref_count.get(inst_id, 0) == 0:
+                invalid_institution_ids.add(inst_id)
+                institutions.root.pop(inst_id, None)
+
+        # ***
+        # cleanup dangling references
+        # ***
+        for author in authors.root.values():
+            if author.works_search:
+                author.works_search = [
+                    wid for wid in author.works_search if wid in works.root
+                ]
+
+            if author.institutions:
+                author.institutions = [
+                    inst
+                    for inst in author.institutions
+                    if inst.openalex_id in institutions.root
+                ]
+
+        return authors, works, institutions
 
 
 if __name__ == "__main__":
