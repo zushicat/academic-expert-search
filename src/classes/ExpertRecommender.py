@@ -55,16 +55,30 @@ class ExpertRecommender:
         # ***
         # Step 2
         # ***
-        current_year = datetime.now().year
+        # current_year = datetime.now().year
 
-        works = await self._get_works(
-            author_ids=authors.root,
-            topics_filter=meta.topics_filter,
-            min_year=current_year - 5,
+        # works = await self._get_works(
+        #     author_ids=authors.root,
+        #     topics_filter=meta.topics_filter,
+        #     min_year=current_year - 5,
+        # )
+
+        # DEBUG
+        # write_json_file(
+        #     file_path=f"{self.class_name}/mock-responses/1_works_from_authors.json",
+        #     data=works,
+        # )
+
+        works_from_authors = read_json_file(
+            file_path=f"{self.class_name}/mock-responses/1_works_from_authors.json"
+        )
+
+        self._process_works(
+            works_from_authors=works_from_authors, works=works, authors=authors
         )
 
         # ***
-        # Step 2
+        # Step 3
         # ***
         # graph = self._build_graph(search_result=search_result)
         # best_authors = self._get_best_experts(graph=graph)
@@ -215,6 +229,14 @@ class ExpertRecommender:
         print(f"Fetched {len(works)} works (expected {total_count})")
 
         return works
+
+    def _process_works(
+        self,
+        works_from_authors: List[Dict[str, Any]],
+        works: ExpertSearch_Topics,
+        authors: ExpertSearch_Authors,
+    ):
+        print(len(works_from_authors))
 
     # ***********
     # Step 3: graph from search results
