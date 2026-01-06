@@ -35,10 +35,10 @@ class ExpertSearch:
         )
 
         # DEBUG
-        # write_json_file(
-        #     f"{self.class_name}/mock-responses/1_openalex_search_response_works.json",
-        #     data=search_results,
-        # )
+        write_json_file(
+            f"{self.class_name}/mock-responses/1_openalex_search_response_works.json",
+            data=search_results,
+        )
 
         # ***
         # Step 2
@@ -48,10 +48,10 @@ class ExpertSearch:
         )
 
         # DEBUG
-        # write_json_file(
-        #     f"{self.class_name}/mock-responses/2_reference_authors.json",
-        #     data=reference_author_results,
-        # )
+        write_json_file(
+            f"{self.class_name}/mock-responses/2_reference_authors.json",
+            data=reference_author_results,
+        )
 
         collected_topics_reference_authors, topics = self._get_reference_author_topics(
             reference_author_results
@@ -84,10 +84,10 @@ class ExpertSearch:
         )
 
         # DEBUG
-        # write_json_file(
-        #     f"{self.class_name}/mock-responses/3_authors_by_topics.json",
-        #     data=authors_by_topics,
-        # )
+        write_json_file(
+            f"{self.class_name}/mock-responses/3_authors_by_topics.json",
+            data=authors_by_topics,
+        )
 
         # ***
         # Step 4
@@ -373,6 +373,7 @@ class ExpertSearch:
                 "institutions": None,
                 "instituitions_count": 0,
                 "works_search": None,
+                "works_author": None,
             }
 
             # ***

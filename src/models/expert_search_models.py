@@ -73,6 +73,7 @@ class ExpertSearch_Author(BaseModel):
     instituitions_count: int
 
     works_search: List[str] | None
+    works_author: List[str] | None
 
 
 class ExpertSearch_Authors(RootModel[Dict[str, ExpertSearch_Author]]):
