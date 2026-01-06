@@ -25227,6 +25227,511 @@
     ]
   },
   {
+    "id": "https://openalex.org/A5046711399",
+    "display_name": "Kingsley W. Dixon",
+    "ids": {
+      "openalex": "https://openalex.org/A5046711399",
+      "orcid": "https://orcid.org/0000-0001-5989-2929"
+    },
+    "affiliations": [
+      {
+        "institution": {
+          "id": "https://openalex.org/I38288417",
+          "ror": "https://ror.org/00thhss72",
+          "display_name": "Botanic Gardens and Parks Authority",
+          "country_code": "AU",
+          "type": "government",
+          "lineage": [
+            "https://openalex.org/I2799506148",
+            "https://openalex.org/I38288417"
+          ]
+        },
+        "years": [
+          2017,
+          2016,
+          2015,
+          2014,
+          2013,
+          2012,
+          2011,
+          2010,
+          2009,
+          2008,
+          2007,
+          2006,
+          2005,
+          2004,
+          2003,
+          2002,
+          2001,
+          2000,
+          1999,
+          1998,
+          1997,
+          1996,
+          1995,
+          1994,
+          1993,
+          1992,
+          1990,
+          1989
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210155177",
+          "ror": "https://ror.org/05ca9hc42",
+          "display_name": "Bentley (Canada)",
+          "country_code": "CA",
+          "type": "company",
+          "lineage": [
+            "https://openalex.org/I4210155177"
+          ]
+        },
+        "years": [
+          2021
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210100608",
+          "ror": "https://ror.org/00n82gt57",
+          "display_name": "Centre for Australian National Biodiversity Research",
+          "country_code": "AU",
+          "type": "government",
+          "lineage": [
+            "https://openalex.org/I1292875679",
+            "https://openalex.org/I2801453606",
+            "https://openalex.org/I4210100608",
+            "https://openalex.org/I4387156119"
+          ]
+        },
+        "years": [
+          2023
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I1337719021",
+          "ror": "https://ror.org/05mmh0f86",
+          "display_name": "Australian Research Council",
+          "country_code": "AU",
+          "type": "government",
+          "lineage": [
+            "https://openalex.org/I1337719021",
+            "https://openalex.org/I2801453606",
+            "https://openalex.org/I4210132349"
+          ]
+        },
+        "years": [
+          2022,
+          2021
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I31746571",
+          "ror": "https://ror.org/03r8z3t63",
+          "display_name": "UNSW Sydney",
+          "country_code": "AU",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I31746571"
+          ]
+        },
+        "years": [
+          2022
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I205640436",
+          "ror": "https://ror.org/02n415q13",
+          "display_name": "Curtin University",
+          "country_code": "AU",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I205640436"
+          ]
+        },
+        "years": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021,
+          2020,
+          2019,
+          2018,
+          2017,
+          2016,
+          2015
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I176790772",
+          "ror": "https://ror.org/00r4sry34",
+          "display_name": "Murdoch University",
+          "country_code": "AU",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I176790772"
+          ]
+        },
+        "years": [
+          2007,
+          2004
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I177605424",
+          "ror": "https://ror.org/028vqfs63",
+          "display_name": "Amherst College",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I177605424"
+          ]
+        },
+        "years": [
+          2003
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I38260057",
+          "ror": "https://ror.org/02qp5k481",
+          "display_name": "In-Q-Tel",
+          "country_code": "US",
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I38260057"
+          ]
+        },
+        "years": [
+          1994
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I2802431724",
+          "ror": "https://ror.org/04tzy5g14",
+          "display_name": "Missouri Botanical Garden",
+          "country_code": "US",
+          "type": "archive",
+          "lineage": [
+            "https://openalex.org/I2802431724"
+          ]
+        },
+        "years": [
+          2021
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4401200342",
+          "ror": "https://ror.org/02hxb7v96",
+          "display_name": "Society for Ecological Restoration",
+          "country_code": null,
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I4401200342"
+          ]
+        },
+        "years": [
+          2022
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I2799807786",
+          "ror": "https://ror.org/00v2a6g95",
+          "display_name": "Center for Plant Conservation",
+          "country_code": "US",
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I2799807786"
+          ]
+        },
+        "years": [
+          2002
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I118347636",
+          "ror": "https://ror.org/019wvm592",
+          "display_name": "Australian National University",
+          "country_code": "AU",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I118347636"
+          ]
+        },
+        "years": [
+          2012
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I1303253705",
+          "ror": "https://ror.org/010tt0206",
+          "display_name": "Asia Society",
+          "country_code": "US",
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I1303253705"
+          ]
+        },
+        "years": [
+          2016
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I174659583",
+          "ror": "https://ror.org/03y54e085",
+          "display_name": "Ecological Society of America",
+          "country_code": "US",
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I174659583"
+          ]
+        },
+        "years": [
+          2022
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I177877127",
+          "ror": "https://ror.org/047272k79",
+          "display_name": "The University of Western Australia",
+          "country_code": "AU",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I177877127"
+          ]
+        },
+        "years": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021,
+          2020,
+          2019,
+          2018,
+          2017,
+          2016,
+          2015,
+          2014,
+          2013,
+          2012,
+          2011,
+          2010,
+          2009,
+          2008,
+          2007,
+          2006,
+          2005,
+          2004,
+          2003,
+          2002,
+          2001,
+          1996,
+          1989
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I2800703674",
+          "ror": "https://ror.org/05x0at146",
+          "display_name": "Santa Barbara Botanic Garden",
+          "country_code": "US",
+          "type": "archive",
+          "lineage": [
+            "https://openalex.org/I2800703674"
+          ]
+        },
+        "years": [
+          2001
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210126202",
+          "ror": "https://ror.org/039h1gd08",
+          "display_name": "Institute of Plant Biology",
+          "country_code": "HU",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I2800351701",
+            "https://openalex.org/I4210126202",
+            "https://openalex.org/I7597260"
+          ]
+        },
+        "years": [
+          2014
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I144852770",
+          "ror": "https://ror.org/051j50p12",
+          "display_name": "The King's College",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I144852770"
+          ]
+        },
+        "years": [
+          2020,
+          2019
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210146297",
+          "ror": "https://ror.org/051e7s436",
+          "display_name": "ARC Centre of Excellence in Advanced Molecular Imaging",
+          "country_code": "AU",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1337719021",
+            "https://openalex.org/I2801453606",
+            "https://openalex.org/I4210132349",
+            "https://openalex.org/I4210146297",
+            "https://openalex.org/I56590836"
+          ]
+        },
+        "years": [
+          2023,
+          2022
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210102918",
+          "ror": "https://ror.org/01a1mq059",
+          "display_name": "ARC Centre of Excellence in Plant Energy Biology",
+          "country_code": "AU",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I118347636",
+            "https://openalex.org/I1337719021",
+            "https://openalex.org/I2801453606",
+            "https://openalex.org/I4210102918",
+            "https://openalex.org/I4210132349"
+          ]
+        },
+        "years": [
+          2008
+        ]
+      }
+    ],
+    "summary_stats": {
+      "2yr_mean_citedness": 6.5,
+      "h_index": 83,
+      "i10_index": 360
+    },
+    "topics": [
+      {
+        "id": "https://openalex.org/T10487",
+        "display_name": "Plant and animal studies",
+        "count": 154,
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1105",
+          "display_name": "Ecology, Evolution, Behavior and Systematics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/11",
+          "display_name": "Agricultural and Biological Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10005",
+        "display_name": "Ecology and Vegetation Dynamics Studies",
+        "count": 114,
+        "score": 0.9997000098228455,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2309",
+          "display_name": "Nature and Landscape Conservation"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/23",
+          "display_name": "Environmental Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12475",
+        "display_name": "Plant Parasitism and Resistance",
+        "count": 114,
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1110",
+          "display_name": "Plant Science"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/11",
+          "display_name": "Agricultural and Biological Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T11098",
+        "display_name": "Seed Germination and Physiology",
+        "count": 107,
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1110",
+          "display_name": "Plant Science"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/11",
+          "display_name": "Agricultural and Biological Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10385",
+        "display_name": "Plant Diversity and Evolution",
+        "count": 51,
+        "score": 0.9997000098228455,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1105",
+          "display_name": "Ecology, Evolution, Behavior and Systematics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/11",
+          "display_name": "Agricultural and Biological Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ]
+  },
+  {
     "id": "https://openalex.org/A5083978052",
     "display_name": "Ken Thompson",
     "ids": {
@@ -25855,511 +26360,6 @@
         "subfield": {
           "id": "https://openalex.org/subfields/1110",
           "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
-  },
-  {
-    "id": "https://openalex.org/A5046711399",
-    "display_name": "Kingsley W. Dixon",
-    "ids": {
-      "openalex": "https://openalex.org/A5046711399",
-      "orcid": "https://orcid.org/0000-0001-5989-2929"
-    },
-    "affiliations": [
-      {
-        "institution": {
-          "id": "https://openalex.org/I38288417",
-          "ror": "https://ror.org/00thhss72",
-          "display_name": "Botanic Gardens and Parks Authority",
-          "country_code": "AU",
-          "type": "government",
-          "lineage": [
-            "https://openalex.org/I2799506148",
-            "https://openalex.org/I38288417"
-          ]
-        },
-        "years": [
-          2017,
-          2016,
-          2015,
-          2014,
-          2013,
-          2012,
-          2011,
-          2010,
-          2009,
-          2008,
-          2007,
-          2006,
-          2005,
-          2004,
-          2003,
-          2002,
-          2001,
-          2000,
-          1999,
-          1998,
-          1997,
-          1996,
-          1995,
-          1994,
-          1993,
-          1992,
-          1990,
-          1989
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210155177",
-          "ror": "https://ror.org/05ca9hc42",
-          "display_name": "Bentley (Canada)",
-          "country_code": "CA",
-          "type": "company",
-          "lineage": [
-            "https://openalex.org/I4210155177"
-          ]
-        },
-        "years": [
-          2021
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210100608",
-          "ror": "https://ror.org/00n82gt57",
-          "display_name": "Centre for Australian National Biodiversity Research",
-          "country_code": "AU",
-          "type": "government",
-          "lineage": [
-            "https://openalex.org/I1292875679",
-            "https://openalex.org/I2801453606",
-            "https://openalex.org/I4210100608",
-            "https://openalex.org/I4387156119"
-          ]
-        },
-        "years": [
-          2023
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I1337719021",
-          "ror": "https://ror.org/05mmh0f86",
-          "display_name": "Australian Research Council",
-          "country_code": "AU",
-          "type": "government",
-          "lineage": [
-            "https://openalex.org/I1337719021",
-            "https://openalex.org/I2801453606",
-            "https://openalex.org/I4210132349"
-          ]
-        },
-        "years": [
-          2022,
-          2021
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I31746571",
-          "ror": "https://ror.org/03r8z3t63",
-          "display_name": "UNSW Sydney",
-          "country_code": "AU",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I31746571"
-          ]
-        },
-        "years": [
-          2022
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I205640436",
-          "ror": "https://ror.org/02n415q13",
-          "display_name": "Curtin University",
-          "country_code": "AU",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I205640436"
-          ]
-        },
-        "years": [
-          2025,
-          2024,
-          2023,
-          2022,
-          2021,
-          2020,
-          2019,
-          2018,
-          2017,
-          2016,
-          2015
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I176790772",
-          "ror": "https://ror.org/00r4sry34",
-          "display_name": "Murdoch University",
-          "country_code": "AU",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I176790772"
-          ]
-        },
-        "years": [
-          2007,
-          2004
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I177605424",
-          "ror": "https://ror.org/028vqfs63",
-          "display_name": "Amherst College",
-          "country_code": "US",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I177605424"
-          ]
-        },
-        "years": [
-          2003
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I38260057",
-          "ror": "https://ror.org/02qp5k481",
-          "display_name": "In-Q-Tel",
-          "country_code": "US",
-          "type": "nonprofit",
-          "lineage": [
-            "https://openalex.org/I38260057"
-          ]
-        },
-        "years": [
-          1994
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I2802431724",
-          "ror": "https://ror.org/04tzy5g14",
-          "display_name": "Missouri Botanical Garden",
-          "country_code": "US",
-          "type": "archive",
-          "lineage": [
-            "https://openalex.org/I2802431724"
-          ]
-        },
-        "years": [
-          2021
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4401200342",
-          "ror": "https://ror.org/02hxb7v96",
-          "display_name": "Society for Ecological Restoration",
-          "country_code": null,
-          "type": "nonprofit",
-          "lineage": [
-            "https://openalex.org/I4401200342"
-          ]
-        },
-        "years": [
-          2022
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I2799807786",
-          "ror": "https://ror.org/00v2a6g95",
-          "display_name": "Center for Plant Conservation",
-          "country_code": "US",
-          "type": "nonprofit",
-          "lineage": [
-            "https://openalex.org/I2799807786"
-          ]
-        },
-        "years": [
-          2002
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I118347636",
-          "ror": "https://ror.org/019wvm592",
-          "display_name": "Australian National University",
-          "country_code": "AU",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I118347636"
-          ]
-        },
-        "years": [
-          2012
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I1303253705",
-          "ror": "https://ror.org/010tt0206",
-          "display_name": "Asia Society",
-          "country_code": "US",
-          "type": "nonprofit",
-          "lineage": [
-            "https://openalex.org/I1303253705"
-          ]
-        },
-        "years": [
-          2016
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I174659583",
-          "ror": "https://ror.org/03y54e085",
-          "display_name": "Ecological Society of America",
-          "country_code": "US",
-          "type": "nonprofit",
-          "lineage": [
-            "https://openalex.org/I174659583"
-          ]
-        },
-        "years": [
-          2022
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I177877127",
-          "ror": "https://ror.org/047272k79",
-          "display_name": "The University of Western Australia",
-          "country_code": "AU",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I177877127"
-          ]
-        },
-        "years": [
-          2025,
-          2024,
-          2023,
-          2022,
-          2021,
-          2020,
-          2019,
-          2018,
-          2017,
-          2016,
-          2015,
-          2014,
-          2013,
-          2012,
-          2011,
-          2010,
-          2009,
-          2008,
-          2007,
-          2006,
-          2005,
-          2004,
-          2003,
-          2002,
-          2001,
-          1996,
-          1989
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I2800703674",
-          "ror": "https://ror.org/05x0at146",
-          "display_name": "Santa Barbara Botanic Garden",
-          "country_code": "US",
-          "type": "archive",
-          "lineage": [
-            "https://openalex.org/I2800703674"
-          ]
-        },
-        "years": [
-          2001
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210126202",
-          "ror": "https://ror.org/039h1gd08",
-          "display_name": "Institute of Plant Biology",
-          "country_code": "HU",
-          "type": "facility",
-          "lineage": [
-            "https://openalex.org/I2800351701",
-            "https://openalex.org/I4210126202",
-            "https://openalex.org/I7597260"
-          ]
-        },
-        "years": [
-          2014
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I144852770",
-          "ror": "https://ror.org/051j50p12",
-          "display_name": "The King's College",
-          "country_code": "US",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I144852770"
-          ]
-        },
-        "years": [
-          2020,
-          2019
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210146297",
-          "ror": "https://ror.org/051e7s436",
-          "display_name": "ARC Centre of Excellence in Advanced Molecular Imaging",
-          "country_code": "AU",
-          "type": "facility",
-          "lineage": [
-            "https://openalex.org/I1337719021",
-            "https://openalex.org/I2801453606",
-            "https://openalex.org/I4210132349",
-            "https://openalex.org/I4210146297",
-            "https://openalex.org/I56590836"
-          ]
-        },
-        "years": [
-          2023,
-          2022
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210102918",
-          "ror": "https://ror.org/01a1mq059",
-          "display_name": "ARC Centre of Excellence in Plant Energy Biology",
-          "country_code": "AU",
-          "type": "facility",
-          "lineage": [
-            "https://openalex.org/I118347636",
-            "https://openalex.org/I1337719021",
-            "https://openalex.org/I2801453606",
-            "https://openalex.org/I4210102918",
-            "https://openalex.org/I4210132349"
-          ]
-        },
-        "years": [
-          2008
-        ]
-      }
-    ],
-    "summary_stats": {
-      "2yr_mean_citedness": 6.5,
-      "h_index": 83,
-      "i10_index": 360
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "count": 154,
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10005",
-        "display_name": "Ecology and Vegetation Dynamics Studies",
-        "count": 114,
-        "score": 0.9997000098228455,
-        "subfield": {
-          "id": "https://openalex.org/subfields/2309",
-          "display_name": "Nature and Landscape Conservation"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/23",
-          "display_name": "Environmental Science"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/3",
-          "display_name": "Physical Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T12475",
-        "display_name": "Plant Parasitism and Resistance",
-        "count": 114,
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1110",
-          "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11098",
-        "display_name": "Seed Germination and Physiology",
-        "count": 107,
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1110",
-          "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10385",
-        "display_name": "Plant Diversity and Evolution",
-        "count": 51,
-        "score": 0.9997000098228455,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
         },
         "field": {
           "id": "https://openalex.org/fields/11",
@@ -30492,6 +30492,475 @@
     ]
   },
   {
+    "id": "https://openalex.org/A5043602538",
+    "display_name": "Mark van Kleunen",
+    "ids": {
+      "openalex": "https://openalex.org/A5043602538",
+      "orcid": "https://orcid.org/0000-0002-2861-3701"
+    },
+    "affiliations": [
+      {
+        "institution": {
+          "id": "https://openalex.org/I1299204452",
+          "ror": "https://ror.org/0329s8h62",
+          "display_name": "Oeschger Centre for Climate Change Research",
+          "country_code": "CH",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I1299204452"
+          ]
+        },
+        "years": [
+          2011,
+          2010,
+          2009
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I26092322",
+          "ror": "https://ror.org/05bk57929",
+          "display_name": "Stellenbosch University",
+          "country_code": "ZA",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I26092322"
+          ]
+        },
+        "years": [
+          2007
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I189712700",
+          "ror": "https://ror.org/0546hnb39",
+          "display_name": "University of Konstanz",
+          "country_code": "DE",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I189712700"
+          ]
+        },
+        "years": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021,
+          2020,
+          2019,
+          2018,
+          2017,
+          2016,
+          2015,
+          2014,
+          2013,
+          2012,
+          2011
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I1340800938",
+          "ror": "https://ror.org/00a7wgt63",
+          "display_name": "Winterthur Museum Garden and Library",
+          "country_code": "US",
+          "type": "archive",
+          "lineage": [
+            "https://openalex.org/I1340800938"
+          ]
+        },
+        "years": [
+          2005
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I95023434",
+          "ror": "https://ror.org/04qzfn040",
+          "display_name": "University of KwaZulu-Natal",
+          "country_code": "ZA",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I95023434"
+          ]
+        },
+        "years": [
+          2007,
+          2006,
+          2005
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I176453806",
+          "ror": "https://ror.org/03bnmw459",
+          "display_name": "University of Potsdam",
+          "country_code": "DE",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I176453806"
+          ]
+        },
+        "years": [
+          2010,
+          2007,
+          2006,
+          2005,
+          2004
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210089289",
+          "ror": "https://ror.org/006gw6z14",
+          "display_name": "Estación Biológica de Doñana",
+          "country_code": "ES",
+          "type": "facility",
+          "lineage": [
+            "https://openalex.org/I134820265",
+            "https://openalex.org/I4210089289"
+          ]
+        },
+        "years": [
+          2011
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I145872427",
+          "ror": "https://ror.org/016xsfp80",
+          "display_name": "Radboud University Nijmegen",
+          "country_code": "NL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I145872427"
+          ]
+        },
+        "years": [
+          2004
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I134820265",
+          "ror": "https://ror.org/02gfc7t72",
+          "display_name": "Consejo Superior de Investigaciones Científicas",
+          "country_code": "ES",
+          "type": "government",
+          "lineage": [
+            "https://openalex.org/I134820265"
+          ]
+        },
+        "years": [
+          2011
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I204823248",
+          "ror": "https://ror.org/023b72294",
+          "display_name": "Huazhong Agricultural University",
+          "country_code": "CN",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I204823248"
+          ]
+        },
+        "years": [
+          2023
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210151202",
+          "ror": "https://ror.org/05g223j58",
+          "display_name": "Plant (United States)",
+          "country_code": "US",
+          "type": "company",
+          "lineage": [
+            "https://openalex.org/I4210151202"
+          ]
+        },
+        "years": [
+          2010
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I202391551",
+          "ror": "https://ror.org/053avzc18",
+          "display_name": "Czech Academy of Sciences",
+          "country_code": "CZ",
+          "type": "government",
+          "lineage": [
+            "https://openalex.org/I202391551"
+          ]
+        },
+        "years": [
+          2021
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I118564535",
+          "ror": "https://ror.org/02k7v4d05",
+          "display_name": "University of Bern",
+          "country_code": "CH",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I118564535"
+          ]
+        },
+        "years": [
+          2013,
+          2012,
+          2011,
+          2010,
+          2009,
+          2008,
+          2007
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I141945490",
+          "ror": "https://ror.org/03rmrcq20",
+          "display_name": "University of British Columbia",
+          "country_code": "CA",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I141945490",
+            "https://openalex.org/I4210128534",
+            "https://openalex.org/I4210135497",
+            "https://openalex.org/I4387154919"
+          ]
+        },
+        "years": [
+          2005,
+          2004
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210148693",
+          "ror": "https://ror.org/04hdrrs71",
+          "display_name": "Metropolitan University",
+          "country_code": "BD",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I4210148693"
+          ]
+        },
+        "years": [
+          2024
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I187531555",
+          "ror": "https://ror.org/012a77v79",
+          "display_name": "Lund University",
+          "country_code": "SE",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I187531555"
+          ]
+        },
+        "years": [
+          2013
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I202697423",
+          "ror": "https://ror.org/02crff812",
+          "display_name": "University of Zurich",
+          "country_code": "CH",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I202697423"
+          ]
+        },
+        "years": [
+          2006,
+          2004,
+          2003,
+          2002,
+          2001,
+          2000
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I82760581",
+          "ror": "https://ror.org/04fzhyx73",
+          "display_name": "Taizhou University",
+          "country_code": "CN",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I82760581"
+          ]
+        },
+        "years": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021,
+          2020,
+          2019,
+          2018,
+          2017
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I174659583",
+          "ror": "https://ror.org/03y54e085",
+          "display_name": "Ecological Society of America",
+          "country_code": "US",
+          "type": "nonprofit",
+          "lineage": [
+            "https://openalex.org/I174659583"
+          ]
+        },
+        "years": [
+          2019
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210114768",
+          "ror": "https://ror.org/01zm94433",
+          "display_name": "John Wiley & Sons (United Kingdom)",
+          "country_code": "GB",
+          "type": "company",
+          "lineage": [
+            "https://openalex.org/I4210114768",
+            "https://openalex.org/I4210131007"
+          ]
+        },
+        "years": [
+          2018
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210131007",
+          "ror": "https://ror.org/02xe89706",
+          "display_name": "John Wiley & Sons (United States)",
+          "country_code": "US",
+          "type": "company",
+          "lineage": [
+            "https://openalex.org/I4210131007"
+          ]
+        },
+        "years": [
+          2018
+        ]
+      }
+    ],
+    "summary_stats": {
+      "2yr_mean_citedness": 5.7063492063492065,
+      "h_index": 81,
+      "i10_index": 273
+    },
+    "topics": [
+      {
+        "id": "https://openalex.org/T10005",
+        "display_name": "Ecology and Vegetation Dynamics Studies",
+        "count": 307,
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2309",
+          "display_name": "Nature and Landscape Conservation"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/23",
+          "display_name": "Environmental Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10487",
+        "display_name": "Plant and animal studies",
+        "count": 273,
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1105",
+          "display_name": "Ecology, Evolution, Behavior and Systematics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/11",
+          "display_name": "Agricultural and Biological Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12475",
+        "display_name": "Plant Parasitism and Resistance",
+        "count": 103,
+        "score": 0.9998999834060669,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1110",
+          "display_name": "Plant Science"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/11",
+          "display_name": "Agricultural and Biological Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T10895",
+        "display_name": "Species Distribution and Climate Change",
+        "count": 86,
+        "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2302",
+          "display_name": "Ecological Modeling"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/23",
+          "display_name": "Environmental Science"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12701",
+        "display_name": "Biological Control of Invasive Species",
+        "count": 33,
+        "score": 0.9995999932289124,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1109",
+          "display_name": "Insect Science"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/11",
+          "display_name": "Agricultural and Biological Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      }
+    ]
+  },
+  {
     "id": "https://openalex.org/A5009220759",
     "display_name": "Jian‐Min Zhou",
     "ids": {
@@ -31164,475 +31633,6 @@
         "subfield": {
           "id": "https://openalex.org/subfields/1110",
           "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
-  },
-  {
-    "id": "https://openalex.org/A5043602538",
-    "display_name": "Mark van Kleunen",
-    "ids": {
-      "openalex": "https://openalex.org/A5043602538",
-      "orcid": "https://orcid.org/0000-0002-2861-3701"
-    },
-    "affiliations": [
-      {
-        "institution": {
-          "id": "https://openalex.org/I1299204452",
-          "ror": "https://ror.org/0329s8h62",
-          "display_name": "Oeschger Centre for Climate Change Research",
-          "country_code": "CH",
-          "type": "facility",
-          "lineage": [
-            "https://openalex.org/I1299204452"
-          ]
-        },
-        "years": [
-          2011,
-          2010,
-          2009
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I26092322",
-          "ror": "https://ror.org/05bk57929",
-          "display_name": "Stellenbosch University",
-          "country_code": "ZA",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I26092322"
-          ]
-        },
-        "years": [
-          2007
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I189712700",
-          "ror": "https://ror.org/0546hnb39",
-          "display_name": "University of Konstanz",
-          "country_code": "DE",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I189712700"
-          ]
-        },
-        "years": [
-          2025,
-          2024,
-          2023,
-          2022,
-          2021,
-          2020,
-          2019,
-          2018,
-          2017,
-          2016,
-          2015,
-          2014,
-          2013,
-          2012,
-          2011
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I1340800938",
-          "ror": "https://ror.org/00a7wgt63",
-          "display_name": "Winterthur Museum Garden and Library",
-          "country_code": "US",
-          "type": "archive",
-          "lineage": [
-            "https://openalex.org/I1340800938"
-          ]
-        },
-        "years": [
-          2005
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I95023434",
-          "ror": "https://ror.org/04qzfn040",
-          "display_name": "University of KwaZulu-Natal",
-          "country_code": "ZA",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I95023434"
-          ]
-        },
-        "years": [
-          2007,
-          2006,
-          2005
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I176453806",
-          "ror": "https://ror.org/03bnmw459",
-          "display_name": "University of Potsdam",
-          "country_code": "DE",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I176453806"
-          ]
-        },
-        "years": [
-          2010,
-          2007,
-          2006,
-          2005,
-          2004
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210089289",
-          "ror": "https://ror.org/006gw6z14",
-          "display_name": "Estación Biológica de Doñana",
-          "country_code": "ES",
-          "type": "facility",
-          "lineage": [
-            "https://openalex.org/I134820265",
-            "https://openalex.org/I4210089289"
-          ]
-        },
-        "years": [
-          2011
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I145872427",
-          "ror": "https://ror.org/016xsfp80",
-          "display_name": "Radboud University Nijmegen",
-          "country_code": "NL",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I145872427"
-          ]
-        },
-        "years": [
-          2004
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I134820265",
-          "ror": "https://ror.org/02gfc7t72",
-          "display_name": "Consejo Superior de Investigaciones Científicas",
-          "country_code": "ES",
-          "type": "government",
-          "lineage": [
-            "https://openalex.org/I134820265"
-          ]
-        },
-        "years": [
-          2011
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I204823248",
-          "ror": "https://ror.org/023b72294",
-          "display_name": "Huazhong Agricultural University",
-          "country_code": "CN",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I204823248"
-          ]
-        },
-        "years": [
-          2023
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210151202",
-          "ror": "https://ror.org/05g223j58",
-          "display_name": "Plant (United States)",
-          "country_code": "US",
-          "type": "company",
-          "lineage": [
-            "https://openalex.org/I4210151202"
-          ]
-        },
-        "years": [
-          2010
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I202391551",
-          "ror": "https://ror.org/053avzc18",
-          "display_name": "Czech Academy of Sciences",
-          "country_code": "CZ",
-          "type": "government",
-          "lineage": [
-            "https://openalex.org/I202391551"
-          ]
-        },
-        "years": [
-          2021
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I118564535",
-          "ror": "https://ror.org/02k7v4d05",
-          "display_name": "University of Bern",
-          "country_code": "CH",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I118564535"
-          ]
-        },
-        "years": [
-          2013,
-          2012,
-          2011,
-          2010,
-          2009,
-          2008,
-          2007
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I141945490",
-          "ror": "https://ror.org/03rmrcq20",
-          "display_name": "University of British Columbia",
-          "country_code": "CA",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I141945490",
-            "https://openalex.org/I4210128534",
-            "https://openalex.org/I4210135497",
-            "https://openalex.org/I4387154919"
-          ]
-        },
-        "years": [
-          2005,
-          2004
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210148693",
-          "ror": "https://ror.org/04hdrrs71",
-          "display_name": "Metropolitan University",
-          "country_code": "BD",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I4210148693"
-          ]
-        },
-        "years": [
-          2024
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I187531555",
-          "ror": "https://ror.org/012a77v79",
-          "display_name": "Lund University",
-          "country_code": "SE",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I187531555"
-          ]
-        },
-        "years": [
-          2013
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I202697423",
-          "ror": "https://ror.org/02crff812",
-          "display_name": "University of Zurich",
-          "country_code": "CH",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I202697423"
-          ]
-        },
-        "years": [
-          2006,
-          2004,
-          2003,
-          2002,
-          2001,
-          2000
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I82760581",
-          "ror": "https://ror.org/04fzhyx73",
-          "display_name": "Taizhou University",
-          "country_code": "CN",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I82760581"
-          ]
-        },
-        "years": [
-          2025,
-          2024,
-          2023,
-          2022,
-          2021,
-          2020,
-          2019,
-          2018,
-          2017
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I174659583",
-          "ror": "https://ror.org/03y54e085",
-          "display_name": "Ecological Society of America",
-          "country_code": "US",
-          "type": "nonprofit",
-          "lineage": [
-            "https://openalex.org/I174659583"
-          ]
-        },
-        "years": [
-          2019
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210114768",
-          "ror": "https://ror.org/01zm94433",
-          "display_name": "John Wiley & Sons (United Kingdom)",
-          "country_code": "GB",
-          "type": "company",
-          "lineage": [
-            "https://openalex.org/I4210114768",
-            "https://openalex.org/I4210131007"
-          ]
-        },
-        "years": [
-          2018
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210131007",
-          "ror": "https://ror.org/02xe89706",
-          "display_name": "John Wiley & Sons (United States)",
-          "country_code": "US",
-          "type": "company",
-          "lineage": [
-            "https://openalex.org/I4210131007"
-          ]
-        },
-        "years": [
-          2018
-        ]
-      }
-    ],
-    "summary_stats": {
-      "2yr_mean_citedness": 5.7063492063492065,
-      "h_index": 81,
-      "i10_index": 273
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10005",
-        "display_name": "Ecology and Vegetation Dynamics Studies",
-        "count": 307,
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/2309",
-          "display_name": "Nature and Landscape Conservation"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/23",
-          "display_name": "Environmental Science"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/3",
-          "display_name": "Physical Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "count": 273,
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T12475",
-        "display_name": "Plant Parasitism and Resistance",
-        "count": 103,
-        "score": 0.9998999834060669,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1110",
-          "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10895",
-        "display_name": "Species Distribution and Climate Change",
-        "count": 86,
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/2302",
-          "display_name": "Ecological Modeling"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/23",
-          "display_name": "Environmental Science"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/3",
-          "display_name": "Physical Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T12701",
-        "display_name": "Biological Control of Invasive Species",
-        "count": 33,
-        "score": 0.9995999932289124,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
         },
         "field": {
           "id": "https://openalex.org/fields/11",
@@ -52399,217 +52399,101 @@
     ]
   },
   {
-    "id": "https://openalex.org/A5084223502",
-    "display_name": "Nico Blüthgen",
+    "id": "https://openalex.org/A5086006151",
+    "display_name": "Georg Jander",
     "ids": {
-      "openalex": "https://openalex.org/A5084223502",
-      "orcid": "https://orcid.org/0000-0001-6349-4528"
+      "openalex": "https://openalex.org/A5086006151",
+      "orcid": "https://orcid.org/0000-0002-9675-934X"
     },
     "affiliations": [
       {
         "institution": {
-          "id": "https://openalex.org/I102373834",
-          "ror": "https://ror.org/05sjwtp51",
-          "display_name": "Bryn Mawr College",
+          "id": "https://openalex.org/I4210087915",
+          "ror": "https://ror.org/002pd6e78",
+          "display_name": "Massachusetts General Hospital",
           "country_code": "US",
-          "type": "education",
+          "type": "healthcare",
           "lineage": [
-            "https://openalex.org/I102373834"
+            "https://openalex.org/I4210087915",
+            "https://openalex.org/I48633490"
           ]
         },
         "years": [
-          2007
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210096386",
-          "ror": "https://ror.org/00cbm0437",
-          "display_name": "Bridge University",
-          "country_code": "SS",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I4210096386"
-          ]
-        },
-        "years": [
-          2022
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I80281795",
-          "ror": "https://ror.org/01jmxt844",
-          "display_name": "University of Otago",
-          "country_code": "NZ",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I80281795"
-          ]
-        },
-        "years": [
-          2007
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I4210100421",
-          "ror": "https://ror.org/0146z4r19",
-          "display_name": "National Center for Ecological Analysis and Synthesis",
-          "country_code": "US",
-          "type": "nonprofit",
-          "lineage": [
-            "https://openalex.org/I154570441",
-            "https://openalex.org/I4210100421"
-          ]
-        },
-        "years": [
-          2007
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I159548981",
-          "ror": "https://ror.org/0116zdb24",
-          "display_name": "State Street (United States)",
-          "country_code": "US",
-          "type": "company",
-          "lineage": [
-            "https://openalex.org/I159548981"
-          ]
-        },
-        "years": [
-          2007
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I124227911",
-          "ror": "https://ror.org/05tkyf982",
-          "display_name": "Ben-Gurion University of the Negev",
-          "country_code": "IL",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I124227911"
-          ]
-        },
-        "years": [
-          2007
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I189158943",
-          "ror": "https://ror.org/00wjc7c48",
-          "display_name": "University of Milan",
-          "country_code": "IT",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I189158943"
-          ]
-        },
-        "years": [
-          2012
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I135140700",
-          "ror": "https://ror.org/041nas322",
-          "display_name": "University of Bonn",
-          "country_code": "DE",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I135140700"
-          ]
-        },
-        "years": [
+          2008,
+          2002,
           2001,
           2000
         ]
       },
       {
         "institution": {
-          "id": "https://openalex.org/I86467917",
-          "ror": "https://ror.org/04gsp2c11",
-          "display_name": "James Cook University",
-          "country_code": "AU",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I86467917"
-          ]
-        },
-        "years": [
-          2022
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I54009628",
-          "ror": "https://ror.org/0234wmv40",
-          "display_name": "University of Bayreuth",
-          "country_code": "DE",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I54009628"
-          ]
-        },
-        "years": [
-          2004,
-          2003,
-          2002
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I25974101",
-          "ror": "https://ror.org/00fbnyb24",
-          "display_name": "University of Würzburg",
-          "country_code": "DE",
-          "type": "education",
-          "lineage": [
-            "https://openalex.org/I25974101"
-          ]
-        },
-        "years": [
-          2024,
-          2013,
-          2012,
-          2011,
-          2010,
-          2009,
-          2008,
-          2007,
-          2006,
-          2005,
-          2004,
-          2003
-        ]
-      },
-      {
-        "institution": {
-          "id": "https://openalex.org/I2799643457",
-          "ror": "https://ror.org/035zntx80",
-          "display_name": "Queensland Museum",
-          "country_code": "AU",
+          "id": "https://openalex.org/I2799300731",
+          "ror": "https://ror.org/0062dz060",
+          "display_name": "Norwich Research Park",
+          "country_code": "GB",
           "type": "archive",
           "lineage": [
-            "https://openalex.org/I2799643457"
+            "https://openalex.org/I2799300731"
           ]
         },
         "years": [
-          2022
+          2016
         ]
       },
       {
         "institution": {
-          "id": "https://openalex.org/I31512782",
-          "ror": "https://ror.org/05n911h24",
-          "display_name": "Technical University of Darmstadt",
-          "country_code": "DE",
+          "id": "https://openalex.org/I913481162",
+          "ror": "https://ror.org/04qw24q55",
+          "display_name": "Wageningen University & Research",
+          "country_code": "NL",
           "type": "education",
           "lineage": [
-            "https://openalex.org/I31512782"
+            "https://openalex.org/I913481162"
+          ]
+        },
+        "years": [
+          2014
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I138006243",
+          "ror": "https://ror.org/03m2x1q45",
+          "display_name": "University of Arizona",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I138006243"
+          ]
+        },
+        "years": [
+          2010
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I101479585",
+          "ror": "https://ror.org/05v9jqt67",
+          "display_name": "South China Agricultural University",
+          "country_code": "CN",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I101479585"
+          ]
+        },
+        "years": [
+          2016
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I205783295",
+          "ror": "https://ror.org/05bnh6r87",
+          "display_name": "Cornell University",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I205783295"
           ]
         },
         "years": [
@@ -52627,41 +52511,194 @@
           2014,
           2013,
           2012,
+          2011,
+          2010,
+          2009,
+          2008,
+          2007,
+          2006,
+          2004
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I16391192",
+          "ror": "https://ror.org/04mhzgx49",
+          "display_name": "Tel Aviv University",
+          "country_code": "IL",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I16391192"
+          ]
+        },
+        "years": [
+          2012
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I136199984",
+          "ror": "https://ror.org/03vek6s52",
+          "display_name": "Harvard University",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I136199984"
+          ]
+        },
+        "years": [
+          2008,
+          2002,
+          2000,
+          1996,
+          1995,
+          1994,
+          1993,
+          1991
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210089818",
+          "ror": "https://ror.org/0089j2p79",
+          "display_name": "Vance Thompson Vision",
+          "country_code": "US",
+          "type": "healthcare",
+          "lineage": [
+            "https://openalex.org/I4210089818"
+          ]
+        },
+        "years": [
+          2015,
+          2010
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I87424562",
+          "ror": "https://ror.org/01kw1gj07",
+          "display_name": "Ithaca College",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I87424562"
+          ]
+        },
+        "years": [
+          2025,
+          2024,
+          2023,
+          2022,
+          2021,
+          2020,
+          2019,
+          2018,
+          2017,
+          2016,
+          2015,
+          2014,
+          2013,
+          2012,
+          2011,
+          2010,
+          2009,
+          2008,
+          2007,
+          2006,
+          2004
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I12097938",
+          "ror": "https://ror.org/011vxgd24",
+          "display_name": "West Virginia University",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I12097938"
+          ]
+        },
+        "years": [
+          2006
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I4210151791",
+          "ror": "https://ror.org/053a6xa29",
+          "display_name": "Genomics (United Kingdom)",
+          "country_code": "GB",
+          "type": "company",
+          "lineage": [
+            "https://openalex.org/I4210151791"
+          ]
+        },
+        "years": [
+          2016
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I130769515",
+          "ror": "https://ror.org/04p491231",
+          "display_name": "Pennsylvania State University",
+          "country_code": "US",
+          "type": "education",
+          "lineage": [
+            "https://openalex.org/I130769515"
+          ]
+        },
+        "years": [
           2011
         ]
       },
       {
         "institution": {
-          "id": "https://openalex.org/I151201029",
-          "ror": "https://ror.org/03cqe8w59",
-          "display_name": "Consejo Nacional de Investigaciones Científicas y Técnicas",
-          "country_code": "AR",
-          "type": "government",
+          "id": "https://openalex.org/I1321434546",
+          "ror": "https://ror.org/01qtasp15",
+          "display_name": "European Southern Observatory",
+          "country_code": "DE",
+          "type": "facility",
           "lineage": [
-            "https://openalex.org/I151201029",
-            "https://openalex.org/I4210123736",
-            "https://openalex.org/I4387155568"
+            "https://openalex.org/I1321434546"
           ]
         },
         "years": [
-          2007
+          1998
+        ]
+      },
+      {
+        "institution": {
+          "id": "https://openalex.org/I2801851002",
+          "ror": "https://ror.org/006v7bf86",
+          "display_name": "Harvard University Press",
+          "country_code": "US",
+          "type": "other",
+          "lineage": [
+            "https://openalex.org/I136199984",
+            "https://openalex.org/I2801851002"
+          ]
+        },
+        "years": [
+          1993
         ]
       }
     ],
     "summary_stats": {
-      "2yr_mean_citedness": 8.387096774193548,
+      "2yr_mean_citedness": 4.552631578947368,
       "h_index": 70,
-      "i10_index": 181
+      "i10_index": 148
     },
     "topics": [
       {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "count": 216,
-        "score": 1.0,
+        "id": "https://openalex.org/T10135",
+        "display_name": "Insect-Plant Interactions and Control",
+        "count": 108,
+        "score": 0.9998999834060669,
         "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
+          "id": "https://openalex.org/subfields/1109",
+          "display_name": "Insect Science"
         },
         "field": {
           "id": "https://openalex.org/fields/11",
@@ -52673,31 +52710,13 @@
         }
       },
       {
-        "id": "https://openalex.org/T10005",
-        "display_name": "Ecology and Vegetation Dynamics Studies",
-        "count": 130,
-        "score": 0.9998999834060669,
-        "subfield": {
-          "id": "https://openalex.org/subfields/2309",
-          "display_name": "Nature and Landscape Conservation"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/23",
-          "display_name": "Environmental Science"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/3",
-          "display_name": "Physical Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "count": 114,
+        "id": "https://openalex.org/T11075",
+        "display_name": "Insect Resistance and Genetics",
+        "count": 63,
         "score": 1.0,
         "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
+          "id": "https://openalex.org/subfields/1312",
+          "display_name": "Molecular Biology"
         },
         "field": {
           "id": "https://openalex.org/fields/13",
@@ -52711,8 +52730,8 @@
       {
         "id": "https://openalex.org/T12475",
         "display_name": "Plant Parasitism and Resistance",
-        "count": 68,
-        "score": 0.9997000098228455,
+        "count": 62,
+        "score": 0.9998999834060669,
         "subfield": {
           "id": "https://openalex.org/subfields/1110",
           "display_name": "Plant Science"
@@ -52727,10 +52746,28 @@
         }
       },
       {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "count": 58,
+        "id": "https://openalex.org/T10494",
+        "display_name": "Plant Virus Research Studies",
+        "count": 47,
         "score": 1.0,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1110",
+          "display_name": "Plant Science"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/11",
+          "display_name": "Agricultural and Biological Sciences"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/1",
+          "display_name": "Life Sciences"
+        }
+      },
+      {
+        "id": "https://openalex.org/T12134",
+        "display_name": "Insect symbiosis and bacterial influences",
+        "count": 28,
+        "score": 0.9998999834060669,
         "subfield": {
           "id": "https://openalex.org/subfields/1109",
           "display_name": "Insect Science"

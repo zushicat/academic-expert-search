@@ -74,6 +74,7 @@ class ExpertSearch_Author(BaseModel):
 
     works_search: List[str] | None
     works_author: List[str] | None
+    works_count: int = 0
 
 
 class ExpertSearch_Authors(RootModel[Dict[str, ExpertSearch_Author]]):

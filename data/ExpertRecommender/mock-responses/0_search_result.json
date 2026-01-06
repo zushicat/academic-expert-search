@@ -7125,6 +7125,62 @@
       "country_code": "AU",
       "type": "facility"
     },
+    "https://openalex.org/I4210155177": {
+      "openalex_id": "https://openalex.org/I4210155177",
+      "ror": "https://ror.org/05ca9hc42",
+      "display_name": "Bentley (Canada)",
+      "country_code": "CA",
+      "type": "company"
+    },
+    "https://openalex.org/I176790772": {
+      "openalex_id": "https://openalex.org/I176790772",
+      "ror": "https://ror.org/00r4sry34",
+      "display_name": "Murdoch University",
+      "country_code": "AU",
+      "type": "education"
+    },
+    "https://openalex.org/I177605424": {
+      "openalex_id": "https://openalex.org/I177605424",
+      "ror": "https://ror.org/028vqfs63",
+      "display_name": "Amherst College",
+      "country_code": "US",
+      "type": "education"
+    },
+    "https://openalex.org/I4401200342": {
+      "openalex_id": "https://openalex.org/I4401200342",
+      "ror": "https://ror.org/02hxb7v96",
+      "display_name": "Society for Ecological Restoration",
+      "country_code": null,
+      "type": "nonprofit"
+    },
+    "https://openalex.org/I2799807786": {
+      "openalex_id": "https://openalex.org/I2799807786",
+      "ror": "https://ror.org/00v2a6g95",
+      "display_name": "Center for Plant Conservation",
+      "country_code": "US",
+      "type": "nonprofit"
+    },
+    "https://openalex.org/I1303253705": {
+      "openalex_id": "https://openalex.org/I1303253705",
+      "ror": "https://ror.org/010tt0206",
+      "display_name": "Asia Society",
+      "country_code": "US",
+      "type": "nonprofit"
+    },
+    "https://openalex.org/I2800703674": {
+      "openalex_id": "https://openalex.org/I2800703674",
+      "ror": "https://ror.org/05x0at146",
+      "display_name": "Santa Barbara Botanic Garden",
+      "country_code": "US",
+      "type": "archive"
+    },
+    "https://openalex.org/I4210146297": {
+      "openalex_id": "https://openalex.org/I4210146297",
+      "ror": "https://ror.org/051e7s436",
+      "display_name": "ARC Centre of Excellence in Advanced Molecular Imaging",
+      "country_code": "AU",
+      "type": "facility"
+    },
     "https://openalex.org/I188760350": {
       "openalex_id": "https://openalex.org/I188760350",
       "ror": "https://ror.org/03bea9k73",
@@ -7208,62 +7264,6 @@
       "display_name": "UK Centre for Ecology & Hydrology",
       "country_code": "GB",
       "type": "other"
-    },
-    "https://openalex.org/I4210155177": {
-      "openalex_id": "https://openalex.org/I4210155177",
-      "ror": "https://ror.org/05ca9hc42",
-      "display_name": "Bentley (Canada)",
-      "country_code": "CA",
-      "type": "company"
-    },
-    "https://openalex.org/I176790772": {
-      "openalex_id": "https://openalex.org/I176790772",
-      "ror": "https://ror.org/00r4sry34",
-      "display_name": "Murdoch University",
-      "country_code": "AU",
-      "type": "education"
-    },
-    "https://openalex.org/I177605424": {
-      "openalex_id": "https://openalex.org/I177605424",
-      "ror": "https://ror.org/028vqfs63",
-      "display_name": "Amherst College",
-      "country_code": "US",
-      "type": "education"
-    },
-    "https://openalex.org/I4401200342": {
-      "openalex_id": "https://openalex.org/I4401200342",
-      "ror": "https://ror.org/02hxb7v96",
-      "display_name": "Society for Ecological Restoration",
-      "country_code": null,
-      "type": "nonprofit"
-    },
-    "https://openalex.org/I2799807786": {
-      "openalex_id": "https://openalex.org/I2799807786",
-      "ror": "https://ror.org/00v2a6g95",
-      "display_name": "Center for Plant Conservation",
-      "country_code": "US",
-      "type": "nonprofit"
-    },
-    "https://openalex.org/I1303253705": {
-      "openalex_id": "https://openalex.org/I1303253705",
-      "ror": "https://ror.org/010tt0206",
-      "display_name": "Asia Society",
-      "country_code": "US",
-      "type": "nonprofit"
-    },
-    "https://openalex.org/I2800703674": {
-      "openalex_id": "https://openalex.org/I2800703674",
-      "ror": "https://ror.org/05x0at146",
-      "display_name": "Santa Barbara Botanic Garden",
-      "country_code": "US",
-      "type": "archive"
-    },
-    "https://openalex.org/I4210146297": {
-      "openalex_id": "https://openalex.org/I4210146297",
-      "ror": "https://ror.org/051e7s436",
-      "display_name": "ARC Centre of Excellence in Advanced Molecular Imaging",
-      "country_code": "AU",
-      "type": "facility"
     },
     "https://openalex.org/I2799428867": {
       "openalex_id": "https://openalex.org/I2799428867",
@@ -7846,6 +7846,20 @@
       "country_code": "GB",
       "type": "nonprofit"
     },
+    "https://openalex.org/I4210148693": {
+      "openalex_id": "https://openalex.org/I4210148693",
+      "ror": "https://ror.org/04hdrrs71",
+      "display_name": "Metropolitan University",
+      "country_code": "BD",
+      "type": "education"
+    },
+    "https://openalex.org/I82760581": {
+      "openalex_id": "https://openalex.org/I82760581",
+      "ror": "https://ror.org/04fzhyx73",
+      "display_name": "Taizhou University",
+      "country_code": "CN",
+      "type": "education"
+    },
     "https://openalex.org/I4210086405": {
       "openalex_id": "https://openalex.org/I4210086405",
       "ror": "https://ror.org/00wksha49",
@@ -7948,20 +7962,6 @@
       "openalex_id": "https://openalex.org/I10496686",
       "ror": "https://ror.org/024qkwh22",
       "display_name": "Shangrao Normal University",
-      "country_code": "CN",
-      "type": "education"
-    },
-    "https://openalex.org/I4210148693": {
-      "openalex_id": "https://openalex.org/I4210148693",
-      "ror": "https://ror.org/04hdrrs71",
-      "display_name": "Metropolitan University",
-      "country_code": "BD",
-      "type": "education"
-    },
-    "https://openalex.org/I82760581": {
-      "openalex_id": "https://openalex.org/I82760581",
-      "ror": "https://ror.org/04fzhyx73",
-      "display_name": "Taizhou University",
       "country_code": "CN",
       "type": "education"
     },
@@ -10114,19 +10114,19 @@
       "country_code": "GB",
       "type": "company"
     },
-    "https://openalex.org/I86467917": {
-      "openalex_id": "https://openalex.org/I86467917",
-      "ror": "https://ror.org/04gsp2c11",
-      "display_name": "James Cook University",
-      "country_code": "AU",
+    "https://openalex.org/I101479585": {
+      "openalex_id": "https://openalex.org/I101479585",
+      "ror": "https://ror.org/05v9jqt67",
+      "display_name": "South China Agricultural University",
+      "country_code": "CN",
       "type": "education"
     },
-    "https://openalex.org/I2799643457": {
-      "openalex_id": "https://openalex.org/I2799643457",
-      "ror": "https://ror.org/035zntx80",
-      "display_name": "Queensland Museum",
-      "country_code": "AU",
-      "type": "archive"
+    "https://openalex.org/I1321434546": {
+      "openalex_id": "https://openalex.org/I1321434546",
+      "ror": "https://ror.org/01qtasp15",
+      "display_name": "European Southern Observatory",
+      "country_code": "DE",
+      "type": "facility"
     }
   },
   "authors": {
@@ -10314,7 +10314,8 @@
       "works_search": [
         "https://openalex.org/W2523705196"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5079176981": {
       "openalex_id": "https://openalex.org/A5079176981",
@@ -10479,7 +10480,8 @@
       "works_search": [
         "https://openalex.org/W2153935646"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5088698878": {
       "openalex_id": "https://openalex.org/A5088698878",
@@ -10597,7 +10599,8 @@
       "works_search": [
         "https://openalex.org/W1973439176"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5085952515": {
       "openalex_id": "https://openalex.org/A5085952515",
@@ -10755,7 +10758,8 @@
       "works_search": [
         "https://openalex.org/W2217108954"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5039999199": {
       "openalex_id": "https://openalex.org/A5039999199",
@@ -10865,7 +10869,8 @@
         "https://openalex.org/W3042360663",
         "https://openalex.org/W3096679246"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 2
     },
     "https://openalex.org/A5043714176": {
       "openalex_id": "https://openalex.org/A5043714176",
@@ -10960,7 +10965,8 @@
       "works_search": [
         "https://openalex.org/W2924365618"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5083070664": {
       "openalex_id": "https://openalex.org/A5083070664",
@@ -11057,7 +11063,8 @@
       "works_search": [
         "https://openalex.org/W2623587077"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5085477907": {
       "openalex_id": "https://openalex.org/A5085477907",
@@ -11154,7 +11161,8 @@
       "works_search": [
         "https://openalex.org/W4281644584"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5053128729": {
       "openalex_id": "https://openalex.org/A5053128729",
@@ -11250,7 +11258,8 @@
       ],
       "instituitions_count": 8,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5045999136": {
       "openalex_id": "https://openalex.org/A5045999136",
@@ -11409,7 +11418,8 @@
       ],
       "instituitions_count": 21,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5077466677": {
       "openalex_id": "https://openalex.org/A5077466677",
@@ -11576,7 +11586,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5070924304": {
       "openalex_id": "https://openalex.org/A5070924304",
@@ -11748,7 +11759,8 @@
       ],
       "instituitions_count": 24,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5013363004": {
       "openalex_id": "https://openalex.org/A5013363004",
@@ -11918,130 +11930,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
-    },
-    "https://openalex.org/A5084223502": {
-      "openalex_id": "https://openalex.org/A5084223502",
-      "orcid_id": "https://orcid.org/0000-0001-6349-4528",
-      "display_name": "Nico Blüthgen",
-      "from_relevant_author_list": false,
-      "two_yr_mean_citedness": 8.387096774193548,
-      "h_index": 70,
-      "i10_index": 181,
-      "relevant_topics": {
-        "T10487": true,
-        "T11641": true,
-        "T10702": true,
-        "T12475": true,
-        "T10005": true
-      },
-      "relevant_topics_share": 5,
-      "active_years_min": 2000,
-      "active_years_max": 2025,
-      "active_years_sum": 26,
-      "active_years_counted": {
-        "2000": 1,
-        "2001": 1,
-        "2002": 1,
-        "2003": 2,
-        "2004": 2,
-        "2005": 1,
-        "2006": 1,
-        "2007": 7,
-        "2008": 1,
-        "2009": 1,
-        "2010": 1,
-        "2011": 2,
-        "2012": 3,
-        "2013": 2,
-        "2014": 1,
-        "2015": 1,
-        "2016": 1,
-        "2017": 1,
-        "2018": 1,
-        "2019": 1,
-        "2020": 1,
-        "2021": 1,
-        "2022": 4,
-        "2023": 1,
-        "2024": 2,
-        "2025": 1
-      },
-      "institutions": [
-        {
-          "openalex_id": "https://openalex.org/I135140700",
-          "year_start": 2000,
-          "year_end": 2001
-        },
-        {
-          "openalex_id": "https://openalex.org/I54009628",
-          "year_start": 2002,
-          "year_end": 2004
-        },
-        {
-          "openalex_id": "https://openalex.org/I25974101",
-          "year_start": 2003,
-          "year_end": 2024
-        },
-        {
-          "openalex_id": "https://openalex.org/I102373834",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I80281795",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210100421",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I159548981",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I124227911",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I151201029",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I31512782",
-          "year_start": 2011,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I189158943",
-          "year_start": 2012,
-          "year_end": 2012
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210096386",
-          "year_start": 2022,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I86467917",
-          "year_start": 2022,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I2799643457",
-          "year_start": 2022,
-          "year_end": 2022
-        }
-      ],
-      "instituitions_count": 14,
-      "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5007801614": {
       "openalex_id": "https://openalex.org/A5007801614",
@@ -12182,7 +12072,8 @@
       "works_search": [
         "https://openalex.org/W2138043077"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5055832161": {
       "openalex_id": "https://openalex.org/A5055832161",
@@ -12313,7 +12204,8 @@
       "works_search": [
         "https://openalex.org/W2480249431"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5007581267": {
       "openalex_id": "https://openalex.org/A5007581267",
@@ -12455,7 +12347,8 @@
       "works_search": [
         "https://openalex.org/W3042360663"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5022069215": {
       "openalex_id": "https://openalex.org/A5022069215",
@@ -12536,7 +12429,8 @@
       "works_search": [
         "https://openalex.org/W4291111806"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5017487819": {
       "openalex_id": "https://openalex.org/A5017487819",
@@ -12613,7 +12507,8 @@
       "works_search": [
         "https://openalex.org/W2519204557"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5015695171": {
       "openalex_id": "https://openalex.org/A5015695171",
@@ -12673,7 +12568,8 @@
       "works_search": [
         "https://openalex.org/W4220866177"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5012301888": {
       "openalex_id": "https://openalex.org/A5012301888",
@@ -12732,7 +12628,8 @@
       "works_search": [
         "https://openalex.org/W3096679246"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5038194873": {
       "openalex_id": "https://openalex.org/A5038194873",
@@ -12914,7 +12811,8 @@
       ],
       "instituitions_count": 24,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5019896810": {
       "openalex_id": "https://openalex.org/A5019896810",
@@ -13003,7 +12901,8 @@
       ],
       "instituitions_count": 7,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5090858629": {
       "openalex_id": "https://openalex.org/A5090858629",
@@ -13178,7 +13077,8 @@
       ],
       "instituitions_count": 23,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5063641005": {
       "openalex_id": "https://openalex.org/A5063641005",
@@ -13382,7 +13282,8 @@
       ],
       "instituitions_count": 28,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5061992490": {
       "openalex_id": "https://openalex.org/A5061992490",
@@ -13502,7 +13403,8 @@
       ],
       "instituitions_count": 10,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5113725924": {
       "openalex_id": "https://openalex.org/A5113725924",
@@ -13647,7 +13549,8 @@
       ],
       "instituitions_count": 16,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5047906247": {
       "openalex_id": "https://openalex.org/A5047906247",
@@ -13786,7 +13689,8 @@
       ],
       "instituitions_count": 16,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5078525299": {
       "openalex_id": "https://openalex.org/A5078525299",
@@ -14293,7 +14197,8 @@
       "works_search": [
         "https://openalex.org/W1923504226"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5084349484": {
       "openalex_id": "https://openalex.org/A5084349484",
@@ -14356,7 +14261,8 @@
       "works_search": [
         "https://openalex.org/W4391023135"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5061655812": {
       "openalex_id": "https://openalex.org/A5061655812",
@@ -14445,7 +14351,8 @@
       "works_search": [
         "https://openalex.org/W2519204557"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5089895033": {
       "openalex_id": "https://openalex.org/A5089895033",
@@ -14534,7 +14441,8 @@
       "works_search": [
         "https://openalex.org/W3009566959"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5084859594": {
       "openalex_id": "https://openalex.org/A5084859594",
@@ -14603,7 +14511,8 @@
       "works_search": [
         "https://openalex.org/W3170535299"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5076351210": {
       "openalex_id": "https://openalex.org/A5076351210",
@@ -14723,7 +14632,8 @@
       "works_search": [
         "https://openalex.org/W1923504226"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5068391722": {
       "openalex_id": "https://openalex.org/A5068391722",
@@ -15109,7 +15019,8 @@
       ],
       "instituitions_count": 63,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5058286546": {
       "openalex_id": "https://openalex.org/A5058286546",
@@ -15280,7 +15191,8 @@
       ],
       "instituitions_count": 20,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5052671897": {
       "openalex_id": "https://openalex.org/A5052671897",
@@ -15423,7 +15335,8 @@
       ],
       "instituitions_count": 16,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5083459636": {
       "openalex_id": "https://openalex.org/A5083459636",
@@ -15617,7 +15530,8 @@
       ],
       "instituitions_count": 27,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5024169467": {
       "openalex_id": "https://openalex.org/A5024169467",
@@ -15853,7 +15767,8 @@
       ],
       "instituitions_count": 32,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5032997569": {
       "openalex_id": "https://openalex.org/A5032997569",
@@ -16054,7 +15969,8 @@
       ],
       "instituitions_count": 29,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5113603630": {
       "openalex_id": "https://openalex.org/A5113603630",
@@ -16157,7 +16073,8 @@
       ],
       "instituitions_count": 8,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5014883785": {
       "openalex_id": "https://openalex.org/A5014883785",
@@ -16336,7 +16253,8 @@
       ],
       "instituitions_count": 24,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5007458724": {
       "openalex_id": "https://openalex.org/A5007458724",
@@ -16528,7 +16446,8 @@
       ],
       "instituitions_count": 27,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5070766255": {
       "openalex_id": "https://openalex.org/A5070766255",
@@ -16740,7 +16659,8 @@
       ],
       "instituitions_count": 27,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5058629427": {
       "openalex_id": "https://openalex.org/A5058629427",
@@ -16837,7 +16757,8 @@
       ],
       "instituitions_count": 8,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5005215306": {
       "openalex_id": "https://openalex.org/A5005215306",
@@ -17051,7 +16972,8 @@
       ],
       "instituitions_count": 31,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5010631631": {
       "openalex_id": "https://openalex.org/A5010631631",
@@ -17205,7 +17127,8 @@
       ],
       "instituitions_count": 18,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5058090063": {
       "openalex_id": "https://openalex.org/A5058090063",
@@ -17518,7 +17441,8 @@
       ],
       "instituitions_count": 50,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5063900609": {
       "openalex_id": "https://openalex.org/A5063900609",
@@ -17639,7 +17563,177 @@
       ],
       "instituitions_count": 11,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
+    },
+    "https://openalex.org/A5046711399": {
+      "openalex_id": "https://openalex.org/A5046711399",
+      "orcid_id": "https://orcid.org/0000-0001-5989-2929",
+      "display_name": "Kingsley W. Dixon",
+      "from_relevant_author_list": false,
+      "two_yr_mean_citedness": 6.5,
+      "h_index": 83,
+      "i10_index": 360,
+      "relevant_topics": {
+        "T10487": true,
+        "T11641": false,
+        "T10702": false,
+        "T12475": true,
+        "T10005": true
+      },
+      "relevant_topics_share": 3,
+      "active_years_min": 1989,
+      "active_years_max": 2025,
+      "active_years_sum": 36,
+      "active_years_counted": {
+        "1989": 2,
+        "1990": 1,
+        "1992": 1,
+        "1993": 1,
+        "1994": 2,
+        "1995": 1,
+        "1996": 2,
+        "1997": 1,
+        "1998": 1,
+        "1999": 1,
+        "2000": 1,
+        "2001": 3,
+        "2002": 3,
+        "2003": 3,
+        "2004": 3,
+        "2005": 2,
+        "2006": 2,
+        "2007": 3,
+        "2008": 3,
+        "2009": 2,
+        "2010": 2,
+        "2011": 2,
+        "2012": 3,
+        "2013": 2,
+        "2014": 3,
+        "2015": 3,
+        "2016": 4,
+        "2017": 3,
+        "2018": 2,
+        "2019": 3,
+        "2020": 3,
+        "2021": 5,
+        "2022": 7,
+        "2023": 4,
+        "2024": 2,
+        "2025": 2
+      },
+      "institutions": [
+        {
+          "openalex_id": "https://openalex.org/I38288417",
+          "year_start": 1989,
+          "year_end": 2017
+        },
+        {
+          "openalex_id": "https://openalex.org/I177877127",
+          "year_start": 1989,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I38260057",
+          "year_start": 1994,
+          "year_end": 1994
+        },
+        {
+          "openalex_id": "https://openalex.org/I2800703674",
+          "year_start": 2001,
+          "year_end": 2001
+        },
+        {
+          "openalex_id": "https://openalex.org/I2799807786",
+          "year_start": 2002,
+          "year_end": 2002
+        },
+        {
+          "openalex_id": "https://openalex.org/I177605424",
+          "year_start": 2003,
+          "year_end": 2003
+        },
+        {
+          "openalex_id": "https://openalex.org/I176790772",
+          "year_start": 2004,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210102918",
+          "year_start": 2008,
+          "year_end": 2008
+        },
+        {
+          "openalex_id": "https://openalex.org/I118347636",
+          "year_start": 2012,
+          "year_end": 2012
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210126202",
+          "year_start": 2014,
+          "year_end": 2014
+        },
+        {
+          "openalex_id": "https://openalex.org/I205640436",
+          "year_start": 2015,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I1303253705",
+          "year_start": 2016,
+          "year_end": 2016
+        },
+        {
+          "openalex_id": "https://openalex.org/I144852770",
+          "year_start": 2019,
+          "year_end": 2020
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210155177",
+          "year_start": 2021,
+          "year_end": 2021
+        },
+        {
+          "openalex_id": "https://openalex.org/I1337719021",
+          "year_start": 2021,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I2802431724",
+          "year_start": 2021,
+          "year_end": 2021
+        },
+        {
+          "openalex_id": "https://openalex.org/I31746571",
+          "year_start": 2022,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I4401200342",
+          "year_start": 2022,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I174659583",
+          "year_start": 2022,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210146297",
+          "year_start": 2022,
+          "year_end": 2023
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210100608",
+          "year_start": 2023,
+          "year_end": 2023
+        }
+      ],
+      "instituitions_count": 21,
+      "works_search": null,
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5083978052": {
       "openalex_id": "https://openalex.org/A5083978052",
@@ -17858,175 +17952,8 @@
       ],
       "instituitions_count": 31,
       "works_search": null,
-      "works_author": null
-    },
-    "https://openalex.org/A5046711399": {
-      "openalex_id": "https://openalex.org/A5046711399",
-      "orcid_id": "https://orcid.org/0000-0001-5989-2929",
-      "display_name": "Kingsley W. Dixon",
-      "from_relevant_author_list": false,
-      "two_yr_mean_citedness": 6.5,
-      "h_index": 83,
-      "i10_index": 360,
-      "relevant_topics": {
-        "T10487": true,
-        "T11641": false,
-        "T10702": false,
-        "T12475": true,
-        "T10005": true
-      },
-      "relevant_topics_share": 3,
-      "active_years_min": 1989,
-      "active_years_max": 2025,
-      "active_years_sum": 36,
-      "active_years_counted": {
-        "1989": 2,
-        "1990": 1,
-        "1992": 1,
-        "1993": 1,
-        "1994": 2,
-        "1995": 1,
-        "1996": 2,
-        "1997": 1,
-        "1998": 1,
-        "1999": 1,
-        "2000": 1,
-        "2001": 3,
-        "2002": 3,
-        "2003": 3,
-        "2004": 3,
-        "2005": 2,
-        "2006": 2,
-        "2007": 3,
-        "2008": 3,
-        "2009": 2,
-        "2010": 2,
-        "2011": 2,
-        "2012": 3,
-        "2013": 2,
-        "2014": 3,
-        "2015": 3,
-        "2016": 4,
-        "2017": 3,
-        "2018": 2,
-        "2019": 3,
-        "2020": 3,
-        "2021": 5,
-        "2022": 7,
-        "2023": 4,
-        "2024": 2,
-        "2025": 2
-      },
-      "institutions": [
-        {
-          "openalex_id": "https://openalex.org/I38288417",
-          "year_start": 1989,
-          "year_end": 2017
-        },
-        {
-          "openalex_id": "https://openalex.org/I177877127",
-          "year_start": 1989,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I38260057",
-          "year_start": 1994,
-          "year_end": 1994
-        },
-        {
-          "openalex_id": "https://openalex.org/I2800703674",
-          "year_start": 2001,
-          "year_end": 2001
-        },
-        {
-          "openalex_id": "https://openalex.org/I2799807786",
-          "year_start": 2002,
-          "year_end": 2002
-        },
-        {
-          "openalex_id": "https://openalex.org/I177605424",
-          "year_start": 2003,
-          "year_end": 2003
-        },
-        {
-          "openalex_id": "https://openalex.org/I176790772",
-          "year_start": 2004,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210102918",
-          "year_start": 2008,
-          "year_end": 2008
-        },
-        {
-          "openalex_id": "https://openalex.org/I118347636",
-          "year_start": 2012,
-          "year_end": 2012
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210126202",
-          "year_start": 2014,
-          "year_end": 2014
-        },
-        {
-          "openalex_id": "https://openalex.org/I205640436",
-          "year_start": 2015,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I1303253705",
-          "year_start": 2016,
-          "year_end": 2016
-        },
-        {
-          "openalex_id": "https://openalex.org/I144852770",
-          "year_start": 2019,
-          "year_end": 2020
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210155177",
-          "year_start": 2021,
-          "year_end": 2021
-        },
-        {
-          "openalex_id": "https://openalex.org/I1337719021",
-          "year_start": 2021,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I2802431724",
-          "year_start": 2021,
-          "year_end": 2021
-        },
-        {
-          "openalex_id": "https://openalex.org/I31746571",
-          "year_start": 2022,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I4401200342",
-          "year_start": 2022,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I174659583",
-          "year_start": 2022,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210146297",
-          "year_start": 2022,
-          "year_end": 2023
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210100608",
-          "year_start": 2023,
-          "year_end": 2023
-        }
-      ],
-      "instituitions_count": 21,
-      "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5021753471": {
       "openalex_id": "https://openalex.org/A5021753471",
@@ -18262,7 +18189,8 @@
       ],
       "instituitions_count": 34,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5069787458": {
       "openalex_id": "https://openalex.org/A5069787458",
@@ -18406,7 +18334,8 @@
       ],
       "instituitions_count": 15,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5043602538": {
       "openalex_id": "https://openalex.org/A5043602538",
@@ -18564,7 +18493,8 @@
       ],
       "instituitions_count": 21,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5052920399": {
       "openalex_id": "https://openalex.org/A5052920399",
@@ -18702,7 +18632,8 @@
       ],
       "instituitions_count": 15,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5066337086": {
       "openalex_id": "https://openalex.org/A5066337086",
@@ -18858,7 +18789,8 @@
       ],
       "instituitions_count": 17,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5041360961": {
       "openalex_id": "https://openalex.org/A5041360961",
@@ -19002,7 +18934,8 @@
       ],
       "instituitions_count": 17,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5045453076": {
       "openalex_id": "https://openalex.org/A5045453076",
@@ -19182,7 +19115,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5051832543": {
       "openalex_id": "https://openalex.org/A5051832543",
@@ -19298,7 +19232,8 @@
       ],
       "instituitions_count": 12,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5060214139": {
       "openalex_id": "https://openalex.org/A5060214139",
@@ -19404,7 +19339,8 @@
       ],
       "instituitions_count": 9,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5021071256": {
       "openalex_id": "https://openalex.org/A5021071256",
@@ -19565,7 +19501,8 @@
       ],
       "instituitions_count": 19,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5005262367": {
       "openalex_id": "https://openalex.org/A5005262367",
@@ -19735,7 +19672,8 @@
       ],
       "instituitions_count": 18,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5073523465": {
       "openalex_id": "https://openalex.org/A5073523465",
@@ -19908,7 +19846,8 @@
       ],
       "instituitions_count": 25,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5082909194": {
       "openalex_id": "https://openalex.org/A5082909194",
@@ -20030,7 +19969,8 @@
       ],
       "instituitions_count": 12,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5003059316": {
       "openalex_id": "https://openalex.org/A5003059316",
@@ -20155,7 +20095,8 @@
       ],
       "instituitions_count": 16,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5075919156": {
       "openalex_id": "https://openalex.org/A5075919156",
@@ -20277,7 +20218,8 @@
       ],
       "instituitions_count": 14,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5054910142": {
       "openalex_id": "https://openalex.org/A5054910142",
@@ -20505,7 +20447,8 @@
       ],
       "instituitions_count": 31,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5005192151": {
       "openalex_id": "https://openalex.org/A5005192151",
@@ -20618,7 +20561,8 @@
       ],
       "instituitions_count": 8,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5043270745": {
       "openalex_id": "https://openalex.org/A5043270745",
@@ -20739,7 +20683,8 @@
       ],
       "instituitions_count": 11,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5057290137": {
       "openalex_id": "https://openalex.org/A5057290137",
@@ -20846,7 +20791,8 @@
       ],
       "instituitions_count": 8,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5082055304": {
       "openalex_id": "https://openalex.org/A5082055304",
@@ -21017,7 +20963,8 @@
       ],
       "instituitions_count": 21,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5074743304": {
       "openalex_id": "https://openalex.org/A5074743304",
@@ -21116,7 +21063,8 @@
       ],
       "instituitions_count": 8,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5045396338": {
       "openalex_id": "https://openalex.org/A5045396338",
@@ -21241,7 +21189,8 @@
       ],
       "instituitions_count": 14,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5078861569": {
       "openalex_id": "https://openalex.org/A5078861569",
@@ -21349,7 +21298,8 @@
       "works_search": [
         "https://openalex.org/W3162878828"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5067099702": {
       "openalex_id": "https://openalex.org/A5067099702",
@@ -21573,7 +21523,8 @@
       "works_search": [
         "https://openalex.org/W1843008321"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5037725540": {
       "openalex_id": "https://openalex.org/A5037725540",
@@ -21689,7 +21640,8 @@
       "works_search": [
         "https://openalex.org/W1973439176"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5035027734": {
       "openalex_id": "https://openalex.org/A5035027734",
@@ -21756,7 +21708,8 @@
       "works_search": [
         "https://openalex.org/W2480249431"
       ],
-      "works_author": null
+      "works_author": null,
+      "works_count": 1
     },
     "https://openalex.org/A5071511664": {
       "openalex_id": "https://openalex.org/A5071511664",
@@ -21974,7 +21927,8 @@
       ],
       "instituitions_count": 29,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5084143562": {
       "openalex_id": "https://openalex.org/A5084143562",
@@ -22347,7 +22301,8 @@
       ],
       "instituitions_count": 62,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5085437167": {
       "openalex_id": "https://openalex.org/A5085437167",
@@ -22505,7 +22460,8 @@
       ],
       "instituitions_count": 20,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5043625675": {
       "openalex_id": "https://openalex.org/A5043625675",
@@ -22812,7 +22768,8 @@
       ],
       "instituitions_count": 48,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5066605711": {
       "openalex_id": "https://openalex.org/A5066605711",
@@ -23140,7 +23097,8 @@
       ],
       "instituitions_count": 51,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5069611685": {
       "openalex_id": "https://openalex.org/A5069611685",
@@ -23297,7 +23255,8 @@
       ],
       "instituitions_count": 18,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5067498631": {
       "openalex_id": "https://openalex.org/A5067498631",
@@ -23463,7 +23422,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5007788413": {
       "openalex_id": "https://openalex.org/A5007788413",
@@ -23675,7 +23635,8 @@
       ],
       "instituitions_count": 31,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5031130945": {
       "openalex_id": "https://openalex.org/A5031130945",
@@ -23871,7 +23832,8 @@
       ],
       "instituitions_count": 24,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5070192659": {
       "openalex_id": "https://openalex.org/A5070192659",
@@ -24025,7 +23987,8 @@
       ],
       "instituitions_count": 19,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5055297109": {
       "openalex_id": "https://openalex.org/A5055297109",
@@ -24332,7 +24295,8 @@
       ],
       "instituitions_count": 48,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5052381433": {
       "openalex_id": "https://openalex.org/A5052381433",
@@ -24481,7 +24445,8 @@
       ],
       "instituitions_count": 17,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5004022979": {
       "openalex_id": "https://openalex.org/A5004022979",
@@ -24609,7 +24574,8 @@
       ],
       "instituitions_count": 12,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5059017776": {
       "openalex_id": "https://openalex.org/A5059017776",
@@ -24793,7 +24759,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5088468992": {
       "openalex_id": "https://openalex.org/A5088468992",
@@ -24930,7 +24897,8 @@
       ],
       "instituitions_count": 14,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5082498150": {
       "openalex_id": "https://openalex.org/A5082498150",
@@ -25105,7 +25073,8 @@
       ],
       "instituitions_count": 21,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5100769533": {
       "openalex_id": "https://openalex.org/A5100769533",
@@ -25582,7 +25551,8 @@
       ],
       "instituitions_count": 84,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5088582956": {
       "openalex_id": "https://openalex.org/A5088582956",
@@ -25818,7 +25788,8 @@
       ],
       "instituitions_count": 31,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5038302656": {
       "openalex_id": "https://openalex.org/A5038302656",
@@ -26038,7 +26009,8 @@
       ],
       "instituitions_count": 31,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5057407298": {
       "openalex_id": "https://openalex.org/A5057407298",
@@ -26308,7 +26280,8 @@
       ],
       "instituitions_count": 39,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5080532569": {
       "openalex_id": "https://openalex.org/A5080532569",
@@ -26514,7 +26487,8 @@
       ],
       "instituitions_count": 27,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5086285278": {
       "openalex_id": "https://openalex.org/A5086285278",
@@ -26699,7 +26673,8 @@
       ],
       "instituitions_count": 25,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5069579045": {
       "openalex_id": "https://openalex.org/A5069579045",
@@ -26939,7 +26914,8 @@
       ],
       "instituitions_count": 36,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5013706725": {
       "openalex_id": "https://openalex.org/A5013706725",
@@ -27302,7 +27278,8 @@
       ],
       "instituitions_count": 59,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5009604211": {
       "openalex_id": "https://openalex.org/A5009604211",
@@ -27473,7 +27450,8 @@
       ],
       "instituitions_count": 24,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5087060148": {
       "openalex_id": "https://openalex.org/A5087060148",
@@ -27708,7 +27686,8 @@
       ],
       "instituitions_count": 34,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5077364923": {
       "openalex_id": "https://openalex.org/A5077364923",
@@ -27848,7 +27827,8 @@
       ],
       "instituitions_count": 15,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5084581807": {
       "openalex_id": "https://openalex.org/A5084581807",
@@ -28010,7 +27990,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5069578294": {
       "openalex_id": "https://openalex.org/A5069578294",
@@ -28160,7 +28141,8 @@
       ],
       "instituitions_count": 19,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5089335497": {
       "openalex_id": "https://openalex.org/A5089335497",
@@ -28357,7 +28339,8 @@
       ],
       "instituitions_count": 27,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5072260864": {
       "openalex_id": "https://openalex.org/A5072260864",
@@ -28483,7 +28466,8 @@
       ],
       "instituitions_count": 14,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5009220759": {
       "openalex_id": "https://openalex.org/A5009220759",
@@ -28706,7 +28690,8 @@
       ],
       "instituitions_count": 33,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5076974173": {
       "openalex_id": "https://openalex.org/A5076974173",
@@ -29069,7 +29054,8 @@
       ],
       "instituitions_count": 56,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5085510832": {
       "openalex_id": "https://openalex.org/A5085510832",
@@ -29169,7 +29155,8 @@
       ],
       "instituitions_count": 6,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5110214691": {
       "openalex_id": "https://openalex.org/A5110214691",
@@ -29297,7 +29284,8 @@
       ],
       "instituitions_count": 12,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5040115265": {
       "openalex_id": "https://openalex.org/A5040115265",
@@ -29470,7 +29458,8 @@
       ],
       "instituitions_count": 21,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5072219752": {
       "openalex_id": "https://openalex.org/A5072219752",
@@ -29557,7 +29546,8 @@
       ],
       "instituitions_count": 3,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5036984771": {
       "openalex_id": "https://openalex.org/A5036984771",
@@ -29721,7 +29711,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5025475871": {
       "openalex_id": "https://openalex.org/A5025475871",
@@ -29888,7 +29879,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5011301116": {
       "openalex_id": "https://openalex.org/A5011301116",
@@ -30077,7 +30069,8 @@
       ],
       "instituitions_count": 25,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5001395924": {
       "openalex_id": "https://openalex.org/A5001395924",
@@ -30254,7 +30247,8 @@
       ],
       "instituitions_count": 23,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5111611237": {
       "openalex_id": "https://openalex.org/A5111611237",
@@ -30409,7 +30403,8 @@
       ],
       "instituitions_count": 18,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5051257404": {
       "openalex_id": "https://openalex.org/A5051257404",
@@ -30569,7 +30564,8 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5017127428": {
       "openalex_id": "https://openalex.org/A5017127428",
@@ -30695,7 +30691,8 @@
       ],
       "instituitions_count": 14,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5051768518": {
       "openalex_id": "https://openalex.org/A5051768518",
@@ -30868,7 +30865,8 @@
       ],
       "instituitions_count": 21,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
     },
     "https://openalex.org/A5019190387": {
       "openalex_id": "https://openalex.org/A5019190387",
@@ -31042,7 +31040,141 @@
       ],
       "instituitions_count": 22,
       "works_search": null,
-      "works_author": null
+      "works_author": null,
+      "works_count": 0
+    },
+    "https://openalex.org/A5086006151": {
+      "openalex_id": "https://openalex.org/A5086006151",
+      "orcid_id": "https://orcid.org/0000-0002-9675-934X",
+      "display_name": "Georg Jander",
+      "from_relevant_author_list": false,
+      "two_yr_mean_citedness": 4.552631578947368,
+      "h_index": 70,
+      "i10_index": 148,
+      "relevant_topics": {
+        "T10487": false,
+        "T11641": false,
+        "T10702": false,
+        "T12475": true,
+        "T10005": false
+      },
+      "relevant_topics_share": 1,
+      "active_years_min": 1991,
+      "active_years_max": 2025,
+      "active_years_sum": 30,
+      "active_years_counted": {
+        "1991": 1,
+        "1993": 2,
+        "1994": 1,
+        "1995": 1,
+        "1996": 1,
+        "1998": 1,
+        "2000": 2,
+        "2001": 1,
+        "2002": 2,
+        "2004": 2,
+        "2006": 3,
+        "2007": 2,
+        "2008": 4,
+        "2009": 2,
+        "2010": 4,
+        "2011": 3,
+        "2012": 3,
+        "2013": 2,
+        "2014": 3,
+        "2015": 3,
+        "2016": 5,
+        "2017": 2,
+        "2018": 2,
+        "2019": 2,
+        "2020": 2,
+        "2021": 2,
+        "2022": 2,
+        "2023": 2,
+        "2024": 2,
+        "2025": 2
+      },
+      "institutions": [
+        {
+          "openalex_id": "https://openalex.org/I136199984",
+          "year_start": 1991,
+          "year_end": 2008
+        },
+        {
+          "openalex_id": "https://openalex.org/I2801851002",
+          "year_start": 1993,
+          "year_end": 1993
+        },
+        {
+          "openalex_id": "https://openalex.org/I1321434546",
+          "year_start": 1998,
+          "year_end": 1998
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210087915",
+          "year_start": 2000,
+          "year_end": 2008
+        },
+        {
+          "openalex_id": "https://openalex.org/I205783295",
+          "year_start": 2004,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I87424562",
+          "year_start": 2004,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I12097938",
+          "year_start": 2006,
+          "year_end": 2006
+        },
+        {
+          "openalex_id": "https://openalex.org/I138006243",
+          "year_start": 2010,
+          "year_end": 2010
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210089818",
+          "year_start": 2010,
+          "year_end": 2015
+        },
+        {
+          "openalex_id": "https://openalex.org/I130769515",
+          "year_start": 2011,
+          "year_end": 2011
+        },
+        {
+          "openalex_id": "https://openalex.org/I16391192",
+          "year_start": 2012,
+          "year_end": 2012
+        },
+        {
+          "openalex_id": "https://openalex.org/I913481162",
+          "year_start": 2014,
+          "year_end": 2014
+        },
+        {
+          "openalex_id": "https://openalex.org/I2799300731",
+          "year_start": 2016,
+          "year_end": 2016
+        },
+        {
+          "openalex_id": "https://openalex.org/I101479585",
+          "year_start": 2016,
+          "year_end": 2016
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210151791",
+          "year_start": 2016,
+          "year_end": 2016
+        }
+      ],
+      "instituitions_count": 15,
+      "works_search": null,
+      "works_author": null,
+      "works_count": 0
     }
   },
   "meta": {
@@ -31060,11 +31192,11 @@
     },
     "topics_filter": "T10487+T11641+(T10702|T12475|T10005)",
     "authors_topic_share_counts": {
-      "5": 14,
+      "5": 13,
       "4": 14,
       "3": 45,
       "2": 19,
-      "1": 31
+      "1": 32
     }
   }
 }
