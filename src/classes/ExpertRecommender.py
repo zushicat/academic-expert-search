@@ -11,6 +11,7 @@ from helpers.filehandler import read_json_file, write_json_file
 from src.models.expert_search_models import (
     ExpertSearch_Response,
     ExpertSearch_Works,
+    ExpertSearch_Work,
     ExpertSearch_Topics,
     ExpertSearch_Institutions,
     ExpertSearch_Author,
@@ -57,34 +58,36 @@ class ExpertRecommender:
         # ***
         # current_year = datetime.now().year
 
-        # works = await self._get_works(
+        # works_from_authors = await self._get_works(
         #     author_ids=authors.root,
         #     topics_filter=meta.topics_filter,
         #     min_year=current_year - 5,
         # )
 
+        # ***
         # DEBUG
+        # ***
         # write_json_file(
         #     file_path=f"{self.class_name}/mock-responses/1_works_from_authors.json",
-        #     data=works,
+        #     data=works_from_authors,
         # )
 
         works_from_authors = read_json_file(
-            file_path=f"{self.class_name}/mock-responses/1_works_from_authors.json"
+            file_path=f"{self.class_name}/mock-responses/1_works_from_authors_0_8.json"
         )
 
-        self._process_works(
+        works, authors = self._processworks_from_authors(
             works_from_authors=works_from_authors, works=works, authors=authors
         )
 
         # ***
         # Step 3
         # ***
-        # graph = self._build_graph(search_result=search_result)
-        # best_authors = self._get_best_experts(graph=graph)
-        # print(len(best_authors))
-        # print()
-        # print(json.dumps(best_authors))
+        graph = self._build_graph(search_result=search_result)
+        best_authors = self._get_best_experts(graph=graph)
+        print(len(best_authors))
+        print()
+        print(json.dumps(best_authors))
 
     # ***********
     # STEP 1: filter author (and the rest) on authors_topic_share_counts
@@ -230,13 +233,63 @@ class ExpertRecommender:
 
         return works
 
-    def _process_works(
+    def _processworks_from_authors(
         self,
         works_from_authors: List[Dict[str, Any]],
         works: ExpertSearch_Topics,
         authors: ExpertSearch_Authors,
     ):
-        print(len(works_from_authors))
+        for current_work in works_from_authors:
+            # ***
+            # process work
+            # ***
+            current_work_id = current_work.get("id")
+
+            # already stored: skip
+            if works.root.get(current_work_id):
+                continue
+
+            tmp_work = {
+                "openalex_id": current_work_id,
+                "doi": (current_work.get("ids") or {}).get("doi"),
+                "title": current_work.get("title"),
+                "publication_year": current_work.get("publication_year"),
+                "relevance_score": current_work.get("relevance_score"),
+                "cited_by_count": current_work.get("cited_by_count"),
+                "primary_topic": (current_work.get("primary_topic") or {}).get("id"),
+                "topics": [t.get("id") for t in current_work.get("topics") or []],
+                "author_ids": [],
+                "from_query_search": False,
+            }
+
+            # ***
+            # process authors
+            # ***
+            for author_in_work in current_work.get("authorships") or []:
+                author_in_work_id = author_in_work.get("author").get("id")
+
+                # author id is not in authors object: skip
+                if authors.root.get(author_in_work_id) is None:
+                    continue
+
+                # store author id in current work object
+                tmp_work["author_ids"].append(author_in_work_id)
+
+                # store current work id in author object
+                author = authors.root[author_in_work_id]
+                if author.works_search is None:
+                    author.works_search = []
+
+                if author.works_author is None:
+                    author.works_author = []
+                author.works_author.append(current_work_id)
+                author.works_count += 1
+
+            # add current_work_id:tmp_work to works
+            works.root[current_work_id] = ExpertSearch_Work(**tmp_work)
+
+        # return updated objects
+        return works, authors
 
     # ***********
     # Step 3: graph from search results
@@ -286,6 +339,7 @@ class ExpertRecommender:
                 relevant_topics_share=author.relevant_topics_share,
                 active_years_min=author.active_years_min,
                 active_years_max=author.active_years_max,
+                works_count=author.works_count,
             )
 
             for topic_id, is_relevant in author.relevant_topics.items():
@@ -356,18 +410,24 @@ class ExpertRecommender:
         productivity_raw = {}
         recency_raw = {}
 
-        # ---- compute raw scores ----
+        # ******
+        # compute raw scores
+        # ******
         for author in authors:
             data = graph.nodes[author]
 
+            # ***
             # Topic expertise: sum of expertise edge weights
+            # ***
             topic_score = 0.0
             for _, _, edata in graph.edges(author, data=True):
                 if edata.get("edge_type") == "expertise":
                     topic_score += edata.get("weight", 0.0)
             topic_raw[author] = topic_score
 
+            # ***
             # Impact: dampened bibliometrics
+            # ***
             h = data.get("h_index") or 0
             i10 = data.get("i10_index") or 0
             citedness = data.get("two_yr_mean_citedness") or 0
@@ -378,7 +438,9 @@ class ExpertRecommender:
                 + 0.1 * math.log1p(citedness)
             )
 
+            # ***
             # Productivity: number of authored works
+            # ***
             authored_works = [
                 nbr
                 for nbr, edata in graph[author].items()
@@ -387,7 +449,9 @@ class ExpertRecommender:
             ]
             productivity_raw[author] = len(set(authored_works))
 
+            # ***
             # Recency: based on most recent publication year
+            # ***
             years = []
             for work in set(authored_works):
                 year = graph.nodes[work].get("publication_year")
@@ -400,7 +464,9 @@ class ExpertRecommender:
             else:
                 recency_raw[author] = 0.0
 
-        # ---- normalization helper ----
+        # ******
+        # normalization helper
+        # ******
         def normalize(scores):
             max_val = max(scores.values())
             if max_val == 0:
@@ -412,7 +478,9 @@ class ExpertRecommender:
         productivity = normalize(productivity_raw)
         recency = normalize(recency_raw)
 
-        # ---- final score ----
+        # ******
+        # final score
+        # ******
         results = []
         for author in authors:
             score = (
@@ -442,7 +510,7 @@ class ExpertRecommender:
 
 
 if __name__ == "__main__":
-    top_perc_found_authors = 0.6  # 0.8
+    top_perc_found_authors = 0.8
     recommender = ExpertRecommender(top_perc_found_authors=top_perc_found_authors)
 
     search_response = read_json_file(
