@@ -1,6 +1,5 @@
 [
   {
-    "id": "https://openalex.org/W2217108954",
     "ids": {
       "openalex": "https://openalex.org/W2217108954",
       "doi": "https://doi.org/10.1890/14-1748.1",
@@ -9,7 +8,7 @@
     },
     "title": "Native wildflower plantings support wild bee abundance and diversity in agricultural landscapes across the United States",
     "publication_year": 2015,
-    "relevance_score": 72.04455,
+    "relevance_score": 72.04322,
     "authorships": [
       {
         "author_position": "first",
@@ -428,7 +427,6 @@
         ]
       }
     ],
-    "cited_by_count": 264,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -445,63 +443,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T12475",
-        "display_name": "Plant Parasitism and Resistance",
-        "score": 0.9983999729156494,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1110",
-          "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9976000189781189,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W1973439176",
     "ids": {
       "openalex": "https://openalex.org/W1973439176",
       "doi": "https://doi.org/10.1371/journal.pone.0002771",
@@ -510,7 +454,7 @@
     },
     "title": "Does Pathogen Spillover from Commercially Reared Bumble Bees Threaten Wild Pollinators?",
     "publication_year": 2008,
-    "relevance_score": 71.15783,
+    "relevance_score": 71.16105,
     "authorships": [
       {
         "author_position": "first",
@@ -585,7 +529,6 @@
         ]
       }
     ],
-    "cited_by_count": 191,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -602,63 +545,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9990000128746033,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W3042360663",
     "ids": {
       "openalex": "https://openalex.org/W3042360663",
       "doi": "https://doi.org/10.1007/s13592-020-00788-9",
@@ -666,7 +555,7 @@
     },
     "title": "Managed honey bees as a radar for wild bee decline?",
     "publication_year": 2020,
-    "relevance_score": 57.791008,
+    "relevance_score": 57.79251,
     "authorships": [
       {
         "author_position": "first",
@@ -1065,7 +954,6 @@
         ]
       }
     ],
-    "cited_by_count": 100,
     "primary_topic": {
       "id": "https://openalex.org/T11641",
       "display_name": "Insect and Pesticide Research",
@@ -1082,63 +970,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9998999834060669,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W2138043077",
     "ids": {
       "openalex": "https://openalex.org/W2138043077",
       "doi": "https://doi.org/10.1046/j.1523-1739.1998.97154.x",
@@ -1146,7 +980,7 @@
     },
     "title": "The Potential Consequences of Pollinator Declines on the Conservation of Biodiversity and Stability of Food Crop Yields",
     "publication_year": 1998,
-    "relevance_score": 54.935116,
+    "relevance_score": 54.93716,
     "authorships": [
       {
         "author_position": "first",
@@ -1185,7 +1019,6 @@
         ]
       }
     ],
-    "cited_by_count": 813,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -1202,63 +1035,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9994000196456909,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T12475",
-        "display_name": "Plant Parasitism and Resistance",
-        "score": 0.9987000226974487,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1110",
-          "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W1923504226",
     "ids": {
       "openalex": "https://openalex.org/W1923504226",
       "doi": "https://doi.org/10.1111/afe.12041",
@@ -1266,7 +1045,7 @@
     },
     "title": "Sublethal neonicotinoid insecticide exposure reduces solitary bee reproductive success",
     "publication_year": 2013,
-    "relevance_score": 54.052914,
+    "relevance_score": 54.05627,
     "authorships": [
       {
         "author_position": "first",
@@ -1496,7 +1275,6 @@
         ]
       }
     ],
-    "cited_by_count": 203,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -1513,63 +1291,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9995999932289124,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W2153935646",
     "ids": {
       "openalex": "https://openalex.org/W2153935646",
       "doi": "https://doi.org/10.1111/2041-210x.12375",
@@ -1577,7 +1301,7 @@
     },
     "title": "The effect of repeated, lethal sampling on wild bee abundance and diversity",
     "publication_year": 2015,
-    "relevance_score": 46.480057,
+    "relevance_score": 46.47578,
     "authorships": [
       {
         "author_position": "first",
@@ -1823,7 +1547,6 @@
         ]
       }
     ],
-    "cited_by_count": 105,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -1840,63 +1563,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9977999925613403,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9965000152587891,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W2480249431",
     "ids": {
       "openalex": "https://openalex.org/W2480249431",
       "doi": "https://doi.org/10.1111/1365-2664.12763",
@@ -1904,7 +1573,7 @@
     },
     "title": "Semi‐natural habitats mitigate the effects of temperature rise on wild bees",
     "publication_year": 2016,
-    "relevance_score": 45.507145,
+    "relevance_score": 45.513084,
     "authorships": [
       {
         "author_position": "first",
@@ -2089,7 +1758,6 @@
         ]
       }
     ],
-    "cited_by_count": 87,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -2106,63 +1774,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9995999932289124,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9993000030517578,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W1843008321",
     "ids": {
       "openalex": "https://openalex.org/W1843008321",
       "doi": "https://doi.org/10.1111/2041-210x.12416",
@@ -2171,7 +1785,7 @@
     },
     "title": "High‐throughput monitoring of wild bee diversity and abundance via mitogenomics",
     "publication_year": 2015,
-    "relevance_score": 43.9309,
+    "relevance_score": 43.935753,
     "authorships": [
       {
         "author_position": "first",
@@ -2825,7 +2439,6 @@
         ]
       }
     ],
-    "cited_by_count": 146,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -2842,63 +2455,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9995999932289124,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9980000257492065,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W4291111806",
     "ids": {
       "openalex": "https://openalex.org/W4291111806",
       "doi": "https://doi.org/10.1002/ece3.9190",
@@ -2906,7 +2465,7 @@
     },
     "title": "Six years of wild bee monitoring shows changes in biodiversity within and across years and declines in abundance",
     "publication_year": 2022,
-    "relevance_score": 39.76729,
+    "relevance_score": 39.76691,
     "authorships": [
       {
         "author_position": "first",
@@ -3067,7 +2626,6 @@
         ]
       }
     ],
-    "cited_by_count": 50,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -3084,63 +2642,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9955000281333923,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9954000115394592,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W2523705196",
     "ids": {
       "openalex": "https://openalex.org/W2523705196",
       "doi": "https://doi.org/10.3184/003685016x14685000479908",
@@ -3149,7 +2653,7 @@
     },
     "title": "The Canary in the Coalmine; Bee Declines as an Indicator of Environmental Health",
     "publication_year": 2016,
-    "relevance_score": 38.90285,
+    "relevance_score": 38.9037,
     "authorships": [
       {
         "author_position": "first",
@@ -3224,7 +2728,6 @@
         ]
       }
     ],
-    "cited_by_count": 47,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -3241,63 +2744,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9990000128746033,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W2924365618",
     "ids": {
       "openalex": "https://openalex.org/W2924365618",
       "doi": "https://doi.org/10.1111/icad.12347",
@@ -3305,7 +2754,7 @@
     },
     "title": "Status changes in the wild bees of north‐eastern North America over 125 years revealed through museum specimens",
     "publication_year": 2019,
-    "relevance_score": 36.51575,
+    "relevance_score": 36.515163,
     "authorships": [
       {
         "author_position": "first",
@@ -3380,7 +2829,6 @@
         ]
       }
     ],
-    "cited_by_count": 52,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -3397,63 +2845,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9988999962806702,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10005",
-        "display_name": "Ecology and Vegetation Dynamics Studies",
-        "score": 0.992900013923645,
-        "subfield": {
-          "id": "https://openalex.org/subfields/2309",
-          "display_name": "Nature and Landscape Conservation"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/23",
-          "display_name": "Environmental Science"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/3",
-          "display_name": "Physical Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W2519204557",
     "ids": {
       "openalex": "https://openalex.org/W2519204557",
       "doi": "https://doi.org/10.1111/cobi.12839",
@@ -3462,7 +2856,7 @@
     },
     "title": "Questioning public perception, conservation policy, and recovery actions for honeybees in North America",
     "publication_year": 2016,
-    "relevance_score": 34.187664,
+    "relevance_score": 34.18952,
     "authorships": [
       {
         "author_position": "first",
@@ -3537,7 +2931,6 @@
         ]
       }
     ],
-    "cited_by_count": 83,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -3554,63 +2947,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9998000264167786,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9987000226974487,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W2623587077",
     "ids": {
       "openalex": "https://openalex.org/W2623587077",
       "doi": "https://doi.org/10.1371/journal.pone.0179273",
@@ -3619,7 +2958,7 @@
     },
     "title": "Flight of the bumble bee: Buzzes predict pollination services",
     "publication_year": 2017,
-    "relevance_score": 33.800262,
+    "relevance_score": 33.798615,
     "authorships": [
       {
         "author_position": "first",
@@ -3802,7 +3141,6 @@
         ]
       }
     ],
-    "cited_by_count": 39,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -3819,70 +3157,16 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.998199999332428,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9976000189781189,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W4281644584",
     "ids": {
       "openalex": "https://openalex.org/W4281644584",
       "doi": "https://doi.org/10.1111/icad.12589"
     },
     "title": "Crop visitation by wild bees declines over an 8‐year time series: A dramatic trend, or just dramatic between‐year variation?",
     "publication_year": 2022,
-    "relevance_score": 32.495007,
+    "relevance_score": 32.494663,
     "authorships": [
       {
         "author_position": "first",
@@ -3993,7 +3277,6 @@
         ]
       }
     ],
-    "cited_by_count": 37,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -4010,63 +3293,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9995999932289124,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9927999973297119,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W3162878828",
     "ids": {
       "openalex": "https://openalex.org/W3162878828",
       "doi": "https://doi.org/10.1016/j.agee.2021.107470",
@@ -4074,7 +3303,7 @@
     },
     "title": "Resampling of wild bees across fifteen years reveals variable species declines and recoveries after extreme weather",
     "publication_year": 2021,
-    "relevance_score": 30.597284,
+    "relevance_score": 30.59491,
     "authorships": [
       {
         "author_position": "first",
@@ -4257,7 +3486,6 @@
         ]
       }
     ],
-    "cited_by_count": 31,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -4274,63 +3502,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9997000098228455,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T12475",
-        "display_name": "Plant Parasitism and Resistance",
-        "score": 0.996999979019165,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1110",
-          "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W3009566959",
     "ids": {
       "openalex": "https://openalex.org/W3009566959",
       "doi": "https://doi.org/10.1371/journal.pone.0230007",
@@ -4339,7 +3513,7 @@
     },
     "title": "Citizen science improves our understanding of the impact of soil management on wild pollinator abundance in agroecosystems",
     "publication_year": 2020,
-    "relevance_score": 30.302706,
+    "relevance_score": 30.302181,
     "authorships": [
       {
         "author_position": "first",
@@ -4483,7 +3657,6 @@
         ]
       }
     ],
-    "cited_by_count": 36,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -4500,70 +3673,16 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T12475",
-        "display_name": "Plant Parasitism and Resistance",
-        "score": 0.9986000061035156,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1110",
-          "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9983999729156494,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W4391023135",
     "ids": {
       "openalex": "https://openalex.org/W4391023135",
       "doi": "https://doi.org/10.1016/j.baae.2024.01.003"
     },
     "title": "Improving wild bee monitoring, sampling methods, and conservation",
     "publication_year": 2024,
-    "relevance_score": 29.91799,
+    "relevance_score": 29.918987,
     "authorships": [
       {
         "author_position": "first",
@@ -5336,7 +4455,6 @@
         ]
       }
     ],
-    "cited_by_count": 23,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -5353,63 +4471,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9993000030517578,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9984999895095825,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W3096679246",
     "ids": {
       "openalex": "https://openalex.org/W3096679246",
       "doi": "https://doi.org/10.1016/j.ecolind.2020.107132",
@@ -5417,7 +4481,7 @@
     },
     "title": "Insect biomass is not a consistent proxy for biodiversity metrics in wild bees",
     "publication_year": 2020,
-    "relevance_score": 29.907862,
+    "relevance_score": 29.90948,
     "authorships": [
       {
         "author_position": "first",
@@ -5854,7 +4918,6 @@
         ]
       }
     ],
-    "cited_by_count": 39,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -5871,70 +4934,16 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10702",
-        "display_name": "Insect and Arachnid Ecology and Behavior",
-        "score": 0.9977999925613403,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1311",
-          "display_name": "Genetics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/13",
-          "display_name": "Biochemistry, Genetics and Molecular Biology"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9973999857902527,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W4220866177",
     "ids": {
       "openalex": "https://openalex.org/W4220866177",
       "doi": "https://doi.org/10.1007/s13592-022-00919-4"
     },
     "title": "Estimating bee abundance: can mark-recapture methods validate common sampling protocols?",
     "publication_year": 2022,
-    "relevance_score": 29.488876,
+    "relevance_score": 29.4885,
     "authorships": [
       {
         "author_position": "first",
@@ -6165,7 +5174,6 @@
         ]
       }
     ],
-    "cited_by_count": 25,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -6182,63 +5190,9 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10005",
-        "display_name": "Ecology and Vegetation Dynamics Studies",
-        "score": 0.9973999857902527,
-        "subfield": {
-          "id": "https://openalex.org/subfields/2309",
-          "display_name": "Nature and Landscape Conservation"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/23",
-          "display_name": "Environmental Science"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/3",
-          "display_name": "Physical Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T10895",
-        "display_name": "Species Distribution and Climate Change",
-        "score": 0.9952999949455261,
-        "subfield": {
-          "id": "https://openalex.org/subfields/2302",
-          "display_name": "Ecological Modeling"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/23",
-          "display_name": "Environmental Science"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/3",
-          "display_name": "Physical Sciences"
-        }
-      }
-    ]
+    }
   },
   {
-    "id": "https://openalex.org/W3170535299",
     "ids": {
       "openalex": "https://openalex.org/W3170535299",
       "doi": "https://doi.org/10.1002/2688-8319.12071",
@@ -6246,7 +5200,7 @@
     },
     "title": "Relative bee abundance varies by collection method and flowering richness: Implications for understanding patterns in bee community data",
     "publication_year": 2021,
-    "relevance_score": 29.01077,
+    "relevance_score": 29.011309,
     "authorships": [
       {
         "author_position": "first",
@@ -6429,7 +5383,6 @@
         ]
       }
     ],
-    "cited_by_count": 36,
     "primary_topic": {
       "id": "https://openalex.org/T10487",
       "display_name": "Plant and animal studies",
@@ -6446,59 +5399,6 @@
         "id": "https://openalex.org/domains/1",
         "display_name": "Life Sciences"
       }
-    },
-    "topics": [
-      {
-        "id": "https://openalex.org/T10487",
-        "display_name": "Plant and animal studies",
-        "score": 1.0,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1105",
-          "display_name": "Ecology, Evolution, Behavior and Systematics"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T11641",
-        "display_name": "Insect and Pesticide Research",
-        "score": 0.9976000189781189,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1109",
-          "display_name": "Insect Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      },
-      {
-        "id": "https://openalex.org/T12475",
-        "display_name": "Plant Parasitism and Resistance",
-        "score": 0.9923999905586243,
-        "subfield": {
-          "id": "https://openalex.org/subfields/1110",
-          "display_name": "Plant Science"
-        },
-        "field": {
-          "id": "https://openalex.org/fields/11",
-          "display_name": "Agricultural and Biological Sciences"
-        },
-        "domain": {
-          "id": "https://openalex.org/domains/1",
-          "display_name": "Life Sciences"
-        }
-      }
-    ]
+    }
   }
 ]

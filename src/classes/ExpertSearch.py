@@ -160,7 +160,7 @@ class ExpertSearch:
         #     "ExpertSearch/mock-responses/1_openalex_search_response_works.json"
         # )
 
-        request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article&per_page={limit}&select=id,ids,title,publication_year,relevance_score,authorships,cited_by_count,primary_topic,topics"
+        request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
 
         response = requests.get(request_url)
         json_data = response.json()
@@ -180,16 +180,16 @@ class ExpertSearch:
             # ***
             # process work
             # ***
-            work_id = work.get("id")
+            work_id = work.get("ids").get("openalex")
             tmp_work = {
                 "openalex_id": work_id,
                 "doi": (work.get("ids") or {}).get("doi"),
                 "title": work.get("title"),
                 "publication_year": work.get("publication_year"),
                 "relevance_score": work.get("relevance_score"),
-                "cited_by_count": work.get("cited_by_count"),
+                # "cited_by_count": work.get("cited_by_count"),
                 "primary_topic": (work.get("primary_topic") or {}).get("id"),
-                "topics": [t.get("id") for t in work.get("topics") or []],
+                # "topics": [t.get("id") for t in work.get("topics") or []],
                 "author_ids": [],
                 "from_query_search": True,
             }

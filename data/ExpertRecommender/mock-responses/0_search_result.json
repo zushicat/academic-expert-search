@@ -92,14 +92,8 @@
       "doi": "https://doi.org/10.1890/14-1748.1",
       "title": "Native wildflower plantings support wild bee abundance and diversity in agricultural landscapes across the United States",
       "publication_year": 2015,
-      "relevance_score": 72.04455,
-      "cited_by_count": 264,
+      "relevance_score": 72.04322,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T12475",
-        "https://openalex.org/T11641"
-      ],
       "author_ids": [
         "https://openalex.org/A5085952515",
         "https://openalex.org/A5100995230"
@@ -111,14 +105,8 @@
       "doi": "https://doi.org/10.1371/journal.pone.0002771",
       "title": "Does Pathogen Spillover from Commercially Reared Bumble Bees Threaten Wild Pollinators?",
       "publication_year": 2008,
-      "relevance_score": 71.15783,
-      "cited_by_count": 191,
+      "relevance_score": 71.16105,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5037725540",
         "https://openalex.org/A5088698878"
@@ -130,14 +118,8 @@
       "doi": "https://doi.org/10.1007/s13592-020-00788-9",
       "title": "Managed honey bees as a radar for wild bee decline?",
       "publication_year": 2020,
-      "relevance_score": 57.791008,
-      "cited_by_count": 100,
+      "relevance_score": 57.79251,
       "primary_topic": "https://openalex.org/T11641",
-      "topics": [
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10487",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5007581267",
         "https://openalex.org/A5039999199"
@@ -149,14 +131,8 @@
       "doi": "https://doi.org/10.1046/j.1523-1739.1998.97154.x",
       "title": "The Potential Consequences of Pollinator Declines on the Conservation of Biodiversity and Stability of Food Crop Yields",
       "publication_year": 1998,
-      "relevance_score": 54.935116,
-      "cited_by_count": 813,
+      "relevance_score": 54.93716,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T12475"
-      ],
       "author_ids": [
         "https://openalex.org/A5007801614"
       ],
@@ -167,14 +143,8 @@
       "doi": "https://doi.org/10.1111/afe.12041",
       "title": "Sublethal neonicotinoid insecticide exposure reduces solitary bee reproductive success",
       "publication_year": 2013,
-      "relevance_score": 54.052914,
-      "cited_by_count": 203,
+      "relevance_score": 54.05627,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5076351210",
         "https://openalex.org/A5078525299"
@@ -186,14 +156,8 @@
       "doi": "https://doi.org/10.1111/2041-210x.12375",
       "title": "The effect of repeated, lethal sampling on wild bee abundance and diversity",
       "publication_year": 2015,
-      "relevance_score": 46.480057,
-      "cited_by_count": 105,
+      "relevance_score": 46.47578,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5033279590",
         "https://openalex.org/A5079176981"
@@ -205,14 +169,8 @@
       "doi": "https://doi.org/10.1111/1365-2664.12763",
       "title": "Semi‐natural habitats mitigate the effects of temperature rise on wild bees",
       "publication_year": 2016,
-      "relevance_score": 45.507145,
-      "cited_by_count": 87,
+      "relevance_score": 45.513084,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5035027734",
         "https://openalex.org/A5055832161"
@@ -224,14 +182,8 @@
       "doi": "https://doi.org/10.1111/2041-210x.12416",
       "title": "High‐throughput monitoring of wild bee diversity and abundance via mitogenomics",
       "publication_year": 2015,
-      "relevance_score": 43.9309,
-      "cited_by_count": 146,
+      "relevance_score": 43.935753,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5101684869",
         "https://openalex.org/A5067099702"
@@ -243,14 +195,8 @@
       "doi": "https://doi.org/10.1002/ece3.9190",
       "title": "Six years of wild bee monitoring shows changes in biodiversity within and across years and declines in abundance",
       "publication_year": 2022,
-      "relevance_score": 39.76729,
-      "cited_by_count": 50,
+      "relevance_score": 39.76691,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5006181984",
         "https://openalex.org/A5022069215"
@@ -262,14 +208,8 @@
       "doi": "https://doi.org/10.3184/003685016x14685000479908",
       "title": "The Canary in the Coalmine; Bee Declines as an Indicator of Environmental Health",
       "publication_year": 2016,
-      "relevance_score": 38.90285,
-      "cited_by_count": 47,
+      "relevance_score": 38.9037,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5008498925",
         "https://openalex.org/A5035816075"
@@ -281,14 +221,8 @@
       "doi": "https://doi.org/10.1111/icad.12347",
       "title": "Status changes in the wild bees of north‐eastern North America over 125 years revealed through museum specimens",
       "publication_year": 2019,
-      "relevance_score": 36.51575,
-      "cited_by_count": 52,
+      "relevance_score": 36.515163,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10005"
-      ],
       "author_ids": [
         "https://openalex.org/A5003036339",
         "https://openalex.org/A5043714176"
@@ -300,14 +234,8 @@
       "doi": "https://doi.org/10.1111/cobi.12839",
       "title": "Questioning public perception, conservation policy, and recovery actions for honeybees in North America",
       "publication_year": 2016,
-      "relevance_score": 34.187664,
-      "cited_by_count": 83,
+      "relevance_score": 34.18952,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5017487819",
         "https://openalex.org/A5061655812"
@@ -319,14 +247,8 @@
       "doi": "https://doi.org/10.1371/journal.pone.0179273",
       "title": "Flight of the bumble bee: Buzzes predict pollination services",
       "publication_year": 2017,
-      "relevance_score": 33.800262,
-      "cited_by_count": 39,
+      "relevance_score": 33.798615,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T10702",
-        "https://openalex.org/T11641"
-      ],
       "author_ids": [
         "https://openalex.org/A5039013257",
         "https://openalex.org/A5083070664"
@@ -338,14 +260,8 @@
       "doi": "https://doi.org/10.1111/icad.12589",
       "title": "Crop visitation by wild bees declines over an 8‐year time series: A dramatic trend, or just dramatic between‐year variation?",
       "publication_year": 2022,
-      "relevance_score": 32.495007,
-      "cited_by_count": 37,
+      "relevance_score": 32.494663,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5005192858",
         "https://openalex.org/A5085477907"
@@ -357,14 +273,8 @@
       "doi": "https://doi.org/10.1016/j.agee.2021.107470",
       "title": "Resampling of wild bees across fifteen years reveals variable species declines and recoveries after extreme weather",
       "publication_year": 2021,
-      "relevance_score": 30.597284,
-      "cited_by_count": 31,
+      "relevance_score": 30.59491,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T12475"
-      ],
       "author_ids": [
         "https://openalex.org/A5070927118",
         "https://openalex.org/A5078861569"
@@ -376,14 +286,8 @@
       "doi": "https://doi.org/10.1371/journal.pone.0230007",
       "title": "Citizen science improves our understanding of the impact of soil management on wild pollinator abundance in agroecosystems",
       "publication_year": 2020,
-      "relevance_score": 30.302706,
-      "cited_by_count": 36,
+      "relevance_score": 30.302181,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T12475",
-        "https://openalex.org/T11641"
-      ],
       "author_ids": [
         "https://openalex.org/A5028598963",
         "https://openalex.org/A5089895033"
@@ -395,14 +299,8 @@
       "doi": "https://doi.org/10.1016/j.baae.2024.01.003",
       "title": "Improving wild bee monitoring, sampling methods, and conservation",
       "publication_year": 2024,
-      "relevance_score": 29.91799,
-      "cited_by_count": 23,
+      "relevance_score": 29.918987,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T10702"
-      ],
       "author_ids": [
         "https://openalex.org/A5044410338",
         "https://openalex.org/A5084349484"
@@ -414,14 +312,8 @@
       "doi": "https://doi.org/10.1016/j.ecolind.2020.107132",
       "title": "Insect biomass is not a consistent proxy for biodiversity metrics in wild bees",
       "publication_year": 2020,
-      "relevance_score": 29.907862,
-      "cited_by_count": 39,
+      "relevance_score": 29.90948,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T10702",
-        "https://openalex.org/T11641"
-      ],
       "author_ids": [
         "https://openalex.org/A5039999199",
         "https://openalex.org/A5012301888"
@@ -433,14 +325,8 @@
       "doi": "https://doi.org/10.1007/s13592-022-00919-4",
       "title": "Estimating bee abundance: can mark-recapture methods validate common sampling protocols?",
       "publication_year": 2022,
-      "relevance_score": 29.488876,
-      "cited_by_count": 25,
+      "relevance_score": 29.4885,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T10005",
-        "https://openalex.org/T10895"
-      ],
       "author_ids": [
         "https://openalex.org/A5054459536",
         "https://openalex.org/A5015695171"
@@ -452,14 +338,8 @@
       "doi": "https://doi.org/10.1002/2688-8319.12071",
       "title": "Relative bee abundance varies by collection method and flowering richness: Implications for understanding patterns in bee community data",
       "publication_year": 2021,
-      "relevance_score": 29.01077,
-      "cited_by_count": 36,
+      "relevance_score": 29.011309,
       "primary_topic": "https://openalex.org/T10487",
-      "topics": [
-        "https://openalex.org/T10487",
-        "https://openalex.org/T11641",
-        "https://openalex.org/T12475"
-      ],
       "author_ids": [
         "https://openalex.org/A5045082865",
         "https://openalex.org/A5084859594"
@@ -5627,55 +5507,6 @@
       "country_code": "US",
       "type": "archive"
     },
-    "https://openalex.org/I4210109258": {
-      "openalex_id": "https://openalex.org/I4210109258",
-      "ror": "https://ror.org/01r4tcq81",
-      "display_name": "Innovative Genomics Institute",
-      "country_code": "US",
-      "type": "education"
-    },
-    "https://openalex.org/I1331889678": {
-      "openalex_id": "https://openalex.org/I1331889678",
-      "ror": "https://ror.org/05kv34a53",
-      "display_name": "East Malling Research (United Kingdom)",
-      "country_code": "GB",
-      "type": "company"
-    },
-    "https://openalex.org/I71838634": {
-      "openalex_id": "https://openalex.org/I71838634",
-      "ror": "https://ror.org/05ykr0121",
-      "display_name": "San Francisco State University",
-      "country_code": "US",
-      "type": "education"
-    },
-    "https://openalex.org/I2802640032": {
-      "openalex_id": "https://openalex.org/I2802640032",
-      "ror": "https://ror.org/0377f6951",
-      "display_name": "Foundation Center",
-      "country_code": "US",
-      "type": "nonprofit"
-    },
-    "https://openalex.org/I4210136293": {
-      "openalex_id": "https://openalex.org/I4210136293",
-      "ror": "https://ror.org/035trbs97",
-      "display_name": "Eden Medical Center",
-      "country_code": "US",
-      "type": "healthcare"
-    },
-    "https://openalex.org/I4210161250": {
-      "openalex_id": "https://openalex.org/I4210161250",
-      "ror": "https://ror.org/05cspff93",
-      "display_name": "U.S. Vegetable Laboratory",
-      "country_code": "US",
-      "type": "facility"
-    },
-    "https://openalex.org/I134446601": {
-      "openalex_id": "https://openalex.org/I134446601",
-      "ror": "https://ror.org/02xewxa75",
-      "display_name": "Berkeley College",
-      "country_code": "US",
-      "type": "education"
-    },
     "https://openalex.org/I60134161": {
       "openalex_id": "https://openalex.org/I60134161",
       "ror": "https://ror.org/04chrp450",
@@ -5780,6 +5611,55 @@
       "display_name": "RIKEN Center for Sustainable Resource Science",
       "country_code": "JP",
       "type": "facility"
+    },
+    "https://openalex.org/I4210109258": {
+      "openalex_id": "https://openalex.org/I4210109258",
+      "ror": "https://ror.org/01r4tcq81",
+      "display_name": "Innovative Genomics Institute",
+      "country_code": "US",
+      "type": "education"
+    },
+    "https://openalex.org/I1331889678": {
+      "openalex_id": "https://openalex.org/I1331889678",
+      "ror": "https://ror.org/05kv34a53",
+      "display_name": "East Malling Research (United Kingdom)",
+      "country_code": "GB",
+      "type": "company"
+    },
+    "https://openalex.org/I71838634": {
+      "openalex_id": "https://openalex.org/I71838634",
+      "ror": "https://ror.org/05ykr0121",
+      "display_name": "San Francisco State University",
+      "country_code": "US",
+      "type": "education"
+    },
+    "https://openalex.org/I2802640032": {
+      "openalex_id": "https://openalex.org/I2802640032",
+      "ror": "https://ror.org/0377f6951",
+      "display_name": "Foundation Center",
+      "country_code": "US",
+      "type": "nonprofit"
+    },
+    "https://openalex.org/I4210136293": {
+      "openalex_id": "https://openalex.org/I4210136293",
+      "ror": "https://ror.org/035trbs97",
+      "display_name": "Eden Medical Center",
+      "country_code": "US",
+      "type": "healthcare"
+    },
+    "https://openalex.org/I4210161250": {
+      "openalex_id": "https://openalex.org/I4210161250",
+      "ror": "https://ror.org/05cspff93",
+      "display_name": "U.S. Vegetable Laboratory",
+      "country_code": "US",
+      "type": "facility"
+    },
+    "https://openalex.org/I134446601": {
+      "openalex_id": "https://openalex.org/I134446601",
+      "ror": "https://ror.org/02xewxa75",
+      "display_name": "Berkeley College",
+      "country_code": "US",
+      "type": "education"
     },
     "https://openalex.org/I4210129656": {
       "openalex_id": "https://openalex.org/I4210129656",
@@ -7125,62 +7005,6 @@
       "country_code": "AU",
       "type": "facility"
     },
-    "https://openalex.org/I4210155177": {
-      "openalex_id": "https://openalex.org/I4210155177",
-      "ror": "https://ror.org/05ca9hc42",
-      "display_name": "Bentley (Canada)",
-      "country_code": "CA",
-      "type": "company"
-    },
-    "https://openalex.org/I176790772": {
-      "openalex_id": "https://openalex.org/I176790772",
-      "ror": "https://ror.org/00r4sry34",
-      "display_name": "Murdoch University",
-      "country_code": "AU",
-      "type": "education"
-    },
-    "https://openalex.org/I177605424": {
-      "openalex_id": "https://openalex.org/I177605424",
-      "ror": "https://ror.org/028vqfs63",
-      "display_name": "Amherst College",
-      "country_code": "US",
-      "type": "education"
-    },
-    "https://openalex.org/I4401200342": {
-      "openalex_id": "https://openalex.org/I4401200342",
-      "ror": "https://ror.org/02hxb7v96",
-      "display_name": "Society for Ecological Restoration",
-      "country_code": null,
-      "type": "nonprofit"
-    },
-    "https://openalex.org/I2799807786": {
-      "openalex_id": "https://openalex.org/I2799807786",
-      "ror": "https://ror.org/00v2a6g95",
-      "display_name": "Center for Plant Conservation",
-      "country_code": "US",
-      "type": "nonprofit"
-    },
-    "https://openalex.org/I1303253705": {
-      "openalex_id": "https://openalex.org/I1303253705",
-      "ror": "https://ror.org/010tt0206",
-      "display_name": "Asia Society",
-      "country_code": "US",
-      "type": "nonprofit"
-    },
-    "https://openalex.org/I2800703674": {
-      "openalex_id": "https://openalex.org/I2800703674",
-      "ror": "https://ror.org/05x0at146",
-      "display_name": "Santa Barbara Botanic Garden",
-      "country_code": "US",
-      "type": "archive"
-    },
-    "https://openalex.org/I4210146297": {
-      "openalex_id": "https://openalex.org/I4210146297",
-      "ror": "https://ror.org/051e7s436",
-      "display_name": "ARC Centre of Excellence in Advanced Molecular Imaging",
-      "country_code": "AU",
-      "type": "facility"
-    },
     "https://openalex.org/I188760350": {
       "openalex_id": "https://openalex.org/I188760350",
       "ror": "https://ror.org/03bea9k73",
@@ -7265,81 +7089,60 @@
       "country_code": "GB",
       "type": "other"
     },
-    "https://openalex.org/I2799428867": {
-      "openalex_id": "https://openalex.org/I2799428867",
-      "ror": "https://ror.org/03xzjnp53",
-      "display_name": "Iziko Museums of South Africa",
-      "country_code": "ZA",
-      "type": "archive"
+    "https://openalex.org/I4210155177": {
+      "openalex_id": "https://openalex.org/I4210155177",
+      "ror": "https://ror.org/05ca9hc42",
+      "display_name": "Bentley (Canada)",
+      "country_code": "CA",
+      "type": "company"
     },
-    "https://openalex.org/I2800129641": {
-      "openalex_id": "https://openalex.org/I2800129641",
-      "ror": "https://ror.org/00zn2c847",
-      "display_name": "Great Ormond Street Hospital",
-      "country_code": "GB",
-      "type": "healthcare"
-    },
-    "https://openalex.org/I99712911": {
-      "openalex_id": "https://openalex.org/I99712911",
-      "ror": "https://ror.org/03r1jm528",
-      "display_name": "Nelson Mandela University",
-      "country_code": "ZA",
+    "https://openalex.org/I176790772": {
+      "openalex_id": "https://openalex.org/I176790772",
+      "ror": "https://ror.org/00r4sry34",
+      "display_name": "Murdoch University",
+      "country_code": "AU",
       "type": "education"
     },
-    "https://openalex.org/I2800729945": {
-      "openalex_id": "https://openalex.org/I2800729945",
-      "ror": "https://ror.org/013ed7841",
-      "display_name": "American College of Physician Executives",
+    "https://openalex.org/I177605424": {
+      "openalex_id": "https://openalex.org/I177605424",
+      "ror": "https://ror.org/028vqfs63",
+      "display_name": "Amherst College",
       "country_code": "US",
       "type": "education"
     },
-    "https://openalex.org/I880615350": {
-      "openalex_id": "https://openalex.org/I880615350",
-      "ror": "https://ror.org/05a4pj207",
-      "display_name": "SUNY Cortland",
-      "country_code": "US",
-      "type": "education"
-    },
-    "https://openalex.org/I8078737": {
-      "openalex_id": "https://openalex.org/I8078737",
-      "ror": "https://ror.org/037s24f05",
-      "display_name": "Clemson University",
-      "country_code": "US",
-      "type": "education"
-    },
-    "https://openalex.org/I7947594": {
-      "openalex_id": "https://openalex.org/I7947594",
-      "ror": "https://ror.org/01adr0w49",
-      "display_name": "University of Maine",
-      "country_code": "US",
-      "type": "education"
-    },
-    "https://openalex.org/I26730717": {
-      "openalex_id": "https://openalex.org/I26730717",
-      "ror": "https://ror.org/00dhmq281",
-      "display_name": "Foothill College",
-      "country_code": "US",
-      "type": "education"
-    },
-    "https://openalex.org/I114073160": {
-      "openalex_id": "https://openalex.org/I114073160",
-      "ror": "https://ror.org/0060avh92",
-      "display_name": "Sutter Health",
-      "country_code": "US",
-      "type": "healthcare"
-    },
-    "https://openalex.org/I866804994": {
-      "openalex_id": "https://openalex.org/I866804994",
-      "ror": "https://ror.org/05s0g1g46",
-      "display_name": "National Research Foundation",
-      "country_code": "ZA",
+    "https://openalex.org/I4401200342": {
+      "openalex_id": "https://openalex.org/I4401200342",
+      "ror": "https://ror.org/02hxb7v96",
+      "display_name": "Society for Ecological Restoration",
+      "country_code": null,
       "type": "nonprofit"
     },
-    "https://openalex.org/I2800026062": {
-      "openalex_id": "https://openalex.org/I2800026062",
-      "ror": "https://ror.org/03bz9t645",
-      "display_name": "Bedford Institute of Oceanography",
-      "country_code": "CA",
+    "https://openalex.org/I2799807786": {
+      "openalex_id": "https://openalex.org/I2799807786",
+      "ror": "https://ror.org/00v2a6g95",
+      "display_name": "Center for Plant Conservation",
+      "country_code": "US",
+      "type": "nonprofit"
+    },
+    "https://openalex.org/I1303253705": {
+      "openalex_id": "https://openalex.org/I1303253705",
+      "ror": "https://ror.org/010tt0206",
+      "display_name": "Asia Society",
+      "country_code": "US",
+      "type": "nonprofit"
+    },
+    "https://openalex.org/I2800703674": {
+      "openalex_id": "https://openalex.org/I2800703674",
+      "ror": "https://ror.org/05x0at146",
+      "display_name": "Santa Barbara Botanic Garden",
+      "country_code": "US",
+      "type": "archive"
+    },
+    "https://openalex.org/I4210146297": {
+      "openalex_id": "https://openalex.org/I4210146297",
+      "ror": "https://ror.org/051e7s436",
+      "display_name": "ARC Centre of Excellence in Advanced Molecular Imaging",
+      "country_code": "AU",
       "type": "facility"
     },
     "https://openalex.org/I167383011": {
@@ -7438,6 +7241,83 @@
       "ror": "https://ror.org/04wtra345",
       "display_name": "Rural Development Institute",
       "country_code": "CN",
+      "type": "facility"
+    },
+    "https://openalex.org/I2799428867": {
+      "openalex_id": "https://openalex.org/I2799428867",
+      "ror": "https://ror.org/03xzjnp53",
+      "display_name": "Iziko Museums of South Africa",
+      "country_code": "ZA",
+      "type": "archive"
+    },
+    "https://openalex.org/I2800129641": {
+      "openalex_id": "https://openalex.org/I2800129641",
+      "ror": "https://ror.org/00zn2c847",
+      "display_name": "Great Ormond Street Hospital",
+      "country_code": "GB",
+      "type": "healthcare"
+    },
+    "https://openalex.org/I99712911": {
+      "openalex_id": "https://openalex.org/I99712911",
+      "ror": "https://ror.org/03r1jm528",
+      "display_name": "Nelson Mandela University",
+      "country_code": "ZA",
+      "type": "education"
+    },
+    "https://openalex.org/I2800729945": {
+      "openalex_id": "https://openalex.org/I2800729945",
+      "ror": "https://ror.org/013ed7841",
+      "display_name": "American College of Physician Executives",
+      "country_code": "US",
+      "type": "education"
+    },
+    "https://openalex.org/I880615350": {
+      "openalex_id": "https://openalex.org/I880615350",
+      "ror": "https://ror.org/05a4pj207",
+      "display_name": "SUNY Cortland",
+      "country_code": "US",
+      "type": "education"
+    },
+    "https://openalex.org/I8078737": {
+      "openalex_id": "https://openalex.org/I8078737",
+      "ror": "https://ror.org/037s24f05",
+      "display_name": "Clemson University",
+      "country_code": "US",
+      "type": "education"
+    },
+    "https://openalex.org/I7947594": {
+      "openalex_id": "https://openalex.org/I7947594",
+      "ror": "https://ror.org/01adr0w49",
+      "display_name": "University of Maine",
+      "country_code": "US",
+      "type": "education"
+    },
+    "https://openalex.org/I26730717": {
+      "openalex_id": "https://openalex.org/I26730717",
+      "ror": "https://ror.org/00dhmq281",
+      "display_name": "Foothill College",
+      "country_code": "US",
+      "type": "education"
+    },
+    "https://openalex.org/I114073160": {
+      "openalex_id": "https://openalex.org/I114073160",
+      "ror": "https://ror.org/0060avh92",
+      "display_name": "Sutter Health",
+      "country_code": "US",
+      "type": "healthcare"
+    },
+    "https://openalex.org/I866804994": {
+      "openalex_id": "https://openalex.org/I866804994",
+      "ror": "https://ror.org/05s0g1g46",
+      "display_name": "National Research Foundation",
+      "country_code": "ZA",
+      "type": "nonprofit"
+    },
+    "https://openalex.org/I2800026062": {
+      "openalex_id": "https://openalex.org/I2800026062",
+      "ror": "https://ror.org/03bz9t645",
+      "display_name": "Bedford Institute of Oceanography",
+      "country_code": "CA",
       "type": "facility"
     },
     "https://openalex.org/I4210087405": {
@@ -9323,6 +9203,41 @@
       "country_code": "DE",
       "type": "archive"
     },
+    "https://openalex.org/I4210106992": {
+      "openalex_id": "https://openalex.org/I4210106992",
+      "ror": "https://ror.org/01g3dya06",
+      "display_name": "Lancaster University Ghana",
+      "country_code": "GH",
+      "type": "education"
+    },
+    "https://openalex.org/I175532246": {
+      "openalex_id": "https://openalex.org/I175532246",
+      "ror": "https://ror.org/00cyydd11",
+      "display_name": "University of Eastern Finland",
+      "country_code": "FI",
+      "type": "education"
+    },
+    "https://openalex.org/I4210121317": {
+      "openalex_id": "https://openalex.org/I4210121317",
+      "ror": "https://ror.org/02z06eb16",
+      "display_name": "Centre for Sustainable Energy",
+      "country_code": "GB",
+      "type": "nonprofit"
+    },
+    "https://openalex.org/I4210167222": {
+      "openalex_id": "https://openalex.org/I4210167222",
+      "ror": "https://ror.org/01tzp8w95",
+      "display_name": "Best Biotech",
+      "country_code": "US",
+      "type": "company"
+    },
+    "https://openalex.org/I4210136190": {
+      "openalex_id": "https://openalex.org/I4210136190",
+      "ror": "https://ror.org/04ejtfc04",
+      "display_name": "Biobe (Norway)",
+      "country_code": "NO",
+      "type": "company"
+    },
     "https://openalex.org/I2801097182": {
       "openalex_id": "https://openalex.org/I2801097182",
       "ror": "https://ror.org/04rb60x98",
@@ -9427,41 +9342,6 @@
       "display_name": "Spintronics Research Network of Japan",
       "country_code": "JP",
       "type": "facility"
-    },
-    "https://openalex.org/I4210106992": {
-      "openalex_id": "https://openalex.org/I4210106992",
-      "ror": "https://ror.org/01g3dya06",
-      "display_name": "Lancaster University Ghana",
-      "country_code": "GH",
-      "type": "education"
-    },
-    "https://openalex.org/I175532246": {
-      "openalex_id": "https://openalex.org/I175532246",
-      "ror": "https://ror.org/00cyydd11",
-      "display_name": "University of Eastern Finland",
-      "country_code": "FI",
-      "type": "education"
-    },
-    "https://openalex.org/I4210121317": {
-      "openalex_id": "https://openalex.org/I4210121317",
-      "ror": "https://ror.org/02z06eb16",
-      "display_name": "Centre for Sustainable Energy",
-      "country_code": "GB",
-      "type": "nonprofit"
-    },
-    "https://openalex.org/I4210167222": {
-      "openalex_id": "https://openalex.org/I4210167222",
-      "ror": "https://ror.org/01tzp8w95",
-      "display_name": "Best Biotech",
-      "country_code": "US",
-      "type": "company"
-    },
-    "https://openalex.org/I4210136190": {
-      "openalex_id": "https://openalex.org/I4210136190",
-      "ror": "https://ror.org/04ejtfc04",
-      "display_name": "Biobe (Norway)",
-      "country_code": "NO",
-      "type": "company"
     },
     "https://openalex.org/I141988945": {
       "openalex_id": "https://openalex.org/I141988945",
@@ -10114,19 +9994,19 @@
       "country_code": "GB",
       "type": "company"
     },
-    "https://openalex.org/I101479585": {
-      "openalex_id": "https://openalex.org/I101479585",
-      "ror": "https://ror.org/05v9jqt67",
-      "display_name": "South China Agricultural University",
-      "country_code": "CN",
+    "https://openalex.org/I86467917": {
+      "openalex_id": "https://openalex.org/I86467917",
+      "ror": "https://ror.org/04gsp2c11",
+      "display_name": "James Cook University",
+      "country_code": "AU",
       "type": "education"
     },
-    "https://openalex.org/I1321434546": {
-      "openalex_id": "https://openalex.org/I1321434546",
-      "ror": "https://ror.org/01qtasp15",
-      "display_name": "European Southern Observatory",
-      "country_code": "DE",
-      "type": "facility"
+    "https://openalex.org/I2799643457": {
+      "openalex_id": "https://openalex.org/I2799643457",
+      "ror": "https://ror.org/035zntx80",
+      "display_name": "Queensland Museum",
+      "country_code": "AU",
+      "type": "archive"
     }
   },
   "authors": {
@@ -11929,6 +11809,130 @@
         }
       ],
       "instituitions_count": 22,
+      "works_search": null,
+      "works_author": null,
+      "works_count": 0
+    },
+    "https://openalex.org/A5084223502": {
+      "openalex_id": "https://openalex.org/A5084223502",
+      "orcid_id": "https://orcid.org/0000-0001-6349-4528",
+      "display_name": "Nico Blüthgen",
+      "from_relevant_author_list": false,
+      "two_yr_mean_citedness": 8.387096774193548,
+      "h_index": 70,
+      "i10_index": 181,
+      "relevant_topics": {
+        "T10487": true,
+        "T11641": true,
+        "T10702": true,
+        "T12475": true,
+        "T10005": true
+      },
+      "relevant_topics_share": 5,
+      "active_years_min": 2000,
+      "active_years_max": 2025,
+      "active_years_sum": 26,
+      "active_years_counted": {
+        "2000": 1,
+        "2001": 1,
+        "2002": 1,
+        "2003": 2,
+        "2004": 2,
+        "2005": 1,
+        "2006": 1,
+        "2007": 7,
+        "2008": 1,
+        "2009": 1,
+        "2010": 1,
+        "2011": 2,
+        "2012": 3,
+        "2013": 2,
+        "2014": 1,
+        "2015": 1,
+        "2016": 1,
+        "2017": 1,
+        "2018": 1,
+        "2019": 1,
+        "2020": 1,
+        "2021": 1,
+        "2022": 4,
+        "2023": 1,
+        "2024": 2,
+        "2025": 1
+      },
+      "institutions": [
+        {
+          "openalex_id": "https://openalex.org/I135140700",
+          "year_start": 2000,
+          "year_end": 2001
+        },
+        {
+          "openalex_id": "https://openalex.org/I54009628",
+          "year_start": 2002,
+          "year_end": 2004
+        },
+        {
+          "openalex_id": "https://openalex.org/I25974101",
+          "year_start": 2003,
+          "year_end": 2024
+        },
+        {
+          "openalex_id": "https://openalex.org/I102373834",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I80281795",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210100421",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I159548981",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I124227911",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I151201029",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I31512782",
+          "year_start": 2011,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I189158943",
+          "year_start": 2012,
+          "year_end": 2012
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210096386",
+          "year_start": 2022,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I86467917",
+          "year_start": 2022,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I2799643457",
+          "year_start": 2022,
+          "year_end": 2022
+        }
+      ],
+      "instituitions_count": 14,
       "works_search": null,
       "works_author": null,
       "works_count": 0
@@ -17566,175 +17570,6 @@
       "works_author": null,
       "works_count": 0
     },
-    "https://openalex.org/A5046711399": {
-      "openalex_id": "https://openalex.org/A5046711399",
-      "orcid_id": "https://orcid.org/0000-0001-5989-2929",
-      "display_name": "Kingsley W. Dixon",
-      "from_relevant_author_list": false,
-      "two_yr_mean_citedness": 6.5,
-      "h_index": 83,
-      "i10_index": 360,
-      "relevant_topics": {
-        "T10487": true,
-        "T11641": false,
-        "T10702": false,
-        "T12475": true,
-        "T10005": true
-      },
-      "relevant_topics_share": 3,
-      "active_years_min": 1989,
-      "active_years_max": 2025,
-      "active_years_sum": 36,
-      "active_years_counted": {
-        "1989": 2,
-        "1990": 1,
-        "1992": 1,
-        "1993": 1,
-        "1994": 2,
-        "1995": 1,
-        "1996": 2,
-        "1997": 1,
-        "1998": 1,
-        "1999": 1,
-        "2000": 1,
-        "2001": 3,
-        "2002": 3,
-        "2003": 3,
-        "2004": 3,
-        "2005": 2,
-        "2006": 2,
-        "2007": 3,
-        "2008": 3,
-        "2009": 2,
-        "2010": 2,
-        "2011": 2,
-        "2012": 3,
-        "2013": 2,
-        "2014": 3,
-        "2015": 3,
-        "2016": 4,
-        "2017": 3,
-        "2018": 2,
-        "2019": 3,
-        "2020": 3,
-        "2021": 5,
-        "2022": 7,
-        "2023": 4,
-        "2024": 2,
-        "2025": 2
-      },
-      "institutions": [
-        {
-          "openalex_id": "https://openalex.org/I38288417",
-          "year_start": 1989,
-          "year_end": 2017
-        },
-        {
-          "openalex_id": "https://openalex.org/I177877127",
-          "year_start": 1989,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I38260057",
-          "year_start": 1994,
-          "year_end": 1994
-        },
-        {
-          "openalex_id": "https://openalex.org/I2800703674",
-          "year_start": 2001,
-          "year_end": 2001
-        },
-        {
-          "openalex_id": "https://openalex.org/I2799807786",
-          "year_start": 2002,
-          "year_end": 2002
-        },
-        {
-          "openalex_id": "https://openalex.org/I177605424",
-          "year_start": 2003,
-          "year_end": 2003
-        },
-        {
-          "openalex_id": "https://openalex.org/I176790772",
-          "year_start": 2004,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210102918",
-          "year_start": 2008,
-          "year_end": 2008
-        },
-        {
-          "openalex_id": "https://openalex.org/I118347636",
-          "year_start": 2012,
-          "year_end": 2012
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210126202",
-          "year_start": 2014,
-          "year_end": 2014
-        },
-        {
-          "openalex_id": "https://openalex.org/I205640436",
-          "year_start": 2015,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I1303253705",
-          "year_start": 2016,
-          "year_end": 2016
-        },
-        {
-          "openalex_id": "https://openalex.org/I144852770",
-          "year_start": 2019,
-          "year_end": 2020
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210155177",
-          "year_start": 2021,
-          "year_end": 2021
-        },
-        {
-          "openalex_id": "https://openalex.org/I1337719021",
-          "year_start": 2021,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I2802431724",
-          "year_start": 2021,
-          "year_end": 2021
-        },
-        {
-          "openalex_id": "https://openalex.org/I31746571",
-          "year_start": 2022,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I4401200342",
-          "year_start": 2022,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I174659583",
-          "year_start": 2022,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210146297",
-          "year_start": 2022,
-          "year_end": 2023
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210100608",
-          "year_start": 2023,
-          "year_end": 2023
-        }
-      ],
-      "instituitions_count": 21,
-      "works_search": null,
-      "works_author": null,
-      "works_count": 0
-    },
     "https://openalex.org/A5083978052": {
       "openalex_id": "https://openalex.org/A5083978052",
       "orcid_id": "https://orcid.org/0000-0002-1487-3254",
@@ -17951,6 +17786,175 @@
         }
       ],
       "instituitions_count": 31,
+      "works_search": null,
+      "works_author": null,
+      "works_count": 0
+    },
+    "https://openalex.org/A5046711399": {
+      "openalex_id": "https://openalex.org/A5046711399",
+      "orcid_id": "https://orcid.org/0000-0001-5989-2929",
+      "display_name": "Kingsley W. Dixon",
+      "from_relevant_author_list": false,
+      "two_yr_mean_citedness": 6.5,
+      "h_index": 83,
+      "i10_index": 360,
+      "relevant_topics": {
+        "T10487": true,
+        "T11641": false,
+        "T10702": false,
+        "T12475": true,
+        "T10005": true
+      },
+      "relevant_topics_share": 3,
+      "active_years_min": 1989,
+      "active_years_max": 2025,
+      "active_years_sum": 36,
+      "active_years_counted": {
+        "1989": 2,
+        "1990": 1,
+        "1992": 1,
+        "1993": 1,
+        "1994": 2,
+        "1995": 1,
+        "1996": 2,
+        "1997": 1,
+        "1998": 1,
+        "1999": 1,
+        "2000": 1,
+        "2001": 3,
+        "2002": 3,
+        "2003": 3,
+        "2004": 3,
+        "2005": 2,
+        "2006": 2,
+        "2007": 3,
+        "2008": 3,
+        "2009": 2,
+        "2010": 2,
+        "2011": 2,
+        "2012": 3,
+        "2013": 2,
+        "2014": 3,
+        "2015": 3,
+        "2016": 4,
+        "2017": 3,
+        "2018": 2,
+        "2019": 3,
+        "2020": 3,
+        "2021": 5,
+        "2022": 7,
+        "2023": 4,
+        "2024": 2,
+        "2025": 2
+      },
+      "institutions": [
+        {
+          "openalex_id": "https://openalex.org/I38288417",
+          "year_start": 1989,
+          "year_end": 2017
+        },
+        {
+          "openalex_id": "https://openalex.org/I177877127",
+          "year_start": 1989,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I38260057",
+          "year_start": 1994,
+          "year_end": 1994
+        },
+        {
+          "openalex_id": "https://openalex.org/I2800703674",
+          "year_start": 2001,
+          "year_end": 2001
+        },
+        {
+          "openalex_id": "https://openalex.org/I2799807786",
+          "year_start": 2002,
+          "year_end": 2002
+        },
+        {
+          "openalex_id": "https://openalex.org/I177605424",
+          "year_start": 2003,
+          "year_end": 2003
+        },
+        {
+          "openalex_id": "https://openalex.org/I176790772",
+          "year_start": 2004,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210102918",
+          "year_start": 2008,
+          "year_end": 2008
+        },
+        {
+          "openalex_id": "https://openalex.org/I118347636",
+          "year_start": 2012,
+          "year_end": 2012
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210126202",
+          "year_start": 2014,
+          "year_end": 2014
+        },
+        {
+          "openalex_id": "https://openalex.org/I205640436",
+          "year_start": 2015,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I1303253705",
+          "year_start": 2016,
+          "year_end": 2016
+        },
+        {
+          "openalex_id": "https://openalex.org/I144852770",
+          "year_start": 2019,
+          "year_end": 2020
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210155177",
+          "year_start": 2021,
+          "year_end": 2021
+        },
+        {
+          "openalex_id": "https://openalex.org/I1337719021",
+          "year_start": 2021,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I2802431724",
+          "year_start": 2021,
+          "year_end": 2021
+        },
+        {
+          "openalex_id": "https://openalex.org/I31746571",
+          "year_start": 2022,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I4401200342",
+          "year_start": 2022,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I174659583",
+          "year_start": 2022,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210146297",
+          "year_start": 2022,
+          "year_end": 2023
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210100608",
+          "year_start": 2023,
+          "year_end": 2023
+        }
+      ],
+      "instituitions_count": 21,
       "works_search": null,
       "works_author": null,
       "works_count": 0
@@ -26283,6 +26287,192 @@
       "works_author": null,
       "works_count": 0
     },
+    "https://openalex.org/A5086285278": {
+      "openalex_id": "https://openalex.org/A5086285278",
+      "orcid_id": "https://orcid.org/0000-0002-0349-3870",
+      "display_name": "Ken Shirasu",
+      "from_relevant_author_list": false,
+      "two_yr_mean_citedness": 6.735294117647059,
+      "h_index": 87,
+      "i10_index": 194,
+      "relevant_topics": {
+        "T10487": false,
+        "T11641": false,
+        "T10702": false,
+        "T12475": true,
+        "T10005": false
+      },
+      "relevant_topics_share": 1,
+      "active_years_min": 1990,
+      "active_years_max": 2025,
+      "active_years_sum": 33,
+      "active_years_counted": {
+        "1990": 1,
+        "1993": 2,
+        "1994": 2,
+        "1996": 3,
+        "1997": 1,
+        "1998": 3,
+        "1999": 3,
+        "2000": 4,
+        "2001": 2,
+        "2002": 3,
+        "2003": 2,
+        "2004": 2,
+        "2005": 2,
+        "2006": 3,
+        "2007": 8,
+        "2008": 3,
+        "2009": 1,
+        "2010": 5,
+        "2011": 3,
+        "2012": 5,
+        "2013": 5,
+        "2014": 3,
+        "2015": 3,
+        "2016": 3,
+        "2017": 2,
+        "2018": 2,
+        "2019": 3,
+        "2020": 3,
+        "2021": 3,
+        "2022": 3,
+        "2023": 5,
+        "2024": 2,
+        "2025": 5
+      },
+      "institutions": [
+        {
+          "openalex_id": "https://openalex.org/I84218800",
+          "year_start": 1990,
+          "year_end": 1996
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210151202",
+          "year_start": 1993,
+          "year_end": 2014
+        },
+        {
+          "openalex_id": "https://openalex.org/I1307098950",
+          "year_start": 1996,
+          "year_end": 1997
+        },
+        {
+          "openalex_id": "https://openalex.org/I2800011936",
+          "year_start": 1998,
+          "year_end": 2010
+        },
+        {
+          "openalex_id": "https://openalex.org/I100288624",
+          "year_start": 1998,
+          "year_end": 2010
+        },
+        {
+          "openalex_id": "https://openalex.org/I2799300731",
+          "year_start": 1998,
+          "year_end": 1998
+        },
+        {
+          "openalex_id": "https://openalex.org/I2800060819",
+          "year_start": 1999,
+          "year_end": 1999
+        },
+        {
+          "openalex_id": "https://openalex.org/I133731052",
+          "year_start": 2000,
+          "year_end": 2000
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210122519",
+          "year_start": 2000,
+          "year_end": 2000
+        },
+        {
+          "openalex_id": "https://openalex.org/I1118541",
+          "year_start": 2002,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210100240",
+          "year_start": 2006,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I2738703131",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I52099693",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I142263535",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210128565",
+          "year_start": 2007,
+          "year_end": 2007
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210086780",
+          "year_start": 2010,
+          "year_end": 2010
+        },
+        {
+          "openalex_id": "https://openalex.org/I203951103",
+          "year_start": 2010,
+          "year_end": 2010
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210110652",
+          "year_start": 2011,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I114171174",
+          "year_start": 2012,
+          "year_end": 2013
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210086649",
+          "year_start": 2012,
+          "year_end": 2014
+        },
+        {
+          "openalex_id": "https://openalex.org/I161296585",
+          "year_start": 2015,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I74801974",
+          "year_start": 2015,
+          "year_end": 2025
+        },
+        {
+          "openalex_id": "https://openalex.org/I153327471",
+          "year_start": 2019,
+          "year_end": 2022
+        },
+        {
+          "openalex_id": "https://openalex.org/I4210150921",
+          "year_start": 2023,
+          "year_end": 2023
+        },
+        {
+          "openalex_id": "https://openalex.org/I60134161",
+          "year_start": 2025,
+          "year_end": 2025
+        }
+      ],
+      "instituitions_count": 25,
+      "works_search": null,
+      "works_author": null,
+      "works_count": 0
+    },
     "https://openalex.org/A5080532569": {
       "openalex_id": "https://openalex.org/A5080532569",
       "orcid_id": "https://orcid.org/0000-0002-9711-3962",
@@ -26486,192 +26676,6 @@
         }
       ],
       "instituitions_count": 27,
-      "works_search": null,
-      "works_author": null,
-      "works_count": 0
-    },
-    "https://openalex.org/A5086285278": {
-      "openalex_id": "https://openalex.org/A5086285278",
-      "orcid_id": "https://orcid.org/0000-0002-0349-3870",
-      "display_name": "Ken Shirasu",
-      "from_relevant_author_list": false,
-      "two_yr_mean_citedness": 6.735294117647059,
-      "h_index": 87,
-      "i10_index": 194,
-      "relevant_topics": {
-        "T10487": false,
-        "T11641": false,
-        "T10702": false,
-        "T12475": true,
-        "T10005": false
-      },
-      "relevant_topics_share": 1,
-      "active_years_min": 1990,
-      "active_years_max": 2025,
-      "active_years_sum": 33,
-      "active_years_counted": {
-        "1990": 1,
-        "1993": 2,
-        "1994": 2,
-        "1996": 3,
-        "1997": 1,
-        "1998": 3,
-        "1999": 3,
-        "2000": 4,
-        "2001": 2,
-        "2002": 3,
-        "2003": 2,
-        "2004": 2,
-        "2005": 2,
-        "2006": 3,
-        "2007": 8,
-        "2008": 3,
-        "2009": 1,
-        "2010": 5,
-        "2011": 3,
-        "2012": 5,
-        "2013": 5,
-        "2014": 3,
-        "2015": 3,
-        "2016": 3,
-        "2017": 2,
-        "2018": 2,
-        "2019": 3,
-        "2020": 3,
-        "2021": 3,
-        "2022": 3,
-        "2023": 5,
-        "2024": 2,
-        "2025": 5
-      },
-      "institutions": [
-        {
-          "openalex_id": "https://openalex.org/I84218800",
-          "year_start": 1990,
-          "year_end": 1996
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210151202",
-          "year_start": 1993,
-          "year_end": 2014
-        },
-        {
-          "openalex_id": "https://openalex.org/I1307098950",
-          "year_start": 1996,
-          "year_end": 1997
-        },
-        {
-          "openalex_id": "https://openalex.org/I2800011936",
-          "year_start": 1998,
-          "year_end": 2010
-        },
-        {
-          "openalex_id": "https://openalex.org/I100288624",
-          "year_start": 1998,
-          "year_end": 2010
-        },
-        {
-          "openalex_id": "https://openalex.org/I2799300731",
-          "year_start": 1998,
-          "year_end": 1998
-        },
-        {
-          "openalex_id": "https://openalex.org/I2800060819",
-          "year_start": 1999,
-          "year_end": 1999
-        },
-        {
-          "openalex_id": "https://openalex.org/I133731052",
-          "year_start": 2000,
-          "year_end": 2000
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210122519",
-          "year_start": 2000,
-          "year_end": 2000
-        },
-        {
-          "openalex_id": "https://openalex.org/I1118541",
-          "year_start": 2002,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210100240",
-          "year_start": 2006,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I2738703131",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I52099693",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I142263535",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210128565",
-          "year_start": 2007,
-          "year_end": 2007
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210086780",
-          "year_start": 2010,
-          "year_end": 2010
-        },
-        {
-          "openalex_id": "https://openalex.org/I203951103",
-          "year_start": 2010,
-          "year_end": 2010
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210110652",
-          "year_start": 2011,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I114171174",
-          "year_start": 2012,
-          "year_end": 2013
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210086649",
-          "year_start": 2012,
-          "year_end": 2014
-        },
-        {
-          "openalex_id": "https://openalex.org/I161296585",
-          "year_start": 2015,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I74801974",
-          "year_start": 2015,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I153327471",
-          "year_start": 2019,
-          "year_end": 2022
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210150921",
-          "year_start": 2023,
-          "year_end": 2023
-        },
-        {
-          "openalex_id": "https://openalex.org/I60134161",
-          "year_start": 2025,
-          "year_end": 2025
-        }
-      ],
-      "instituitions_count": 25,
       "works_search": null,
       "works_author": null,
       "works_count": 0
@@ -31042,139 +31046,6 @@
       "works_search": null,
       "works_author": null,
       "works_count": 0
-    },
-    "https://openalex.org/A5086006151": {
-      "openalex_id": "https://openalex.org/A5086006151",
-      "orcid_id": "https://orcid.org/0000-0002-9675-934X",
-      "display_name": "Georg Jander",
-      "from_relevant_author_list": false,
-      "two_yr_mean_citedness": 4.552631578947368,
-      "h_index": 70,
-      "i10_index": 148,
-      "relevant_topics": {
-        "T10487": false,
-        "T11641": false,
-        "T10702": false,
-        "T12475": true,
-        "T10005": false
-      },
-      "relevant_topics_share": 1,
-      "active_years_min": 1991,
-      "active_years_max": 2025,
-      "active_years_sum": 30,
-      "active_years_counted": {
-        "1991": 1,
-        "1993": 2,
-        "1994": 1,
-        "1995": 1,
-        "1996": 1,
-        "1998": 1,
-        "2000": 2,
-        "2001": 1,
-        "2002": 2,
-        "2004": 2,
-        "2006": 3,
-        "2007": 2,
-        "2008": 4,
-        "2009": 2,
-        "2010": 4,
-        "2011": 3,
-        "2012": 3,
-        "2013": 2,
-        "2014": 3,
-        "2015": 3,
-        "2016": 5,
-        "2017": 2,
-        "2018": 2,
-        "2019": 2,
-        "2020": 2,
-        "2021": 2,
-        "2022": 2,
-        "2023": 2,
-        "2024": 2,
-        "2025": 2
-      },
-      "institutions": [
-        {
-          "openalex_id": "https://openalex.org/I136199984",
-          "year_start": 1991,
-          "year_end": 2008
-        },
-        {
-          "openalex_id": "https://openalex.org/I2801851002",
-          "year_start": 1993,
-          "year_end": 1993
-        },
-        {
-          "openalex_id": "https://openalex.org/I1321434546",
-          "year_start": 1998,
-          "year_end": 1998
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210087915",
-          "year_start": 2000,
-          "year_end": 2008
-        },
-        {
-          "openalex_id": "https://openalex.org/I205783295",
-          "year_start": 2004,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I87424562",
-          "year_start": 2004,
-          "year_end": 2025
-        },
-        {
-          "openalex_id": "https://openalex.org/I12097938",
-          "year_start": 2006,
-          "year_end": 2006
-        },
-        {
-          "openalex_id": "https://openalex.org/I138006243",
-          "year_start": 2010,
-          "year_end": 2010
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210089818",
-          "year_start": 2010,
-          "year_end": 2015
-        },
-        {
-          "openalex_id": "https://openalex.org/I130769515",
-          "year_start": 2011,
-          "year_end": 2011
-        },
-        {
-          "openalex_id": "https://openalex.org/I16391192",
-          "year_start": 2012,
-          "year_end": 2012
-        },
-        {
-          "openalex_id": "https://openalex.org/I913481162",
-          "year_start": 2014,
-          "year_end": 2014
-        },
-        {
-          "openalex_id": "https://openalex.org/I2799300731",
-          "year_start": 2016,
-          "year_end": 2016
-        },
-        {
-          "openalex_id": "https://openalex.org/I101479585",
-          "year_start": 2016,
-          "year_end": 2016
-        },
-        {
-          "openalex_id": "https://openalex.org/I4210151791",
-          "year_start": 2016,
-          "year_end": 2016
-        }
-      ],
-      "instituitions_count": 15,
-      "works_search": null,
-      "works_author": null,
-      "works_count": 0
     }
   },
   "meta": {
@@ -31192,11 +31063,11 @@
     },
     "topics_filter": "T10487+T11641+(T10702|T12475|T10005)",
     "authors_topic_share_counts": {
-      "5": 13,
+      "5": 14,
       "4": 14,
       "3": 45,
       "2": 19,
-      "1": 32
+      "1": 31
     }
   }
 }
