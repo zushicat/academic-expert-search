@@ -187,9 +187,7 @@ class ExpertSearch:
                 "title": work.get("title"),
                 "publication_year": work.get("publication_year"),
                 "relevance_score": work.get("relevance_score"),
-                # "cited_by_count": work.get("cited_by_count"),
                 "primary_topic": (work.get("primary_topic") or {}).get("id"),
-                # "topics": [t.get("id") for t in work.get("topics") or []],
                 "author_ids": [],
                 "from_query_search": True,
             }

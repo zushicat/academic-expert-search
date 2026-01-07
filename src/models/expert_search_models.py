@@ -9,9 +9,7 @@ class ExpertSearch_Work(BaseModel):
     title: str
     publication_year: int | None
     relevance_score: float | None
-    # cited_by_count: int | None
     primary_topic: str | None
-    # topics: List[str]
     author_ids: List[str]
     from_query_search: bool = False
 
