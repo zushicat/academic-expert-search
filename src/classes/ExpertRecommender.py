@@ -7,6 +7,7 @@ from time import sleep
 from typing import Dict, Any, List, Set, Tuple
 
 from helpers.filehandler import read_json_file, write_json_file
+from helpers.toon import encode_toon
 
 from src.models.expert_search_models import (
     ExpertSearch_Response,
@@ -57,18 +58,19 @@ class ExpertRecommender:
         # Step 2
         # ***
         # current_year = datetime.now().year
+        # years_back = 3
 
         # works_from_authors = await self._get_works(
         #     author_ids=authors.root,
         #     topics_filter=meta.topics_filter,
-        #     min_year=current_year - 5,
+        #     min_year=current_year - years_back,
         # )
 
         # ***
         # DEBUG
         # ***
         # write_json_file(
-        #     file_path=f"{self.class_name}/mock-responses/1_works_from_authors.json",
+        #     file_path=f"{self.class_name}/mock-responses/1_works_from_authors_0_8.json",
         #     data=works_from_authors,
         # )
 
@@ -81,13 +83,94 @@ class ExpertRecommender:
         )
 
         # ***
-        # Step 3
+        # Step 3: Analyze graph (authors)
         # ***
         graph = self._build_graph(search_result=search_result)
-        best_authors = self._get_best_experts(graph=graph)
-        print(len(best_authors))
-        print()
-        print(json.dumps(best_authors))
+        authors_by_score = self._get_best_experts(graph=graph)
+        author_connections = self._get_connected_authors(graph=graph)
+
+        authors_by_score = self._update_author_scores(
+            authors_by_score=authors_by_score, author_connections=author_connections
+        )
+
+        # filter authors_by_score by score cutoff and keep only relevant authors
+        score_cutoff = 0.6
+        authors_by_score = {
+            k: v
+            for k, v in authors_by_score.items()
+            if v["overall_score"] >= score_cutoff
+        }
+        # print(len(authors_by_score))
+        # print(json.dumps(authors_by_score))
+
+        aggregated_author_connections = self._update_author_connections(
+            author_connections=author_connections,
+            relevant_author_ids=list(authors_by_score.keys()),
+        )
+
+        # print(json.dumps(aggregated_author_connections))
+        print(
+            json.dumps(
+                authors.root["https://openalex.org/A5070924304"].model_dump(),
+                ensure_ascii=False,
+            )
+        )
+
+        # ***
+        # Step 4
+        # ***
+        # batch = []
+        # for author_id in list(authors_by_score.keys())[:2]:
+        #     author = authors.root[author_id]
+        #     author_works_ids = author.works_search + author.works_author
+
+        #     collected_works_titles = {"openalex_id": author_id, "publications": {}}
+
+        #     for author_works_id in author_works_ids:
+        #         title = works.root[author_works_id].title
+        #         publication_year = works.root[author_works_id].publication_year
+
+        #         if collected_works_titles["publications"].get(publication_year) is None:
+        #             collected_works_titles["publications"][publication_year] = []
+        #         collected_works_titles["publications"][publication_year].append(title)
+
+        #     batch.append(collected_works_titles)
+
+        # print(len(batch))
+        # print()
+        # toon_data = encode_toon(batch)
+        # print(toon_data)
+
+        # print(authors.root["https://openalex.org/A5070924304"].model_dump())
+        # author = authors.root["https://openalex.org/A5070924304"]
+
+        # author_id = author.openalex_id
+        # author_works_ids = author.works_search + author.works_author
+
+        # collected_works_titles = {"openalex_id": author_id, "publications": {}}
+
+        # for author_works_id in author_works_ids:
+        #     title = works.root[author_works_id].title
+        #     publication_year = works.root[author_works_id].publication_year
+
+        #     if collected_works_titles["publications"].get(publication_year) is None:
+        #         collected_works_titles["publications"][publication_year] = []
+        #     collected_works_titles["publications"][publication_year].append(title)
+
+        # toon_data = encode_toon(collected_works_titles)
+        # print(toon_data)
+
+        # from toon_format import estimate_savings, compare_formats
+
+        # json_data = collected_works_titles
+
+        # result = estimate_savings(json_data)
+        # print(f"Saves {result['savings_percent']:.1f}% tokens")
+
+        # # Get formatted comparison
+        # print(compare_formats(json_data))
+
+        # print(json.dumps(collected_works_titles, ensure_ascii=False))
 
     # ***********
     # STEP 1: filter author (and the rest) on authors_topic_share_counts
@@ -192,8 +275,8 @@ class ExpertRecommender:
             f"topics.id:{topics_filter},"
             f"author.id:{author_filter},"
             f"has_doi:true"
-            "&select=id,ids,title,publication_year,relevance_score,"
-            "authorships,cited_by_count,primary_topic,topics"
+            "&select=ids,title,publication_year,"
+            "authorships,primary_topic"
         )
 
         semaphore = asyncio.Semaphore(MAX_RPS)
@@ -243,7 +326,7 @@ class ExpertRecommender:
             # ***
             # process work
             # ***
-            current_work_id = current_work.get("id")
+            current_work_id = current_work.get("ids").get("openalex")
 
             # already stored: skip
             if works.root.get(current_work_id):
@@ -255,9 +338,7 @@ class ExpertRecommender:
                 "title": current_work.get("title"),
                 "publication_year": current_work.get("publication_year"),
                 "relevance_score": current_work.get("relevance_score"),
-                "cited_by_count": current_work.get("cited_by_count"),
                 "primary_topic": (current_work.get("primary_topic") or {}).get("id"),
-                "topics": [t.get("id") for t in current_work.get("topics") or []],
                 "author_ids": [],
                 "from_query_search": False,
             }
@@ -292,7 +373,8 @@ class ExpertRecommender:
         return works, authors
 
     # ***********
-    # Step 3: graph from search results
+    # Step 3: Analyze graph (authors)
+    # - graph from search results
     # ***********
     def _build_graph(self, search_result: ExpertSearch_Response) -> nx.MultiGraph:
         G = nx.MultiGraph()
@@ -314,19 +396,15 @@ class ExpertRecommender:
                 node_type="work",
                 title=work.title,
                 publication_year=work.publication_year,
-                relevance_score=work.relevance_score,
-                cited_by_count=work.cited_by_count,
                 from_query_search=work.from_query_search,
             )
 
-            for topic_id in work.topics:
-                if topic_id in G:
-                    G.add_edge(
-                        work.openalex_id,
-                        topic_id,
-                        edge_type="has_topic",
-                        is_primary=(topic_id == work.primary_topic),
-                    )
+            if work.primary_topic in G:  # topic id
+                G.add_edge(
+                    work.openalex_id,
+                    work.primary_topic,
+                    edge_type="has_topic",
+                )
 
         for author in search_result.authors.root.values():
             G.add_node(
@@ -433,7 +511,7 @@ class ExpertRecommender:
             citedness = data.get("two_yr_mean_citedness") or 0
 
             impact_raw[author] = (
-                0.6 * math.log1p(h)
+                0.8 * math.log1p(h)
                 + 0.3 * math.log1p(i10)
                 + 0.1 * math.log1p(citedness)
             )
@@ -479,9 +557,23 @@ class ExpertRecommender:
         recency = normalize(recency_raw)
 
         # ******
+        # result format helper
+        # ******
+        def format_results(raw_results: List[List[Any]]) -> Dict[str, Any]:
+            results: Dict[str, Any] = {}
+            for raw_result in raw_results:
+                author_id = raw_result[0]
+                tmp = {"openalex_id": author_id, "overall_score": raw_result[1]}
+                for k, v in raw_result[2].items():
+                    tmp[k] = v
+
+                results[author_id] = tmp
+            return results
+
+        # ******
         # final score
         # ******
-        results = []
+        raw_results = []
         for author in authors:
             score = (
                 0.40 * topic[author]
@@ -490,7 +582,7 @@ class ExpertRecommender:
                 + 0.10 * recency[author]
             )
 
-            results.append(
+            raw_results.append(
                 (
                     author,
                     score,
@@ -504,9 +596,268 @@ class ExpertRecommender:
             )
 
         # sort descending by score
-        results.sort(key=lambda x: x[1], reverse=True)
+        raw_results.sort(key=lambda x: x[1], reverse=True)
+
+        # format and return orderend dict
+        results = format_results(raw_results=raw_results)
 
         return results
+
+    def _get_connected_authors(self, graph: nx.MultiGraph):
+        """
+        Detect author groups using Option A-2:
+        - Groups are cliques formed by authors on the same work or institution
+        - Groups are deduplicated by identical author membership
+        - No transitive closure, no topics
+        """
+        # --- collect author nodes
+        authors = {
+            n for n, d in graph.nodes(data=True) if d.get("node_type") == "author"
+        }
+
+        # =============================
+        # Co-authorship cliques (works)
+        # =============================
+        coauthor_groups = {}
+
+        for node, data in graph.nodes(data=True):
+            if data.get("node_type") != "work":
+                continue
+
+            work_id = node
+            work_authors = []
+
+            for nbr, edata_dict in graph[work_id].items():
+                for edata in edata_dict.values():
+                    if edata.get("edge_type") == "authored" and nbr in authors:
+                        work_authors.append(nbr)
+
+            if len(work_authors) < 2:
+                continue
+
+            key = frozenset(work_authors)
+            if key not in coauthor_groups:
+                coauthor_groups[key] = {
+                    "authors": list(key),
+                    "works": [work_id],
+                    "size": len(key),
+                }
+            else:
+                coauthor_groups[key]["works"].append(work_id)
+
+        # =============================
+        # Institution cliques
+        # =============================
+        institution_groups = {}
+
+        for node, data in graph.nodes(data=True):
+            if data.get("node_type") != "institution":
+                continue
+
+            inst_id = node
+            inst_authors = []
+
+            for nbr, edata_dict in graph[inst_id].items():
+                for edata in edata_dict.values():
+                    if edata.get("edge_type") == "affiliated_with" and nbr in authors:
+                        inst_authors.append(nbr)
+
+            if len(inst_authors) < 2:
+                continue
+
+            key = frozenset(inst_authors)
+            if key not in institution_groups:
+                institution_groups[key] = {
+                    "authors": list(key),
+                    "institutions": [inst_id],
+                    "size": len(key),
+                }
+            else:
+                institution_groups[key]["institutions"].append(inst_id)
+
+        # =============================
+        # Assign group IDs
+        # =============================
+        coauthor_group_list = []
+        for idx, group in enumerate(coauthor_groups.values()):
+            group["group_id"] = idx
+            coauthor_group_list.append(group)
+
+        institution_group_list = []
+        for idx, group in enumerate(institution_groups.values()):
+            group["group_id"] = idx
+            institution_group_list.append(group)
+
+        # =============================
+        # Author membership index
+        # =============================
+        author_membership = {
+            a: {"coauthor_groups": [], "institution_groups": []} for a in authors
+        }
+
+        for group in coauthor_group_list:
+            gid = group["group_id"]
+            for author in group["authors"]:
+                author_membership[author]["coauthor_groups"].append(gid)
+
+        for group in institution_group_list:
+            gid = group["group_id"]
+            for author in group["authors"]:
+                author_membership[author]["institution_groups"].append(gid)
+
+        # =============================
+        # Connectivity scores
+        # =============================
+        work_score_raw = {a: 0 for a in authors}
+        institution_score_raw = {a: 0 for a in authors}
+
+        for group in coauthor_group_list:
+            increment = group.get("size", 0) - 1
+            if increment <= 0:
+                continue
+            for author in group["authors"]:
+                work_score_raw[author] += increment
+
+        for group in institution_group_list:
+            increment = group.get("size", 0) - 1
+            if increment <= 0:
+                continue
+            for author in group["authors"]:
+                institution_score_raw[author] += increment
+
+        max_work = max(work_score_raw.values()) or 1
+        max_inst = max(institution_score_raw.values()) or 1
+
+        for author in authors:
+            work_norm = work_score_raw[author] / max_work
+            inst_norm = institution_score_raw[author] / max_inst
+
+            author_membership[author].update(
+                {
+                    "connectivity_score_works": round(work_norm, 3),
+                    "connectivity_score_institutions": round(inst_norm, 3),
+                    "connectivity_score": round((0.5 * work_norm + 0.5 * inst_norm), 3),
+                }
+            )
+
+        # --- sort authors by connectivity score (desc)
+        author_membership_sorted = dict(
+            sorted(
+                author_membership.items(),
+                key=lambda x: x[1].get("connectivity_score", 0),
+                reverse=True,
+            )
+        )
+
+        return {
+            "by_coauthorship": coauthor_group_list,
+            "by_institution": institution_group_list,
+            "author_membership": author_membership_sorted,
+        }
+
+    def _update_author_scores(
+        self, authors_by_score: Dict[str, Any], author_connections: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Add author connectivity score to authors_by_score"""
+        for author_id, author_data in author_connections.get(
+            "author_membership"
+        ).items():
+            authors_by_score[author_id].update(
+                {
+                    "connectivity_score_works": author_data.get(
+                        "connectivity_score_works"
+                    ),
+                    "connectivity_score_institutions": author_data.get(
+                        "connectivity_score_institutions"
+                    ),
+                    "connectivity_score": author_data.get("connectivity_score"),
+                }
+            )
+
+        return authors_by_score
+
+    def _update_author_connections(
+        self, author_connections: Dict[str, Any], relevant_author_ids: List[str]
+    ) -> Dict[str, Any]:
+        """
+        Aggregates connections like so:
+            {
+                "author_123": {
+                    "author_456": {
+                        connected_by_work: <bool>,
+                        connected_by_affiliation: <bool>
+                    }
+                }
+            }
+        Aggregate author-to-author connections based on:
+        - shared coauthorship groups
+        - shared institution groups
+        """
+        aggregated: Dict[str, Dict[str, Dict[str, bool]]] = {}
+
+        coauthor_groups = author_connections.get("by_coauthorship", [])
+        institution_groups = author_connections.get("by_institution", [])
+        author_membership = author_connections.get("author_membership", {})
+
+        # ***
+        # Pre-index groups by group_id for fast lookup
+        # ***
+        coauthor_by_id = {g["group_id"]: g for g in coauthor_groups}
+        institution_by_id = {g["group_id"]: g for g in institution_groups}
+
+        for author_id, membership in author_membership.items():
+            aggregated.setdefault(author_id, {})
+            # ***
+            # Co-authorship connections
+            # ***
+            for group_id in membership.get("coauthor_groups", []):
+                group = coauthor_by_id.get(group_id)
+
+                if not group:
+                    continue
+
+                for other_author in group.get("authors", []):
+                    if other_author == author_id:
+                        continue
+                    if other_author not in relevant_author_ids:
+                        continue
+
+                    aggregated[author_id].setdefault(
+                        other_author,
+                        {
+                            "connected_by_work": False,
+                            "connected_by_affiliation": False,
+                        },
+                    )
+                    aggregated[author_id][other_author]["connected_by_work"] = True
+
+            # ***
+            # Institution connections
+            # ***
+            for group_id in membership.get("institution_groups", []):
+                group = institution_by_id.get(group_id)
+
+                if not group:
+                    continue
+
+                for other_author in group.get("authors", []):
+                    if other_author == author_id:
+                        continue
+                    if other_author not in relevant_author_ids:
+                        continue
+
+                    aggregated[author_id].setdefault(
+                        other_author,
+                        {
+                            "connected_by_work": False,
+                            "connected_by_affiliation": False,
+                        },
+                    )
+                    aggregated[author_id][other_author][
+                        "connected_by_affiliation"
+                    ] = True
+
+        return aggregated
 
 
 if __name__ == "__main__":
