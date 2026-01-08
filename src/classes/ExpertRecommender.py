@@ -6,8 +6,9 @@ import math
 from time import sleep
 from typing import Dict, Any, List, Set, Tuple
 
-from classes.ExpertGraph import ExpertGraph
-from classes.ExpertUpdate import ExpertUpdate
+from classes.RecommenderClasses.ExpertGraph import ExpertGraph
+from classes.RecommenderClasses.ExpertUpdate import ExpertUpdate
+from classes.RecommenderClasses.ExpertAnalysis import ExpertAnalysis
 from helpers.filehandler import read_json_file, write_json_file
 from helpers.toon import encode_toon
 
@@ -150,8 +151,8 @@ class ExpertRecommender:
         # ***
         # Step 5: Process / analyze author works (LLM)
         # ***
-        batches = self._create_title_batches(authors=authors, works=works, batch_size=1)
-        print(json.dumps(batches[0], ensure_ascii=False))
+        analyzer = ExpertAnalysis()
+        await analyzer.analyze_author(authors=authors, works=works, batch_size=3)
 
     # ***********
     # STEP 1: filter author (and the rest) on authors_topic_share_counts
@@ -365,68 +366,8 @@ class ExpertRecommender:
 
     # ***********
     # Step 5: Analyze author works
-    # **********Ü
-    def _create_title_batches(
-        self,
-        authors: ExpertRecommender_Authors,
-        works: ExpertSearch_Works,
-        batch_size: int = 5,
-    ):
-        """
-        Create batches of 5 authors per batch.
-        Per author collect batches per year with a list of works titles.
-            {
-                author_id 1:
-                {
-                    2019: [title 1, title 2, ...], ...
-                },
-                author_id 1:
-                {
-                    2019: [title 1, title 2, ...], ...
-                }
-            }
-        """
-        author_work_map: Dict[str, Dict[int, List[str]]] = {}
-
-        for author_id, author in authors.root.items():
-            if not author.works:
-                continue
-
-            per_year: Dict[int, List[str]] = {}
-
-            for work_id in author.works:
-                work = works.root.get(work_id)
-                if not work:
-                    continue
-
-                year = work.publication_year
-                title = work.title
-
-                if not isinstance(year, int) or not title:
-                    continue
-
-                per_year.setdefault(year, []).append(title)
-
-            if not per_year:
-                continue
-
-            # deduplicate and sort titles per year, sort years
-            cleaned_per_year: Dict[int, List[str]] = {}
-            for year in sorted(per_year.keys()):
-                cleaned_per_year[year] = sorted(set(per_year[year]))
-
-            author_work_map[author_id] = cleaned_per_year
-
-        # batch authors in groups of 5
-        author_ids = list(author_work_map.keys())
-        batches: List[Dict[str, Dict[int, List[str]]]] = []
-
-        for i in range(0, len(author_ids), batch_size):
-            batch_ids = author_ids[i : i + batch_size]
-            batch = {aid: author_work_map[aid] for aid in batch_ids}
-            batches.append(batch)
-
-        return batches
+    # -> class ExpertAnalysis
+    # ***********
 
 
 if __name__ == "__main__":

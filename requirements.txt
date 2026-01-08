@@ -1,5 +1,6 @@
 aiohttp==3.13.3
 fastapi==0.128.0
+litellm==1.80.12
 networkx==3.6.1
 pydantic==2.12.5
 pydantic-settings==2.4.0
