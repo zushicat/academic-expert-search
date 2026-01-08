@@ -1,26 +1,9 @@
-import asyncio
-import collections
-from datetime import datetime
-import json
-import math
-from time import sleep
 from typing import Dict, Any, List, Set, Tuple
 
-from classes.ExpertGraph import ExpertGraph
-from helpers.filehandler import read_json_file, write_json_file
-from helpers.toon import encode_toon
-
 from models.expert_search_models import (
-    ExpertSearch_Response,
     ExpertSearch_Works,
-    ExpertSearch_Work,
-    ExpertSearch_Topics,
     ExpertSearch_Institutions,
-    ExpertSearch_Institution,
-    ExpertSearch_AuthorInstitution,
-    ExpertSearch_Author,
     ExpertSearch_Authors,
-    ExpertSearch_Meta,
 )
 
 from models.expert_recommender_models import (
@@ -30,9 +13,7 @@ from models.expert_recommender_models import (
     ExpertRecommender_Authors,
 )
 
-import aiohttp
 import networkx as nx
-import requests
 
 
 class ExpertUpdate:
