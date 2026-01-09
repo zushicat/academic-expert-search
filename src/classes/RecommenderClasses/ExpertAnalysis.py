@@ -22,16 +22,17 @@ litellm.drop_params = True
 # ******************************
 # model configs from environment
 # ******************************
+LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
+LLM_ANALYZER_BATCH_SIZE = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
+LLM_ANALYZER_TIMEOUT = int(os.environ["LLM_ANALYZER_TIMEOUT"])
+
 LLM_ANALYZER_MODEL = os.environ["LLM_ANALYZER_MODEL"]
 LLM_ANALYZER_BASE_URL = os.environ["LLM_ANALYZER_BASE_URL"]
 LLM_ANALYZER_API_KEY = os.environ["LLM_ANALYZER_API_KEY"]
-LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
 
-LLM_ANALYZER_MODEL = "openai/gpt-oss-120b-llmlb"
-
-# LLM_ANALYZER_MODEL = "groq/openai/gpt-oss-120b"
-# LLM_ANALYZER_BASE_URL = "https://api.groq.com/openai/v1"
-# LLM_ANALYZER_API_KEY = "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"
+LLM_JSON_REPAIR_MODEL = os.environ["LLM_JSON_REPAIR_MODEL"]
+LLM_JSON_REPAIR_BASE_URL = os.environ["LLM_JSON_REPAIR_BASE_URL"]
+LLM_JSON_REPAIR_API_KEY = os.environ["LLM_JSON_REPAIR_API_KEY"]
 
 
 class ExpertAnalysis:
@@ -42,8 +43,12 @@ class ExpertAnalysis:
         self,
         authors: ExpertRecommender_Authors,
         works: ExpertSearch_Works,
-        batch_size: int = 5,
+        batch_size: int = LLM_ANALYZER_BATCH_SIZE,
+        max_concurrency: int = LLM_ANALYZER_MAX_CONCURRENCY,
     ):
+        """
+        Main processing method called by ExpertRcommender.
+        """
         # ********
         # Prepare data
         # ********
@@ -58,7 +63,7 @@ class ExpertAnalysis:
         prompts = self._create_prompts(toon_batches=toon_batches, batch_size=batch_size)
 
         request_results = await self._request_llm_batches(
-            prompts=prompts, max_concurrency=LLM_ANALYZER_MAX_CONCURRENCY
+            prompts=prompts, max_concurrency=max_concurrency
         )
 
         # print(json.dumps(request_results, ensure_ascii=False))
@@ -159,35 +164,42 @@ class ExpertAnalysis:
     async def _request_llm_batches(
         self,
         prompts: List[str],
-        max_concurrency: int = 5,
+        max_concurrency: int,
     ) -> Dict[str, Any]:
-        semaphore = asyncio.Semaphore(max_concurrency)
-
-        async def bounded_request(prompt: str):
-            async with semaphore:
-                return await self._request_llm(
-                    prompt=prompt,
-                    model=LLM_ANALYZER_MODEL,
-                    api_key=LLM_ANALYZER_API_KEY,
-                    base_url=LLM_ANALYZER_BASE_URL,
-                )
-
-        tasks = [bounded_request(prompt) for prompt in prompts]
-        responses = await asyncio.gather(*tasks, return_exceptions=True)
-
+        queue: asyncio.Queue[str | None] = asyncio.Queue()
         results: Dict[str, Any] = {}
-        for r in responses:
-            try:
-                results.update(json.loads(r))
-            except Exception:
+
+        for prompt in prompts:
+            queue.put_nowait(prompt)
+        for _ in range(max_concurrency):
+            queue.put_nowait(None)
+
+        async def worker():
+            while True:
+                prompt = await queue.get()
+                if prompt is None:
+                    queue.task_done()
+                    break
                 try:
-                    print("-----> ERROR  1")
-                    repaired_json = await self._repair_json_response(json_response=r)
-                    results.update(json.loads(repaired_json))
-                except Exception as e:
-                    print("-----> ERROR  2")
-                    # print(f"      {e}")
-                    pass
+                    response = await self._request_llm(prompt=prompt)
+                    try:
+                        parsed = json.loads(response)
+                        results.update(parsed)
+                    except Exception:
+                        try:
+                            print("---> error")
+                            repaired_json = await self._repair_json_response(
+                                json_response=response
+                            )
+                            results.update(json.loads(repaired_json))
+                        except Exception:
+                            pass
+                finally:
+                    queue.task_done()
+
+        async with asyncio.TaskGroup() as tg:
+            for _ in range(max_concurrency):
+                tg.create_task(worker())
 
         return results
 
@@ -202,9 +214,9 @@ class ExpertAnalysis:
 
         repaired_json = await self._request_llm(
             prompt=prompt,
-            model=LLM_ANALYZER_MODEL,
-            api_key=LLM_ANALYZER_API_KEY,
-            base_url=LLM_ANALYZER_BASE_URL,
+            model=LLM_JSON_REPAIR_MODEL,
+            api_key=LLM_JSON_REPAIR_API_KEY,
+            base_url=LLM_JSON_REPAIR_BASE_URL,
         )
 
         return repaired_json
@@ -212,21 +224,19 @@ class ExpertAnalysis:
     async def _request_llm(
         self,
         prompt: str,
-        model: str,
-        api_key: str,
-        base_url: str | None,
         temperature: float = 0.2,
         reasoning_effort: str = "low",
+        timeout: int = LLM_ANALYZER_TIMEOUT,
     ) -> str:
         litellm_params = {
-            "model": model,
+            "model": LLM_ANALYZER_MODEL,
             "temperature": temperature,
-            "api_key": api_key,
+            "api_key": LLM_ANALYZER_API_KEY,
             "reasoning_effort": reasoning_effort,  # Options: "low", "medium", "high"
         }
 
         if LLM_ANALYZER_BASE_URL:
-            litellm_params["api_base"] = base_url
+            litellm_params["api_base"] = LLM_ANALYZER_BASE_URL
 
         litellm_params["messages"] = [
             {"role": "user", "content": prompt},
@@ -234,7 +244,7 @@ class ExpertAnalysis:
 
         try:
             # response = litellm.completion(**litellm_params, timeout=20)
-            response = await litellm.acompletion(**litellm_params, timeout=20)
+            response = await litellm.acompletion(**litellm_params, timeout=timeout)
             content = response.choices[0].message.get("content")
 
             return content

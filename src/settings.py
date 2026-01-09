@@ -5,10 +5,17 @@ class Settings(BaseSettings):
     API_KEY: str | None = None
     USE_API_KEY: bool | None = False
 
+    LLM_ANALYZER_MAX_CONCURRENCY: int = 5
+    LLM_ANALYZER_BATCH_SIZE: int = 4
+    LLM_ANALYZER_TIMEOUT: int = 30
+
     LLM_ANALYZER_MODEL: str | None = None
     LLM_ANALYZER_BASE_URL: str | None = None
     LLM_ANALYZER_API_KEY: str | None = None
-    LLM_ANALYZER_MAX_CONCURRENCY: int = 5
+
+    LLM_JSON_REPAIR_MODEL: str | None = None
+    LLM_JSON_REPAIR_BASE_URL: str | None = None
+    LLM_JSON_REPAIR_API_KEY: str | None = None
 
 
 config = Settings()

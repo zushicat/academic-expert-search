@@ -45,7 +45,11 @@ class ExpertRecommender:
     # ************
     # The actual processing call (i.e. from router)
     # ************
-    async def recommend_experts(self, search_result: ExpertSearch_Response):
+    async def recommend_experts(
+        self,
+        search_result: ExpertSearch_Response,
+        create_expert_summaries: bool = False,
+    ):
         meta = topics = search_result.meta  # .model_dump()
         topics = search_result.topics  # .model_dump()
         works = search_result.works  # .model_dump()
@@ -151,8 +155,11 @@ class ExpertRecommender:
         # ***
         # Step 5: Process / analyze author works (LLM)
         # ***
-        analyzer = ExpertAnalysis()
-        await analyzer.analyze_author(authors=authors, works=works, batch_size=4)
+        if create_expert_summaries:
+            analyzer = ExpertAnalysis()
+            await analyzer.analyze_author(
+                authors=authors, works=works
+            )  # use default batch_size and max_concurrency from env
 
     # ***********
     # STEP 1: filter author (and the rest) on authors_topic_share_counts
@@ -379,6 +386,7 @@ if __name__ == "__main__":
     )
     result = asyncio.run(
         recommender.recommend_experts(
-            search_result=ExpertSearch_Response.model_validate(search_response)
+            search_result=ExpertSearch_Response.model_validate(search_response),
+            create_expert_summaries=True,
         )
     )
