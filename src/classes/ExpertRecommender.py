@@ -152,7 +152,7 @@ class ExpertRecommender:
         # Step 5: Process / analyze author works (LLM)
         # ***
         analyzer = ExpertAnalysis()
-        await analyzer.analyze_author(authors=authors, works=works, batch_size=3)
+        await analyzer.analyze_author(authors=authors, works=works, batch_size=4)
 
     # ***********
     # STEP 1: filter author (and the rest) on authors_topic_share_counts

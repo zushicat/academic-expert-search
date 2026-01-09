@@ -1,5 +1,5 @@
 import asyncio
-
+import json
 import os
 from typing import Dict, Any, List, Set, Tuple
 import warnings
@@ -25,6 +25,13 @@ litellm.drop_params = True
 LLM_ANALYZER_MODEL = os.environ["LLM_ANALYZER_MODEL"]
 LLM_ANALYZER_BASE_URL = os.environ["LLM_ANALYZER_BASE_URL"]
 LLM_ANALYZER_API_KEY = os.environ["LLM_ANALYZER_API_KEY"]
+LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
+
+LLM_ANALYZER_MODEL = "openai/gpt-oss-120b-llmlb"
+
+# LLM_ANALYZER_MODEL = "groq/openai/gpt-oss-120b"
+# LLM_ANALYZER_BASE_URL = "https://api.groq.com/openai/v1"
+# LLM_ANALYZER_API_KEY = "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"
 
 
 class ExpertAnalysis:
@@ -37,6 +44,9 @@ class ExpertAnalysis:
         works: ExpertSearch_Works,
         batch_size: int = 5,
     ):
+        # ********
+        # Prepare data
+        # ********
         author_data_batches = self._create_title_batches(
             authors=authors, works=works, batch_size=batch_size
         )
@@ -47,17 +57,13 @@ class ExpertAnalysis:
 
         prompts = self._create_prompts(toon_batches=toon_batches, batch_size=batch_size)
 
-        # for each batch in prompts: call self._request_llm concurrently and
-        # store in results
-        # order doesn't matter
-        results: List[str] = []
-        result = await self._request_llm(
-            prompt=prompts[0],
-            model=LLM_ANALYZER_MODEL,
-            api_key=LLM_ANALYZER_API_KEY,
-            base_url=LLM_ANALYZER_BASE_URL,
+        request_results = await self._request_llm_batches(
+            prompts=prompts, max_concurrency=LLM_ANALYZER_MAX_CONCURRENCY
         )
-        print(result)
+
+        # print(json.dumps(request_results, ensure_ascii=False))
+        # print()
+        print(len(request_results))
 
     # *********
     # data preparation
@@ -150,6 +156,59 @@ class ExpertAnalysis:
     # *********
     #
     # *********
+    async def _request_llm_batches(
+        self,
+        prompts: List[str],
+        max_concurrency: int = 5,
+    ) -> Dict[str, Any]:
+        semaphore = asyncio.Semaphore(max_concurrency)
+
+        async def bounded_request(prompt: str):
+            async with semaphore:
+                return await self._request_llm(
+                    prompt=prompt,
+                    model=LLM_ANALYZER_MODEL,
+                    api_key=LLM_ANALYZER_API_KEY,
+                    base_url=LLM_ANALYZER_BASE_URL,
+                )
+
+        tasks = [bounded_request(prompt) for prompt in prompts]
+        responses = await asyncio.gather(*tasks, return_exceptions=True)
+
+        results: Dict[str, Any] = {}
+        for r in responses:
+            try:
+                results.update(json.loads(r))
+            except Exception:
+                try:
+                    print("-----> ERROR  1")
+                    repaired_json = await self._repair_json_response(json_response=r)
+                    results.update(json.loads(repaired_json))
+                except Exception as e:
+                    print("-----> ERROR  2")
+                    # print(f"      {e}")
+                    pass
+
+        return results
+
+    async def _repair_json_response(self, json_response: str) -> str:
+        """
+        Try to let a model repair a buggy json response (from the batch prcessing).
+        """
+        prompt_template = read_text_file(
+            file_path=f"{self.class_name}/prompts/repair_json.txt"
+        )
+        prompt = prompt_template.format(buggy_json_result=json_response)
+
+        repaired_json = await self._request_llm(
+            prompt=prompt,
+            model=LLM_ANALYZER_MODEL,
+            api_key=LLM_ANALYZER_API_KEY,
+            base_url=LLM_ANALYZER_BASE_URL,
+        )
+
+        return repaired_json
+
     async def _request_llm(
         self,
         prompt: str,
@@ -174,7 +233,8 @@ class ExpertAnalysis:
         ]
 
         try:
-            response = litellm.completion(**litellm_params, timeout=20)
+            # response = litellm.completion(**litellm_params, timeout=20)
+            response = await litellm.acompletion(**litellm_params, timeout=20)
             content = response.choices[0].message.get("content")
 
             return content

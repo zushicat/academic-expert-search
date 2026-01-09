@@ -1,5 +1,6 @@
 from routes import root_route, simple_request_route, stream_request_route
 
+from dotenv import load_dotenv
 from fastapi import FastAPI, Request, Depends
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
@@ -7,7 +8,6 @@ from fastapi.exceptions import RequestValidationError
 from auth import bearer_auth_dependency
 
 app = FastAPI(dependencies=[Depends(bearer_auth_dependency)])
-
 
 # Import and include routers
 app.include_router(root_route.router)

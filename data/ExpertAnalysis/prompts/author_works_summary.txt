@@ -13,18 +13,12 @@ For each batch: analyze the titles regarding the topics and create a summary of 
 - Just describe the focus in a factual and describing manner.
 - It is important that each summary can be identified by it's respective openalex_id
 
-Internally create an object like this
+Create an object like this
 ```json
-[
   {{
     "https://openalex.org/A123": "The summary of the individual batch you just created for id https://openalex.org/A123"
   }}
-]
 ```
+Be very carefull that the JSON object is valid JSON format.
 
-Return in Toon format like this example:
-```
-[number of items]{{openalex_id,general_focus}}:
-  "https://openalex.org/A5070924304","The ecology, conservation, and health of pollinators, particularly bees, are investigated. A focus is placed on the effects of environmental stressors, such as pesticides and land use change, on pollinator diversity, communities, and ecosystem services. The role of habitat management, floral resources, and multi-trophic interactions in supporting healthy pollinator populations is also explored through various monitoring and ecological approaches."
-  "https://openalex.org/another openalex_id","Another summary of the analysis of the titles"
-```
+Return the JSON objects, only. Do not explain.
