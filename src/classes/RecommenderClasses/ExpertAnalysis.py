@@ -23,7 +23,7 @@ litellm.drop_params = True
 # model configs from environment
 # ******************************
 LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
-LLM_ANALYZER_BATCH_SIZE = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
+LLM_ANALYZER_BATCH_SIZE = int(os.environ["LLM_ANALYZER_BATCH_SIZE"])
 LLM_ANALYZER_TIMEOUT = int(os.environ["LLM_ANALYZER_TIMEOUT"])
 
 LLM_ANALYZER_MODEL = os.environ["LLM_ANALYZER_MODEL"]
@@ -161,45 +161,36 @@ class ExpertAnalysis:
     # *********
     #
     # *********
+    async def _process_prompt(self, prompt: str) -> Dict[str, Any]:
+        response = await self._request_llm(prompt=prompt)
+        try:
+            return json.loads(response)
+        except Exception:
+            repaired = await self._repair_json_response(json_response=response)
+            return json.loads(repaired)
+
     async def _request_llm_batches(
         self,
         prompts: List[str],
         max_concurrency: int,
     ) -> Dict[str, Any]:
-        queue: asyncio.Queue[str | None] = asyncio.Queue()
+        semaphore = asyncio.Semaphore(max_concurrency)
+
+        async def guarded(prompt: str) -> Dict[str, Any]:
+            async with semaphore:
+                return await self._process_prompt(prompt)
+
         results: Dict[str, Any] = {}
 
-        for prompt in prompts:
-            queue.put_nowait(prompt)
-        for _ in range(max_concurrency):
-            queue.put_nowait(None)
+        responses = await asyncio.gather(
+            *(guarded(prompt) for prompt in prompts),
+            return_exceptions=True,
+        )
 
-        async def worker():
-            while True:
-                prompt = await queue.get()
-                if prompt is None:
-                    queue.task_done()
-                    break
-                try:
-                    response = await self._request_llm(prompt=prompt)
-                    try:
-                        parsed = json.loads(response)
-                        results.update(parsed)
-                    except Exception:
-                        try:
-                            print("---> error")
-                            repaired_json = await self._repair_json_response(
-                                json_response=response
-                            )
-                            results.update(json.loads(repaired_json))
-                        except Exception:
-                            pass
-                finally:
-                    queue.task_done()
-
-        async with asyncio.TaskGroup() as tg:
-            for _ in range(max_concurrency):
-                tg.create_task(worker())
+        for response in responses:
+            if isinstance(response, Exception):
+                continue
+            results.update(response)
 
         return results
 
