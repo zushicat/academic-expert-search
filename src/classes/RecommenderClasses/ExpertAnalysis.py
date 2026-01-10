@@ -1,4 +1,6 @@
 import asyncio
+import csv
+from io import StringIO
 import json
 import os
 from typing import Dict, Any, List, Set, Tuple
@@ -26,18 +28,25 @@ LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
 LLM_ANALYZER_BATCH_SIZE = int(os.environ["LLM_ANALYZER_BATCH_SIZE"])
 LLM_ANALYZER_TIMEOUT = int(os.environ["LLM_ANALYZER_TIMEOUT"])
 
+LLM_ANALYZER_REASONING_EFFORT = os.environ["LLM_ANALYZER_REASONING_EFFORT"]
+# LLM_JSON_REPAIR_REASONING_EFFORT = os.environ["LLM_JSON_REPAIR_REASONING_EFFORT"]
+
 LLM_ANALYZER_MODEL = os.environ["LLM_ANALYZER_MODEL"]
 LLM_ANALYZER_BASE_URL = os.environ["LLM_ANALYZER_BASE_URL"]
 LLM_ANALYZER_API_KEY = os.environ["LLM_ANALYZER_API_KEY"]
 
-LLM_JSON_REPAIR_MODEL = os.environ["LLM_JSON_REPAIR_MODEL"]
-LLM_JSON_REPAIR_BASE_URL = os.environ["LLM_JSON_REPAIR_BASE_URL"]
-LLM_JSON_REPAIR_API_KEY = os.environ["LLM_JSON_REPAIR_API_KEY"]
+# LLM_JSON_REPAIR_MODEL = os.environ["LLM_JSON_REPAIR_MODEL"]
+# LLM_JSON_REPAIR_BASE_URL = os.environ["LLM_JSON_REPAIR_BASE_URL"]
+# LLM_JSON_REPAIR_API_KEY = os.environ["LLM_JSON_REPAIR_API_KEY"]
 
 
 class ExpertAnalysis:
     def __init__(self):
         self.class_name = self.__class__.__name__
+
+        self.prompt_template = read_text_file(
+            file_path=f"{self.class_name}/prompts/author_works_summary.txt"
+        )
 
     async def analyze_author(
         self,
@@ -45,9 +54,11 @@ class ExpertAnalysis:
         works: ExpertSearch_Works,
         batch_size: int = LLM_ANALYZER_BATCH_SIZE,
         max_concurrency: int = LLM_ANALYZER_MAX_CONCURRENCY,
-    ):
+    ) -> Dict[str, str]:
         """
         Main processing method called by ExpertRcommender.
+
+        Returns dict with { openalex_id: summary }
         """
         # ********
         # Prepare data
@@ -62,13 +73,15 @@ class ExpertAnalysis:
 
         prompts = self._create_prompts(toon_batches=toon_batches, batch_size=batch_size)
 
-        request_results = await self._request_llm_batches(
+        results = await self._request_llm_batches(
             prompts=prompts, max_concurrency=max_concurrency
         )
 
-        # print(json.dumps(request_results, ensure_ascii=False))
+        # print(json.dumps(results, ensure_ascii=False, indent=2))
         # print()
-        print(len(request_results))
+        # print(len(results))
+
+        return results
 
     # *********
     # data preparation
@@ -147,11 +160,9 @@ class ExpertAnalysis:
 
     def _create_prompts(self, toon_batches: List[str], batch_size: int) -> List[str]:
         prompts: List[str] = []
-        prompt_template = read_text_file(
-            file_path=f"{self.class_name}/prompts/author_works_summary.txt"
-        )
+
         for toon_batch in toon_batches:
-            prompt = prompt_template.format(
+            prompt = self.prompt_template.format(
                 toon_batch=toon_batch, batch_size=batch_size
             )
             prompts.append(prompt)
@@ -162,12 +173,20 @@ class ExpertAnalysis:
     #
     # *********
     async def _process_prompt(self, prompt: str) -> Dict[str, Any]:
-        response = await self._request_llm(prompt=prompt)
-        try:
-            return json.loads(response)
-        except Exception:
-            repaired = await self._repair_json_response(json_response=response)
-            return json.loads(repaired)
+        response = await self._request_llm(
+            prompt=prompt,
+            model=LLM_ANALYZER_MODEL,
+            api_key=LLM_ANALYZER_API_KEY,
+            base_url=LLM_ANALYZER_BASE_URL,
+            reasoning_effort=LLM_ANALYZER_REASONING_EFFORT,
+        )
+
+        response = f"{response}\n"  # add empty line at the end of response csv string
+
+        reader = csv.DictReader(StringIO(response))
+        result = {row["openalex_id"]: row["summary"] for row in reader}
+
+        return result
 
     async def _request_llm_batches(
         self,
@@ -178,7 +197,7 @@ class ExpertAnalysis:
 
         async def guarded(prompt: str) -> Dict[str, Any]:
             async with semaphore:
-                return await self._process_prompt(prompt)
+                return await self._process_prompt(prompt=prompt)
 
         results: Dict[str, Any] = {}
 
@@ -194,40 +213,25 @@ class ExpertAnalysis:
 
         return results
 
-    async def _repair_json_response(self, json_response: str) -> str:
-        """
-        Try to let a model repair a buggy json response (from the batch prcessing).
-        """
-        prompt_template = read_text_file(
-            file_path=f"{self.class_name}/prompts/repair_json.txt"
-        )
-        prompt = prompt_template.format(buggy_json_result=json_response)
-
-        repaired_json = await self._request_llm(
-            prompt=prompt,
-            model=LLM_JSON_REPAIR_MODEL,
-            api_key=LLM_JSON_REPAIR_API_KEY,
-            base_url=LLM_JSON_REPAIR_BASE_URL,
-        )
-
-        return repaired_json
-
     async def _request_llm(
         self,
         prompt: str,
+        model: str,
+        api_key: str | None,
+        base_url: str,
+        reasoning_effort: str,
         temperature: float = 0.2,
-        reasoning_effort: str = "low",
         timeout: int = LLM_ANALYZER_TIMEOUT,
     ) -> str:
         litellm_params = {
-            "model": LLM_ANALYZER_MODEL,
+            "model": model,
             "temperature": temperature,
-            "api_key": LLM_ANALYZER_API_KEY,
-            "reasoning_effort": reasoning_effort,  # Options: "low", "medium", "high"
+            "api_key": api_key,
+            "reasoning_effort": reasoning_effort,
         }
 
-        if LLM_ANALYZER_BASE_URL:
-            litellm_params["api_base"] = LLM_ANALYZER_BASE_URL
+        if base_url:
+            litellm_params["api_base"] = base_url
 
         litellm_params["messages"] = [
             {"role": "user", "content": prompt},

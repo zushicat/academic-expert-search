@@ -2,14 +2,18 @@
 # ROOT | GET & POST
 # POST request ignores data body
 # ********
-GET http://localhost:10101
+# GET http://localhost:10101
 # POST http://localhost:10101
 
 # {"x": "y"}
 
 # ********
-# Simple Request | GET
+# Search
 # ********
-# GET http://localhost:10100/expert/search?query=
-# GET http://localhost:10100/simple/get-request?number=2&text=Some random text&boolean=true
+# GET http://localhost:10101/expert/search?query=deep research
 # Authorization: Bearer sk-1234
+
+# ********
+# Recommender
+# ********
+GET http://localhost:10101/expert/recommender?query=deep research

@@ -8,6 +8,8 @@ class Settings(BaseSettings):
     LLM_ANALYZER_MAX_CONCURRENCY: int = 5
     LLM_ANALYZER_BATCH_SIZE: int = 4
     LLM_ANALYZER_TIMEOUT: int = 30
+    LLM_ANALYZER_REASONING_EFFORT: str | None = None
+    LLM_JSON_REPAIR_REASONING_EFFORT: str | None = None
 
     LLM_ANALYZER_MODEL: str | None = None
     LLM_ANALYZER_BASE_URL: str | None = None

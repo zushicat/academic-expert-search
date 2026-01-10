@@ -1,5 +1,6 @@
 import asyncio
 import collections
+import json
 from time import sleep
 from typing import Dict, Any, List, Set, Tuple
 
@@ -8,6 +9,7 @@ from helpers.filehandler import read_json_file, write_json_file
 from src.models.expert_search_models import (
     ExpertSearch_Response,
     ExpertSearch_Works,
+    ExpertSearch_Work,
     ExpertSearch_Topics,
     ExpertSearch_Institutions,
     ExpertSearch_Author,
@@ -35,10 +37,10 @@ class ExpertSearch:
         )
 
         # DEBUG
-        write_json_file(
-            f"{self.class_name}/mock-responses/1_openalex_search_response_works.json",
-            data=search_results,
-        )
+        # write_json_file(
+        #     f"{self.class_name}/mock-responses/1_openalex_search_response_works.json",
+        #     data=search_results,
+        # )
 
         # ***
         # Step 2
@@ -48,10 +50,10 @@ class ExpertSearch:
         )
 
         # DEBUG
-        write_json_file(
-            f"{self.class_name}/mock-responses/2_reference_authors.json",
-            data=reference_author_results,
-        )
+        # write_json_file(
+        #     f"{self.class_name}/mock-responses/2_reference_authors.json",
+        #     data=reference_author_results,
+        # )
 
         collected_topics_reference_authors, topics = self._get_reference_author_topics(
             reference_author_results
@@ -84,10 +86,10 @@ class ExpertSearch:
         )
 
         # DEBUG
-        write_json_file(
-            f"{self.class_name}/mock-responses/3_authors_by_topics.json",
-            data=authors_by_topics,
-        )
+        # write_json_file(
+        #     f"{self.class_name}/mock-responses/3_authors_by_topics.json",
+        #     data=authors_by_topics,
+        # )
 
         # ***
         # Step 4
@@ -105,31 +107,47 @@ class ExpertSearch:
             institutions=institutions,
         )
 
+        # merge
         aggregated_authors = aggregated_authors_source_search
         for key, val in aggregated_authors_source_topics.items():
             if key not in aggregated_authors:
                 aggregated_authors[key] = val
 
+        # only keep authors that have more than 1 shared topics
+        aggregated_authors = {
+            k: v
+            for k, v in aggregated_authors.items()
+            if v.get("relevant_topics_share") > 1
+        }
+
         aggregated_authors = self._assign_search_works_authors(
             aggregated_authors, works
         )
 
+        # ***
+        # Step 5: Putting it all together and return
+        # ***
+        # dicts to models
         authors_models: Dict[str, ExpertSearch_Author] = {}
         for author_id, author in aggregated_authors.items():
             data = dict(author)
             data["two_yr_mean_citedness"] = data.pop("2yr_mean_citedness", None)
             authors_models[author_id] = ExpertSearch_Author(**data)
 
-        # ***
-        # Step 5: Putting it all together and return
-        # ***
         authors_models, topic_share_batches = self._sort_batch_authors_by_topics_count(
             authors_dict=authors_models
         )
 
+        works_models: Dict[str, ExpertSearch_Author] = {}
+        for work_id, work in works.items():
+            try:
+                works_models[work_id] = ExpertSearch_Work(**work)
+            except:
+                pass
+
         search_response = ExpertSearch_Response(
             topics=ExpertSearch_Topics(topics),
-            works=ExpertSearch_Works(works),
+            works=ExpertSearch_Works(works_models),
             institutions=ExpertSearch_Institutions(institutions),
             authors=ExpertSearch_Authors(authors_models),
             meta=ExpertSearch_Meta(
@@ -311,8 +329,14 @@ class ExpertSearch:
 
         # ***************
         # actually build filter
+        # - core topic MUST be present / optional topics CAN be present
+        # - per documentation, higher shares on OR are at the top or results (?)
+        # - Openalex logic filter seems kind of weird
         # ***************
-        topics_filter = f'{"+".join(core_topics)}+({"|".join(optional_topics)})'
+        if not core_topics:
+            topics_filter = f'{"|".join(optional_topics)}'
+        else:
+            topics_filter = f'{"+".join(core_topics)}+({"|".join(optional_topics)})'
 
         return topics_filter
 
@@ -497,10 +521,17 @@ class ExpertSearch:
 if __name__ == "__main__":
     searcher = ExpertSearch()
 
-    query = "wild bee population decline bee monitoring"
+    # query = "spruce forest drought"
+    # query = "wild bee population decline bee monitoring"
+    # query = "Forest and woodland stand structural complexity"
+    query = "Deep learning"
     result = asyncio.run(searcher.search_experts(query=query))
 
-    write_json_file(
-        "ExpertRecommender/mock-responses/0_search_result.json",
-        data=result.model_dump(),
-    )
+    # write_json_file(
+    #     "ExpertRecommender/mock-responses/0_search_result.json",
+    #     data=result.model_dump(),
+    # )
+
+    print(json.dumps(result.model_dump()["works"], ensure_ascii=False))
+    print("-" * 100)
+    print(json.dumps(result.model_dump()["meta"], ensure_ascii=False))
