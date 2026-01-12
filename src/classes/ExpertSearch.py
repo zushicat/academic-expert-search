@@ -1,6 +1,7 @@
 import asyncio
 import collections
 import json
+from statistics import median, mean, stdev, quantiles
 from time import sleep
 from typing import Dict, Any, List, Set, Tuple
 
@@ -31,10 +32,15 @@ class ExpertSearch:
         # ***
         # Step 1
         # ***
-        search_results = self._search_works(query=query)
+        search_results = await self._search_works(
+            query=query, limit=20, year_cutoff=2020
+        )
         reference_author_openalex_ids, works = self._get_reference_author_ids(
             search_results
         )
+
+        print("1 --->", len(reference_author_openalex_ids), len(works))
+        print(list(reference_author_openalex_ids)[0])
 
         # DEBUG
         # write_json_file(
@@ -45,9 +51,11 @@ class ExpertSearch:
         # ***
         # Step 2
         # ***
-        reference_author_results = self._request_reference_authors(
+        reference_author_results = await self._request_reference_authors(
             reference_author_openalex_ids
         )
+
+        print("2 --->", len(reference_author_results))
 
         # DEBUG
         # write_json_file(
@@ -58,6 +66,8 @@ class ExpertSearch:
         collected_topics_reference_authors, topics = self._get_reference_author_topics(
             reference_author_results
         )
+
+        print("3 --->", len(collected_topics_reference_authors), len(topics))
 
         best_match_topics = self._get_most_shared_topics(
             collected_topics_reference_authors
@@ -117,7 +127,7 @@ class ExpertSearch:
         aggregated_authors = {
             k: v
             for k, v in aggregated_authors.items()
-            if v.get("relevant_topics_share") > 1
+            if v.get("relevant_topics_share") > 0
         }
 
         aggregated_authors = self._assign_search_works_authors(
@@ -167,7 +177,9 @@ class ExpertSearch:
     # ***********
     # STEP 1: use Openalex search on works and get Openalex ids of reference authors
     # ***********
-    def _search_works(self, query: str, limit: int = 20) -> List[Dict[str, Any]]:
+    async def _search_works(
+        self, query: str, limit: int = 20, year_cutoff: int = 2020
+    ) -> List[Dict[str, Any]]:
         # ***
         # debug
         # Simulate Openalex request: use mock data
@@ -178,7 +190,7 @@ class ExpertSearch:
         #     "ExpertSearch/mock-responses/1_openalex_search_response_works.json"
         # )
 
-        request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+        request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
 
         response = requests.get(request_url)
         json_data = response.json()
@@ -217,8 +229,8 @@ class ExpertSearch:
                 author_data = author.get("author") or {}
                 author_id = author_data.get("id")
 
-                if author.get("author_position") not in {"first", "last"}:
-                    continue
+                # if author.get("author_position") not in {"first", "last"}:
+                #     continue
 
                 tmp_work["author_ids"].append(author_id)
 
@@ -232,26 +244,44 @@ class ExpertSearch:
     # ***********
     # STEP 2: request reference authors (endpoint author) and get author topics
     # ***********
-    def _request_reference_authors(
+    # get author data
+    # ***
+    def _chunk_ids(self, ids: List[str], size: int = 25) -> List[List[str]]:
+        return [ids[i : i + size] for i in range(0, len(ids), size)]
+
+    async def _fetch_author_batch(self, session_ids: List[str]) -> List[Dict[str, Any]]:
+        author_id_filter = "|".join(session_ids)
+        request_url = (
+            "https://api.openalex.org/authors"
+            f"?filter=id:{author_id_filter}"
+            "&select=id,display_name,ids,affiliations,summary_stats,topics"
+        )
+        loop = asyncio.get_running_loop()
+        response = await loop.run_in_executor(None, lambda: requests.get(request_url))
+        try:
+            return response.json().get("results") or []
+        except Exception:
+            return []
+
+    async def _request_reference_authors(
         self, reference_author_openalex_ids: Set[str]
     ) -> List[Dict[str, Any]]:
-        # ***
-        # debug
-        # Simulate Openalex request: use mock data
-        # ***
-        # sleep(1)
-        # json_data = read_json_file(
-        #     "ExpertSearch/mock-responses/2_reference_authors.json"
-        # )
+        id_list = list(reference_author_openalex_ids)
+        batches = self._chunk_ids(id_list, size=25)
 
-        author_id_filter = "|".join(reference_author_openalex_ids)
-        request_url = f"https://api.openalex.org/authors?filter=id:{author_id_filter}&select=id,display_name,ids,affiliations,summary_stats,topics"
+        tasks = [self._fetch_author_batch(batch) for batch in batches]
+        results = await asyncio.gather(*tasks)
 
-        response = requests.get(request_url)
-        json_data = response.json()
+        merged: List[Dict[str, Any]] = []
 
-        return json_data.get("results") or []
+        for batch in results:
+            merged.extend(batch)
 
+        return merged
+
+    # ***
+    # analyze topics from authors
+    # ***
     def _get_reference_author_topics(
         self, reference_author_results: List[Dict[str, Any]]
     ) -> Tuple[List[List[str]], Dict[str, Any]]:
@@ -273,24 +303,59 @@ class ExpertSearch:
     def _get_most_shared_topics(
         self, collected_topics_reference_authors: List[List[str]]
     ) -> Dict[str, int]:
+        # Count topics
         topics_counted: Dict[str, int] = {}
         for author_topics in collected_topics_reference_authors:
             for topic_id in author_topics:
                 topics_counted[topic_id] = topics_counted.get(topic_id, 0) + 1
 
-        topics_counted = {
-            k: v for k, v in topics_counted.items() if v > 1
-        }  # count must be > 1
+        # Filter: must appear more than once
+        topics_counted = {k: v for k, v in topics_counted.items() if v > 1}
+
+        if len(topics_counted) < 2:
+            return topics_counted
+
+        # Sort descending by count
         topics_counted = dict(
             sorted(topics_counted.items(), key=lambda i: i[1], reverse=True)
-        )  # sort desc by count
+        )
 
-        total = sum(topics_counted.values()) or 1
-        topics_counted = {
-            k: v for k, v in topics_counted.items() if v / total >= 0.1
-        }  # filter top topics
+        counts = list(topics_counted.values())
 
-        return topics_counted
+        # Calculate statistics
+        q1, q2, q3 = quantiles(counts, n=4)  # quartiles
+        iqr = q3 - q1
+        avg = mean(counts)
+        std = stdev(counts)
+
+        # ===== Choose your filtering method =====
+
+        # Method 1: Percentile-based (above 75th percentile)
+        # threshold = q3
+
+        # Method 2: IQR-based "mild outliers" (above Q3 + 0.5*IQR)
+        # threshold = q3 + 0.5 * iqr
+
+        # Method 3: IQR-based "strong outliers" (above Q3 + 1.5*IQR)
+        threshold = q3 + 1.5 * iqr
+
+        # Method 4: Z-score based (more than 1 std above mean)
+        # threshold = avg + std
+
+        # Method 5: Z-score based (more than 2 std above mean)
+        # threshold = avg + 2 * std
+
+        # Debug output
+        # print(f"   Statistics: mean={avg:.2f}, std={std:.2f}, median={q2}")
+        # print(f"   Quartiles: Q1={q1}, Q2={q2}, Q3={q3}, IQR={iqr}")
+        # print(f"   Threshold: {threshold:.2f}")
+
+        # Filter topics
+        filtered_topics = {k: v for k, v in topics_counted.items() if v >= threshold}
+
+        # print(f"   Kept {len(filtered_topics)} of {len(topics_counted)} topics")
+
+        return filtered_topics
 
     # ***********
     # STEP 3: Create and request Topics combination as filter on authors
@@ -332,6 +397,8 @@ class ExpertSearch:
         # - core topic MUST be present / optional topics CAN be present
         # - per documentation, higher shares on OR are at the top or results (?)
         # - Openalex logic filter seems kind of weird
+        #
+        # Maybe this is over-engineered and a simple OR concat is sufficient.
         # ***************
         if not core_topics:
             topics_filter = f'{"|".join(optional_topics)}'
@@ -524,7 +591,8 @@ if __name__ == "__main__":
     # query = "spruce forest drought"
     # query = "wild bee population decline bee monitoring"
     # query = "Forest and woodland stand structural complexity"
-    query = "Deep learning"
+    # query = "Deep learning"
+    query = "Transformers without Normalization"
     result = asyncio.run(searcher.search_experts(query=query))
 
     # write_json_file(
@@ -532,6 +600,6 @@ if __name__ == "__main__":
     #     data=result.model_dump(),
     # )
 
-    print(json.dumps(result.model_dump()["works"], ensure_ascii=False))
-    print("-" * 100)
-    print(json.dumps(result.model_dump()["meta"], ensure_ascii=False))
+    # print(json.dumps(result.model_dump()["works"], ensure_ascii=False))
+    # print("-" * 100)
+    print(json.dumps(result.model_dump()["meta"], ensure_ascii=False, indent=2))

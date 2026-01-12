@@ -11,9 +11,15 @@
 # Search
 # ********
 # GET http://localhost:10101/expert/search?query=deep research
+# GET http://localhost:10101/expert/search?query=large language models ai
+# GET http://localhost:10101/expert/search?query=Transformers without Normalization
 # Authorization: Bearer sk-1234
 
 # ********
 # Recommender
 # ********
-GET http://localhost:10101/expert/recommender?query=deep research
+GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring
+# GET http://localhost:10101/expert/recommender?query=large language models ai
+# GET http://localhost:10101/expert/recommender?query=Transformers without Normalization
+# GET http://localhost:10101/expert/recommender?query=Forest and woodland stand structural complexity
+# GET http://localhost:10101/expert/recommender?query=spruce forest drought

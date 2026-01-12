@@ -211,11 +211,25 @@ class ExpertGraph:
         # ******
         raw_results = []
         for author in authors:
+            # score = (
+            #     0.40 * topic[author]
+            #     + 0.30 * impact[author]
+            #     + 0.20 * productivity[author]
+            #     + 0.10 * recency[author]
+            # )
+
+            # score = (
+            #     0.50 * topic[author]
+            #     + 0.40 * impact[author]
+            #     + 0.05 * productivity[author]
+            #     + 0.05 * recency[author]
+            # )
+
             score = (
                 0.40 * topic[author]
-                + 0.30 * impact[author]
-                + 0.20 * productivity[author]
-                + 0.10 * recency[author]
+                + 0.50 * impact[author]
+                + 0.05 * productivity[author]
+                + 0.05 * recency[author]
             )
 
             raw_results.append(

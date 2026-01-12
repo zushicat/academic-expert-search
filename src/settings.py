@@ -15,9 +15,13 @@ class Settings(BaseSettings):
     LLM_ANALYZER_BASE_URL: str | None = None
     LLM_ANALYZER_API_KEY: str | None = None
 
-    LLM_JSON_REPAIR_MODEL: str | None = None
-    LLM_JSON_REPAIR_BASE_URL: str | None = None
-    LLM_JSON_REPAIR_API_KEY: str | None = None
+    # LLM_JSON_REPAIR_MODEL: str | None = None
+    # LLM_JSON_REPAIR_BASE_URL: str | None = None
+    # LLM_JSON_REPAIR_API_KEY: str | None = None
+
+    LLM_QUERY_EXPANSION_MODEL: str | None = None
+    LLM_QUERY_EXPANSION_BASE_URL: str | None = None
+    LLM_QUERY_EXPANSION_API_KEY: str | None = None
 
 
 config = Settings()

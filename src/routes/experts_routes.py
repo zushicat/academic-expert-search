@@ -31,7 +31,7 @@ async def expert_search(query: str = Query(default="", description="A string")):
         return {"Status": "Error", "Response": str(e)}
 
 
-@router.get("/expert/recommender")
+@router.get("/expert/recommender", response_model=None)
 async def expert_recommender(
     query: str = Query(default="", description="The search query string"),
     create_expert_summaries: bool = Query(
@@ -65,8 +65,8 @@ async def expert_recommender(
             create_expert_summaries=create_expert_summaries,
         )
 
-        response = recommender_response.model_dump()
+        # response = recommender_response.model_dump()
 
-        return {"Status": "ok", "Response": response}
+        return {"Status": "ok", "Response": recommender_response}
     except Exception as e:
         return {"Status": "Error", "Response": str(e)}
