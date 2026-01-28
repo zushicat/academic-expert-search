@@ -5,6 +5,7 @@ from statistics import median, mean, stdev, quantiles
 from time import sleep
 from typing import Dict, Any, List, Set, Tuple
 
+from classes.ExpertQuery import ExpertQuery
 from helpers.filehandler import read_json_file, write_json_file
 
 from src.models.expert_search_models import (
@@ -24,16 +25,26 @@ import requests
 class ExpertSearch:
     def __init__(self):
         self.class_name = self.__class__.__name__
+        self.expert_query = ExpertQuery()
 
     # ************
     # The actual processing call (i.e. from router)
     # ************
-    async def search_experts(self, query: str) -> ExpertSearch_Response:
+    async def search_experts(
+        self,
+        query: str,
+        use_fulltext_search: bool = False,
+        create_queries: bool = False,
+    ) -> ExpertSearch_Response:
         # ***
         # Step 1
         # ***
-        search_results = await self._search_works(
-            query=query, limit=20, year_cutoff=2020
+        search_results, generated_queries = await self._search_works(
+            query=query,
+            limit=20,
+            year_cutoff=2020,
+            use_fulltext_search=use_fulltext_search,
+            create_queries=create_queries,
         )
         reference_author_openalex_ids, works = self._get_reference_author_ids(
             search_results
@@ -162,6 +173,7 @@ class ExpertSearch:
             authors=ExpertSearch_Authors(authors_models),
             meta=ExpertSearch_Meta(
                 query=query,
+                generated_queries=generated_queries,
                 reference_author_count=author_count,
                 author_count=len(authors_models),
                 works_count=len(works),
@@ -178,8 +190,13 @@ class ExpertSearch:
     # STEP 1: use Openalex search on works and get Openalex ids of reference authors
     # ***********
     async def _search_works(
-        self, query: str, limit: int = 20, year_cutoff: int = 2020
-    ) -> List[Dict[str, Any]]:
+        self,
+        query: str,
+        limit: int = 20,
+        year_cutoff: int = 2020,
+        use_fulltext_search: bool = False,
+        create_queries: bool = False,
+    ) -> Tuple[List[Dict[str, Any]], List[str]]:
         # ***
         # debug
         # Simulate Openalex request: use mock data
@@ -190,12 +207,43 @@ class ExpertSearch:
         #     "ExpertSearch/mock-responses/1_openalex_search_response_works.json"
         # )
 
-        request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+        queries: List[str] = []
+        query_results: List[str] = []
 
-        response = requests.get(request_url)
-        json_data = response.json()
+        num_new_queries = 3
 
-        return json_data.get("results") or []
+        if create_queries:
+            query_results = await self.expert_query.create_queries(
+                query=query, num_new_queries=num_new_queries
+            )
+            if query_results:
+                queries = query_results
+        else:
+            queries.append(query)
+
+        # ***
+        # collect and depublicat by ids.openalex
+        # ***
+        all_results = []
+
+        for query in queries:
+            if use_fulltext_search:
+                request_url = f"https://api.openalex.org/works?search={query}&filter=type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+            else:
+                request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+
+            response = requests.get(request_url)
+            json_data = response.json()
+            all_results.extend(json_data.get("results"))
+
+        # deduplicate
+        distinct_by_openalex = {}
+        for work in all_results:
+            openalex_id = (work.get("ids") or {}).get("openalex")
+            if openalex_id:
+                distinct_by_openalex[openalex_id] = work
+
+        return list(distinct_by_openalex.values()), query_results
 
     def _get_reference_author_ids(
         self, search_results: List[Dict[str, Any]]
@@ -590,9 +638,10 @@ if __name__ == "__main__":
 
     # query = "spruce forest drought"
     # query = "wild bee population decline bee monitoring"
-    # query = "Forest and woodland stand structural complexity"
+    query = "Forest and woodland stand structural complexity"
     # query = "Deep learning"
-    query = "Transformers without Normalization"
+    # query = "Transformers without Normalization"
+
     result = asyncio.run(searcher.search_experts(query=query))
 
     # write_json_file(

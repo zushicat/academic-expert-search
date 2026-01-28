@@ -216,10 +216,10 @@ class ExpertAnalysis:
     async def _request_llm(
         self,
         prompt: str,
-        model: str,
-        api_key: str | None,
-        base_url: str,
-        reasoning_effort: str,
+        model: str = LLM_ANALYZER_MODEL,
+        api_key: str | None = LLM_ANALYZER_API_KEY,
+        base_url: str = LLM_ANALYZER_BASE_URL,
+        reasoning_effort: str = LLM_ANALYZER_REASONING_EFFORT,
         temperature: float = 0.2,
         timeout: int = LLM_ANALYZER_TIMEOUT,
     ) -> str:
@@ -229,9 +229,10 @@ class ExpertAnalysis:
             "api_key": api_key,
             "reasoning_effort": reasoning_effort,
         }
-
         if base_url:
             litellm_params["api_base"] = base_url
+
+        print(json.dumps(litellm_params, indent=2))
 
         litellm_params["messages"] = [
             {"role": "user", "content": prompt},
@@ -248,6 +249,24 @@ class ExpertAnalysis:
 
 
 if __name__ == "__main__":
+    # LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
+    # LLM_ANALYZER_BATCH_SIZE = int(os.environ["LLM_ANALYZER_BATCH_SIZE"])
+    # LLM_ANALYZER_TIMEOUT = int(os.environ["LLM_ANALYZER_TIMEOUT"])
+
+    # LLM_ANALYZER_REASONING_EFFORT = os.environ["LLM_ANALYZER_REASONING_EFFORT"]
+    # # LLM_JSON_REPAIR_REASONING_EFFORT = os.environ["LLM_JSON_REPAIR_REASONING_EFFORT"]
+
+    # LLM_ANALYZER_MODEL = os.environ["LLM_ANALYZER_MODEL"]
+    # LLM_ANALYZER_BASE_URL = os.environ["LLM_ANALYZER_BASE_URL"]
+    # LLM_ANALYZER_API_KEY = os.environ["LLM_ANALYZER_API_KEY"]
+    # print(LLM_ANALYZER_MAX_CONCURRENCY)
+    # print(LLM_ANALYZER_BATCH_SIZE)
+    # print(LLM_ANALYZER_TIMEOUT)
+    # print(LLM_ANALYZER_REASONING_EFFORT)
+    # print(LLM_ANALYZER_MODEL)
+    # print(LLM_ANALYZER_BASE_URL)
+    # print(LLM_ANALYZER_API_KEY)
+
     analyzer = ExpertAnalysis()
     prompt = "Tell me a cat joke."
     result = asyncio.run(analyzer._request_llm(prompt=prompt))

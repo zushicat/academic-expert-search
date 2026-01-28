@@ -24,14 +24,18 @@ litellm.drop_params = True
 # ******************************
 # model configs from environment
 # ******************************
-TIMEOUT = 20
+LLM_QUERY_EXPANSION_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
+LLM_QUERY_EXPANSION_BATCH_SIZE = int(os.environ["LLM_ANALYZER_BATCH_SIZE"])
+LLM_QUERY_EXPANSION_TIMEOUT = int(os.environ["LLM_ANALYZER_TIMEOUT"])
+
+LLM_QUERY_EXPANSION_REASONING_EFFORT = os.environ["LLM_ANALYZER_REASONING_EFFORT"]
 
 LLM_QUERY_EXPANSION_MODEL = os.environ["LLM_QUERY_EXPANSION_MODEL"]
 LLM_QUERY_EXPANSION_BASE_URL = os.environ["LLM_QUERY_EXPANSION_BASE_URL"]
 LLM_QUERY_EXPANSION_API_KEY = os.environ["LLM_QUERY_EXPANSION_API_KEY"]
 
-LLM_QUERY_EXPANSION_MODEL = "openai/qwen/qwen3-32b"
-LLM_QUERY_EXPANSION_REASONING_EFFORT = "none"
+# LLM_QUERY_EXPANSION_MODEL = "openai/qwen/qwen3-32b"
+# LLM_QUERY_EXPANSION_REASONING_EFFORT = "none"
 
 
 class ExpertQuery:
@@ -41,28 +45,28 @@ class ExpertQuery:
             file_path=f"{self.class_name}/prompts/query_expansion.txt"
         )
 
-    async def expand_query(self, query: str):
-        # print(query)
-        # print("-" * 50)
-        prompt = self.prompt_template.format(QUERY=query)
-        # print(prompt)
-        # print()
+    async def create_queries(self, query: str, num_new_queries: int = 3) -> List[str]:
+        prompt = self.prompt_template.format(
+            QUERY=query, NUM_NEW_QUERIES=num_new_queries
+        )
 
         response = await self._process_prompt(prompt=prompt)
-        response = response.strip()
+        response = response.strip()  # get text with linebreaks
 
-        new_queries = response.split("\n")
-        limit = 20
-        year_cutoff = 2020
-        request_urls = []
-        for q in new_queries:
-            print(f"--> {q}")
-            request_urls.append(
-                f"https://api.openalex.org/works?filter=title_and_abstract.search:{q},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
-            )
+        try:
+            return [x.strip() for x in response.split("\n")]
+        except:
+            return []
 
-        print()
-        print(json.dumps(request_urls, ensure_ascii=False, indent=2))
+        # debug
+        # request_urls =[]
+        # for q in new_queries:
+        #     print(f"--> {q}")
+        #     request_urls.append(
+        #         f"https://api.openalex.org/works?filter=title_and_abstract.search:{q},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+        #     )
+        # print()
+        # print(json.dumps(request_urls, ensure_ascii=False, indent=2))
 
     # *********
     #
@@ -84,9 +88,9 @@ class ExpertQuery:
         model: str,
         api_key: str | None,
         base_url: str,
-        reasoning_effort: str,
+        reasoning_effort: str = LLM_QUERY_EXPANSION_REASONING_EFFORT,
         temperature: float = 0.2,
-        timeout: int = TIMEOUT,
+        timeout: int = LLM_QUERY_EXPANSION_TIMEOUT,
     ) -> str:
         litellm_params = {
             "model": model,
@@ -113,11 +117,14 @@ class ExpertQuery:
 
 
 if __name__ == "__main__":
-    query = "Transformers without Normalization"
+    # query = "Transformers without Normalization"
     # query = "spruce forest drought"
     # query = "wild bee population decline bee monitoring"
     # query = "Forest and woodland stand structural complexity"
     # query = "Deep learning"
+
+    # query = "Traces of cancer-linked pesticide found in tests at UK playgrounds"
+    query = "Davos: Greenpeace fordert Landeverbot für Privatflugzeuge beim Weltwirtschaftsforum"
 
     # queries = [
     #     "Ein Land im Blackout Die Internet-Abschaltung im Iran ist deutlich umfassender als bei früheren Protesten. Einige finden trotzdem Wege, denn Sichtbarkeit entscheidet über Leben und Freiheit."
@@ -126,4 +133,5 @@ if __name__ == "__main__":
     # query = " ".join(queries)
 
     query_expander = ExpertQuery()
-    asyncio.run(query_expander.expand_query(query=query))
+    response = asyncio.run(query_expander.expand_query(query=query))
+    print(json.dumps(response))

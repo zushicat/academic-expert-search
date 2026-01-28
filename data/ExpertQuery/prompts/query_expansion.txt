@@ -38,7 +38,7 @@ Quality guidance:
 - Do not introduce unrelated methods or disciplines
 
 Quantity:
-- Generate exactly 5 distinct search queries
+- Generate exactly {NUM_NEW_QUERIES} distinct search queries
 
 Input query:
 "{QUERY}"

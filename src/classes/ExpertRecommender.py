@@ -9,6 +9,8 @@ from typing import Dict, Any, List, Set, Tuple
 from classes.RecommenderClasses.ExpertGraph import ExpertGraph
 from classes.RecommenderClasses.ExpertUpdate import ExpertUpdate
 from classes.RecommenderClasses.ExpertAnalysis import ExpertAnalysis
+from classes.ExpertQuery import ExpertQuery
+
 from helpers.filehandler import read_json_file, write_json_file
 from helpers.toon import encode_toon
 
@@ -78,6 +80,8 @@ class ExpertRecommender:
         # ***
         current_year = datetime.now().year
         years_back = 3
+
+        print("----->", len(authors.root))
 
         works_from_authors = await self._get_works(
             author_ids=authors.root,
@@ -321,20 +325,21 @@ class ExpertRecommender:
     async def _get_works(
         self, topics_filter: str, author_ids: List[str], min_year: int
     ):
+        AUTHOR_BATCH_SIZE = 25
         PER_PAGE = 200
         MAX_RPS = 10
 
         author_ids = [author_id.split("/")[-1] for author_id in author_ids]
-        author_filter = "|".join(author_ids)
+        author_filter = "|".join(author_ids[:50])
+
+        print(f". ----> {len(topics_filter.split("|"))} | {len(author_ids)}")
 
         base_params = (
             f"filter=type:article,"
             f"publication_year:>{min_year-1},"
             f"topics.id:{topics_filter},"
             f"author.id:{author_filter},"
-            f"has_doi:true"
-            "&select=ids,title,publication_year,"
-            "authorships,primary_topic"
+            f"has_doi:true&select=ids,title,publication_year,authorships,primary_topic"
         )
 
         semaphore = asyncio.Semaphore(MAX_RPS)
@@ -349,19 +354,27 @@ class ExpertRecommender:
                     return await resp.json()
 
         async with aiohttp.ClientSession() as session:
+            # print("  ---> page 1")
             first_url = (
-                f"https://api.openalex.org/works?{base_params}" "&per_page=1&page=1"
-            )
+                f"https://api.openalex.org/works?{base_params}&per_page=1&page=1"
+            ).strip()
             first = await fetch_page(session, first_url)
 
             total_count = first["meta"]["count"]
             total_pages = math.ceil(total_count / PER_PAGE)
 
+            print(
+                "  ---> page 1",
+                total_pages,
+                [page for page in range(1, total_pages + 1)],
+            )
+
             urls = [
-                f"https://api.openalex.org/works?{base_params}"
-                f"&per_page={PER_PAGE}&page={page}"
+                f"https://api.openalex.org/works?{base_params}&per_page={PER_PAGE}&page={page}"
                 for page in range(1, total_pages + 1)
             ]
+
+            # print(urls)
 
             tasks = [fetch_page(session, url) for url in urls]
             responses = await asyncio.gather(*tasks)
