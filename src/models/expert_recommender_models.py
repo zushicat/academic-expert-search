@@ -59,6 +59,25 @@ class ExpertRecommender_Author(BaseModel):
 
     expert_connections: List[ExpertRecommender_ExpertConnection] | None
 
+    summary: str | None = None
+
 
 class ExpertRecommender_Authors(RootModel[Dict[str, ExpertRecommender_Author]]):
     pass
+
+
+class ExpertRecommender_Meta(BaseModel):
+    author_count: int
+    works_count: int
+    institutions_count: int
+    author_min_score: float = 0.0
+    author_max_score: float = 0.0
+    search: ExpertSearch_Meta | None = None
+
+
+class ExpertRecommender_Response(BaseModel):
+    topics: ExpertSearch_Topics
+    works: ExpertSearch_Works
+    # institutions: ExpertSearch_Institutions
+    authors: ExpertRecommender_Authors
+    meta: ExpertRecommender_Meta

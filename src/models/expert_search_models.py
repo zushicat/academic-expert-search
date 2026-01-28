@@ -81,6 +81,7 @@ class ExpertSearch_Authors(RootModel[Dict[str, ExpertSearch_Author]]):
 
 class ExpertSearch_Meta(BaseModel):
     query: str
+    generated_queries: List[str] | None = None
     reference_author_count: int
     author_count: int
     works_count: int

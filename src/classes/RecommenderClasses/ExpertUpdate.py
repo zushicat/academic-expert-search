@@ -3,6 +3,7 @@ from typing import Dict, Any, List, Set, Tuple
 from models.expert_search_models import (
     ExpertSearch_Works,
     ExpertSearch_Institutions,
+    ExpertSearch_AuthorInstitution,
     ExpertSearch_Authors,
 )
 
@@ -223,6 +224,12 @@ class ExpertUpdate:
                 for topic_id, val in search_author.relevant_topics.items()
             }
 
+            institutions_data = None
+            if search_author.institutions:
+                institutions_data = [
+                    inst.model_dump() for inst in search_author.institutions
+                ]
+
             recommender_authors[author_id] = ExpertRecommender_Author(
                 openalex_id=search_author.openalex_id,
                 orcid_id=search_author.orcid_id,
@@ -238,7 +245,7 @@ class ExpertUpdate:
                 active_years_max=search_author.active_years_max,
                 active_years_sum=search_author.active_years_sum,
                 active_years_counted=search_author.active_years_counted,
-                institutions=search_author.institutions,
+                institutions=institutions_data,  #  search_author.institutions,
                 instituitions_count=len(search_author.institutions or []),
                 works=works_list,
                 works_count=len(works_list or []),

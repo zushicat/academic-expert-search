@@ -20,6 +20,7 @@ You will receive a single JSON-like string that may be invalid.
 - Output **only** the repaired JSON string.
 - Do NOT include explanations, comments, markdown, or extra text.
 - The output must be parseable by a standard JSON parser.
+- The output must be a simple string: do NOT embed the JSON string in ``` quotes
 - If the input cannot be repaired without guessing missing content, return the closest valid JSON by closing structures and escaping strings only.
 
 # Examples
@@ -30,9 +31,7 @@ You will receive a single JSON-like string that may be invalid.
 ```
 
 ### Output
-```
 {{"name": "John", "age": 30}}
-```
 
 ## Example 2
 ### Input
@@ -41,9 +40,7 @@ You will receive a single JSON-like string that may be invalid.
 ```
 
 ### Output
-```
 {{"items": ["apple", "banana", "orange"]}}
-```
 
 ## Example 3
 ### Input
@@ -52,9 +49,7 @@ You will receive a single JSON-like string that may be invalid.
 ```
 
 ### Output
-```
 {{"user": {{"id": 123, "active": true}}}}
-```
 
 ## Example 4
 ### Input
@@ -63,9 +58,7 @@ You will receive a single JSON-like string that may be invalid.
 ```
 
 ### Output
-```
 {{"text": "He said \"hello\" to her"}}
-```
 
 ## Example 5
 ### Input
@@ -74,9 +67,7 @@ You will receive a single JSON-like string that may be invalid.
 ```
 
 ### Output
-```
 {{"a":1, "b":2}}
-```
 
 # Input JSON
 {buggy_json_result}

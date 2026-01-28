@@ -2,14 +2,31 @@
 # ROOT | GET & POST
 # POST request ignores data body
 # ********
-GET http://localhost:10101
+# GET http://localhost:10101
 # POST http://localhost:10101
 
 # {"x": "y"}
 
 # ********
-# Simple Request | GET
+# Search
 # ********
-# GET http://localhost:10100/expert/search?query=
-# GET http://localhost:10100/simple/get-request?number=2&text=Some random text&boolean=true
+# GET http://localhost:10101/expert/search?query=wild bee population decline bee monitoring
+# GET http://localhost:10101/expert/search?query=deep research
+# GET http://localhost:10101/expert/search?query=large language models ai
+# GET http://localhost:10101/expert/search?query=Transformers without Normalization
+# GET http://localhost:10101/expert/search?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=true
 # Authorization: Bearer sk-1234
+
+# ********
+# Recommender
+# ********
+# GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring
+# GET http://localhost:10101/expert/recommender?query=large language models ai
+# GET http://localhost:10101/expert/recommender?query=Transformers without Normalization
+# GET http://localhost:10101/expert/recommender?query=Forest and woodland stand structural complexity&use_fulltext_search=False
+# GET http://localhost:10101/expert/recommender?query=spruce forest drought
+
+# ********
+# Recommender with generated queries and/or use openalex full text search
+# ********
+GET http://localhost:10101/expert/recommender?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=True

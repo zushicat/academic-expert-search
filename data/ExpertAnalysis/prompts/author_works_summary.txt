@@ -1,24 +1,29 @@
 You are an expert academic research analyst and a specialist in summarizing texts.
 
 This is a list of list of {batch_size} batches of academic paper titles by publication year in Toon format:
-
 ```toon
 {toon_batch}
 ```
 
-For each batch: analyze the titles regarding the topics and create a summary of what this batch is mainly about.
+For each batch:
+- Analyze the titles regarding their topics.
+- Create a concise summary describing what the batch is mainly about.
+- Avoid phrasing like "The focus is", "Examined are", "Explored are", "Investigated are", or similar constructions.
+- Describe the topic in a factual, descriptive manner.
+- Each summary must be clearly associated with its respective `openalex_id`.
 
-- Keep it brief. 
-- Avoid phrasing like "The focus is", "Examined are", "Explored are", "Investigated are" or similar phrases when summarizing. 
-- Just describe the focus in a factual and describing manner.
-- It is important that each summary can be identified by it's respective openalex_id
+### Output requirements (VERY IMPORTANT)
 
-Create an object like this
-```json
-  {{
-    "https://openalex.org/A123": "The summary of the individual batch you just created for id https://openalex.org/A123"
-  }}
-```
-Be very carefull that the JSON object is valid JSON format.
-
-Return the JSON objects, only. Do not explain.
+- Output a **CSV string** with **exactly two columns** in this order:
+  1. `openalex_id`
+  2. `summary`
+- Include a **single header row**:  
+  `openalex_id,summary`
+- Each subsequent row must correspond to one batch.
+- Each `openalex_id` must appear exactly once.
+- Do **not** include extra columns.
+- Do **not** include explanations, comments, markdown, or additional text.
+- Do **not** wrap the CSV in code blocks.
+- Ensure the output is valid CSV and can be parsed by a standard CSV parser.
+- If a summary contains commas, enclose the summary field in double quotes.
+- Output **only** the CSV string.

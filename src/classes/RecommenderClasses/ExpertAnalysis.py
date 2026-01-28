@@ -1,4 +1,6 @@
 import asyncio
+import csv
+from io import StringIO
 import json
 import os
 from typing import Dict, Any, List, Set, Tuple
@@ -22,28 +24,42 @@ litellm.drop_params = True
 # ******************************
 # model configs from environment
 # ******************************
+LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
+LLM_ANALYZER_BATCH_SIZE = int(os.environ["LLM_ANALYZER_BATCH_SIZE"])
+LLM_ANALYZER_TIMEOUT = int(os.environ["LLM_ANALYZER_TIMEOUT"])
+
+LLM_ANALYZER_REASONING_EFFORT = os.environ["LLM_ANALYZER_REASONING_EFFORT"]
+# LLM_JSON_REPAIR_REASONING_EFFORT = os.environ["LLM_JSON_REPAIR_REASONING_EFFORT"]
+
 LLM_ANALYZER_MODEL = os.environ["LLM_ANALYZER_MODEL"]
 LLM_ANALYZER_BASE_URL = os.environ["LLM_ANALYZER_BASE_URL"]
 LLM_ANALYZER_API_KEY = os.environ["LLM_ANALYZER_API_KEY"]
-LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
 
-LLM_ANALYZER_MODEL = "openai/gpt-oss-120b-llmlb"
-
-# LLM_ANALYZER_MODEL = "groq/openai/gpt-oss-120b"
-# LLM_ANALYZER_BASE_URL = "https://api.groq.com/openai/v1"
-# LLM_ANALYZER_API_KEY = "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"
+# LLM_JSON_REPAIR_MODEL = os.environ["LLM_JSON_REPAIR_MODEL"]
+# LLM_JSON_REPAIR_BASE_URL = os.environ["LLM_JSON_REPAIR_BASE_URL"]
+# LLM_JSON_REPAIR_API_KEY = os.environ["LLM_JSON_REPAIR_API_KEY"]
 
 
 class ExpertAnalysis:
     def __init__(self):
         self.class_name = self.__class__.__name__
 
+        self.prompt_template = read_text_file(
+            file_path=f"{self.class_name}/prompts/author_works_summary.txt"
+        )
+
     async def analyze_author(
         self,
         authors: ExpertRecommender_Authors,
         works: ExpertSearch_Works,
-        batch_size: int = 5,
-    ):
+        batch_size: int = LLM_ANALYZER_BATCH_SIZE,
+        max_concurrency: int = LLM_ANALYZER_MAX_CONCURRENCY,
+    ) -> Dict[str, str]:
+        """
+        Main processing method called by ExpertRcommender.
+
+        Returns dict with { openalex_id: summary }
+        """
         # ********
         # Prepare data
         # ********
@@ -57,13 +73,15 @@ class ExpertAnalysis:
 
         prompts = self._create_prompts(toon_batches=toon_batches, batch_size=batch_size)
 
-        request_results = await self._request_llm_batches(
-            prompts=prompts, max_concurrency=LLM_ANALYZER_MAX_CONCURRENCY
+        results = await self._request_llm_batches(
+            prompts=prompts, max_concurrency=max_concurrency
         )
 
-        # print(json.dumps(request_results, ensure_ascii=False))
+        # print(json.dumps(results, ensure_ascii=False, indent=2))
         # print()
-        print(len(request_results))
+        # print(len(results))
+
+        return results
 
     # *********
     # data preparation
@@ -142,11 +160,9 @@ class ExpertAnalysis:
 
     def _create_prompts(self, toon_batches: List[str], batch_size: int) -> List[str]:
         prompts: List[str] = []
-        prompt_template = read_text_file(
-            file_path=f"{self.class_name}/prompts/author_works_summary.txt"
-        )
+
         for toon_batch in toon_batches:
-            prompt = prompt_template.format(
+            prompt = self.prompt_template.format(
                 toon_batch=toon_batch, batch_size=batch_size
             )
             prompts.append(prompt)
@@ -156,77 +172,67 @@ class ExpertAnalysis:
     # *********
     #
     # *********
-    async def _request_llm_batches(
-        self,
-        prompts: List[str],
-        max_concurrency: int = 5,
-    ) -> Dict[str, Any]:
-        semaphore = asyncio.Semaphore(max_concurrency)
-
-        async def bounded_request(prompt: str):
-            async with semaphore:
-                return await self._request_llm(
-                    prompt=prompt,
-                    model=LLM_ANALYZER_MODEL,
-                    api_key=LLM_ANALYZER_API_KEY,
-                    base_url=LLM_ANALYZER_BASE_URL,
-                )
-
-        tasks = [bounded_request(prompt) for prompt in prompts]
-        responses = await asyncio.gather(*tasks, return_exceptions=True)
-
-        results: Dict[str, Any] = {}
-        for r in responses:
-            try:
-                results.update(json.loads(r))
-            except Exception:
-                try:
-                    print("-----> ERROR  1")
-                    repaired_json = await self._repair_json_response(json_response=r)
-                    results.update(json.loads(repaired_json))
-                except Exception as e:
-                    print("-----> ERROR  2")
-                    # print(f"      {e}")
-                    pass
-
-        return results
-
-    async def _repair_json_response(self, json_response: str) -> str:
-        """
-        Try to let a model repair a buggy json response (from the batch prcessing).
-        """
-        prompt_template = read_text_file(
-            file_path=f"{self.class_name}/prompts/repair_json.txt"
-        )
-        prompt = prompt_template.format(buggy_json_result=json_response)
-
-        repaired_json = await self._request_llm(
+    async def _process_prompt(self, prompt: str) -> Dict[str, Any]:
+        response = await self._request_llm(
             prompt=prompt,
             model=LLM_ANALYZER_MODEL,
             api_key=LLM_ANALYZER_API_KEY,
             base_url=LLM_ANALYZER_BASE_URL,
+            reasoning_effort=LLM_ANALYZER_REASONING_EFFORT,
         )
 
-        return repaired_json
+        response = f"{response}\n"  # add empty line at the end of response csv string
+
+        reader = csv.DictReader(StringIO(response))
+        result = {row["openalex_id"]: row["summary"] for row in reader}
+
+        return result
+
+    async def _request_llm_batches(
+        self,
+        prompts: List[str],
+        max_concurrency: int,
+    ) -> Dict[str, Any]:
+        semaphore = asyncio.Semaphore(max_concurrency)
+
+        async def guarded(prompt: str) -> Dict[str, Any]:
+            async with semaphore:
+                return await self._process_prompt(prompt=prompt)
+
+        results: Dict[str, Any] = {}
+
+        responses = await asyncio.gather(
+            *(guarded(prompt) for prompt in prompts),
+            return_exceptions=True,
+        )
+
+        for response in responses:
+            if isinstance(response, Exception):
+                continue
+            results.update(response)
+
+        return results
 
     async def _request_llm(
         self,
         prompt: str,
-        model: str,
-        api_key: str,
-        base_url: str | None,
+        model: str = LLM_ANALYZER_MODEL,
+        api_key: str | None = LLM_ANALYZER_API_KEY,
+        base_url: str = LLM_ANALYZER_BASE_URL,
+        reasoning_effort: str = LLM_ANALYZER_REASONING_EFFORT,
         temperature: float = 0.2,
-        reasoning_effort: str = "low",
+        timeout: int = LLM_ANALYZER_TIMEOUT,
     ) -> str:
         litellm_params = {
             "model": model,
             "temperature": temperature,
             "api_key": api_key,
-            "reasoning_effort": reasoning_effort,  # Options: "low", "medium", "high"
+            "reasoning_effort": reasoning_effort,
         }
-
-        if LLM_ANALYZER_BASE_URL:
+        if base_url:
             litellm_params["api_base"] = base_url
+
+        print(json.dumps(litellm_params, indent=2))
 
         litellm_params["messages"] = [
             {"role": "user", "content": prompt},
@@ -234,7 +240,7 @@ class ExpertAnalysis:
 
         try:
             # response = litellm.completion(**litellm_params, timeout=20)
-            response = await litellm.acompletion(**litellm_params, timeout=20)
+            response = await litellm.acompletion(**litellm_params, timeout=timeout)
             content = response.choices[0].message.get("content")
 
             return content
@@ -243,6 +249,24 @@ class ExpertAnalysis:
 
 
 if __name__ == "__main__":
+    # LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
+    # LLM_ANALYZER_BATCH_SIZE = int(os.environ["LLM_ANALYZER_BATCH_SIZE"])
+    # LLM_ANALYZER_TIMEOUT = int(os.environ["LLM_ANALYZER_TIMEOUT"])
+
+    # LLM_ANALYZER_REASONING_EFFORT = os.environ["LLM_ANALYZER_REASONING_EFFORT"]
+    # # LLM_JSON_REPAIR_REASONING_EFFORT = os.environ["LLM_JSON_REPAIR_REASONING_EFFORT"]
+
+    # LLM_ANALYZER_MODEL = os.environ["LLM_ANALYZER_MODEL"]
+    # LLM_ANALYZER_BASE_URL = os.environ["LLM_ANALYZER_BASE_URL"]
+    # LLM_ANALYZER_API_KEY = os.environ["LLM_ANALYZER_API_KEY"]
+    # print(LLM_ANALYZER_MAX_CONCURRENCY)
+    # print(LLM_ANALYZER_BATCH_SIZE)
+    # print(LLM_ANALYZER_TIMEOUT)
+    # print(LLM_ANALYZER_REASONING_EFFORT)
+    # print(LLM_ANALYZER_MODEL)
+    # print(LLM_ANALYZER_BASE_URL)
+    # print(LLM_ANALYZER_API_KEY)
+
     analyzer = ExpertAnalysis()
     prompt = "Tell me a cat joke."
     result = asyncio.run(analyzer._request_llm(prompt=prompt))

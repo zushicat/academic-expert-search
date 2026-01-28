@@ -1,4 +1,6 @@
-from routes import root_route, simple_request_route, stream_request_route
+from routes import root_route, experts_routes
+
+# simple_request_route, stream_request_route
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request, Depends
@@ -11,8 +13,9 @@ app = FastAPI(dependencies=[Depends(bearer_auth_dependency)])
 
 # Import and include routers
 app.include_router(root_route.router)
-app.include_router(simple_request_route.router)
-app.include_router(stream_request_route.router)
+app.include_router(experts_routes.router)
+# app.include_router(simple_request_route.router)
+# app.include_router(stream_request_route.router)
 
 
 # add exception handling

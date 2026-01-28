@@ -9,6 +9,8 @@ from typing import Dict, Any, List, Set, Tuple
 from classes.RecommenderClasses.ExpertGraph import ExpertGraph
 from classes.RecommenderClasses.ExpertUpdate import ExpertUpdate
 from classes.RecommenderClasses.ExpertAnalysis import ExpertAnalysis
+from classes.ExpertQuery import ExpertQuery
+
 from helpers.filehandler import read_json_file, write_json_file
 from helpers.toon import encode_toon
 
@@ -30,6 +32,8 @@ from models.expert_recommender_models import (
     ExpertRecommender_AuthorScores,
     ExpertRecommender_Author,
     ExpertRecommender_Authors,
+    ExpertRecommender_Response,
+    ExpertRecommender_Meta,
 )
 
 import aiohttp
@@ -45,15 +49,20 @@ class ExpertRecommender:
     # ************
     # The actual processing call (i.e. from router)
     # ************
-    async def recommend_experts(self, search_result: ExpertSearch_Response):
-        meta = topics = search_result.meta  # .model_dump()
+    async def recommend_experts(
+        self,
+        search_result: ExpertSearch_Response,
+        create_expert_summaries: bool = False,
+    ):
+        meta = search_result.meta  # .model_dump()
         topics = search_result.topics  # .model_dump()
         works = search_result.works  # .model_dump()
         institutions = search_result.institutions  # .model_dump()
         authors = search_result.authors  # .model_dump()
 
         # ***
-        # Step 1
+        # STEP 1: filter author (and the rest) on authors_topic_share_counts
+        # - use threshold on topic share (authors)
         # ***
         top_counts = self._get_top_topic_share(
             meta=meta, top_perc=self.top_perc_found_authors
@@ -67,16 +76,18 @@ class ExpertRecommender:
         )
 
         # ***
-        # Step 2
+        # Step 2: get and process works for all authors
         # ***
-        # current_year = datetime.now().year
-        # years_back = 3
+        current_year = datetime.now().year
+        years_back = 3
 
-        # works_from_authors = await self._get_works(
-        #     author_ids=authors.root,
-        #     topics_filter=meta.topics_filter,
-        #     min_year=current_year - years_back,
-        # )
+        print("----->", len(authors.root))
+
+        works_from_authors = await self._get_works(
+            author_ids=authors.root,
+            topics_filter=meta.topics_filter,
+            min_year=current_year - years_back,
+        )
 
         # ***
         # DEBUG
@@ -86,9 +97,9 @@ class ExpertRecommender:
         #     data=works_from_authors,
         # )
 
-        works_from_authors = read_json_file(
-            file_path=f"{self.class_name}/mock-responses/1_works_from_authors_0_8.json"
-        )
+        # works_from_authors = read_json_file(
+        #     file_path=f"{self.class_name}/mock-responses/1_works_from_authors_0_8.json"
+        # )
         #
         # ***
 
@@ -98,8 +109,9 @@ class ExpertRecommender:
 
         # ***
         # Step 3: Analyze graph (authors)
-        # - graph: ExpertGraph instance
-        # - graph.graph: nx.MultiGraph
+        # -> class ExpertGraph
+        #    - graph: ExpertGraph instance
+        #    - graph.graph: nx.MultiGraph
         # ***
         graph = ExpertGraph(search_result=search_result)
         authors_by_score = graph.get_best_experts()
@@ -107,6 +119,7 @@ class ExpertRecommender:
 
         # ***
         # Step 4: Filter and update by relevance
+        # -> class ExpertUpdate
         # ***
         update = ExpertUpdate()
         authors_by_score = update.update_author_scores(
@@ -114,7 +127,7 @@ class ExpertRecommender:
         )
 
         # filter authors_by_score by score cutoff and keep only relevant authors
-        score_cutoff = 0.6
+        score_cutoff = 0.5
         authors_by_score = {
             k: v for k, v in authors_by_score.items() if v.overall_score >= score_cutoff
         }
@@ -136,9 +149,32 @@ class ExpertRecommender:
         )
 
         # add scores and connections to authors
+        # store min/max author scores
+        author_min_score: float = 0.0
+        author_max_score: float = 0.0
         for k, v in authors.root.items():
             v.scores = authors_by_score.get(k)
             v.expert_connections = aggregated_author_connections.get(k)
+
+            if author_min_score == 0.0:
+                author_min_score = v.scores.overall_score
+            if author_max_score == 0.0:
+                author_max_score = v.scores.overall_score
+
+            if v.scores.overall_score < author_min_score:
+                author_min_score = v.scores.overall_score
+            if v.scores.overall_score > author_max_score:
+                author_max_score = v.scores.overall_score
+
+        # sort authors by author.scores.obverall_score
+        sorted_authors = collections.OrderedDict(
+            sorted(
+                authors.root.items(),
+                key=lambda item: item[1].scores.overall_score,
+                reverse=True,
+            )
+        )
+        authors = ExpertRecommender_Authors(**sorted_authors)
 
         # print(aggregated_author_connections)
         # print(
@@ -150,9 +186,53 @@ class ExpertRecommender:
 
         # ***
         # Step 5: Process / analyze author works (LLM)
+        # -> class ExpertAnalysis
+        #    - get summary from author's works titles
         # ***
-        analyzer = ExpertAnalysis()
-        await analyzer.analyze_author(authors=authors, works=works, batch_size=4)
+        if create_expert_summaries:
+            analyzer = ExpertAnalysis()
+            authors_works_summary = await analyzer.analyze_author(
+                authors=authors, works=works
+            )  # use default batch_size and max_concurrency from env
+
+            for author_id, summary in authors_works_summary.items():
+                authors.root[author_id].summary = summary
+
+        # ***
+        # Step 6: Putting it all together and return
+        # ***
+        # recommender_response = ExpertRecommender_Response(
+        #     topics=topics,
+        #     works=works,
+        #     institutions=institutions,
+        #     authors=authors,
+        #     meta=ExpertRecommender_Meta(
+        #         author_count=len(authors.root),
+        #         works_count=len(works.root),
+        #         institutions_count=len(institutions.root),
+        #         search=meta,
+        #     ),
+        # )
+
+        # return recommender_response.model_dump()
+
+        # Serialize to dicts first to avoid nested model validation issues
+        response_data = {
+            "topics": topics.model_dump(),
+            "works": works.model_dump(),
+            # "institutions": institutions.model_dump(),
+            "authors": authors.model_dump(),
+            "meta": {
+                "author_count": len(authors.root),
+                "works_count": len(works.root),
+                "institutions_count": len(institutions.root),
+                "author_min_score": round(author_min_score, 3),
+                "author_max_score": round(author_max_score, 3),
+                "search": meta.model_dump() if meta else None,
+            },
+        }
+
+        return response_data
 
     # ***********
     # STEP 1: filter author (and the rest) on authors_topic_share_counts
@@ -245,20 +325,21 @@ class ExpertRecommender:
     async def _get_works(
         self, topics_filter: str, author_ids: List[str], min_year: int
     ):
+        AUTHOR_BATCH_SIZE = 25
         PER_PAGE = 200
         MAX_RPS = 10
 
         author_ids = [author_id.split("/")[-1] for author_id in author_ids]
-        author_filter = "|".join(author_ids)
+        author_filter = "|".join(author_ids[:50])
+
+        print(f". ----> {len(topics_filter.split("|"))} | {len(author_ids)}")
 
         base_params = (
             f"filter=type:article,"
             f"publication_year:>{min_year-1},"
             f"topics.id:{topics_filter},"
             f"author.id:{author_filter},"
-            f"has_doi:true"
-            "&select=ids,title,publication_year,"
-            "authorships,primary_topic"
+            f"has_doi:true&select=ids,title,publication_year,authorships,primary_topic"
         )
 
         semaphore = asyncio.Semaphore(MAX_RPS)
@@ -273,19 +354,27 @@ class ExpertRecommender:
                     return await resp.json()
 
         async with aiohttp.ClientSession() as session:
+            # print("  ---> page 1")
             first_url = (
-                f"https://api.openalex.org/works?{base_params}" "&per_page=1&page=1"
-            )
+                f"https://api.openalex.org/works?{base_params}&per_page=1&page=1"
+            ).strip()
             first = await fetch_page(session, first_url)
 
             total_count = first["meta"]["count"]
             total_pages = math.ceil(total_count / PER_PAGE)
 
+            print(
+                "  ---> page 1",
+                total_pages,
+                [page for page in range(1, total_pages + 1)],
+            )
+
             urls = [
-                f"https://api.openalex.org/works?{base_params}"
-                f"&per_page={PER_PAGE}&page={page}"
+                f"https://api.openalex.org/works?{base_params}&per_page={PER_PAGE}&page={page}"
                 for page in range(1, total_pages + 1)
             ]
+
+            # print(urls)
 
             tasks = [fetch_page(session, url) for url in urls]
             responses = await asyncio.gather(*tasks)
@@ -354,21 +443,6 @@ class ExpertRecommender:
         # return updated objects
         return works, authors
 
-    # ***********
-    # Step 3: Analyze graph (authors)
-    # -> class ExpertGraph
-    # ***********
-
-    # ***********
-    # Step 4: Filter by relevance
-    # -> class ExpertUpdate
-    # ***********
-
-    # ***********
-    # Step 5: Analyze author works
-    # -> class ExpertAnalysis
-    # ***********
-
 
 if __name__ == "__main__":
     top_perc_found_authors = 0.8
@@ -379,6 +453,13 @@ if __name__ == "__main__":
     )
     result = asyncio.run(
         recommender.recommend_experts(
-            search_result=ExpertSearch_Response.model_validate(search_response)
+            search_result=ExpertSearch_Response.model_validate(search_response),
+            create_expert_summaries=False,
         )
     )
+
+    # print(
+    #     json.dumps(list(result.model_dump()["authors"].values())[0], ensure_ascii=False)
+    # )
+
+    print(json.dumps(list(result["authors"].values())[0], ensure_ascii=False))
