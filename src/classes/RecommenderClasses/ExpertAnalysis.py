@@ -247,24 +247,6 @@ class ExpertAnalysis:
 
 
 if __name__ == "__main__":
-    # LLM_ANALYZER_MAX_CONCURRENCY = int(os.environ["LLM_ANALYZER_MAX_CONCURRENCY"])
-    # LLM_ANALYZER_BATCH_SIZE = int(os.environ["LLM_ANALYZER_BATCH_SIZE"])
-    # LLM_ANALYZER_TIMEOUT = int(os.environ["LLM_ANALYZER_TIMEOUT"])
-
-    # LLM_ANALYZER_REASONING_EFFORT = os.environ["LLM_ANALYZER_REASONING_EFFORT"]
-    # # LLM_JSON_REPAIR_REASONING_EFFORT = os.environ["LLM_JSON_REPAIR_REASONING_EFFORT"]
-
-    # LLM_ANALYZER_MODEL = os.environ["LLM_ANALYZER_MODEL"]
-    # LLM_ANALYZER_BASE_URL = os.environ["LLM_ANALYZER_BASE_URL"]
-    # LLM_ANALYZER_API_KEY = os.environ["LLM_ANALYZER_API_KEY"]
-    # print(LLM_ANALYZER_MAX_CONCURRENCY)
-    # print(LLM_ANALYZER_BATCH_SIZE)
-    # print(LLM_ANALYZER_TIMEOUT)
-    # print(LLM_ANALYZER_REASONING_EFFORT)
-    # print(LLM_ANALYZER_MODEL)
-    # print(LLM_ANALYZER_BASE_URL)
-    # print(LLM_ANALYZER_API_KEY)
-
     analyzer = ExpertAnalysis()
     prompt = "Tell me a cat joke."
     result = asyncio.run(analyzer._request_llm(prompt=prompt))
