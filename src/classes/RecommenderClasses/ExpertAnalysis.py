@@ -173,6 +173,7 @@ class ExpertAnalysis:
     #
     # *********
     async def _process_prompt(self, prompt: str) -> Dict[str, Any]:
+        print("ExpertAnalysis 1 ---> _process_prompt")
         response = await self._request_llm(
             prompt=prompt,
             model=LLM_ANALYZER_MODEL,

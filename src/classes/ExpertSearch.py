@@ -39,6 +39,8 @@ class ExpertSearch:
         # ***
         # Step 1
         # ***
+        print("ExpertSearch 1 ---> _search_works")
+
         search_results, generated_queries = await self._search_works(
             query=query,
             limit=20,
@@ -46,12 +48,11 @@ class ExpertSearch:
             use_fulltext_search=use_fulltext_search,
             create_queries=create_queries,
         )
+
+        print("ExpertSearch 2 ---> _get_reference_author_ids")
         reference_author_openalex_ids, works = self._get_reference_author_ids(
             search_results
         )
-
-        print("1 --->", len(reference_author_openalex_ids), len(works))
-        print(list(reference_author_openalex_ids)[0])
 
         # DEBUG
         # write_json_file(
@@ -62,11 +63,11 @@ class ExpertSearch:
         # ***
         # Step 2
         # ***
+        print("ExpertSearch 3 ---> _request_reference_authors")
+
         reference_author_results = await self._request_reference_authors(
             reference_author_openalex_ids
         )
-
-        print("2 --->", len(reference_author_results))
 
         # DEBUG
         # write_json_file(
@@ -74,12 +75,12 @@ class ExpertSearch:
         #     data=reference_author_results,
         # )
 
+        print("ExpertSearch 4 ---> _get_reference_author_topics")
         collected_topics_reference_authors, topics = self._get_reference_author_topics(
             reference_author_results
         )
 
-        print("3 --->", len(collected_topics_reference_authors), len(topics))
-
+        print("ExpertSearch 5 ---> _get_most_shared_topics")
         best_match_topics = self._get_most_shared_topics(
             collected_topics_reference_authors
         )
@@ -96,6 +97,9 @@ class ExpertSearch:
         # ***
         author_count = len(collected_topics_reference_authors)
 
+        print(
+            "ExpertSearch 6 ---> _get_most_shared_topics_combinations | _get_authors_by_topics"
+        )
         topics_filter = self._get_most_shared_topics_combinations(
             best_match_topics=best_match_topics,
             author_count=author_count,
@@ -115,6 +119,7 @@ class ExpertSearch:
         # ***
         # Step 4
         # ***
+        print("ExpertSearch 7 ---> _aggregate_authors")
         aggregated_authors_source_search, institutions = self._aggregate_authors(
             author_list=reference_author_results,
             best_match_topics=best_match_topics,
@@ -129,6 +134,9 @@ class ExpertSearch:
         )
 
         # merge
+        print(
+            "ExpertSearch 8 ---> aggregated_authors_source_search | _assign_search_works_authors"
+        )
         aggregated_authors = aggregated_authors_source_search
         for key, val in aggregated_authors_source_topics.items():
             if key not in aggregated_authors:
@@ -382,10 +390,10 @@ class ExpertSearch:
         # threshold = q3
 
         # Method 2: IQR-based "mild outliers" (above Q3 + 0.5*IQR)
-        # threshold = q3 + 0.5 * iqr
+        threshold = q3 + 0.5 * iqr
 
         # Method 3: IQR-based "strong outliers" (above Q3 + 1.5*IQR)
-        threshold = q3 + 1.5 * iqr
+        # threshold = q3 + 1.5 * iqr
 
         # Method 4: Z-score based (more than 1 std above mean)
         # threshold = avg + std

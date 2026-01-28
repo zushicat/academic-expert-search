@@ -64,10 +64,12 @@ class ExpertRecommender:
         # STEP 1: filter author (and the rest) on authors_topic_share_counts
         # - use threshold on topic share (authors)
         # ***
+        print("ExpertRecommender 1 ---> _get_top_topic_share")
         top_counts = self._get_top_topic_share(
             meta=meta, top_perc=self.top_perc_found_authors
         )
 
+        print("ExpertRecommender 2 ---> _filter_search_result")
         authors, works, institutions = self._filter_search_result(
             works=works,
             institutions=institutions,
@@ -81,8 +83,7 @@ class ExpertRecommender:
         current_year = datetime.now().year
         years_back = 3
 
-        print("----->", len(authors.root))
-
+        print("ExpertRecommender 3 ---> _get_works")
         works_from_authors = await self._get_works(
             author_ids=authors.root,
             topics_filter=meta.topics_filter,
@@ -102,7 +103,7 @@ class ExpertRecommender:
         # )
         #
         # ***
-
+        print("ExpertRecommender 4 ---> _processworks_from_authors")
         works, authors = self._processworks_from_authors(
             works_from_authors=works_from_authors, works=works, authors=authors
         )
@@ -113,6 +114,9 @@ class ExpertRecommender:
         #    - graph: ExpertGraph instance
         #    - graph.graph: nx.MultiGraph
         # ***
+        print(
+            "ExpertRecommender 5 ---> ExpertGraph | get_best_experts | get_connected_authors"
+        )
         graph = ExpertGraph(search_result=search_result)
         authors_by_score = graph.get_best_experts()
         author_connections = graph.get_connected_authors()
@@ -121,6 +125,9 @@ class ExpertRecommender:
         # Step 4: Filter and update by relevance
         # -> class ExpertUpdate
         # ***
+        print(
+            "ExpertRecommender 6 ---> update_author_scores | update_author_connections"
+        )
         update = ExpertUpdate()
         authors_by_score = update.update_author_scores(
             authors_by_score=authors_by_score, author_connections=author_connections
@@ -140,6 +147,7 @@ class ExpertRecommender:
         # update search results objects:
         # filter out irrelevant stuff not connected to authors_by_score
         # overwrite / typecast author from ExpertSearch_Authors to Dict[str, ExpertRecommender_Author]
+        print("ExpertRecommender 7 ---> update search results")
         works, institutions, authors = update.update_search_result_objects(
             authors=authors,
             works=works,
@@ -176,26 +184,17 @@ class ExpertRecommender:
         )
         authors = ExpertRecommender_Authors(**sorted_authors)
 
-        # print(aggregated_author_connections)
-        # print(
-        #     json.dumps(
-        #         authors.root["https://openalex.org/A5070924304"].model_dump(),
-        #         ensure_ascii=False,
-        #     )
-        # )
-
         # ***
         # Step 5: Process / analyze author works (LLM)
         # -> class ExpertAnalysis
         #    - get summary from author's works titles
         # ***
         if create_expert_summaries:
+            print("ExpertRecommender 8 ---> create_expert_summaries")
             analyzer = ExpertAnalysis()
             authors_works_summary = await analyzer.analyze_author(
                 authors=authors, works=works
             )  # use default batch_size and max_concurrency from env
-
-            # print(json.dumps(authors_works_summary))
 
             for author_id, summary in authors_works_summary.items():
                 try:
@@ -342,8 +341,6 @@ class ExpertRecommender:
         author_ids = [author_id.split("/")[-1] for author_id in author_ids]
         author_filter = "|".join(author_ids[:50])
 
-        print(f". ----> {len(topics_filter.split("|"))} | {len(author_ids)}")
-
         base_params = (
             f"filter=type:article,"
             f"publication_year:>{min_year-1},"
@@ -364,7 +361,6 @@ class ExpertRecommender:
                     return await resp.json()
 
         async with aiohttp.ClientSession() as session:
-            # print("  ---> page 1")
             first_url = (
                 f"https://api.openalex.org/works?{base_params}&per_page=1&page=1"
             ).strip()
@@ -373,18 +369,10 @@ class ExpertRecommender:
             total_count = first["meta"]["count"]
             total_pages = math.ceil(total_count / PER_PAGE)
 
-            print(
-                "  ---> page 1",
-                total_pages,
-                [page for page in range(1, total_pages + 1)],
-            )
-
             urls = [
                 f"https://api.openalex.org/works?{base_params}&per_page={PER_PAGE}&page={page}"
                 for page in range(1, total_pages + 1)
             ]
-
-            # print(urls)
 
             tasks = [fetch_page(session, url) for url in urls]
             responses = await asyncio.gather(*tasks)
@@ -392,8 +380,6 @@ class ExpertRecommender:
         works = []
         for r in responses:
             works.extend(r.get("results", []))
-
-        print(f"Fetched {len(works)} works (expected {total_count})")
 
         return works
 

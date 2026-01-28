@@ -46,6 +46,7 @@ class ExpertQuery:
         )
 
     async def create_queries(self, query: str, num_new_queries: int = 3) -> List[str]:
+        print("ExpertQuery 1 ---> create_queries")
         prompt = self.prompt_template.format(
             QUERY=query, NUM_NEW_QUERIES=num_new_queries
         )
