@@ -232,8 +232,6 @@ class ExpertAnalysis:
         if base_url:
             litellm_params["api_base"] = base_url
 
-        print(json.dumps(litellm_params, indent=2))
-
         litellm_params["messages"] = [
             {"role": "user", "content": prompt},
         ]

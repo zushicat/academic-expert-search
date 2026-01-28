@@ -195,8 +195,18 @@ class ExpertRecommender:
                 authors=authors, works=works
             )  # use default batch_size and max_concurrency from env
 
+            # print(json.dumps(authors_works_summary))
+
             for author_id, summary in authors_works_summary.items():
-                authors.root[author_id].summary = summary
+                try:
+                    authors.root[author_id].summary = summary
+                except KeyError:
+                    try:
+                        authors.root[f"https://openalex.org/{author_id}"].summary = (
+                            summary
+                        )
+                    except KeyError:
+                        pass
 
         # ***
         # Step 6: Putting it all together and return
