@@ -5,6 +5,7 @@ from classes.ExpertSearch import ExpertSearch
 from classes.ExpertRecommender import ExpertRecommender
 
 from fastapi import APIRouter, Query
+from helpers.short_recommender_response import create_short_recommender_response
 
 router = APIRouter()
 
@@ -120,7 +121,10 @@ async def expert_recommender(
             create_expert_summaries=create_expert_summaries,
         )
 
-        # response = recommender_response.model_dump()
+        if short_response:
+            recommender_response = create_short_recommender_response(
+                response=recommender_response
+            )
 
         return {"Status": "ok", "Response": recommender_response}
     except Exception as e:
