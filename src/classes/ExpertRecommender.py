@@ -54,11 +54,11 @@ class ExpertRecommender:
         search_result: ExpertSearch_Response,
         create_expert_summaries: bool = False,
     ):
-        meta = search_result.meta  # .model_dump()
-        topics = search_result.topics  # .model_dump()
-        works = search_result.works  # .model_dump()
-        institutions = search_result.institutions  # .model_dump()
-        authors = search_result.authors  # .model_dump()
+        meta = search_result.meta
+        topics = search_result.topics
+        works = search_result.works
+        institutions = search_result.institutions
+        authors = search_result.authors
 
         # ***
         # STEP 1: filter author (and the rest) on authors_topic_share_counts

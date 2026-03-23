@@ -55,7 +55,7 @@ class ExpertQuery:
         response = response.strip()  # get text with linebreaks
 
         try:
-            return [x.strip() for x in response.split("\n")]
+            return [x.strip() for x in response.split("\n") if x]
         except:
             return []
 

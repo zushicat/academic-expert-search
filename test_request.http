@@ -14,7 +14,7 @@
 # GET http://localhost:10101/expert/search?query=deep research
 # GET http://localhost:10101/expert/search?query=large language models ai
 # GET http://localhost:10101/expert/search?query=Transformers without Normalization
-# GET http://localhost:10101/expert/search?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=true
+GET http://localhost:10101/expert/search?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=true
 # Authorization: Bearer sk-1234
 
 # ********
@@ -29,4 +29,4 @@
 # ********
 # Recommender with generated queries and/or use openalex full text search
 # ********
-GET http://localhost:10101/expert/recommender?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=True&create_expert_summaries=False
+# GET http://localhost:10101/expert/recommender?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=True&create_expert_summaries=False
