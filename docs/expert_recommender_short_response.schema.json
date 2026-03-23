@@ -1,0 +1,480 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Expert Recommender Short Response",
+  "description": "Schema for the /expert/recommender response when short_response=true.",
+  "oneOf": [
+    {
+      "type": "object",
+      "description": "Successful API response wrapper.",
+      "additionalProperties": false,
+      "properties": {
+        "Status": {
+          "description": "Response status for successful requests.",
+          "enum": [
+            "ok"
+          ]
+        },
+        "Response": {
+          "description": "The expert recommender payload in short-response format.",
+          "$ref": "#/definitions/SuccessResponse"
+        }
+      },
+      "required": [
+        "Status",
+        "Response"
+      ]
+    },
+    {
+      "type": "object",
+      "description": "Error API response wrapper.",
+      "additionalProperties": false,
+      "properties": {
+        "Status": {
+          "description": "Response status for failed requests.",
+          "enum": [
+            "Error"
+          ]
+        },
+        "Response": {
+          "description": "Human-readable error message.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Status",
+        "Response"
+      ]
+    }
+  ],
+  "definitions": {
+    "SuccessResponse": {
+      "type": "object",
+      "description": "Short-form recommender response containing compact topic, work, institution, author, and metadata arrays.",
+      "additionalProperties": false,
+      "properties": {
+        "topics": {
+          "description": "Topics identified as relevant to the query.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Topic"
+          }
+        },
+        "works": {
+          "description": "Relevant works associated with the recommended experts.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Work"
+          }
+        },
+        "institutions": {
+          "description": "Institutions associated with the recommended experts.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Institution"
+          }
+        },
+        "authors": {
+          "description": "Recommended experts in shortened author form.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Author"
+          }
+        },
+        "meta": {
+          "description": "Aggregate counts and search metadata for the recommender response.",
+          "$ref": "#/definitions/Meta"
+        }
+      },
+      "required": [
+        "topics",
+        "works",
+        "institutions",
+        "authors",
+        "meta"
+      ]
+    },
+    "Topic": {
+      "type": "object",
+      "description": "A short representation of a relevant OpenAlex topic.",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "description": "OpenAlex topic identifier.",
+          "type": "string"
+        },
+        "display_name": {
+          "description": "Human-readable topic name.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "display_name"
+      ]
+    },
+    "Work": {
+      "type": "object",
+      "description": "A short representation of a work related to the recommended experts.",
+      "additionalProperties": false,
+      "properties": {
+        "openalex_id": {
+          "description": "OpenAlex work identifier.",
+          "type": "string"
+        },
+        "doi": {
+          "description": "DOI URL for the work, if available.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "description": "Work title.",
+          "type": "string"
+        },
+        "publication_year": {
+          "description": "Publication year of the work.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "primary_topic": {
+          "description": "OpenAlex topic identifier of the work's primary topic.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "author_ids": {
+          "description": "OpenAlex author identifiers for authors of the work.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "openalex_id",
+        "doi",
+        "title",
+        "publication_year",
+        "primary_topic",
+        "author_ids"
+      ]
+    },
+    "Institution": {
+      "type": "object",
+      "description": "A short representation of an institution connected to the recommended experts.",
+      "additionalProperties": false,
+      "properties": {
+        "openalex_id": {
+          "description": "OpenAlex institution identifier.",
+          "type": "string"
+        },
+        "ror": {
+          "description": "ROR identifier URL for the institution, if available.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "display_name": {
+          "description": "Human-readable institution name.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country_code": {
+          "description": "Two-letter country code of the institution, if available.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "description": "Institution type as returned by OpenAlex, if available.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "openalex_id",
+        "ror",
+        "display_name",
+        "country_code",
+        "type"
+      ]
+    },
+    "AuthorInstitution": {
+      "type": "object",
+      "description": "A time-bounded affiliation between an author and an institution.",
+      "additionalProperties": false,
+      "properties": {
+        "openalex_id": {
+          "description": "OpenAlex institution identifier.",
+          "type": "string"
+        },
+        "year_start": {
+          "description": "First year of the affiliation.",
+          "type": "integer"
+        },
+        "year_end": {
+          "description": "Last year of the affiliation.",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "openalex_id",
+        "year_start",
+        "year_end"
+      ]
+    },
+    "Author": {
+      "type": "object",
+      "description": "A short representation of a recommended expert.",
+      "additionalProperties": false,
+      "properties": {
+        "openalex_id": {
+          "description": "OpenAlex author identifier.",
+          "type": "string"
+        },
+        "orcid_id": {
+          "description": "ORCID identifier URL for the author, if available.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "display_name": {
+          "description": "Human-readable author name.",
+          "type": "string"
+        },
+        "two_yr_mean_citedness": {
+          "description": "Average citedness metric over two years, if available.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "h_index": {
+          "description": "Author h-index, if available.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "i10_index": {
+          "description": "Author i10-index, if available.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "relevant_topics": {
+          "description": "OpenAlex topic identifiers marked as relevant for this author.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "relevant_topics_share": {
+          "description": "Count of relevant topics associated with the author.",
+          "type": "integer"
+        },
+        "active_years_min": {
+          "description": "Earliest active publication year detected for the author.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "active_years_max": {
+          "description": "Latest active publication year detected for the author.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "active_years_sum": {
+          "description": "Number of active publication years counted for the author.",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "institutions": {
+          "description": "List of author affiliations with start and end years, or null if unavailable.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AuthorInstitution"
+          }
+        },
+        "instituitions_count": {
+          "description": "Number of institution affiliations in the institutions list.",
+          "type": "integer"
+        },
+        "works": {
+          "description": "List of OpenAlex work identifiers associated with the author, or null if unavailable.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "works_count": {
+          "description": "Number of works in the works list.",
+          "type": "integer"
+        },
+        "summary": {
+          "description": "Optional LLM-generated author summary.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "openalex_id",
+        "orcid_id",
+        "display_name",
+        "two_yr_mean_citedness",
+        "h_index",
+        "i10_index",
+        "relevant_topics",
+        "relevant_topics_share",
+        "active_years_min",
+        "active_years_max",
+        "active_years_sum",
+        "institutions",
+        "instituitions_count",
+        "works",
+        "works_count",
+        "summary"
+      ]
+    },
+    "Meta": {
+      "type": "object",
+      "description": "Aggregate metadata for the recommender output and the underlying expert search.",
+      "additionalProperties": false,
+      "properties": {
+        "author_count": {
+          "description": "Total number of authors returned in the recommender response.",
+          "type": "integer"
+        },
+        "works_count": {
+          "description": "Total number of works returned in the recommender response.",
+          "type": "integer"
+        },
+        "institutions_count": {
+          "description": "Total number of institutions returned in the recommender response.",
+          "type": "integer"
+        },
+        "author_min_score": {
+          "description": "Lowest overall author score among returned authors.",
+          "type": "number"
+        },
+        "author_max_score": {
+          "description": "Highest overall author score among returned authors.",
+          "type": "number"
+        },
+        "search": {
+          "description": "Metadata from the underlying expert search stage, or null if unavailable.",
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/SearchMeta"
+            }
+          ]
+        }
+      },
+      "required": [
+        "author_count",
+        "works_count",
+        "institutions_count",
+        "author_min_score",
+        "author_max_score",
+        "search"
+      ]
+    },
+    "SearchMeta": {
+      "type": "object",
+      "description": "Metadata describing the underlying expert search request and its aggregated results.",
+      "additionalProperties": false,
+      "properties": {
+        "query": {
+          "description": "Original query string sent to expert search.",
+          "type": "string"
+        },
+        "generated_queries": {
+          "description": "Alternative generated queries used for the search, if query expansion was enabled.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "reference_author_count": {
+          "description": "Number of reference authors identified during the search stage.",
+          "type": "integer"
+        },
+        "author_count": {
+          "description": "Total number of authors found during the search stage.",
+          "type": "integer"
+        },
+        "works_count": {
+          "description": "Total number of works found during the search stage.",
+          "type": "integer"
+        },
+        "institutions_count": {
+          "description": "Total number of institutions found during the search stage.",
+          "type": "integer"
+        },
+        "best_match_topics": {
+          "description": "Map of topic short IDs to counts of how often they matched in the search results.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        },
+        "topics_filter": {
+          "description": "OpenAlex topic filter expression used when retrieving additional works.",
+          "type": "string"
+        },
+        "authors_topic_share_counts": {
+          "description": "Map of relevant-topic-share values to the number of authors having each value.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "query",
+        "generated_queries",
+        "reference_author_count",
+        "author_count",
+        "works_count",
+        "institutions_count",
+        "best_match_topics",
+        "topics_filter",
+        "authors_topic_share_counts"
+      ]
+    }
+  }
+}
