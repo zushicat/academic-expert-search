@@ -5,6 +5,8 @@ class Settings(BaseSettings):
     API_KEY: str | None = None
     USE_API_KEY: bool | None = False
 
+    OPENALEX_API_KEY: str | None
+
     LLM_ANALYZER_MAX_CONCURRENCY: int = 5
     LLM_ANALYZER_BATCH_SIZE: int = 4
     LLM_ANALYZER_TIMEOUT: int = 30

@@ -1,6 +1,7 @@
 import asyncio
 import collections
 import json
+import os
 from statistics import median, mean, stdev, quantiles
 from time import sleep
 from typing import Dict, Any, List, Set, Tuple
@@ -20,6 +21,9 @@ from src.models.expert_search_models import (
 )
 
 import requests
+
+
+OPENALEX_API_KEY = os.environ["OPENALEX_API_KEY"]
 
 
 class ExpertSearch:
@@ -236,9 +240,9 @@ class ExpertSearch:
 
         for query in queries:
             if use_fulltext_search:
-                request_url = f"https://api.openalex.org/works?search={query}&filter=type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+                request_url = f"https://api.openalex.org/works?search={query}&filter=type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic&api_key={OPENALEX_API_KEY}"
             else:
-                request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+                request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic&api_key={OPENALEX_API_KEY}"
 
             response = requests.get(request_url)
             json_data = response.json()
@@ -311,7 +315,11 @@ class ExpertSearch:
             "https://api.openalex.org/authors"
             f"?filter=id:{author_id_filter}"
             "&select=id,display_name,ids,affiliations,summary_stats,topics"
+            f"&api_key={OPENALEX_API_KEY}"
         )
+
+        print("   ", request_url)
+
         loop = asyncio.get_running_loop()
         response = await loop.run_in_executor(None, lambda: requests.get(request_url))
         try:
@@ -474,7 +482,7 @@ class ExpertSearch:
         #     "ExpertSearch/mock-responses/3_authors_by_topics.json"
         # )
 
-        request_url = f"https://api.openalex.org/authors?filter=topics.id:{topics_filter}&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page={limit}"
+        request_url = f"https://api.openalex.org/authors?filter=topics.id:{topics_filter}&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page={limit}&api_key={OPENALEX_API_KEY}"
 
         response = requests.get(request_url)
         json_data = response.json()
