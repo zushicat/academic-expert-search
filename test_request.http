@@ -37,3 +37,10 @@
 # use top 0.9 authors from search
 # ********
 GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring&use_fulltext_search=False&create_queries=False&create_expert_summaries=False&top_perc_found_authors=0.9
+
+# ********
+# Recommender WITHOUT generated queries WITHOUT use openalex full text search
+# use top 0.9 authors from search
+# use toon format for output
+# ********
+# GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring&use_fulltext_search=False&create_queries=False&create_expert_summaries=False&top_perc_found_authors=0.9&toon=true

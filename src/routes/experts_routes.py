@@ -5,38 +5,11 @@ from classes.ExpertSearch import ExpertSearch
 from classes.ExpertRecommender import ExpertRecommender
 
 from fastapi import APIRouter, Query
+
+from helpers.toon import encode_toon
 from helpers.short_recommender_response import create_short_recommender_response
 
 router = APIRouter()
-
-
-# @router.get("openalex/query/create")
-# async def create_openalex_works_queries(
-#     query: str = Query(default="", description="A string"),
-#     use_fulltext_search: bool = Query(
-#         default=False, description="set openalex query: title/abstract or fullsearch"
-#     ),
-# ):
-#     """
-#     A GET requests with the parameters
-#     - query
-
-#     Response:
-#     A JSON object with objects
-#     - Status: "ok" or "error"
-#     - Response: A response from the called class
-
-#     Intentionally not using Pydantic model, here.
-#     """
-#     try:
-#         searcher = ExpertSearch()
-#         search_response = await searcher.search_experts(
-#             query=query, use_fulltext_search=use_fulltext_search
-#         )
-
-#         return {"Status": "ok", "Response": search_response}
-#     except Exception as e:
-#         return {"Status": "Error", "Response": str(e)}
 
 
 @router.get("/expert/search")
@@ -93,6 +66,10 @@ async def expert_recommender(
         default=True,
         description="Get the shortened version of the response",
     ),
+    toon: bool = Query(
+        default=False,
+        description="Return the recommender response in Toon format (or JSON)",
+    ),
 ):
     """
     A GET requests with the parameters
@@ -125,6 +102,9 @@ async def expert_recommender(
             recommender_response = create_short_recommender_response(
                 response=recommender_response
             )
+
+        if toon:
+            recommender_response = encode_toon(json_data=recommender_response)
 
         return {"Status": "ok", "Response": recommender_response}
     except Exception as e:
