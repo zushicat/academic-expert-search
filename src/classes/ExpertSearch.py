@@ -39,6 +39,7 @@ class ExpertSearch:
         query: str,
         use_fulltext_search: bool = False,
         create_queries: bool = False,
+        topics_filter_core_threshold: float = 0.9,
     ) -> ExpertSearch_Response:
         # ***
         # Step 1
@@ -107,7 +108,7 @@ class ExpertSearch:
         topics_filter = self._get_most_shared_topics_combinations(
             best_match_topics=best_match_topics,
             author_count=author_count,
-            core_threshold=0.85,
+            core_threshold=topics_filter_core_threshold,
         )
 
         authors_by_topics = self._get_authors_by_topics(
@@ -317,8 +318,6 @@ class ExpertSearch:
             "&select=id,display_name,ids,affiliations,summary_stats,topics"
             f"&api_key={OPENALEX_API_KEY}"
         )
-
-        print("   ", request_url)
 
         loop = asyncio.get_running_loop()
         response = await loop.run_in_executor(None, lambda: requests.get(request_url))
@@ -667,4 +666,4 @@ if __name__ == "__main__":
 
     # print(json.dumps(result.model_dump()["works"], ensure_ascii=False))
     # print("-" * 100)
-    print(json.dumps(result.model_dump()["meta"], ensure_ascii=False, indent=2))
+    # print(json.dumps(result.model_dump()["meta"], ensure_ascii=False, indent=2))
