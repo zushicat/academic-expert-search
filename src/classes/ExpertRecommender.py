@@ -229,7 +229,7 @@ class ExpertRecommender:
         response_data = {
             "topics": topics.model_dump(),
             "works": works.model_dump(),
-            # "institutions": institutions.model_dump(),
+            "institutions": institutions.model_dump(),
             "authors": authors.model_dump(),
             "meta": {
                 "author_count": len(authors.root),

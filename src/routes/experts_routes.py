@@ -88,6 +88,10 @@ async def expert_recommender(
     create_queries: bool = Query(
         default=False, description="create a list of queries by LLM first"
     ),
+    short_response: bool = Query(
+        default=True,
+        description="Get the shortened version of the response",
+    ),
 ):
     """
     A GET requests with the parameters
