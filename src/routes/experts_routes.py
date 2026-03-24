@@ -93,6 +93,10 @@ async def expert_search(
         default=True,
         description="Get the shortened version of the response",
     ),
+    toon: bool = Query(
+        default=False,
+        description="Return the recommender response in Toon format (or JSON)",
+    ),
 ):
     """
     A GET requests with the parameters
@@ -118,6 +122,9 @@ async def expert_search(
                 response=search_response.model_dump()
             )
 
+        if toon:
+            search_response = encode_toon(json_data=search_response)
+
         return {"Status": "ok", "Response": search_response}
     except Exception as e:
         return {"Status": "Error", "Response": str(e)}
@@ -136,6 +143,10 @@ async def expert_search_stream(
     short_response: bool = Query(
         default=True,
         description="Get the shortened version of the response",
+    ),
+    toon: bool = Query(
+        default=False,
+        description="Return the recommender response in Toon format (or JSON)",
     ),
 ):
     async def worker(progress_callback: ProgressCallback):
@@ -158,6 +169,9 @@ async def expert_search_stream(
         result = search_response.model_dump()
         if short_response:
             result = create_short_search_response(response=result)
+
+        if toon:
+            result = encode_toon(json_data=result)
 
         await emit_expert_stream_event(
             progress_callback=progress_callback,
