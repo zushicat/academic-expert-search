@@ -10,13 +10,18 @@
 # ********
 # Search
 # ********
-GET http://localhost:10101/expert/search?query=wild bee population decline bee monitoring
+# GET http://localhost:10101/expert/search?query=wild bee population decline bee monitoring
 # GET http://localhost:10101/expert/search?query=wild bee population decline bee monitoring&short_response=false
 # GET http://localhost:10101/expert/search?query=deep research
 # GET http://localhost:10101/expert/search?query=large language models ai
 # GET http://localhost:10101/expert/search?query=Transformers without Normalization
 # GET http://localhost:10101/expert/search?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=true
 # Authorization: Bearer sk-1234
+
+# ********
+# Search with Toon format
+# ********
+GET http://localhost:10101/expert/search?query=forest and woodland stand structural complexity&use_fulltext_search=false&create_queries=false&toon=true
 
 # ********
 # Recommender
@@ -32,6 +37,7 @@ GET http://localhost:10101/expert/search?query=wild bee population decline bee m
 # ********
 # GET http://localhost:10101/expert/recommender?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=True&create_expert_summaries=False
 # GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring&use_fulltext_search=False&create_queries=True&create_expert_summaries=False
+# GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring&use_fulltext_search=False&create_queries=True&create_expert_summaries=true
 
 # ********
 # Recommender WITHOUT generated queries WITHOUT use openalex full text search
