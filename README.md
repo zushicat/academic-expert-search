@@ -175,6 +175,8 @@ That separation is useful because it keeps the first step broad and interpretabl
 $ docker-compose build
 $ docker-compose up
 ```
+- You may want to change the port in docker-compose.yml (from now 10101 to i.e. 8000)
+- Refer to [Api Usage](docs/api-usage.md) on how to use the Api
 
 ### Openalex Api key
 Openalex changed to Api key based requests. The requests are still free of charge but you have a (really generous) daily rate limit.    
