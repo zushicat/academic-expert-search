@@ -1,11 +1,13 @@
 import asyncio
 import collections
 import json
+import os
 from statistics import median, mean, stdev, quantiles
 from time import sleep
 from typing import Dict, Any, List, Set, Tuple
 
 from classes.ExpertQuery import ExpertQuery
+from helpers.expert_stream import emit_expert_stream_event, ProgressCallback
 from helpers.filehandler import read_json_file, write_json_file
 
 from src.models.expert_search_models import (
@@ -22,10 +24,29 @@ from src.models.expert_search_models import (
 import requests
 
 
+OPENALEX_API_KEY = os.environ["OPENALEX_API_KEY"]
+
+
 class ExpertSearch:
     def __init__(self):
         self.class_name = self.__class__.__name__
         self.expert_query = ExpertQuery()
+
+    async def _emit_progress(
+        self,
+        *,
+        progress_callback: ProgressCallback | None,
+        step: str,
+        message: str,
+    ):
+        await emit_expert_stream_event(
+            progress_callback=progress_callback,
+            event="step",
+            stage="search",
+            step=step,
+            message=message,
+            fallback_prefix=self.class_name,
+        )
 
     # ************
     # The actual processing call (i.e. from router)
@@ -35,11 +56,17 @@ class ExpertSearch:
         query: str,
         use_fulltext_search: bool = False,
         create_queries: bool = False,
+        topics_filter_core_threshold: float = 0.9,
+        progress_callback: ProgressCallback | None = None,
     ) -> ExpertSearch_Response:
         # ***
         # Step 1
         # ***
-        print("ExpertSearch 1 ---> _search_works")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="search_works",
+            message="Searching works matching the query",
+        )
 
         search_results, generated_queries = await self._search_works(
             query=query,
@@ -47,9 +74,14 @@ class ExpertSearch:
             year_cutoff=2020,
             use_fulltext_search=use_fulltext_search,
             create_queries=create_queries,
+            progress_callback=progress_callback,
         )
 
-        print("ExpertSearch 2 ---> _get_reference_author_ids")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="extract_reference_authors",
+            message="Extracting reference authors from matching works",
+        )
         reference_author_openalex_ids, works = self._get_reference_author_ids(
             search_results
         )
@@ -63,7 +95,11 @@ class ExpertSearch:
         # ***
         # Step 2
         # ***
-        print("ExpertSearch 3 ---> _request_reference_authors")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="fetch_reference_authors",
+            message="Fetching reference author profiles",
+        )
 
         reference_author_results = await self._request_reference_authors(
             reference_author_openalex_ids
@@ -75,12 +111,20 @@ class ExpertSearch:
         #     data=reference_author_results,
         # )
 
-        print("ExpertSearch 4 ---> _get_reference_author_topics")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="collect_topics",
+            message="Collecting topics from reference authors",
+        )
         collected_topics_reference_authors, topics = self._get_reference_author_topics(
             reference_author_results
         )
 
-        print("ExpertSearch 5 ---> _get_most_shared_topics")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="select_shared_topics",
+            message="Selecting the most shared topics",
+        )
         best_match_topics = self._get_most_shared_topics(
             collected_topics_reference_authors
         )
@@ -97,13 +141,15 @@ class ExpertSearch:
         # ***
         author_count = len(collected_topics_reference_authors)
 
-        print(
-            "ExpertSearch 6 ---> _get_most_shared_topics_combinations | _get_authors_by_topics"
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="find_authors_by_topics",
+            message="Finding additional authors through shared topics",
         )
         topics_filter = self._get_most_shared_topics_combinations(
             best_match_topics=best_match_topics,
             author_count=author_count,
-            core_threshold=0.85,
+            core_threshold=topics_filter_core_threshold,
         )
 
         authors_by_topics = self._get_authors_by_topics(
@@ -119,7 +165,11 @@ class ExpertSearch:
         # ***
         # Step 4
         # ***
-        print("ExpertSearch 7 ---> _aggregate_authors")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="aggregate_authors",
+            message="Aggregating author and institution details",
+        )
         aggregated_authors_source_search, institutions = self._aggregate_authors(
             author_list=reference_author_results,
             best_match_topics=best_match_topics,
@@ -134,8 +184,10 @@ class ExpertSearch:
         )
 
         # merge
-        print(
-            "ExpertSearch 8 ---> aggregated_authors_source_search | _assign_search_works_authors"
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="assemble_response",
+            message="Assembling the expert search response",
         )
         aggregated_authors = aggregated_authors_source_search
         for key, val in aggregated_authors_source_topics.items():
@@ -204,6 +256,7 @@ class ExpertSearch:
         year_cutoff: int = 2020,
         use_fulltext_search: bool = False,
         create_queries: bool = False,
+        progress_callback: ProgressCallback | None = None,
     ) -> Tuple[List[Dict[str, Any]], List[str]]:
         # ***
         # debug
@@ -222,7 +275,9 @@ class ExpertSearch:
 
         if create_queries:
             query_results = await self.expert_query.create_queries(
-                query=query, num_new_queries=num_new_queries
+                query=query,
+                num_new_queries=num_new_queries,
+                progress_callback=progress_callback,
             )
             if query_results:
                 queries = query_results
@@ -236,9 +291,9 @@ class ExpertSearch:
 
         for query in queries:
             if use_fulltext_search:
-                request_url = f"https://api.openalex.org/works?search={query}&filter=type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+                request_url = f"https://api.openalex.org/works?search={query}&filter=type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic&api_key={OPENALEX_API_KEY}"
             else:
-                request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic"
+                request_url = f"https://api.openalex.org/works?filter=title_and_abstract.search:{query},type:article,publication_year:>{year_cutoff-1}&per_page={limit}&select=ids,title,publication_year,relevance_score,authorships,primary_topic&api_key={OPENALEX_API_KEY}"
 
             response = requests.get(request_url)
             json_data = response.json()
@@ -311,7 +366,9 @@ class ExpertSearch:
             "https://api.openalex.org/authors"
             f"?filter=id:{author_id_filter}"
             "&select=id,display_name,ids,affiliations,summary_stats,topics"
+            f"&api_key={OPENALEX_API_KEY}"
         )
+
         loop = asyncio.get_running_loop()
         response = await loop.run_in_executor(None, lambda: requests.get(request_url))
         try:
@@ -474,7 +531,7 @@ class ExpertSearch:
         #     "ExpertSearch/mock-responses/3_authors_by_topics.json"
         # )
 
-        request_url = f"https://api.openalex.org/authors?filter=topics.id:{topics_filter}&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page={limit}"
+        request_url = f"https://api.openalex.org/authors?filter=topics.id:{topics_filter}&select=id,display_name,ids,affiliations,summary_stats,topics&sort=summary_stats.h_index:desc&per_page={limit}&api_key={OPENALEX_API_KEY}"
 
         response = requests.get(request_url)
         json_data = response.json()
@@ -659,4 +716,4 @@ if __name__ == "__main__":
 
     # print(json.dumps(result.model_dump()["works"], ensure_ascii=False))
     # print("-" * 100)
-    print(json.dumps(result.model_dump()["meta"], ensure_ascii=False, indent=2))
+    # print(json.dumps(result.model_dump()["meta"], ensure_ascii=False, indent=2))

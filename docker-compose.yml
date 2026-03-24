@@ -1,6 +1,6 @@
 services:
-  academic_expert-search:
-    container_name: academic_expert-search-container
+  academic-expert-search:
+    container_name: academic-expert-search-container
     build:
       context: .
       dockerfile: Dockerfile

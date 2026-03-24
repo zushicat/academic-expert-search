@@ -1,0 +1,75 @@
+direction: down
+
+title: "Academic Expert Search Active Flow"
+
+client: "HTTP Client"
+
+client -> app: "requests service"
+app -> experts_router: "include_router"
+
+experts_router -> route_search: "mounted endpoint"
+experts_router -> route_recommender: "mounted endpoint"
+
+route_search -> expert_search_class: "instantiate"
+expert_search_class -> search_entry: "run"
+
+search_entry -> search_works: "step 1"
+search_works -> query_expander: "if create_queries=true"
+query_expander -> litellm_gateway: "acompletion"
+
+search_works -> openalex_works: "request works search"
+search_works -> ref_author_ids: "dedupe works + collect author ids"
+ref_author_ids -> request_reference_authors: "reference author ids"
+request_reference_authors -> openalex_authors: "batch author lookup"
+request_reference_authors -> reference_topics: "author topic lists"
+reference_topics -> most_shared_topics: "count shared topics"
+most_shared_topics -> topics_combinations: "build topics_filter"
+topics_combinations -> authors_by_topics: "filter authors by topics"
+authors_by_topics -> openalex_authors: "request topic-matched authors"
+
+request_reference_authors -> aggregate_authors: "aggregate reference authors"
+authors_by_topics -> aggregate_authors: "aggregate topic authors"
+search_works -> assign_search_works: "works map"
+aggregate_authors -> assign_search_works: "attach works_search"
+assign_search_works -> sort_author_batches: "sort by relevant_topics_share"
+sort_author_batches -> search_response: "create typed response"
+
+route_recommender -> expert_search_class: "instantiate searcher"
+route_recommender -> expert_recommender_class: "instantiate recommender"
+route_recommender -> search_entry: "search first"
+search_response -> recommend_entry: "pass ExpertSearch_Response"
+
+expert_recommender_class -> recommend_entry: "run"
+recommend_entry -> top_topic_share: "step 1"
+top_topic_share -> filter_search_result: "author share threshold"
+filter_search_result -> get_author_works: "filtered authors/topics"
+get_author_works -> openalex_works: "request recent author works"
+get_author_works -> process_author_works: "works_from_authors"
+
+process_author_works -> graph_build: "enriched works + authors"
+graph_build -> graph_scores: "score experts"
+graph_build -> graph_connections: "find coauthor/institution groups"
+graph_scores -> update_scores: "raw score dict"
+graph_connections -> update_scores: "connectivity metadata"
+graph_connections -> update_connections: "membership groups"
+update_scores -> update_results: "relevant author ids"
+update_connections -> update_results: "connection lists"
+
+recommend_entry -> analysis_stage: "if create_expert_summaries=true"
+analysis_stage -> analyze_author: "optional summary branch"
+analyze_author -> title_batches: "prepare per-author titles"
+title_batches -> toon_batches: "group author/year titles"
+toon_batches -> create_prompts: "compose prompt inputs"
+create_prompts -> analysis_prompt: "load prompt template"
+create_prompts -> llm_batch_requests: "batch prompts"
+llm_batch_requests -> litellm_gateway: "acompletion"
+analyze_author -> update_results: "attach summaries to authors"
+
+update_results -> recommender_payload: "filtered works + institutions + authors"
+
+search_response.style.fill: "#E8F4FF"
+recommender_payload.style.fill: "#EAF7E8"
+openalex_works.style.fill: "#FFF4DD"
+openalex_authors.style.fill: "#FFF4DD"
+litellm_gateway.style.fill: "#F8E8FF"
+llm_provider.style.fill: "#F8E8FF"

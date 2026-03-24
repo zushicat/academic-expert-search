@@ -1,0 +1,193 @@
+{
+  "Status": "ok",
+  "Response": {
+    "topics": [
+      {
+        "id": "https://openalex.org/T10487",
+        "display_name": "Plant and animal studies"
+      }
+    ],
+    "works": [
+      {
+        "openalex_id": "https://openalex.org/W3042360663",
+        "doi": "https://doi.org/10.1007/s13592-020-00788-9",
+        "title": "Managed honey bees as a radar for wild bee decline?",
+        "publication_year": 2020,
+        "primary_topic": "https://openalex.org/T10487",
+        "author_ids": [
+          "https://openalex.org/A5007581267",
+          "https://openalex.org/A5082179290",
+          "https://openalex.org/A5070960423",
+          "https://openalex.org/A5000840879",
+          "https://openalex.org/A5078525299",
+          "https://openalex.org/A5087221634",
+          "https://openalex.org/A5023316377",
+          "https://openalex.org/A5010320716",
+          "https://openalex.org/A5084690702",
+          "https://openalex.org/A5079201337",
+          "https://openalex.org/A5039999199"
+        ]
+      }
+    ],
+    "institutions": [
+      {
+        "openalex_id": "https://openalex.org/I130929987",
+        "ror": "https://ror.org/02qnnz951",
+        "display_name": "University of Mons",
+        "country_code": "BE",
+        "type": "education"
+      }
+    ],
+    "authors": [
+      {
+        "openalex_id": "https://openalex.org/A5053128729",
+        "orcid_id": "https://orcid.org/0000-0003-1359-3944",
+        "display_name": "Ingolf Steffan‐Dewenter",
+        "two_yr_mean_citedness": 6.142857142857143,
+        "h_index": 115,
+        "i10_index": 310,
+        "relevant_topics": [
+          "https://openalex.org/T10487",
+          "https://openalex.org/T11641",
+          "https://openalex.org/T10702",
+          "https://openalex.org/T10005",
+          "https://openalex.org/T12475"
+        ],
+        "relevant_topics_share": 5,
+        "active_years_min": 1997,
+        "active_years_max": 2026,
+        "active_years_sum": 30,
+        "institutions": [
+          {
+            "openalex_id": "https://openalex.org/I74656192",
+            "year_start": 1997,
+            "year_end": 2010
+          },
+          {
+            "openalex_id": "https://openalex.org/I25974101",
+            "year_start": 2005,
+            "year_end": 2026
+          },
+          {
+            "openalex_id": "https://openalex.org/I54009628",
+            "year_start": 2007,
+            "year_end": 2011
+          },
+          {
+            "openalex_id": "https://openalex.org/I21881038",
+            "year_start": 2008,
+            "year_end": 2008
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210098344",
+            "year_start": 2008,
+            "year_end": 2008
+          },
+          {
+            "openalex_id": "https://openalex.org/I138689650",
+            "year_start": 2013,
+            "year_end": 2013
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210126310",
+            "year_start": 2021,
+            "year_end": 2021
+          },
+          {
+            "openalex_id": "https://openalex.org/I2800389101",
+            "year_start": 2023,
+            "year_end": 2023
+          }
+        ],
+        "instituitions_count": 8,
+        "works": [
+          "https://openalex.org/W4406721107",
+          "https://openalex.org/W4399760691",
+          "https://openalex.org/W4394952721",
+          "https://openalex.org/W4405233925",
+          "https://openalex.org/W7130575094",
+          "https://openalex.org/W4413939664",
+          "https://openalex.org/W4377137229",
+          "https://openalex.org/W4410109058",
+          "https://openalex.org/W4376133341",
+          "https://openalex.org/W4390807392",
+          "https://openalex.org/W7130616857",
+          "https://openalex.org/W4383816818",
+          "https://openalex.org/W4388017070",
+          "https://openalex.org/W4389895316",
+          "https://openalex.org/W4417117722",
+          "https://openalex.org/W4407114025",
+          "https://openalex.org/W4385769969",
+          "https://openalex.org/W4407122166",
+          "https://openalex.org/W4411158183",
+          "https://openalex.org/W4366813992",
+          "https://openalex.org/W4401373306",
+          "https://openalex.org/W4414263076",
+          "https://openalex.org/W4367046388",
+          "https://openalex.org/W4414494520",
+          "https://openalex.org/W4410109139",
+          "https://openalex.org/W4405016920",
+          "https://openalex.org/W4401269913",
+          "https://openalex.org/W4391023135",
+          "https://openalex.org/W4417186063",
+          "https://openalex.org/W4380052497",
+          "https://openalex.org/W4408308405",
+          "https://openalex.org/W4399046438",
+          "https://openalex.org/W4414306249",
+          "https://openalex.org/W4363672337",
+          "https://openalex.org/W4323039528",
+          "https://openalex.org/W4409512684",
+          "https://openalex.org/W4386421521",
+          "https://openalex.org/W4399594099",
+          "https://openalex.org/W4390054706",
+          "https://openalex.org/W4390700928",
+          "https://openalex.org/W4382138982",
+          "https://openalex.org/W4408017168",
+          "https://openalex.org/W4399292691",
+          "https://openalex.org/W4414190292",
+          "https://openalex.org/W4376280149",
+          "https://openalex.org/W4409351208",
+          "https://openalex.org/W4397021368",
+          "https://openalex.org/W4321465440"
+        ],
+        "works_count": 48,
+        "summary": null
+      }
+    ],
+    "meta": {
+      "author_count": 87,
+      "works_count": 533,
+      "institutions_count": 735,
+      "author_min_score": 0.508,
+      "author_max_score": 0.954,
+      "search": {
+        "query": "wild bee population decline bee monitoring",
+        "generated_queries": [],
+        "reference_author_count": 146,
+        "author_count": 240,
+        "works_count": 20,
+        "institutions_count": 2708,
+        "best_match_topics": {
+          "T10487": 133,
+          "T11641": 102,
+          "T10702": 101,
+          "T10005": 68,
+          "T12475": 46,
+          "T10895": 45,
+          "T10135": 24,
+          "T11386": 13,
+          "T11974": 11,
+          "T10199": 10
+        },
+        "topics_filter": "T10487+(T11641|T10702|T10005|T12475|T10895|T10135|T11386|T11974|T10199)",
+        "authors_topic_share_counts": {
+          "1": 36,
+          "2": 37,
+          "3": 57,
+          "4": 55,
+          "5": 55
+        }
+      }
+    }
+  }
+}

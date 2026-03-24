@@ -11,6 +11,7 @@ from classes.RecommenderClasses.ExpertUpdate import ExpertUpdate
 from classes.RecommenderClasses.ExpertAnalysis import ExpertAnalysis
 from classes.ExpertQuery import ExpertQuery
 
+from helpers.expert_stream import emit_expert_stream_event, ProgressCallback
 from helpers.filehandler import read_json_file, write_json_file
 from helpers.toon import encode_toon
 
@@ -46,6 +47,22 @@ class ExpertRecommender:
         self.class_name = self.__class__.__name__
         self.top_perc_found_authors = top_perc_found_authors
 
+    async def _emit_progress(
+        self,
+        *,
+        progress_callback: ProgressCallback | None,
+        step: str,
+        message: str,
+    ):
+        await emit_expert_stream_event(
+            progress_callback=progress_callback,
+            event="step",
+            stage="recommender",
+            step=step,
+            message=message,
+            fallback_prefix=self.class_name,
+        )
+
     # ************
     # The actual processing call (i.e. from router)
     # ************
@@ -53,23 +70,32 @@ class ExpertRecommender:
         self,
         search_result: ExpertSearch_Response,
         create_expert_summaries: bool = False,
+        progress_callback: ProgressCallback | None = None,
     ):
-        meta = search_result.meta  # .model_dump()
-        topics = search_result.topics  # .model_dump()
-        works = search_result.works  # .model_dump()
-        institutions = search_result.institutions  # .model_dump()
-        authors = search_result.authors  # .model_dump()
+        meta = search_result.meta
+        topics = search_result.topics
+        works = search_result.works
+        institutions = search_result.institutions
+        authors = search_result.authors
 
         # ***
         # STEP 1: filter author (and the rest) on authors_topic_share_counts
         # - use threshold on topic share (authors)
         # ***
-        print("ExpertRecommender 1 ---> _get_top_topic_share")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="select_candidates",
+            message="Selecting the strongest candidate authors",
+        )
         top_counts = self._get_top_topic_share(
             meta=meta, top_perc=self.top_perc_found_authors
         )
 
-        print("ExpertRecommender 2 ---> _filter_search_result")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="filter_search_result",
+            message="Filtering the search result to the top candidates",
+        )
         authors, works, institutions = self._filter_search_result(
             works=works,
             institutions=institutions,
@@ -83,7 +109,11 @@ class ExpertRecommender:
         current_year = datetime.now().year
         years_back = 3
 
-        print("ExpertRecommender 3 ---> _get_works")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="fetch_author_works",
+            message="Fetching recent works for the candidate authors",
+        )
         works_from_authors = await self._get_works(
             author_ids=authors.root,
             topics_filter=meta.topics_filter,
@@ -103,7 +133,11 @@ class ExpertRecommender:
         # )
         #
         # ***
-        print("ExpertRecommender 4 ---> _processworks_from_authors")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="process_author_works",
+            message="Processing retrieved works and attaching them to authors",
+        )
         works, authors = self._processworks_from_authors(
             works_from_authors=works_from_authors, works=works, authors=authors
         )
@@ -114,8 +148,10 @@ class ExpertRecommender:
         #    - graph: ExpertGraph instance
         #    - graph.graph: nx.MultiGraph
         # ***
-        print(
-            "ExpertRecommender 5 ---> ExpertGraph | get_best_experts | get_connected_authors"
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="build_graph_and_score",
+            message="Building the expert graph and scoring authors",
         )
         graph = ExpertGraph(search_result=search_result)
         authors_by_score = graph.get_best_experts()
@@ -125,8 +161,10 @@ class ExpertRecommender:
         # Step 4: Filter and update by relevance
         # -> class ExpertUpdate
         # ***
-        print(
-            "ExpertRecommender 6 ---> update_author_scores | update_author_connections"
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="refine_scores_and_connections",
+            message="Refining author scores and connections",
         )
         update = ExpertUpdate()
         authors_by_score = update.update_author_scores(
@@ -147,7 +185,11 @@ class ExpertRecommender:
         # update search results objects:
         # filter out irrelevant stuff not connected to authors_by_score
         # overwrite / typecast author from ExpertSearch_Authors to Dict[str, ExpertRecommender_Author]
-        print("ExpertRecommender 7 ---> update search results")
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="trim_response",
+            message="Trimming the response to the most relevant experts",
+        )
         works, institutions, authors = update.update_search_result_objects(
             authors=authors,
             works=works,
@@ -190,10 +232,11 @@ class ExpertRecommender:
         #    - get summary from author's works titles
         # ***
         if create_expert_summaries:
-            print("ExpertRecommender 8 ---> create_expert_summaries")
             analyzer = ExpertAnalysis()
             authors_works_summary = await analyzer.analyze_author(
-                authors=authors, works=works
+                authors=authors,
+                works=works,
+                progress_callback=progress_callback,
             )  # use default batch_size and max_concurrency from env
 
             for author_id, summary in authors_works_summary.items():
@@ -226,10 +269,16 @@ class ExpertRecommender:
         # return recommender_response.model_dump()
 
         # Serialize to dicts first to avoid nested model validation issues
+        await self._emit_progress(
+            progress_callback=progress_callback,
+            step="assemble_response",
+            message="Assembling the recommender response",
+        )
+
         response_data = {
             "topics": topics.model_dump(),
             "works": works.model_dump(),
-            # "institutions": institutions.model_dump(),
+            "institutions": institutions.model_dump(),
             "authors": authors.model_dump(),
             "meta": {
                 "author_count": len(authors.root),

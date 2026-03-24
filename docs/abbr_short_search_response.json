@@ -1,0 +1,228 @@
+{
+  "Status": "ok",
+  "Response": {
+    "topics": [
+      {
+        "id": "https://openalex.org/T10487",
+        "display_name": "Plant and animal studies"
+      }
+    ],
+    "works": [
+      {
+        "openalex_id": "https://openalex.org/W3042360663",
+        "doi": "https://doi.org/10.1007/s13592-020-00788-9",
+        "title": "Managed honey bees as a radar for wild bee decline?",
+        "publication_year": 2020,
+        "primary_topic": "https://openalex.org/T10487",
+        "author_ids": [
+          "https://openalex.org/A5007581267",
+          "https://openalex.org/A5082179290",
+          "https://openalex.org/A5070960423",
+          "https://openalex.org/A5000840879",
+          "https://openalex.org/A5078525299",
+          "https://openalex.org/A5087221634",
+          "https://openalex.org/A5023316377",
+          "https://openalex.org/A5010320716",
+          "https://openalex.org/A5084690702",
+          "https://openalex.org/A5079201337",
+          "https://openalex.org/A5039999199"
+        ]
+      }
+    ],
+    "institutions": [
+      {
+        "openalex_id": "https://openalex.org/I113456305",
+        "ror": "https://ror.org/02w2y2t16",
+        "display_name": "Leuphana University of Lüneburg",
+        "country_code": "DE",
+        "type": "education"
+      }
+    ],
+    "authors": [
+      {
+        "openalex_id": "https://openalex.org/A5070924304",
+        "orcid_id": "https://orcid.org/0000-0003-2139-8575",
+        "display_name": "Alexandra‐Maria Klein",
+        "two_yr_mean_citedness": 4.258620689655173,
+        "h_index": 85,
+        "i10_index": 222,
+        "relevant_topics": [
+          "https://openalex.org/T10487",
+          "https://openalex.org/T11641",
+          "https://openalex.org/T10702",
+          "https://openalex.org/T10005",
+          "https://openalex.org/T12475"
+        ],
+        "relevant_topics_share": 5,
+        "active_years_min": 2000,
+        "active_years_max": 2026,
+        "active_years_sum": 26,
+        "institutions": [
+          {
+            "openalex_id": "https://openalex.org/I76198965",
+            "year_start": 2000,
+            "year_end": 2010
+          },
+          {
+            "openalex_id": "https://openalex.org/I74656192",
+            "year_start": 2002,
+            "year_end": 2015
+          },
+          {
+            "openalex_id": "https://openalex.org/I92869138",
+            "year_start": 2007,
+            "year_end": 2007
+          },
+          {
+            "openalex_id": "https://openalex.org/I2800262456",
+            "year_start": 2008,
+            "year_end": 2008
+          },
+          {
+            "openalex_id": "https://openalex.org/I95457486",
+            "year_start": 2008,
+            "year_end": 2011
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210129758",
+            "year_start": 2009,
+            "year_end": 2009
+          },
+          {
+            "openalex_id": "https://openalex.org/I113456305",
+            "year_start": 2010,
+            "year_end": 2019
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210100404",
+            "year_start": 2010,
+            "year_end": 2010
+          },
+          {
+            "openalex_id": "https://openalex.org/I161046081",
+            "year_start": 2012,
+            "year_end": 2026
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210100930",
+            "year_start": 2013,
+            "year_end": 2014
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210149884",
+            "year_start": 2013,
+            "year_end": 2024
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210163172",
+            "year_start": 2015,
+            "year_end": 2015
+          },
+          {
+            "openalex_id": "https://openalex.org/I114090438",
+            "year_start": 2019,
+            "year_end": 2019
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210112860",
+            "year_start": 2019,
+            "year_end": 2019
+          },
+          {
+            "openalex_id": "https://openalex.org/I1280640908",
+            "year_start": 2022,
+            "year_end": 2022
+          },
+          {
+            "openalex_id": "https://openalex.org/I118564535",
+            "year_start": 2023,
+            "year_end": 2023
+          },
+          {
+            "openalex_id": "https://openalex.org/I1292896151",
+            "year_start": 2023,
+            "year_end": 2023
+          },
+          {
+            "openalex_id": "https://openalex.org/I1312222531",
+            "year_start": 2023,
+            "year_end": 2023
+          },
+          {
+            "openalex_id": "https://openalex.org/I1336096307",
+            "year_start": 2023,
+            "year_end": 2023
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210122148",
+            "year_start": 2023,
+            "year_end": 2023
+          },
+          {
+            "openalex_id": "https://openalex.org/I4210139035",
+            "year_start": 2023,
+            "year_end": 2023
+          },
+          {
+            "openalex_id": "https://openalex.org/I52158045",
+            "year_start": 2023,
+            "year_end": 2023
+          },
+          {
+            "openalex_id": "https://openalex.org/I79817857",
+            "year_start": 2023,
+            "year_end": 2023
+          },
+          {
+            "openalex_id": "https://openalex.org/I187531555",
+            "year_start": 2024,
+            "year_end": 2025
+          },
+          {
+            "openalex_id": "https://openalex.org/I121797337",
+            "year_start": 2025,
+            "year_end": 2025
+          },
+          {
+            "openalex_id": "https://openalex.org/I887064364",
+            "year_start": 2025,
+            "year_end": 2025
+          }
+        ],
+        "instituitions_count": 26,
+        "works_search": [
+          "https://openalex.org/W4391023135"
+        ],
+        "works_search_count": 1
+      }
+    ],
+    "meta": {
+      "query": "wild bee population decline bee monitoring",
+      "generated_queries": [],
+      "reference_author_count": 146,
+      "author_count": 240,
+      "works_count": 20,
+      "institutions_count": 2708,
+      "best_match_topics": {
+        "T10487": 133,
+        "T11641": 102,
+        "T10702": 101,
+        "T10005": 68,
+        "T12475": 46,
+        "T10895": 45,
+        "T10135": 24,
+        "T11386": 13,
+        "T11974": 11,
+        "T10199": 10
+      },
+      "topics_filter": "T10487+(T11641|T10702|T10005|T12475|T10895|T10135|T11386|T11974|T10199)",
+      "authors_topic_share_counts": {
+        "1": 36,
+        "2": 37,
+        "3": 57,
+        "4": 55,
+        "5": 55
+      }
+    }
+  }
+}
