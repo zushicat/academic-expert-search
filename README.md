@@ -1,6 +1,27 @@
 # Academic Expert Recommender
 Get academic experts recommendations for a fuzzy query based on [Openalex](https://developers.openalex.org/) entities.
 
+## Table of Contents
+- [Overview](#overview)
+- [Core Principle](#core-principle)
+- [Search Endpoint](#search-endpoint)
+  - [What Search Is Really Doing](#what-search-is-really-doing)
+  - [Why Search Is Useful](#why-search-is-useful)
+- [Recommender Endpoint](#recommender-endpoint)
+  - [What Recommender Adds](#what-recommender-adds)
+- [Search vs Recommender](#search-vs-recommender)
+  - [Search](#search)
+  - [Recommender](#recommender)
+- [Why This Overall Approach Works Well](#why-this-overall-approach-works-well)
+- [Practical Mental Model](#practical-mental-model)
+- [Installation](#installation)
+  - [Openalex Api key](#openalex-api-key)
+- [References](#references)
+  - [General app flow graph](#general-app-flow-graph)
+  - [Api Usage](#api-usage)
+  - [Abbreviated Response Examples](#abbreviated-response-examples)
+  - [Short Response Recommender JSON Schema](#short-response-recommender-json-schema)
+
 ## Overview
 This application finds relevant researchers by using a simple but effective idea:
 
