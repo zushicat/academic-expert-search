@@ -10,7 +10,8 @@
 # ********
 # Search
 # ********
-# GET http://localhost:10101/expert/search?query=wild bee population decline bee monitoring
+GET http://localhost:10101/expert/search?query=wild bee population decline bee monitoring
+# GET http://localhost:10101/expert/search?query=wild bee population decline bee monitoring&short_response=false
 # GET http://localhost:10101/expert/search?query=deep research
 # GET http://localhost:10101/expert/search?query=large language models ai
 # GET http://localhost:10101/expert/search?query=Transformers without Normalization
@@ -29,14 +30,14 @@
 # ********
 # Recommender with generated queries and/or use openalex full text search
 # ********
-# GET http://localhost:10101/expert/recommender?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=True&create_expert_summaries=False&min_shared_topics=3
+# GET http://localhost:10101/expert/recommender?query=forest and woodland stand structural complexity&use_fulltext_search=False&create_queries=True&create_expert_summaries=False
 # GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring&use_fulltext_search=False&create_queries=True&create_expert_summaries=False
 
 # ********
 # Recommender WITHOUT generated queries WITHOUT use openalex full text search
 # use top 0.9 authors from search
 # ********
-GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring&use_fulltext_search=False&create_queries=False&create_expert_summaries=False&top_perc_found_authors=0.9
+# GET http://localhost:10101/expert/recommender?query=wild bee population decline bee monitoring&use_fulltext_search=False&create_queries=False&create_expert_summaries=False&top_perc_found_authors=0.9
 
 # ********
 # Recommender WITHOUT generated queries WITHOUT use openalex full text search
