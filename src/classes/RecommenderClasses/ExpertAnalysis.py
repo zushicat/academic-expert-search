@@ -7,6 +7,7 @@ from typing import Dict, Any, List, Set, Tuple
 import warnings
 
 # import classes.LlmRequestHandler
+from helpers.expert_stream import emit_expert_stream_event, ProgressCallback
 from helpers.filehandler import read_text_file
 from helpers.toon import encode_toon, decode_toon
 
@@ -54,6 +55,7 @@ class ExpertAnalysis:
         works: ExpertSearch_Works,
         batch_size: int = LLM_ANALYZER_BATCH_SIZE,
         max_concurrency: int = LLM_ANALYZER_MAX_CONCURRENCY,
+        progress_callback: ProgressCallback | None = None,
     ) -> Dict[str, str]:
         """
         Main processing method called by ExpertRcommender.
@@ -63,6 +65,15 @@ class ExpertAnalysis:
         # ********
         # Prepare data
         # ********
+        await emit_expert_stream_event(
+            progress_callback=progress_callback,
+            event="step",
+            stage="recommender",
+            step="prepare_summaries",
+            message="Preparing expert summaries from author works",
+            fallback_prefix=self.class_name,
+        )
+
         author_data_batches = self._create_title_batches(
             authors=authors, works=works, batch_size=batch_size
         )
@@ -73,6 +84,15 @@ class ExpertAnalysis:
 
         prompts = self._create_prompts(toon_batches=toon_batches, batch_size=batch_size)
 
+        await emit_expert_stream_event(
+            progress_callback=progress_callback,
+            event="step",
+            stage="recommender",
+            step="request_summaries",
+            message="Generating expert summaries",
+            fallback_prefix=self.class_name,
+        )
+
         results = await self._request_llm_batches(
             prompts=prompts, max_concurrency=max_concurrency
         )
@@ -80,6 +100,15 @@ class ExpertAnalysis:
         # print(json.dumps(results, ensure_ascii=False, indent=2))
         # print()
         # print(len(results))
+
+        await emit_expert_stream_event(
+            progress_callback=progress_callback,
+            event="step",
+            stage="recommender",
+            step="summaries_completed",
+            message="Expert summaries generated",
+            fallback_prefix=self.class_name,
+        )
 
         return results
 
@@ -173,7 +202,6 @@ class ExpertAnalysis:
     #
     # *********
     async def _process_prompt(self, prompt: str) -> Dict[str, Any]:
-        print("ExpertAnalysis 1 ---> _process_prompt")
         response = await self._request_llm(
             prompt=prompt,
             model=LLM_ANALYZER_MODEL,

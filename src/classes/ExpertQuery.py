@@ -8,6 +8,7 @@ import warnings
 
 # import classes.LlmRequestHandler
 from helpers.filehandler import read_text_file
+from helpers.expert_stream import emit_expert_stream_event, ProgressCallback
 from helpers.toon import encode_toon, decode_toon
 
 from models.expert_recommender_models import ExpertRecommender_Authors
@@ -45,8 +46,21 @@ class ExpertQuery:
             file_path=f"{self.class_name}/prompts/query_expansion.txt"
         )
 
-    async def create_queries(self, query: str, num_new_queries: int = 3) -> List[str]:
-        print("ExpertQuery 1 ---> create_queries")
+    async def create_queries(
+        self,
+        query: str,
+        num_new_queries: int = 3,
+        progress_callback: ProgressCallback | None = None,
+    ) -> List[str]:
+        await emit_expert_stream_event(
+            progress_callback=progress_callback,
+            event="step",
+            stage="search",
+            step="expand_query",
+            message="Generating alternative search queries",
+            fallback_prefix=self.class_name,
+        )
+
         prompt = self.prompt_template.format(
             QUERY=query, NUM_NEW_QUERIES=num_new_queries
         )
