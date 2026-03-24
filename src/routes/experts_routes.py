@@ -15,6 +15,7 @@ from helpers.expert_stream import (
     format_expert_stream_event,
     ProgressCallback,
 )
+from helpers.short_search_response import create_short_search_response
 from helpers.toon import encode_toon
 from helpers.short_recommender_response import create_short_recommender_response
 from models.expert_stream_models import ExpertStreamEvent
@@ -88,6 +89,10 @@ async def expert_search(
     create_queries: bool = Query(
         default=False, description="create a list of queries by LLM first"
     ),
+    short_response: bool = Query(
+        default=True,
+        description="Get the shortened version of the response",
+    ),
 ):
     """
     A GET requests with the parameters
@@ -108,6 +113,11 @@ async def expert_search(
             create_queries=create_queries,
         )
 
+        if short_response:
+            search_response = create_short_search_response(
+                response=search_response.model_dump()
+            )
+
         return {"Status": "ok", "Response": search_response}
     except Exception as e:
         return {"Status": "Error", "Response": str(e)}
@@ -122,6 +132,10 @@ async def expert_search_stream(
     ),
     create_queries: bool = Query(
         default=False, description="create a list of queries by LLM first"
+    ),
+    short_response: bool = Query(
+        default=True,
+        description="Get the shortened version of the response",
     ),
 ):
     async def worker(progress_callback: ProgressCallback):
@@ -141,13 +155,17 @@ async def expert_search_stream(
             progress_callback=progress_callback,
         )
 
+        result = search_response.model_dump()
+        if short_response:
+            result = create_short_search_response(response=result)
+
         await emit_expert_stream_event(
             progress_callback=progress_callback,
             event="completed",
             stage="search",
             step="completed",
             message="Search stream completed",
-            result=search_response.model_dump(),
+            result=result,
         )
 
     return _create_streaming_response(request, worker)
