@@ -1,11 +1,12 @@
-# Academic Expert Search
+# Academic Expert Recommender
+Get academic experts recommendations for a fuzzy query based on [Openalex](https://developers.openalex.org/) entities.
 
 ## Overview
 This application finds relevant researchers by using a simple but effective idea:
 
 If several papers that match a query point to authors who repeatedly share the same topics, those shared topics are a strong signal for the real subject area behind the query. Once those topics are identified, the application can look for other authors who are active in the same topic cluster.
 
-One important challenge is that author-level topics are often too broad to serve as a precise starting point on their own. They usually describe a researcher’s general area, but not always the specific question behind a query. That is why the application takes a detour through works first: works are usually much closer to the actual research problem, and from there the system can infer a more focused topic signature.
+One important challenge is that author-level topics are often too broad to serve as a precise starting point on their own. They usually describe a researcher’s general area, but not always the specific question behind a query. That is why the application takes a detour through works first: works are usually much closer to the actual research problem, and from there the system can infer a more focused topic signature.    
 
 That works quite well because it does not rely on a single keyword match or a single paper. Instead, it uses overlap across multiple search results and multiple authors. In practice, this often reduces noise and surfaces people who are genuinely active in the area, even if their names did not appear in the first paper search.
 
@@ -16,7 +17,10 @@ It is also relatively fast because the process stays compact:
 - it derives a small topic set from those authors
 - it uses that topic set to fetch a broader but still focused candidate pool
 
-So the application first narrows the problem by topic structure, and only then expands to expert candidates.
+So the application first narrows the problem by topic structure, and only then expands to expert candidates.    
+
+**Note**: Although Openalex significantly enhanced their capabilities (i.e. for fuzzy searches) they also switched to an Api key based request with different daily credit costs for different request types (i.e. a list lookup uses less credits than a search and so on). The daily rate limit with 10000 free credits is still very generous but this app tries *not* to burn through the daily credits and to be as credit effective as possible.
+
 
 ## Core Principle
 At a high level, the application treats the first batch of search results as a way to discover the topic signature of a query.
