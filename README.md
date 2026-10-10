@@ -40,7 +40,11 @@ It is also relatively fast because the process stays compact:
 
 So the application first narrows the problem by topic structure, and only then expands to expert candidates.    
 
-**Note**: Although Openalex significantly enhanced their capabilities (i.e. for fuzzy searches) they also switched to an Api key based request with different daily credit costs for different request types (i.e. a list lookup uses less credits than a search and so on). The daily rate limit with 10000 free credits is still very generous but this app tries *not* to burn through the daily credits and to be as credit effective as possible.
+**Note 1**: Although Openalex significantly enhanced their capabilities (i.e. for fuzzy searches) they also switched to an Api key based request with different daily credit costs for different request types (i.e. a list lookup uses less credits than a search and so on). The daily rate limit with 10000 free credits is still very generous but this app tries *not* to burn through the daily credits and to be as credit effective as possible.    
+    
+**Note 2**: You can find a quick&dirty vibe coded frontend demo for this Api here: [academic-expert-search-demo-frontend](https://github.com/zushicat/academic-expert-search-demo-frontend)    
+    
+**Note 3**: This is still kind of in construction. Hence, take the current state of the repo with a grain of salt or use it as a starting point for your own implementation.
 
 
 ## Core Principle

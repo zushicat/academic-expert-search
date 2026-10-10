@@ -20,7 +20,6 @@ warnings.filterwarnings("ignore", category=UserWarning, module="pydantic")
 warnings.filterwarnings("ignore", category=RuntimeWarning, module="litellm")
 
 litellm.drop_params = True
-# litellm.suppress_debug_info = True
 
 # ******************************
 # model configs from environment
@@ -34,9 +33,6 @@ LLM_QUERY_EXPANSION_REASONING_EFFORT = os.environ["LLM_ANALYZER_REASONING_EFFORT
 LLM_QUERY_EXPANSION_MODEL = os.environ["LLM_QUERY_EXPANSION_MODEL"]
 LLM_QUERY_EXPANSION_BASE_URL = os.environ["LLM_QUERY_EXPANSION_BASE_URL"]
 LLM_QUERY_EXPANSION_API_KEY = os.environ["LLM_QUERY_EXPANSION_API_KEY"]
-
-# LLM_QUERY_EXPANSION_MODEL = "openai/qwen/qwen3-32b"
-# LLM_QUERY_EXPANSION_REASONING_EFFORT = "none"
 
 
 class ExpertQuery:
