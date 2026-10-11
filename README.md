@@ -46,6 +46,7 @@ So the application first narrows the problem by topic structure, and only then e
     
 **Note 3**: This is still kind of in construction. Hence, take the current state of the repo with a grain of salt or use it as a starting point for your own implementation.
 
+![Discovery Flow](docs/discovery-flow.png)
 
 ## Core Principle
 At a high level, the application treats the first batch of search results as a way to discover the topic signature of a query.
